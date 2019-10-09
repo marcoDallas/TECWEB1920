@@ -17,6 +17,8 @@ Idealmente ogni Issue va sviluppata su un suo branch dedicato. Ogni branch può 
 
 Una volta effettuato il merge del branch sul trunk principale eliminare il branch temporaneo su cui si era lavorato.
 
+NOTA BENE: ogni volta che si vuole fare un merge, bisogna accertarsi che il codice sia valido XHTML. Per validare il codice: https://validator.w3.org/.
+
 ### Commit
 Cercare di tenerli il più possibile "atomici" e collegarli sempre al codice della Issue. Atomici significa che ogni commit dovrebbe registrare solo un tipo di modifica, non una lista. Ag ogni Issue possono corrispondere più commit e viceversa.
 
