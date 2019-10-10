@@ -7,7 +7,7 @@
     <!-- Specifico il charset -->
     <meta http-equiv="content-Type" content="text/html; charset=utf-8" />
     <!-- Titolo -->
-    <title>Registrazione nuovo utente</title>
+    <title>Registrazione</title>
     <!-- Titolo esteso dentro un meta -->
     <meta name="title" content="" />
     <!-- Descrizione del sito -->
@@ -26,7 +26,8 @@
 </head>
 <body>
     <div id="header">
-    ...
+        <h1>Pagina di registrazione</h1>
+        <h2>Registrati in pochi passi per poter recensire i vari prodotti della nostra pasticceria</h2>
     </div>
 
     <div id="breadcrumb">
@@ -34,11 +35,45 @@
     </div>
 
     <div id="menu">
-    ...
+        <dl>
+            <dt xml:lang="en"><a href="home.html">Home</a></dt>
+            <dt><a href="prodotti.html">Prodotti</a></dt>
+            <dt><a href="storia.html">Storia</a></dt>
+            <dt><a href="chisiamo.html">Chi siamo</a></dt>
+            <!-- Aggiungere voce per dettagli utente e storico recensioni -->
+        </dl>
     </div>
 
+    <!-- Form di registrazione con nome, cognome, username utente e password(che dev'essere confermata)
+         Username e password utilizzati solo per l'accesso al form della pagina Home
+         Nome e cognome verranno visualizzati sulla recensione che rilascerà un determinato utente loggato -->
     <div id="content">
-    ...
+        <form action="" method="post">
+            <fieldset>
+                <legend>Nuova registrazione</legend>
+                <p>
+                    <label for="name"><span xml:lang="en">Nome:</span></label>
+                    <input type="text" name="name" id="name" maxlength="20"/>
+                    <label for="surname"><span xml:lang="en">Cognome:</span></label>
+                    <input type="text" name="surname" id="surname" maxlength="20"/>
+                </p>
+                <p>
+                    <label for="username"><span xml:lang="en">Username:</span></label>
+                    <input type="text" name="username" id="username" maxlength="20"/>
+                </p>
+                <p>
+                    <label for="password"><span xml:lang="en">Password:</span></label>
+                    <input type="password" name="password" id="password" maxlength="20"/>
+                </p>
+                <p>
+                    <label for="confirmPassword"><span xml:lang="en">Conferma password:</span></label>
+                    <input type="password" name="confirmPassword" id="confirmPassword" maxlength="20"/>
+                </p>
+                <p>
+                    <input type="submit" value="Registrati"/>
+                </p>    
+            </fieldset>
+        </form>
     </div>
 
     <div id="footer">
