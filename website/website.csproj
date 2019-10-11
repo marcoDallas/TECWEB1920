@@ -69,7 +69,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
-    <Content Include="www\index.html" />
+    <Content Include="www\chisiamo.html" />
+    <Content Include="www\home.html" />
+    <Content Include="www\prodotti.html" />
+    <Content Include="www\registrazione.html" />
+    <Content Include="www\storia.html" />
     <Content Include="www\style.css" />
   </ItemGroup>
   <ItemGroup>
