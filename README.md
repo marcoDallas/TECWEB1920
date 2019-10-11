@@ -10,6 +10,8 @@ Prima di fare qualsiasi modifica al codice coordinarsi con il resto del gruppo e
 Se vi vengono in mente più modifiche da fare scrivete pure più Issue ed incaricatevi solo quelle che riuscite a gestire in breve tempo, lasciando le altre al resto del gruppo così da lavorare in parallelo.
 
 ### Scrittura del codice
+**CODIFICA:** impostare l'IDE o l'editor che utilizzate con la codifica `Unicode (UTF-8 without signature) - Codepage 65001` al fine di evitare i warning di validazione segnalati nella issue #18 .
+
 E' buona norma seguire le indicazioni delle prime lezioni di TOS: a nostra scelta se adottare gitflow o feature-flow come workflow di lavoro. Gitflow è un tantino più "costruito" però sarebbe ottimo, in ogni caso per questo progetto dovrebbbe bastare anche il feature-flow.
 
 ### Branch e Merge
@@ -17,7 +19,7 @@ Idealmente ogni Issue va sviluppata su un suo branch dedicato. Ogni branch può 
 
 Una volta effettuato il merge del branch sul trunk principale eliminare il branch temporaneo su cui si era lavorato.
 
-NOTA BENE: ogni volta che si vuole fare un merge, bisogna accertarsi che il codice sia valido XHTML. Per validare il codice: https://validator.w3.org/.
+**NOTA BENE:** ogni volta che si vuole fare un merge, bisogna accertarsi che il codice sia valido XHTML. Per validare il codice: https://validator.w3.org/.
 
 ### Commit
 Cercare di tenerli il più possibile "atomici" e collegarli sempre al codice della Issue. Atomici significa che ogni commit dovrebbe registrare solo un tipo di modifica, non una lista. Ag ogni Issue possono corrispondere più commit e viceversa.
