@@ -1,0 +1,7 @@
+# Per altre informazioni sul file con estensione editorconfig, vedere https://aka.ms/editorconfigdocs
+root = true
+
+# All files
+[*]
+charset = utf-8
+
