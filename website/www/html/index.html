@@ -19,30 +19,35 @@
     <!-- Autori della pagina -->
     <meta name="author" content="Alberto Gobbo, Marco Dalla Libera, Riccardo Cestaro, Stefano Lazzaroni" />
     <!-- Icona del bookmark -->
-    <link rel="icon" href="" />
+    <link rel="icon" href="../Images/logo_header.png" />
 
     <!-- link al CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/desktop.css" />
+    <link rel="stylesheet" href="../css/mobile.css" />
+    <link rel="stylesheet" href="../css/print.css" />
+
 </head>
 <body>
     <div id="header">
-        <h1>Pasticceria Unipd</h1>
+        <h1>Sweet Emotions</h1>
         <h2>La miglior pasticceria del Veneto</h2>
     </div>
         
     <div id="breadcrumb">
-    ...
+        <a href="login.html" title="Login">Accedi o registrati</a>
     </div>
     
     <!-- Utilizzato tag per elenco di definizioni senza alcun tipo di punto
          Modificare con tag ul (e voci li) se si desidera un elenco puntato -->
     <div id="menu">
         <dl>
-            <dt xml:lang="en">Home</dt>
-            <dt><a href="prodotti.html">Prodotti</a></dt>
-            <dt><a href="storia.html">Storia</a></dt>
-            <dt><a href="chisiamo.html">Chi siamo</a></dt>
-            <!-- Aggiungere voce per dettagli utente e storico recensioni -->
+            <dt xml:lang="en"><a href="" title="Home"><em>Home</em></a></dt>
+            <dt><a href="" title="Prodotti">Prodotti</a></dt> 
+                <!-- Nascondere successivamente le due voci sottostanti, in modo che appaiano nel momento in cui clicco sopra Prodotti-->
+                <dd><a href="paste.html" title="Paste">Paste</a></dd>
+                <dd><a href="torte.html" title="Torte">Torte</a></dd>
+            <dt><a href="storia.html" title="La storia">Storia</a></dt>
+            <dt><a href="chisiamo.html" title="Chi siamo">Chi siamo</a></dt>
         </dl>
     </div>
     <!-- Per aprire link su nuova scheda, usare questo codice JavaScript dentro il tag <a>:
@@ -50,24 +55,6 @@
         
     <div id="content">
     ...
-        <form action="" method="post">
-            <fieldset>
-                <legend>Accesso utente</legend>
-                <p>
-                    <label for="username"><span xml:lang="en">Username:</span></label>
-                    <input type="text" name="username" id="username" maxlength="20"/>
-                </p>
-                <p>
-                    <label for="password"><span xml:lang="en">Password:</span></label>
-                    <input type="password" name="password" id="password" maxlength="20"/>
-                </p>
-                <p>
-                    <input type="submit" value="Accedi"/>
-                    <input type="reset" value="Reset"/>
-                </p>    
-                <a href="registrazione.html" accesskey="r" tabindex="1" onclick="window.open(this.href);return false">Non sei ancora registrato?</a>
-            </fieldset>
-        </form>
     </div>
         
     <div id="footer">

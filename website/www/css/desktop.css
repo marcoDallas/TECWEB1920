@@ -1,0 +1,55 @@
+*{
+    margin: 0em;
+    padding: 0em;
+}
+
+html, body{
+    max-width: 2048px;
+    margin: 0em 5% 0em;
+}
+
+#header{
+    background-color: orange;
+    color: brown;
+    padding: 1em 0em 1em 0em;
+    text-align: center;
+    line-height: 2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#breadcrumb{
+    background-color: #000;
+    color: orange;
+    font-size: 1em;
+    padding: 1em;
+    text-align: right;
+}
+
+#breadcrumb a{
+    text-decoration: none;
+    color: white;
+}
+
+#menu{
+    float: left;
+    width: 20%;
+    padding: 1em;
+    font-size: 1em;
+    text-align: left;
+}
+
+#menu dl dt a{
+    text-decoration: none;
+    color: black;
+}
+
+#menu dl dd a{
+    padding-left: 1em;
+    text-decoration: none;
+    color: black;
+}
+
+#footer{
+    clear: left;
+    margin: 1em;
+}

@@ -19,10 +19,13 @@
     <!-- Autori della pagina -->
     <meta name="author" content="Alberto Gobbo, Marco Dalla Libera, Riccardo Cestaro, Stefano Lazzaroni" />
     <!-- Icona del bookmark -->
-    <link rel="icon" href="" />
+    <link rel="icon" href="../Images/logo_header.png" />
 
     <!-- link al CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/desktop.css" />
+    <link rel="stylesheet" href="../css/mobile.css" />
+    <link rel="stylesheet" href="../css/print.css" />
+
 </head>
 <body>
     <div id="header">
@@ -31,16 +34,18 @@
     </div>
 
     <div id="breadcrumb">
-    ...
+        <a href="login.html">Accedi o registrati</a>
     </div>
 
     <div id="menu">
         <dl>
-            <dt xml:lang="en"><a href="home.html">Home</a></dt>
-            <dt><a href="prodotti.html">Prodotti</a></dt>
-            <dt>Storia</dt>
-            <dt><a href="chisiamo.html">Chi siamo</a></dt>
-            <!-- Aggiungere voce per dettagli utente e storico recensioni -->
+            <dt xml:lang="en"><a href="index.html" title="Home">Home</a></dt>
+            <dt><a href="" title="Prodotti">Prodotti</a></dt> 
+                <!-- Nascondere successivamente le due voci sottostanti, in modo che appaiano nel momento in cui clicco sopra Prodotti-->
+                <dd><a href="paste.html" title="Paste">Paste</a></dd>
+                <dd><a href="torte.html" title="Torte">Torte</a></dd>
+            <dt><a href="" title="La storia"><em>Storia</em></a></dt>
+            <dt><a href="chisiamo.html" title="Chi siamo">Chi siamo</a></dt>
         </dl>
     </div>
 
@@ -49,7 +54,8 @@
     </div>
 
     <div id="footer">
-    ...
+        <p>Alberto Gobbo, Marco Dalla Libera, Riccardo Cestaro, Stefano Lazzaroni.
+           <span xml:lang="en">All rights reserved.</span></p>
     </div>
 </body>
 </html>
