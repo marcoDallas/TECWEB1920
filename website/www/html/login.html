@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">          
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+
+<head>
+    <!-- Specifico il charset -->
+    <meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+    <!-- Titolo -->
+    <title>Pagina login</title>
+    <!-- Titolo esteso dentro un meta -->
+    <meta name="title" content="" />
+    <!-- Descrizione del sito -->
+    <meta name="description" content="" />
+    <!-- Keyword principali del sito -->
+    <meta name="keywords" content="Pasticceria,Veneto" />
+    <!-- Linguaggio del contenuto -->
+    <meta name="language" content="italian it" />
+    <!-- Autori della pagina -->
+    <meta name="author" content="Alberto Gobbo, Marco Dalla Libera, Riccardo Cestaro, Stefano Lazzaroni" />
+    <!-- Icona del bookmark -->
+    <link rel="icon" href="../Images/logo_header.png" />
+
+    <!-- link al CSS -->
+    <link rel="stylesheet" href="../css/desktop.css" />
+    <link rel="stylesheet" href="../css/mobile.css" />
+    <link rel="stylesheet" href="../css/print.css" />
+    
+</head>
+<body>
+    <div id="header">
+        <h1>Sweet Emotions</h1>
+        <h2>Effettua il login</h2>
+    </div>
+        
+    <div id="breadcrumb">
+        <a href="index.html">Torna alla home</a>
+    </div>
+    
+    <div id="menu">
+    ...    
+    </div>
+        
+    <div id="content">
+    ...
+        <form action="" method="post">
+            <fieldset>
+                <legend>Accesso utente</legend>
+                <p>
+                    <label for="username"><span xml:lang="en">Username:</span></label>
+                    <input type="text" name="username" id="username" maxlength="20"/>
+                </p>
+                <p>
+                    <label for="password"><span xml:lang="en">Password:</span></label>
+                    <input type="password" name="password" id="password" maxlength="20"/>
+                </p>
+                <p>
+                    <input type="submit" value="Accedi"/>
+                    <input type="reset" value="Reset"/>
+                </p>    
+                <a href="registrazione.html" accesskey="r" tabindex="1">Non sei ancora registrato?</a>
+                <!-- onclick="window.open(this.href);return false" -->
+                <!-- Rimosso momentaneamente perchè ho possibilità di tornare sia alla pagina di login che alla pagina home -->  
+            </fieldset>
+        </form>
+    </div>
+        
+    <div id="footer">
+        <p>Alberto Gobbo, Marco Dalla Libera, Riccardo Cestaro, Stefano Lazzaroni.
+           <span xml:lang="en">All rights reserved.</span></p>
+    </div>
+</body>
+</html>
