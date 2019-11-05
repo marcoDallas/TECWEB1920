@@ -1,0 +1,36 @@
+\documentclass[a4paper, oneside, openany, dvipsnames, table]{article}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{lmodern}
+\usepackage{breakurl}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{stile}
+
+
+\begin{document}
+\copertina
+\tableofcontents
+\newpage
+\section{Introduzione}
+	\input{sez/Introduzione.tex} %può anche rimanere vuoto
+	\subsection{Abstract}
+		\input{sez/Introduzione/Abstract.tex}
+	
+	
+\newpage
+\section{Analisi}
+	\input{sez/Analisi.tex}
+	\subsection{Studio dell'utenza finale}
+		\input{sez/Analisi/stud_utenza.tex}
+	\subsection{Casi d'uso}
+		\input{sez/Analisi/Casi_Uso.tex}
+		\subsubsection{Utente generico}
+			\input{sez/Analisi/CasiUso/UtGenerico.tex}
+		\subsubsection{Amministratore}
+			\input{sez/Analisi/CasiUso/Admin.tex}
+
+\newpage
+
+\end{document}
