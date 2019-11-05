@@ -69,12 +69,69 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
-    <Content Include="www\chisiamo.html" />
-    <Content Include="www\home.html" />
-    <Content Include="www\prodotti.html" />
-    <Content Include="www\registrazione.html" />
-    <Content Include="www\storia.html" />
-    <Content Include="www\style.css" />
+    <Content Include="www\css\desktop.css" />
+    <Content Include="www\css\mobile.css" />
+    <Content Include="www\css\print.css" />
+    <Content Include="www\html\chisiamo.html" />
+    <Content Include="www\html\fallback.html" />
+    <Content Include="www\html\index.html" />
+    <Content Include="www\html\login.html" />
+    <Content Include="www\html\paste.html" />
+    <Content Include="www\html\registrazione.html" />
+    <Content Include="www\html\storia.html" />
+    <Content Include="www\html\torte.html" />
+    <Content Include="www\Images\favicon.png" />
+    <Content Include="www\Images\logo.png" />
+    <Content Include="www\Images\logo_header.png" />
+    <Content Include="www\Images\logo_transparent.png" />
+    <Content Include="www\Images\Mignon\bigne-alla-crema-al-cioccolato-grand-cru.png" />
+    <Content Include="www\Images\Mignon\bigne-alla-crema-al-pistacchio-di-bronte.png" />
+    <Content Include="www\Images\Mignon\bigne-alla-crema-chantilly.png" />
+    <Content Include="www\Images\Mignon\bigne-allo-zabaione.png" />
+    <Content Include="www\Images\Mignon\bresciana.png" />
+    <Content Include="www\Images\Mignon\cannoncino-con-crema-pasticcera.png" />
+    <Content Include="www\Images\Mignon\crostatina-al-caramello-e-cioccolato-al-latte.png" />
+    <Content Include="www\Images\Mignon\crostatina-al-cioccolato-e-arancio.png" />
+    <Content Include="www\Images\Mignon\crostatina-al-cioccolato-fondente-e-banane.png" />
+    <Content Include="www\Images\Mignon\crostatina-alla-crema-chantilly-e-frutta-secca.png" />
+    <Content Include="www\Images\Mignon\crostatina-alle-mandorle-e-ananas.png" />
+    <Content Include="www\Images\Mignon\cubo-alle-mandorle.png" />
+    <Content Include="www\Images\Mignon\cubo-cioco-mango.png" />
+    <Content Include="www\Images\Mignon\cubo-vaniglia-e-fragola.png" />
+    <Content Include="www\Images\Mignon\opera.png" />
+    <Content Include="www\Images\Mignon\tarletta-al-cioccolato-e-pera.png" />
+    <Content Include="www\Images\Mignon\tarletta-alle-mele-e-frutta-secca.png" />
+    <Content Include="www\Images\Mignon\tortino-caraibico.png" />
+    <Content Include="www\Images\Mignon\tortino-cremoso-di-nocciole.png" />
+    <Content Include="www\Images\Mignon\tortino-lamponi-e-cioccolato.png" />
+    <Content Include="www\Images\Monoporzioni\abbraccio-di-cioccolato.png" />
+    <Content Include="www\Images\Monoporzioni\amalfi.png" />
+    <Content Include="www\Images\Monoporzioni\angelina.png" />
+    <Content Include="www\Images\Monoporzioni\caramell-arancia.png" />
+    <Content Include="www\Images\Monoporzioni\cheope.png" />
+    <Content Include="www\Images\Monoporzioni\cuore-di-velluto.png" />
+    <Content Include="www\Images\Monoporzioni\exotica.png" />
+    <Content Include="www\Images\Monoporzioni\perle-e-rubini.png" />
+    <Content Include="www\Images\Monoporzioni\rugiada.png" />
+    <Content Include="www\Images\Monoporzioni\settepetali.png" />
+    <Content Include="www\Images\Torte\abbraccio-di-cioccolato.png" />
+    <Content Include="www\Images\Torte\angelina.png" />
+    <Content Include="www\Images\Torte\caramell-arancia.png" />
+    <Content Include="www\Images\Torte\crostata-ai-frutti-di-bosco.png" />
+    <Content Include="www\Images\Torte\cuore-di-velluto.png" />
+    <Content Include="www\Images\Torte\cupola-al-torroncino.png" />
+    <Content Include="www\Images\Torte\Exotica.png" />
+    <Content Include="www\Images\Torte\meringata-alla-frutta.png" />
+    <Content Include="www\Images\Torte\mimosa.png" />
+    <Content Include="www\Images\Torte\settepetali.png" />
+    <Content Include="www\Images\Torte\torta-alle-mandorle.png" />
+    <Content Include="www\Images\Torte\torta-amalfi.png" />
+    <Content Include="www\Images\Torte\torta-bresciana-zizzola.png" />
+    <Content Include="www\Images\Torte\torta-langhe.png" />
+    <Content Include="www\Images\Torte\torta-noci-caramello.png" />
+    <Content Include="www\Images\Torte\torta-perle-e-rubini.png" />
+    <Content Include="www\Images\Torte\torta-rugiada.png" />
+    <Content Include="www\Images\Torte\torta-sacher-zizzola.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,10 +145,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="www\html\cache.manifest" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="www\img\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
