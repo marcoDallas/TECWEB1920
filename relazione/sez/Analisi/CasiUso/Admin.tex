@@ -1,0 +1,18 @@
+L'amministratore è l'utente caratterizzato dall'indirizzo email fittizio \texttt{admin@admin.com}. Eredita tutti gli use case di \textit{utente loggato}, e dispone di alcune funzionalità extra:
+\begin{itemize}
+	\item \hyperref[par:PanAm]{Accesso al pannello amministratore (\ref{par:PanAm})};
+	\item \hyperref[par:InsCat]{Eliminazione di recensioni (\ref{par:InsCat})};
+\end{itemize}
+
+\paragraph{Accesso al pannello amministratore}\mbox{}\\
+\label{par:PanAm}
+L'amministratore può accedere al pannello amministratore cliccando il link \textit{Pannello Amministratore} sulla navbar. Mentre l'utente normale viene bloccato da un messaggio di errore, l'amministratore visualizza il pannello che consiste in:
+\begin{itemize}
+	\item Un form per l'inserimento di nuovi prodotti;
+	\item L'insieme di tutte le recensioni per ogni prodotto, con annessi id interno del database e bottone \textit{Elimina}.
+\end{itemize}
+
+\paragraph{Eliminazione di recensioni}\mbox{}\\
+\label{par:InsCat}
+L'amministratore potrà cancellare le recesioni, oltre che dal suo pannello di controllo, anche direttamente
+dalle recensioni stesse, cliccando l'apposito pulsante esclusivo.
