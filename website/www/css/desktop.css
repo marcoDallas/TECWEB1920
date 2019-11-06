@@ -8,6 +8,11 @@ html, body{
     min-width: 1024px;
     margin: 0em 5% 0em;
 }
+#logo{
+    height: 5em;
+    float:left;
+}
+
 
 #header{
     background-color: orange;
@@ -22,7 +27,7 @@ html, body{
     background-color: orange;
     font-size: 1em;
     padding: 1em;
-    text-align: right;
+    text-align: left;
 }
 
 #breadcrumb a{
@@ -37,6 +42,7 @@ html, body{
 }
 
 #menu{
+    clear:both;
     background-color: khaki;
     float: left;
     width: 20%;
