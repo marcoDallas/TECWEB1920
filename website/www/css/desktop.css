@@ -8,11 +8,11 @@ html, body{
     min-width: 1024px;
     margin: 0em 5% 0em;
 }
+
 #logo{
     height: 5em;
-    float:left;
+    float: left;
 }
-
 
 #header{
     background-color: orange;
@@ -24,14 +24,18 @@ html, body{
 }
 
 #breadcrumb{
+    font-family: Arial, Helvetica, sans-serif;
     background-color: orange;
     font-size: 1em;
     padding: 1em;
-    text-align: left;
 }
 
-#breadcrumb a{
-    
+#breadcrump p{
+    float: left;
+}
+
+#breadcrumb a{ 
+    float: right;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: black
@@ -42,9 +46,10 @@ html, body{
 }
 
 #menu{
-    clear:both;
-    background-color: khaki;
+    position: static;
+    clear: both;
     float: left;
+    background-color: khaki;
     width: 20%;
     padding: 1em;
     font-size: 1.5em;
@@ -52,20 +57,16 @@ html, body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#menu dl dt,#menu dl dd{
+#menu dl dt{
     padding-bottom: 1em;
 }
 
-#menu dl dt a,#menu dl dd a{
+#menu dl dt a{
     text-decoration: none;
     color: black;
 }
 
-#menu dl dd{
-    padding-left: 1em;
-}
-
-#menu dl dt a:hover, #menu dl dd a:hover{
+#menu dl dt a:hover{
     color: red;
 }
 
