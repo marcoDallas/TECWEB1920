@@ -34,30 +34,28 @@
     </div>
         
     <div id="breadcrumb">
-        <p>Ti trovi in: <string xml:lang="en">Login</string><a href="index.html" title="Login">Torna alla home</a></p>
+        <p>Ti trovi in: <strong xml:lang="en">Login</strong><a href="index.html" title="Login">Torna alla home</a></p>
     </div>
     
     <div id="menuLoginRegistrazione"></div>
         
     <div id="contentLoginRegistrazione">
         <form action="" method="post">
-            <fieldset>
-                <legend>Accesso utente</legend>
+            <fieldset id="fieldsetLogin">
+                <legend><strong>Accedi</strong></legend>
                 <p>
-                    <label for="username"><span xml:lang="en">Username:</span></label>
-                    <input type="text" name="username" id="username" maxlength="20"/>
+                    <label for="username"><span xml:lang="en">Username</span>:</label>
+                    <input type="text" name="username" placeholder="Utente login" id="username" maxlength="20" required/>
                 </p>
                 <p>
-                    <label for="password"><span xml:lang="en">Password:</span></label>
-                    <input type="password" name="password" id="password" maxlength="20"/>
+                    <label for="password"><span xml:lang="en">Password</span>:</label>
+                    <input type="password" name="password" placeholder="Password login" id="password" maxlength="20" required/>
                 </p>
                 <p>
                     <input type="submit" value="Accedi"/>
                     <input type="reset" value="Reset"/>
                 </p>    
                 <a href="registrazione.html" accesskey="r" tabindex="1">Non sei ancora registrato?</a>
-                <!-- onclick="window.open(this.href);return false" -->
-                <!-- Rimosso momentaneamente perchè ho possibilità di tornare sia alla pagina di login che alla pagina home -->  
             </fieldset>
         </form>
     </div>

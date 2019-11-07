@@ -38,7 +38,7 @@ html, body{
     float: right;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
-    color: black
+    color: black;
 }
 
 #breadcrumb a:hover{
@@ -62,6 +62,10 @@ html, body{
 #menu dl dt a{
     text-decoration: none;
     color: black;
+}
+
+#menu dl dt a:visited{
+    color: purple;
 }
 
 #menu dl dt a:hover{
@@ -89,6 +93,28 @@ html, body{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
+
 #informazioniFooter{
     margin-bottom: 2em;
+}
+
+form{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form legend{
+    text-align: center;
+}
+
+#fieldsetLogin{
+    margin: 0em 25% 0em;
+}
+
+form fieldset{
+    padding: 1em 5% 1em;
+    border: 1px solid brown;
+}
+
+form label, form input{
+    margin: 1em;
 }
