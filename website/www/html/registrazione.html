@@ -39,36 +39,46 @@
 
     <div id="menuLoginRegistrazione"></div>
 
-    <!-- Form di registrazione con nome, cognome, username utente e password(che dev'essere confermata)
-         Username e password utilizzati solo per l'accesso al form della pagina Home
-         Nome e cognome verranno visualizzati sulla recensione che rilascerà un determinato utente loggato -->
+    <!-- Nome e cognome verranno visualizzati sulla recensione che rilascerà un determinato utente loggato -->
     <div id="contentLoginRegistrazione">
         <form action="" method="post">
             <fieldset>
-                <legend>Nuova registrazione</legend>
+                <legend><strong>Registrazione nuovo utente</strong></legend>
                 <p>
-                    <label for="name"><span xml:lang="en">Nome:</span></label>
-                    <input type="text" name="name" id="name" maxlength="20"/>
-                    <label for="surname"><span xml:lang="en">Cognome:</span></label>
-                    <input type="text" name="surname" id="surname" maxlength="20"/>
+                    <label for="name">Nome:</label>
+                    <input type="text" name="name" id="name" placeholder="Mario" maxlength="20" required/>
                 </p>
                 <p>
-                    <label for="username"><span xml:lang="en">Username:</span></label>
-                    <input type="text" name="username" id="username" maxlength="20"/>
+                    <label for="surname">Cognome:</label>
+                    <input type="text" name="surname" id="surname" placeholder="Rossi" maxlength="20" required/>
                 </p>
                 <p>
-                    <label for="password"><span xml:lang="en">Password:</span></label>
-                    <input type="password" name="password" id="password" maxlength="20"/>
+                    <label for="birthdate">Data di nascita:</label>
+                    <input type="date" name="birthdate" id="birthdate" required/>
                 </p>
                 <p>
-                    <label for="confirmPassword"><span xml:lang="en">Conferma password:</span></label>
-                    <input type="password" name="confirmPassword" id="confirmPassword" maxlength="20"/>
+                    <label for="mail"><span xml:lang="en">Mail</span>:</label>
+                    <input type="email" name="mail" placeholder="example@gmail.com" id="name" required/>
                 </p>
                 <p>
-                    <input type="submit" value="Registrati"/>
+                    <label for="phone">Numero di cellulare:</label>
+                    <input type="tel" name="phone" placeholder="3xxxxxxxxx" id="phone"/>
+                </p>
+                <p>
+                    <label for="username"><span xml:lang="en">Username</span>:</label>
+                    <input type="text" name="username" placeholder="Utente login" id="username" maxlength="20"/>
+                </p>
+                <p>
+                    <label for="password"><span xml:lang="en">Password</span>:</label>
+                    <input type="password" name="password" placeholder="Password login" id="password" maxlength="20"/>
+                </p>
+                <p>
+                    <label for="confirmPassword">Conferma <span xml:lang="en">password</span>:</label>
+                    <input type="password" name="confirmPassword" placeholder="Conferma password login" id="confirmPassword" maxlength="20"/>
+                </p>
+                <p>
+                    <span id="lastRowRegistrazione"><input type="submit" value="Registrati"/><a href="login.html" accesskey="r" tabindex="1">Login</a></span>
                 </p> 
-                <a href="login.html" accesskey="r" tabindex="1">Login</a>
-                
             </fieldset>
         </form>
     </div>
