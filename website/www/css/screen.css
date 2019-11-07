@@ -64,9 +64,13 @@ html, body{
     color: black;
 }
 
+/*
+
 #menu dl dt a:visited{
     color: purple;
 }
+
+Da rivedere: non funziona*/
 
 #menu dl dt a:hover{
     color: red;
