@@ -6,7 +6,8 @@
 html, body{
     max-width: 2048px;
     min-width: 1024px;
-    margin: 0em 5% 0em;
+    margin: 0em 7% 0em;
+    background-color: #FFEECC;
 }
 
 #logo{
@@ -15,8 +16,8 @@ html, body{
 }
 
 #header{
-    background-color: burlywood;
-    color: brown;
+    background-color: #EC7205;
+    color: #924500;
     padding: 1em 0em 1em 0em;
     text-align: center;
     line-height: 2;
@@ -25,7 +26,8 @@ html, body{
 
 #breadcrumb{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: burlywood;
+    background-color: #BC5800;
+    color:white;
     font-size: 1em;
     padding: 1em;
 }
@@ -37,8 +39,7 @@ html, body{
 #breadcrumb a{ 
     float: right;
     font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    color: black;
+    color: white;
 }
 
 #breadcrumb a:hover{
@@ -81,7 +82,7 @@ Da rivedere: non funziona*/
 }
 
 #content{
-    background-color: khaki;
+    background-color: #FFF7E6;
     margin-left: 20%;
     padding: 1% 1%;
     text-align: center;
@@ -96,6 +97,8 @@ Da rivedere: non funziona*/
     padding: 2%;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    background-color: #BC5800;
+    color:white;
 }
 
 #informazioniFooter{
