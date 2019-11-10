@@ -68,21 +68,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="database\Afferenza.txt" />
+    <Content Include="database\database.sql" />
+    <Content Include="database\Prodotto.txt" />
+    <Content Include="database\SchemaConcettuale.png" />
+    <Content Include="database\Utente.txt" />
     <Content Include="Web.config" />
     <Content Include="www\css\screen.css" />
     <Content Include="www\css\print.css" />
     <Content Include="www\html\chisiamo.html" />
+    <Content Include="www\html\contatti.html" />
     <Content Include="www\html\fallback.html" />
     <Content Include="www\html\index.html" />
-    <Content Include="www\html\login.html" />
+    <Content Include="www\html\map.html" />
+    <Content Include="www\html\mapsgoogle.html" />
     <Content Include="www\html\paste.html" />
     <Content Include="www\html\registrazione.html" />
     <Content Include="www\html\storia.html" />
     <Content Include="www\html\torte.html" />
     <Content Include="www\Images\favicon.png" />
     <Content Include="www\Images\logo.png" />
-    <Content Include="www\Images\logo_header.png" />
-    <Content Include="www\Images\logo_transparent.png" />
     <Content Include="www\Images\Mignon\bigne-alla-crema-al-cioccolato-grand-cru.png" />
     <Content Include="www\Images\Mignon\bigne-alla-crema-al-pistacchio-di-bronte.png" />
     <Content Include="www\Images\Mignon\bigne-alla-crema-chantilly.png" />
@@ -137,6 +142,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".editorconfig" />
+    <Content Include="database\ASPASIA.pdf" />
+    <Content Include="database\SchemaConcettuale.drawio" />
+    <Content Include="database\SchemaLogico.pdf" />
+    <Content Include="database\SchemaLogico.vsdx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
