@@ -12,7 +12,7 @@ html, body{
 
 #logo{
     height: 10em;
-    float:left;
+    float: left;
 }
 
 #header{
@@ -30,20 +30,43 @@ html, body{
     color:white;
     font-size: 1em;
     padding: 1em;
+    height: 4.5em;
 }
 
-#breadcrump p{
+#path{
     float: left;
 }
 
-#breadcrumb a{ 
+#login{
+    float: right;
+    padding-right: 1em;
+}
+
+#login form label, #login form input{
+    margin: 0.5em;
+}
+
+#login span{
+    text-align: center;
+}
+
+#breadcrumbRegistrazione{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #BC5800;
+    color:white;
+    font-size: 1em;
+    padding: 1em;
+}
+
+#breadcrumbRegistrazione a{ 
     float: right;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    text-decoration: none;
 }
 
-#breadcrumb a:hover{
-    font-weight: bold;
+#breadcrumbRegistrazione a:hover{
+    text-decoration: underline;
 }
 
 #menu{
