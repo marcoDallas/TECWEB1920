@@ -8,6 +8,7 @@ html, body{
     min-width: 1024px;
     margin: 0em 7% 0em;
     background-color: #FFEECC;
+    height: 100%;
 }
 
 #logo{
@@ -109,6 +110,7 @@ Da rivedere: non funziona*/
     margin-left: 20%;
     padding: 1% 1%;
     text-align: center;
+    min-height: 58.8%;
 }
 
 #contentLoginRegistrazione{
