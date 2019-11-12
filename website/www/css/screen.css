@@ -168,6 +168,10 @@ form label, form input{
     padding: 0.5em;
 }
 
+#content >dl{
+    padding: 1em;
+}
+
 #content{
     background-color: white;
     text-align: center;
