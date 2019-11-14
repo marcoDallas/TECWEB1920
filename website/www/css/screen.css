@@ -135,6 +135,17 @@ form label, form input{
     padding: 0.5em 0 0.5em 0;
 }
 
+#breadcrumb a{
+    float: right;
+    padding-right: 1em;
+    color: white;
+    text-decoration: none;
+}
+
+#breadcrumb a:hover{
+    text-decoration: underline;
+}
+
 #login *{
     display: block;
 }
@@ -150,20 +161,18 @@ form label, form input{
     margin: 0.5em;
 }
 
-#registrazione{
-    background-color: #BC5800;
-    color:white;
-    padding: 1em;
+#registrationForm{
+    margin: 5% 26%;
+    width: 48%;
 }
 
-#registrazione a{ 
-    float: right;
-    color: white;
-    text-decoration: none;
+#registrationForm input{
+    width: 20em;
 }
 
-#registrazione a:hover{
-    text-decoration: underline;
+#registrationForm input[type="submit"]{
+    height: 2em;
+    width: 10em;
 }
 
 #general_container{
@@ -192,11 +201,6 @@ form label, form input{
     color: red;
 }
 
-#menuLoginRegistrazione{
-    display: none;
-}
-
-
 #content >p{
     padding: 1.5em;
 }
@@ -214,9 +218,17 @@ form label, form input{
     text-align: center;
 }
 
+#contentContatti{
+    text-align: left;
+    padding-left: 2.5em;
+}
 
-#contentLoginRegistrazione{
-    padding: 5% 15% 5%;
+#contentContatti p{
+    padding: 1em;
+}
+
+h3{
+    color:red;
 }
 
 #footer > p{
