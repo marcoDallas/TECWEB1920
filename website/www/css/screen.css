@@ -1,83 +1,179 @@
 *{
     margin: 0em;
     padding: 0em;
+    max-width:100%;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
 }
 
-html, body{
-    max-width: 2048px;
-    min-width: 1024px;
-    margin: 0em 7% 0em;
-    background-color: #FFEECC;
-    height: 100%;
+html{
+    box-sizing: border-box;
 }
+
+body{
+    max-width: 1200px;
+    min-width: 360px;
+    margin: auto;
+    background-color: #FFAC61;
+}
+
+/*tags*/
+input[type=text],input[type=password]{
+    width: 8em;
+}
+
+form legend{
+    text-align: center;
+}
+form fieldset{
+    padding: 1em 5% 1em;
+    border: 1px solid brown;
+}
+form label, form input{
+    margin: 1em;
+}
+
+/*containers*/
+.box{
+    overflow: hidden;
+}
+
+.box > *{
+    float: left;
+    display: inline-block;
+}
+/* mobile */
+.thin_column{
+    width: 15%;
+}
+.a_quarter_column{
+    width: 25%;
+}
+.one_third_column{
+    width: 33.33%;
+}
+.half_column{
+    width: 50%;
+}
+.three_quarter_column{
+    width: 75%;
+}
+.large_column{
+    width: 85%;
+}
+.a_column{
+    width: 100%;
+}
+/* desktop */
+.thin_column_xl{
+    width: 15%;
+}
+.a_quarter_column_xl{
+    width: 25%;
+}
+.one_third_column_xl{
+    width: 33.33%;
+}
+.half_column_xl{
+    width: 50%;
+}
+.three_quarter_column_xl{
+    width: 75%;
+}
+.large_column_xl{
+    width: 85%;
+}
+.a_column_xl{
+    width: 100%;
+}
+/*other*/
+
+.hidden{
+    font-size: 0px;
+    text-indent:100%;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+.element{
+    background-color: #FFF7E6;
+    border: 0.1em solid #FFAC61;
+}
+
+.element p{
+    padding: 2em;
+}
+.element strong{
+    display: block;
+}
+
+/*specific*/
 
 #logo{
-    height: 10em;
-    float: left;
+    content: url("../images/logo.png");
+    padding-left: 1em;
+    min-height: 4.3em;
+    min-width: 9.7em;
 }
-
+#header h2{
+    text-align: center;
+    padding-top: 2em;
+}
 #header{
+    min-height: 9em;
     background-color: #EC7205;
     color: #924500;
-    padding: 1em 0em 1em 0em;
-    text-align: center;
-    line-height: 2;
-    font-family: Arial, Helvetica, sans-serif;
+}
+
+#breadcrumb p{
+    padding-left: 1em;
 }
 
 #breadcrumb{
-    font-family: Arial, Helvetica, sans-serif;
     background-color: #BC5800;
     color:white;
-    font-size: 1em;
-    padding: 1em;
-    height: 4.5em;
+    padding: 0.5em 0 0.5em 0;
 }
 
-#path{
-    float: left;
+#login *{
+    display: block;
 }
 
+#login a{
+    font-size: 0.8em;
+}
 #login{
-    float: right;
-    padding-right: 1em;
+    padding: 0 1em 1em 1em;
+    overflow:hidden;
 }
-
-#login form label, #login form input{
+#login form label, #login form input, #login a{
     margin: 0.5em;
 }
 
-#login span{
-    text-align: center;
-}
-
-#breadcrumbRegistrazione{
-    font-family: Arial, Helvetica, sans-serif;
+#registrazione{
     background-color: #BC5800;
     color:white;
-    font-size: 1em;
     padding: 1em;
 }
 
-#breadcrumbRegistrazione a{ 
+#registrazione a{ 
     float: right;
-    font-family: Arial, Helvetica, sans-serif;
     color: white;
     text-decoration: none;
 }
 
-#breadcrumbRegistrazione a:hover{
+#registrazione a:hover{
     text-decoration: underline;
 }
 
+#general_container{
+    background-color: #FFF7E6;
+}
+
 #menu{
-    clear: both;
-    float: left;
-    width: 15%;
     padding: 1em;
+    overflow:hidden;
     font-size: 1.5em;
-    overflow: hidden;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 #menu dl dt{
@@ -88,14 +184,9 @@ html, body{
     text-decoration: none;
     color: black;
 }
-
-/*
-
 #menu dl dt a:visited{
     color: purple;
 }
-
-Da rivedere: non funziona*/
 
 #menu dl dt a:hover{
     color: red;
@@ -105,48 +196,38 @@ Da rivedere: non funziona*/
     display: none;
 }
 
-#content{
-    background-color: #FFF7E6;
-    margin-left: 20%;
-    padding: 1% 1%;
-    text-align: center;
-    min-height: 58.8%;
+
+#content >p{
+    padding: 1.5em;
 }
+
+#content >h1{
+    padding: 0.5em;
+}
+
+#content >dl{
+    padding: 1em;
+}
+
+#content{
+    background-color: white;
+    text-align: center;
+}
+
 
 #contentLoginRegistrazione{
     padding: 5% 15% 5%;
 }
 
-#footer{
-    clear: left;
-    padding: 2%;
-    font-family: Arial, Helvetica, sans-serif;
+#footer > p{
     text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#footer{
     background-color: #BC5800;
     color:white;
 }
 
-#informazioniFooter{
-    margin-bottom: 2em;
-}
 
-form{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-form legend{
-    text-align: center;
-}
-
-#fieldsetLogin{
-    margin: 0em 25% 0em;
-}
-
-form fieldset{
-    padding: 1em 5% 1em;
-    border: 1px solid brown;
-}
-
-form label, form input{
-    margin: 1em;
-}
