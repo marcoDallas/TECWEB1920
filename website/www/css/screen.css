@@ -6,11 +6,15 @@
     line-height: 1.5em;
 }
 
-html{
+html {
     box-sizing: border-box;
+    height: 100%; /* riferimento per le percentuali successive */
+    width: 100%; /* riferimento per le percentuali successive */
 }
 
-body{
+body {
+    height: 100%; /* riferimento per le percentuali successive */
+    width: 100%; /* riferimento per le percentuali successive */
     max-width: 1200px;
     min-width: 360px;
     margin: auto;
@@ -106,10 +110,10 @@ form label, form input{
     padding-left: 1em;
 }
 
-#breadcrumb{
+#breadcrumb {
     background-color: #BC5800;
-    color:white;
-    padding: 0.5em 0 0.5em 0;
+    color: white;
+    padding: 0.575em 0 0.575em 0;
 }
 
 #breadcrumb a{
@@ -175,6 +179,7 @@ form label, form input{
 
 #general_container{
     background-color: #FFF7E6;
+    min-height: 69%;
 }
 
 #menu{
