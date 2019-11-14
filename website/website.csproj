@@ -76,7 +76,6 @@
     <Content Include="Web.config" />
     <Content Include="www\css\screen.css" />
     <Content Include="www\css\print.css" />
-    <Content Include="www\html\chisiamo.html" />
     <Content Include="www\html\contatti.html" />
     <Content Include="www\html\fallback.html" />
     <Content Include="www\html\index.html" />
@@ -142,7 +141,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".editorconfig" />
-    <Content Include="database\ASPASIA.pdf" />
     <Content Include="database\SchemaConcettuale.drawio" />
     <Content Include="database\SchemaLogico.pdf" />
     <Content Include="database\SchemaLogico.vsdx" />
