@@ -42,9 +42,9 @@ form label, form input{
     float: left;
     display: inline-block;
 }
-/* mobile */
+/* desktop */
 .thin_column{
-    width: 15%;
+    width: 20%;
 }
 .a_quarter_column{
     width: 25%;
@@ -59,35 +59,12 @@ form label, form input{
     width: 75%;
 }
 .large_column{
-    width: 85%;
+    width: 60%;
 }
 .a_column{
     width: 100%;
 }
-/* desktop */
-.thin_column_xl{
-    width: 15%;
-}
-.a_quarter_column_xl{
-    width: 25%;
-}
-.one_third_column_xl{
-    width: 33.33%;
-}
-.half_column_xl{
-    width: 50%;
-}
-.three_quarter_column_xl{
-    width: 75%;
-}
-.large_column_xl{
-    width: 85%;
-}
-.a_column_xl{
-    width: 100%;
-}
-/*other*/
-
+/* other */
 .hidden{
     font-size: 0px;
     text-indent:100%;
@@ -135,6 +112,10 @@ form label, form input{
     padding: 0.5em 0 0.5em 0;
 }
 
+.login_column{
+    float: right;
+}
+
 #login *{
     display: block;
 }
@@ -166,18 +147,34 @@ form label, form input{
     text-decoration: underline;
 }
 
+#news_container{
+    border: 1px solid;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+}
+
+.news_title{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.news_content{
+    padding-bottom: 1em;
+    border-bottom: 1px dashed;
+}
+
 #general_container{
     background-color: #FFF7E6;
 }
 
 #menu{
-    padding: 1em;
     overflow:hidden;
     font-size: 1.5em;
 }
 
 #menu dl dt{
-    padding-bottom: 1em;
+    padding: 0.5em 1em 0em 1em;
 }
 
 #menu dl dt a{
