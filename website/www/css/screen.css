@@ -333,7 +333,9 @@ h3 {
     #header h2 {
         font-size: 1.7em;
         text-align: right;
-        padding: 2em 5% 0em 0em;
+        margin-top: 5%;
+        padding-right: 5%;
+        margin-left: 25%;
     }
 
     #header {
