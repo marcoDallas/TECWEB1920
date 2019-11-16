@@ -63,18 +63,29 @@
                     <fieldset id="fieldsetLogin">
                         <legend><strong>Accedi</strong></legend>
                         <label for="username"><span xml:lang="en">Username</span></label>
-                        <input type="text" name="username" placeholder="Username" id="username" maxlength="20" tabindex="6" required="required"/>
+                        <input type="text" name="username" placeholder="Username" id="username" maxlength="20" tabindex="6" required="required" />
                         <label for="password"><span xml:lang="en">Password</span></label>
-                        <input type="password" name="password" placeholder="Password" id="password" maxlength="20" tabindex="7" required="required"/>
-                        <input type="submit" value="Accedi" tabindex="8"/>
+                        <input type="password" name="password" placeholder="Password" id="password" maxlength="20" tabindex="7" required="required" />
+                        <input type="submit" value="Accedi" tabindex="8" />
                         <a href="registrazione.html" tabindex="9"> Non sei ancora registrato?</a>
                     </fieldset>
                 </form>
             </div>
-            <div id="news_container">
+            <div class="news_container">
                 <p class="news_title">Sconti speciali a natale!</p>
                 <p class="news_content"> dal 15 dicembre al 15 gennaio se prendi 2 torte la meno cara la paghi la metà</p>
             </div>
+            <div class="news_container">
+                <a class="news_title" href="../html/contatti.html">
+                    Vieni a trovarci!
+                    <span id="maps_icon"></span> <!-- tag vuoto per l'icona -->
+                </a>
+                <p class="news_content">
+                    <strong><abbr title="lunedì">lun</abbr>-<abbr title="venerdì">ven</abbr></strong>: 7:00 - 12:30 / 14:30 - 18:00,&ensp;
+                    <strong><abbr title="sabato">sab</abbr>-<abbr title="domenica">dom</abbr></strong>: 7:00 - 12:30
+                </p>
+            </div>
+
         </div>
         <div id="content" class="large_column">
             <p>
@@ -101,9 +112,19 @@
     </div>
     <div id="footer" class="box a_column">
         <p class="a_column">
-            <strong>Pasticceria Padovana</strong>&ensp;<strong><abbr title="Telefono">Tel</abbr></strong>: 0421-00000&ensp;<strong>Indirizzo</strong>: Via Belzoni 1&ensp; 
-            <strong>Orari</strong>: <abbr title="lunedì">lun</abbr>-<abbr title="venerdì">ven</abbr>: 8:00-22:00,&ensp;
-            <abbr title="sabato">sab</abbr>-<abbr title="domenica">dom</abbr>: chiuso
+            <span class="footer_element">
+                <strong>Pasticceria Padovana</strong>&ensp;
+            </span>
+            <span class="footer_element">
+                <strong><abbr title="Telefono">Tel</abbr></strong>: 0421-00000&ensp;
+            </span class="footer_element">
+            <span class="footer_element">
+                <strong>Indirizzo</strong>: Via Belzoni 1&ensp;
+            </span>
+            <span class="footer_element">
+                <strong>Orari</strong>: <abbr title="lunedì">lun</abbr>-<abbr title="venerdì">ven</abbr>: 7:00 - 12:30 / 14:30 - 18:00,&ensp;
+                <abbr title="sabato">sab</abbr>-<abbr title="domenica">dom</abbr>: 7:00 - 12:30
+            </span>
         </p>
         <p class="a_column">
             <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Validazione XHTML 1.0 Strict"/> 

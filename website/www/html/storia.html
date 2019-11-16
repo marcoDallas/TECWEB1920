@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">         
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" manifest="cache.manifest">
@@ -31,21 +31,28 @@
         <div class="a_quarter_column">
             <a href="index.html" title="Vai alla pagina principale"><h1 id="logo">Pasticceria Padovana</h1></a>
         </div>
-        <div class="three_quarter_column">
+        <div class="three_quarter_column mobile_hidden">
             <h2>Dietro ad una grande pasticceria, c'è anche una grande tradizione</h2>
         </div>
     </div>
     <div id="breadcrumb" class="box a_column"><p>Ti trovi in: <strong>Storia</strong></p></div>
     <div id="general_container" class="box a_column">
-        <div id="menu" class="thin_column">
-            <dl>
-                <dt class="hidden"><a href="#content" tabindex="1">Vai al contenuto</a></dt>
-                <dt><a href="index.html" xml:lang="en" tabindex="2">Home</a></dt>
-                <dt><a href="paste.html" tabindex="2">Paste</a></dt>
-                <dt><a href="torte.html" tabindex="3">Torte</a></dt>
-                <dt><strong>Storia</strong></dt>
-                <dt><a href="contatti.html" tabindex="5">Contatti</a></dt>
-            </dl>
+        <div id="menu_container" class="thin_column">
+            <div id="menu" class="mobile_hidden">
+                <dl>
+                    <dt class="hidden"><a href="#content" tabindex="1">Vai al contenuto</a></dt>
+                    <dt><a href="index.html" xml:lang="en" tabindex="2">Home</a></dt>
+                    <dt><a href="paste.html" tabindex="2">Paste</a></dt>
+                    <dt><a href="torte.html" tabindex="3">Torte</a></dt>
+                    <dt><strong>Storia</strong></dt>
+                    <dt><a href="contatti.html" tabindex="5">Contatti</a></dt>
+                </dl>
+            </div>
+            <div id="menu_icon" onclick="toggleMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </div>
         <div class="thin_column login_column">
             <div id="login">
@@ -53,66 +60,86 @@
                     <fieldset id="fieldsetLogin">
                         <legend><strong>Accedi</strong></legend>
                         <label for="username"><span xml:lang="en">Username</span></label>
-                        <input type="text" name="username" placeholder="Username" id="username" maxlength="20" tabindex="6" required="required"/>
+                        <input type="text" name="username" placeholder="Username" id="username" maxlength="20" tabindex="6" required="required" />
                         <label for="password"><span xml:lang="en">Password</span></label>
-                        <input type="password" name="password" placeholder="Password" id="password" maxlength="20" tabindex="7" required="required"/>
-                        <input type="submit" value="Accedi" tabindex="8"/>
+                        <input type="password" name="password" placeholder="Password" id="password" maxlength="20" tabindex="7" required="required" />
+                        <input type="submit" value="Accedi" tabindex="8" />
                         <a href="registrazione.html" tabindex="9"> Non sei ancora registrato?</a>
                     </fieldset>
                 </form>
             </div>
-            <div id="news_container">
+            <div class="news_container">
                 <p class="news_title">Sconti speciali a natale!</p>
                 <p class="news_content"> dal 15 dicembre al 15 gennaio se prendi 2 torte la meno cara la paghi la metà</p>
             </div>
+            <div class="news_container">
+                <a class="news_title" href="../html/contatti.html">
+                    Vieni a trovarci!
+                    <span id="maps_icon"></span> <!-- tag vuoto per l'icona -->
+                </a>
+                <p class="news_content">
+                    <strong><abbr title="lunedì">lun</abbr>-<abbr title="venerdì">ven</abbr></strong>: 7:00 - 12:30 / 14:30 - 18:00,&ensp;
+                    <strong><abbr title="sabato">sab</abbr>-<abbr title="domenica">dom</abbr></strong>: 7:00 - 12:30
+                </p>
+            </div>
         </div>
         <div id="content" class="large_column">
-            <img src="../images/logo.png"/>
-           <p>
-                La storia della nostra pasticceria si sviluppa dagli albori dell’anno 1946, a quasi un anno dalla Liberazione del 
-                nazifascismo in Italia. Una data simbolica che segnò l’inizio della pace, della rinascita e della ricostruzione del 
-                territorio nazionale. Il fondatore, della quale si sa solo che si facesse chiamare “Maestro”, aveva un obiettivo chiaro e 
-                preciso: portare felicità e dolcezza nelle case di tutti. Fu così che iniziò la sua attività, inizialmente nata per 
-                distribuire <span xml:lang=”fr”>brioche</span> alla crema e bignè al cioccolato ad un costo accessibile per tutte le famiglie. 
-                La produzione si sviluppò inizialmente nella casa del “Maestro”, che si diceva preparasse tutti i dolciumi insieme a sua 
-                madre, dalla quale successivamente ereditò l’esperienza e, in particolar modo, le sue ricette. Ricette che tutt’ora 
+            <img src="../images/logo.png" />
+            <p>
+                La storia della nostra pasticceria si sviluppa dagli albori dell’anno 1946, a quasi un anno dalla Liberazione del
+                nazifascismo in Italia. Una data simbolica che segnò l’inizio della pace, della rinascita e della ricostruzione del
+                territorio nazionale. Il fondatore, della quale si sa solo che si facesse chiamare “Maestro”, aveva un obiettivo chiaro e
+                preciso: portare felicità e dolcezza nelle case di tutti. Fu così che iniziò la sua attività, inizialmente nata per
+                distribuire <span xml:lang=”fr”>brioche</span> alla crema e bignè al cioccolato ad un costo accessibile per tutte le famiglie.
+                La produzione si sviluppò inizialmente nella casa del “Maestro”, che si diceva preparasse tutti i dolciumi insieme a sua
+                madre, dalla quale successivamente ereditò l’esperienza e, in particolar modo, le sue ricette. Ricette che tutt’ora
                 rimangono segrete e che solo i dipendenti della nostra attività possono venirne a conoscenza.
-           </p>
-           <p>
-                L’attività di distribuzione dei dolciumi continuò per 6 anni abbondanti, fino a quando nel 1952 avvenne la svolta. 
-                Tutto nasce grazie ad un fratello della madre del “Maestro”, economicamente benestante: accorgendosi delle potenzialità 
-                della sua produzione di dolciumi, decise di regalare al “Maestro” un locale sfitto di sua proprietà, in Piazza dei Signori 
-                nel centro di Padova. Fu così che, dopo qualche mese di ristrutturazione, nacque il suo sogno sotto l’insegna di “Pasticceria 
+            </p>
+            <p>
+                L’attività di distribuzione dei dolciumi continuò per 6 anni abbondanti, fino a quando nel 1952 avvenne la svolta.
+                Tutto nasce grazie ad un fratello della madre del “Maestro”, economicamente benestante: accorgendosi delle potenzialità
+                della sua produzione di dolciumi, decise di regalare al “Maestro” un locale sfitto di sua proprietà, in Piazza dei Signori
+                nel centro di Padova. Fu così che, dopo qualche mese di ristrutturazione, nacque il suo sogno sotto l’insegna di “Pasticceria
                 Padovana”.
             </p>
             <p>
-                Da quel momento, il “Maestro” inizia a produrre e vendere i suoi prodotti direttamente nel locale, insieme ad un team di 
-                qualità ed esperienza. Locale che attualmente è situato nella stessa posizione, fermi nell’intenzione di continuare a scrivere 
+                Da quel momento, il “Maestro” inizia a produrre e vendere i suoi prodotti direttamente nel locale, insieme ad un team di
+                qualità ed esperienza. Locale che attualmente è situato nella stessa posizione, fermi nell’intenzione di continuare a scrivere
                 la storia di “Pasticceria Padovana” nel luogo in qui tutto è nato.
-                Del “Maestro” solo si sa che ha lasciato le redini della sua attività nel 1990, a causa della vecchiaia. 
-                Di lui si è cercato invano di scoprire la sua vera identità, ma è proprio per questo “velo di mistero” che la nostra 
+                Del “Maestro” solo si sa che ha lasciato le redini della sua attività nel 1990, a causa della vecchiaia.
+                Di lui si è cercato invano di scoprire la sua vera identità, ma è proprio per questo “velo di mistero” che la nostra
                 pasticceria è diventata famosa (oltre alla qualità dei nostri prodotti) e alleggia ancora il suo nome come una sorta di divinità.
                 Il resto è storia.
-            </p>    
-                “Pasticceria Padovana” concorre ogni anno per il “Campionato Nazionale di Pasticceria” portando in concorso un pasticcere. 
-                Negli ultimi vent’anni ci siamo sempre posizionati nelle prime 3 posizioni, vincendo per ben 9 volte il titolo. Abbiamo 
-                partecipato anche nelle ultime 5 edizioni del “Campionato Mondiale di Pasticceria”, e nel 2018 siamo arrivati in quinta 
-                posizione. Un orgoglio per la nostra pasticceria, che ha raggiunto grandi traguardi, e per il nostro territorio che ci offre 
-                la miglior materia prima, sempre ed esclusivamente in nome del mitico “Maestro”.
+            </p>
+            “Pasticceria Padovana” concorre ogni anno per il “Campionato Nazionale di Pasticceria” portando in concorso un pasticcere.
+            Negli ultimi vent’anni ci siamo sempre posizionati nelle prime 3 posizioni, vincendo per ben 9 volte il titolo. Abbiamo
+            partecipato anche nelle ultime 5 edizioni del “Campionato Mondiale di Pasticceria”, e nel 2018 siamo arrivati in quinta
+            posizione. Un orgoglio per la nostra pasticceria, che ha raggiunto grandi traguardi, e per il nostro territorio che ci offre
+            la miglior materia prima, sempre ed esclusivamente in nome del mitico “Maestro”.
             </p>
         </div>
-    </div>
-    <div id="footer" class="box a_column">
-        <p class="a_column">
-            <strong>Pasticceria Padovana</strong>&ensp;<strong><abbr title="Telefono">Tel</abbr></strong>: 0421-00000&ensp;<strong>Indirizzo</strong>: Via Belzoni 1&ensp; 
-            <strong>Orari</strong>: <abbr title="lunedì">lun</abbr>-<abbr title="venerdì">ven</abbr>: 8:00-22:00,&ensp;
-            <abbr title="sabato">sab</abbr>-<abbr title="domenica">dom</abbr>: chiuso
-        </p>
-        <p class="a_column">
-            <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Validazione XHTML 1.0 Strict"/> 
-            Alberto Gobbo, Marco Dalla Libera, Riccardo Cestaro, Stefano Lazzaroni. <span xml:lang="en">All rights reserved.</span> 
-            <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Validazione CSS" />
-        </p>
+        <div id="footer" class="box a_column">
+            <p class="a_column">
+                <span class="footer_element">
+                    <strong>Pasticceria Padovana</strong>&ensp;
+                </span>
+                <span class="footer_element">
+                    <strong><abbr title="Telefono">Tel</abbr></strong>: 0421-00000&ensp;
+                </span>
+                <span class="footer_element">
+                    <strong>Indirizzo</strong>: Via Belzoni 1&ensp;
+                </span>
+                <span class="footer_element">
+                    <strong>Orari</strong>: <abbr title="lunedì">lun</abbr>-<abbr title="venerdì">ven</abbr>: 7:00 - 12:30 / 14:30 - 18:00,&ensp;
+                    <abbr title="sabato">sab</abbr>-<abbr title="domenica">dom</abbr>: 7:00 - 12:30
+                </span>
+            </p>
+            <p class="a_column">
+                <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Validazione XHTML 1.0 Strict" />
+                Alberto Gobbo, Marco Dalla Libera, Riccardo Cestaro, Stefano Lazzaroni. <span xml:lang="en">All rights reserved.</span>
+                <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Validazione CSS" />
+            </p>
+        </div>
     </div>
 </body>
 </html>
