@@ -1,7 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">         
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" manifest="cache.manifest">
+<!--<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" manifest="cache.manifest">-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
 <head>
     <!-- Specifico il charset -->
@@ -32,7 +33,7 @@
 <body>
     <div id="header" class="box a_column">
         <div class="a_quarter_column">
-            <a href="index.html" title="Vai alla pagina principale"><h1 id="logo">Pasticceria Padovana</h1></a>
+            <h1 id="logo"><a href="index.html" title="Vai alla pagina principale">Pasticceria Padovana</a></h1>
         </div>
         <div class="three_quarter_column mobile_hidden">
             <h2>Una vasta gamma di torte, a voi basta solo scegliere</h2>
@@ -63,9 +64,11 @@
                     <fieldset id="fieldsetLogin">
                         <legend><strong>Accedi</strong></legend>
                         <label for="username"><span xml:lang="en">Username</span></label>
-                        <input type="text" name="username" placeholder="Username" id="username" maxlength="20" tabindex="6" required="required" />
+                        <!--<input type="text" name="username" placeholder="Username" id="username" maxlength="20" tabindex="6" required="required" />-->
+                        <input type="text" name="username" id="username" maxlength="20" tabindex="6" />
                         <label for="password"><span xml:lang="en">Password</span></label>
-                        <input type="password" name="password" placeholder="Password" id="password" maxlength="20" tabindex="7" required="required" />
+                        <!--<input type="password" name="password" placeholder="Password" id="password" maxlength="20" tabindex="7" required="required" />-->
+                        <input type="password" name="password" id="password" maxlength="20" tabindex="7" />
                         <input type="submit" value="Accedi" tabindex="8" />
                         <a href="registrazione.html" tabindex="9"> Non sei ancora registrato?</a>
                     </fieldset>
@@ -87,10 +90,10 @@
             </div>
         </div>
         <div id="content" class="large_column">
+            <h1>
+                Titolo
+            </h1>
             <dl>
-                <h1>
-                    Titolo
-                </h1>
                 <dt id="paste_1">
                     Sottotitolo1
                 </dt>

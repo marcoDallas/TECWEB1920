@@ -63,6 +63,12 @@ body {
     padding: 0.7em 0.1em 0.7em 1em;
 }
 
+#logo_azienda {
+    content: url("../images/logo.png");
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #header {
     min-height: 3em;
     background-color: #EC7205;
@@ -249,7 +255,7 @@ body {
     padding-left: 2.5em;
 }
 
-    #contentContatti p {
+    #contentContatti p, dl {
         padding: 1em;
     }
 
