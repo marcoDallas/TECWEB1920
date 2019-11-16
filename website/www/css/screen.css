@@ -34,7 +34,15 @@ body {
     display: inline-block;
 }
 
-.mobile_menu_bar {
+.half_column {
+    width: 100%;
+}
+
+.medium_column {
+    width: 100%;
+}
+
+.a_quarter_column {
     width: 54%;
 }
 
@@ -59,12 +67,17 @@ body {
     overflow: hidden;
 }
 
+dd {
+    font-weight: bold;
+}
+
 #logo {
     content: url("../images/logo.png");
     padding: 0.1em 0.1em 0.1em 1em;
+    max-height: 4em;
 }
 
-#logo_azienda {
+#logo_storia {
     content: url("../images/logo.png");
     margin-left: auto;
     margin-right: auto;
@@ -74,6 +87,7 @@ body {
     min-height: 3em;
     background-color: #EC7205;
     color: #FFFFFF;
+    min-height: 5.4em;
 }
 
 #breadcrumb p {
@@ -155,7 +169,8 @@ body {
     right: 0;
     top: 0;
     cursor: pointer;
-    padding: 6% 2em 6% 2em;
+    padding: 6.5% 2em 3.5em 2em;
+    min-width: 48px;
 }
 
 /* dynamic menu icon */
@@ -224,14 +239,19 @@ body {
     margin: 1em auto 1em auto;
 }
 
-#footer > p {
+#footer dl {
     text-align: center;
+    padding-top: 1em;
+}
+
+#footer > p {
     padding-top: 1em;
     padding-bottom: 1em;
 }
 
 .footer_element {
-    display:block;
+    display: block;
+    text-align: center;
 }
 
 #content > p {
@@ -256,7 +276,7 @@ body {
     padding-left: 2.5em;
 }
 
-    #contentContatti p, dl {
+    #contentContatti p, #contentContatti dl {
         padding: 1em;
     }
 
@@ -267,7 +287,7 @@ h3 {
 /**************************************************************************
  ******************* TABLET AND DESKTOP LAYOUT ****************************
  **************************************************************************/
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 830px) {
     /*tags*/
     input[type=text], input[type=password] {
         width: 8em;
@@ -286,12 +306,12 @@ h3 {
         margin: 1em;
     }
     
-    .mobile_menu_bar {
-        width: unset;
-    }
-
     .thin_column {
         width: 20%;
+    }
+
+    .medium_column {
+        width: 25%;
     }
 
     .a_quarter_column {
@@ -311,7 +331,7 @@ h3 {
     }
 
     .large_column {
-        width: 60%;
+        width: 55%;
     }
 
     /* other */
@@ -337,6 +357,7 @@ h3 {
 
     #logo {
         padding: 0em 0em 0em 1em;
+        max-height: unset;
         min-height: 4.1em;
         min-width: 9.5em;
     }
@@ -392,7 +413,7 @@ h3 {
 
     #general_container {
         background-color: #FFF7E6;
-        min-height: 69%;
+        min-height: 59.3%;
     }
 
     #maps_icon {
@@ -422,6 +443,7 @@ h3 {
     }
 
     #footer img {
+        vertical-align: middle;
         display: initial;
         margin: 0em;
     }
