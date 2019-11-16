@@ -337,8 +337,8 @@ h3 {
 
     #logo {
         padding: 0em 0em 0em 1em;
-        min-height: 4.3em;
-        min-width: 9.7em;
+        min-height: 4.1em;
+        min-width: 9.5em;
     }
 
     #header h2 {
@@ -407,12 +407,12 @@ h3 {
     }
 
     #menu dl dt {
+        text-align: left;
         padding: 0.5em 1em 0em 1em;
         border: none;
     }
 
         #menu dl dt a {
-            text-align: left;
             float: none;
             display: unset;
         }
