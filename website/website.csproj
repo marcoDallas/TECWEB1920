@@ -117,6 +117,7 @@
     <Content Include="www\Images\Monoporzioni\perle-e-rubini.png" />
     <Content Include="www\Images\Monoporzioni\rugiada.png" />
     <Content Include="www\Images\Monoporzioni\settepetali.png" />
+    <Content Include="www\Images\navigation.png" />
     <Content Include="www\Images\Torte\abbraccio-di-cioccolato.png" />
     <Content Include="www\Images\Torte\angelina.png" />
     <Content Include="www\Images\Torte\caramell-arancia.png" />
