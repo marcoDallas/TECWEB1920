@@ -21,93 +21,62 @@ body {
     background-color: #FFAC61;
 }
 
-/*tags*/
-input[type=text],input[type=password]{
-    width: 8em;
-}
-
-form legend{
-    text-align: center;
-}
-form fieldset{
-    padding: 1em 5% 1em;
-    border: 1px solid brown;
-}
-form label, form input{
-    margin: 1em;
-}
-
+/**************************************************************************
+ *********************** MOBILE LAYOUT ************************************
+ **************************************************************************/
 /*containers*/
-.box{
+.box {
     overflow: hidden;
 }
 
-.box > *{
+.box > * {
     float: left;
     display: inline-block;
 }
-/* desktop */
-.thin_column{
-    width: 20%;
-}
-.a_quarter_column{
+
+.a_quarter_column {
     width: 25%;
 }
-.one_third_column{
-    width: 33.33%;
-}
-.half_column{
-    width: 50%;
-}
-.three_quarter_column{
-    width: 75%;
-}
-.large_column{
-    width: 60%;
-}
-.a_column{
+.thin_column {
     width: 100%;
 }
-/* other */
-.hidden{
+
+.hidden {
     font-size: 0px;
-    text-indent:100%;
-    white-space:nowrap;
-    overflow:hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
-.element{
-    background-color: #FFF7E6;
-    border: 0.1em solid #FFAC61;
+.mobile_hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
-.element p{
-    padding: 2em;
-}
-.element strong{
-    display: block;
-}
-
-/*specific*/
-
-#logo{
+#logo {
     content: url("../images/logo.png");
-    padding-left: 1em;
-    min-height: 4.3em;
-    min-width: 9.7em;
+    padding: 0.7em 0.1em 0.7em 1em;
 }
-#header h2{
+
+#header h2 {
+    font-size: 1em;
     text-align: center;
-    padding-top: 2em;
+    padding-top: 0.1em;
 }
-#header{
-    min-height: 9em;
+
+#header {
+    min-height: 3em;
     background-color: #EC7205;
     color: #FFFFFF;
 }
 
-#breadcrumb p{
-    padding-left: 1em;
+#breadcrumb p {
+    font-size: 0.8em;
+    padding-left: 0.5em;
 }
 
 #breadcrumb {
@@ -116,132 +85,315 @@ form label, form input{
     padding: 0.575em 0 0.575em 0;
 }
 
-#breadcrumb a{
+#breadcrumb a {
     float: right;
     padding-right: 1em;
     color: white;
     text-decoration: none;
 }
 
-#breadcrumb a:hover{
+#breadcrumb a:hover {
     text-decoration: underline;
 }
 
-.login_column{
-    float: right;
-}
-
-#login *{
+#login * {
     display: block;
 }
 
-#login a{
+#login a {
     font-size: 0.8em;
 }
-#login{
+
+#login {
     padding: 0 1em 1em 1em;
-    overflow:hidden;
-}
-#login form label, #login form input, #login a{
-    margin: 0.5em;
-}
-
-#registrationForm{
-    margin: 5% 26%;
-    width: 48%;
+    overflow: hidden;
+    border-bottom: 5px solid #bc5800;
+    border-top: 3px solid #bc5800;
+    margin-bottom: 2em;
 }
 
-#registrationForm input{
-    width: 20em;
-}
+    #login form label, #login form input, #login a {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1em;
+        text-align: center;
+    }
 
-#registrationForm input[type="submit"]{
-    height: 2em;
-    width: 10em;
-}
-
-#news_container{
+#news_container {
     border: 1px solid;
     margin: 1em;
     padding: 1em;
     text-align: center;
 }
 
-.news_title{
+.news_title {
     font-size: 1.5em;
     font-weight: bold;
 }
 
-.news_content{
+.news_content {
     padding-bottom: 1em;
     border-bottom: 1px dashed;
 }
 
-#general_container{
-    background-color: #FFF7E6;
-    min-height: 69%;
-}
-
-#menu{
-    overflow:hidden;
+#menu {
     font-size: 1.5em;
+    overflow: hidden;
 }
 
-#menu dl dt{
-    padding: 0.5em 1em 0em 1em;
+#menu_icon {
+    border-left: 2px solid #bc5800;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    padding: 6% 2em 6% 2em;
 }
 
-#menu dl dt a{
-    text-decoration: none;
-    color: black;
+/* dynamic menu icon */
+.bar1, .bar2, .bar3 {
+    width: 44px;
+    height: 5px;
+    background-color: #333;
+    margin: 7px 0;
+    transition: 0.4s;
 }
-#menu dl dt a:visited{
-    color: purple;
-}
-
-#menu dl dt a:hover{
-    color: red;
-}
-
-#content >p{
-    padding: 1.5em;
+/* hamburger animations */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
 }
 
-#content >h1{
-    padding: 0.5em;
+.change .bar2 {
+    opacity: 0;
 }
 
-#content >dl{
-    padding: 1em;
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
 }
 
-#content{
-    background-color: white;
-    text-align: center;
+    #menu dl dt {
+        text-align: center;
+        padding: 0em;
+        border-bottom: 2px solid #bc5800;
+        padding: 0.4em 0em 0.4em 0em;
+    }
+
+        #menu dl dt a {
+            color: black;
+            float: left;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+        }
+
+            #menu dl dt a:visited {
+                color: purple;
+            }
+
+            #menu dl dt a:hover {
+                color: red;
+            }
+
+/* classe mobile aggiunta da JS alla pressione dell'icona*/
+#menu.mobile {
+    position: relative;
 }
 
-#contentContatti{
-    text-align: left;
-    padding-left: 2.5em;
+#menu.mobile dt a{
+    float: none;
+    display: block;
 }
 
-#contentContatti p{
-    padding: 1em;
+#footer {
+    background-color: #BC5800;
+    color: white;
 }
 
-h3{
-    color:red;
+#footer img {
+    display: block;
+    margin: 1em auto 1em auto;
 }
 
-#footer > p{
+#footer > p {
     text-align: center;
     padding-top: 1em;
     padding-bottom: 1em;
 }
 
-#footer{
-    background-color: #BC5800;
-    color:white;
+#content > p {
+    padding: 1.5em;
 }
 
+#content > h1 {
+    padding: 0.5em;
+}
+
+#content > dl {
+    padding: 1em;
+}
+
+#content {
+    background-color: white;
+    text-align: center;
+}
+
+#contentContatti {
+    text-align: left;
+    padding-left: 2.5em;
+}
+
+    #contentContatti p {
+        padding: 1em;
+    }
+
+h3 {
+    color: red;
+}
+
+/**************************************************************************
+ ******************* TABLET AND DESKTOP LAYOUT ****************************
+ **************************************************************************/
+@media only screen and (min-width: 1000px) {
+    /*tags*/
+    input[type=text], input[type=password] {
+        width: 8em;
+    }
+
+    form legend {
+        text-align: center;
+    }
+
+    form fieldset {
+        padding: 1em 5% 1em;
+        border: 1px solid brown;
+    }
+
+    form label, form input {
+        margin: 1em;
+    }
+
+    .thin_column {
+        width: 20%;
+    }
+
+    .a_quarter_column {
+        width: 25%;
+    }
+
+    .one_third_column {
+        width: 33.33%;
+    }
+
+    .half_column {
+        width: 50%;
+    }
+
+    .three_quarter_column {
+        width: 75%;
+    }
+
+    .large_column {
+        width: 60%;
+    }
+
+    .a_column {
+        width: 100%;
+    }
+    /* other */
+    .mobile_hidden {
+        position: unset;
+        left: unset;
+        top: unset;
+        width: unset;
+        height: unset;
+        overflow: unset;
+    }
+
+    .element {
+        background-color: #FFF7E6;
+        border: 0.1em solid #FFAC61;
+    }
+
+        .element p {
+            padding: 2em;
+        }
+
+        .element strong {
+            display: block;
+        }
+
+    /*specific*/
+
+    #logo {
+        padding: 0em 0em 0em 1em;
+        min-height: 4.3em;
+        min-width: 9.7em;
+    }
+
+    #header h2 {
+        font-size: 1.7em;
+        padding-top: 2em;
+    }
+
+    #header {
+        min-height: 9em;
+    }
+
+    #breadcrumb p {
+        font-size: 1em;
+        padding-left: 1em;
+    }
+
+    .login_column {
+        float: right;
+    }
+
+    #login {
+        border: none;
+        margin: none;
+    }
+
+        #login form label, #login form input, #login a {
+            margin: 0.5em;
+            text-align:left;
+        }
+
+    #registrationForm {
+        margin: 5% 26%;
+        width: 48%;
+    }
+
+        #registrationForm input {
+            width: 20em;
+        }
+
+            #registrationForm input[type="submit"] {
+                height: 2em;
+                width: 10em;
+            }
+
+    #general_container {
+        background-color: #FFF7E6;
+        min-height: 69%;
+    }
+
+    #menu_icon {
+        display: none; /* l'icona del menu' è superflua per lo screen reader in questo caso */
+    }
+
+    #menu dl dt {
+        padding: 0.5em 1em 0em 1em;
+        border: none;
+    }
+
+        #menu dl dt a {
+            padding: 2em 2.5em;
+            text-align: left;
+            float: none;
+            display: unset;
+        }
+}
 
