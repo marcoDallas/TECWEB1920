@@ -50,10 +50,7 @@ body {
 
 .mobile_hidden {
     position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
+    left: -100000px;
     overflow: hidden;
 }
 
@@ -75,7 +72,7 @@ body {
 }
 
 #breadcrumb p {
-    font-size: 0.8em;
+    font-size: 1em;
     padding-left: 0.5em;
 }
 
@@ -256,7 +253,7 @@ h3 {
 /**************************************************************************
  ******************* TABLET AND DESKTOP LAYOUT ****************************
  **************************************************************************/
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 850px) {
     /*tags*/
     input[type=text], input[type=password] {
         width: 8em;
@@ -304,12 +301,8 @@ h3 {
     }
     /* other */
     .mobile_hidden {
-        position: unset;
-        left: unset;
-        top: unset;
-        width: unset;
-        height: unset;
-        overflow: unset;
+        position: initial;
+        height: auto;
     }
 
     .element {
@@ -381,7 +374,7 @@ h3 {
     }
 
     #menu_icon {
-        display: none; /* l'icona del menu' è superflua per lo screen reader in questo caso */
+        display: none; /* l'icona del menu' Ã¨ superflua per lo screen reader in questo caso */
     }
 
     #menu dl dt {
@@ -390,7 +383,6 @@ h3 {
     }
 
         #menu dl dt a {
-            padding: 2em 2.5em;
             text-align: left;
             float: none;
             display: unset;
