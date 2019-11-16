@@ -59,7 +59,7 @@
             <div class="bar3"></div>
         </div>
     </div>
-    <div class="thin_column login_column">
+    <div class="medium_column login_column">
         <div id="login" class="mobile_hidden">
             <form action="" method="post">
                 <fieldset id="fieldsetLogin">
@@ -84,10 +84,13 @@
                 Vieni a trovarci!
                 <span id="maps_icon"></span> <!-- tag vuoto per l'icona -->
             </a>
-            <p class="news_content">
-                <strong><abbr title="lunedì">lun</abbr>-<abbr title="venerdì">ven</abbr></strong>: 7:00 - 12:30 / 14:30 - 18:00,&ensp;
-                <strong><abbr title="sabato">sab</abbr>-<abbr title="domenica">dom</abbr></strong>: 7:00 - 12:30
-            </p>
+            <dl class="news_content">
+                <dd><abbr title="lunedì">lun</abbr>-<abbr title="venerdì">ven</abbr>:</dd>
+                <dt>7:00 - 12:30</dt>
+                <dt>14:30 - 18:00</dt>
+                <dd><abbr title="sabato">sab</abbr>-<abbr title="domenica">dom</abbr>:</dd>
+                <dt>7:00 - 12:30</dt>
+            </dl>
         </div>
     </div>
     <div id="content" class="large_column">
@@ -95,22 +98,30 @@
         <p>Hai bisogno di ritrovare la retta via? Ricollegati alla rete oppure torna <a href="index.html">qui</a></p>
     </div>
     <div id="footer" class="box a_column">
-        <p class="a_column">
-            <span class="footer_element">
-                <strong>Pasticceria Padovana</strong>&ensp;
-            </span>
-            <span class="footer_element">
-                <strong><abbr title="Telefono">Tel</abbr></strong>: 0421-00000&ensp;
-            </span>
-            <span class="footer_element">
-                <strong>Indirizzo</strong>: Via Belzoni 1&ensp;
-            </span>
-            <span class="footer_element">
-                <strong>Orari</strong>: <abbr title="lunedì">lun</abbr>-<abbr title="venerdì">ven</abbr>: 7:00 - 12:30 / 14:30 - 18:00,&ensp;
-                <abbr title="sabato">sab</abbr>-<abbr title="domenica">dom</abbr>: 7:00 - 12:30
-            </span>
-        </p>
-        <p class="a_column">
+        <dl id="footer_contatti" class="half_column footer_element">
+            <dd>
+                Pasticceria Padovana
+            </dd>
+            <dd>
+                Telefono:
+            </dd>
+            <dt>0421-00000</dt>
+            <dd>
+                Indirizzo:
+            </dd>
+            <dt>
+                Via Trieste, 63 - 35121 Padova
+            </dt>
+        </dl>
+        <dl class="half_column footer_element">
+            <dd>Orari:</dd>
+            <dd>lunedì - venerdì:</dd>
+            <dt>7:00 - 12:30</dt>
+            <dt>14:30 - 18:00</dt>
+            <dd>sabato - domenica:</dd>
+            <dt>7:00 - 12:30</dt>
+        </dl>
+        <p class="a_column footer_element">
             <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Validazione XHTML 1.0 Strict" />
             Alberto Gobbo, Marco Dalla Libera, Riccardo Cestaro, Stefano Lazzaroni. <span xml:lang="en">All rights reserved.</span>
             <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Validazione CSS" />
