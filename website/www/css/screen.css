@@ -34,9 +34,10 @@ body {
     display: inline-block;
 }
 
-.a_quarter_column {
-    width: 25%;
+.mobile_menu_bar {
+    width: 54%;
 }
+
 .thin_column {
     width: 100%;
 }
@@ -60,7 +61,7 @@ body {
 
 #logo {
     content: url("../images/logo.png");
-    padding: 0.7em 0.1em 0.7em 1em;
+    padding: 0.1em 0.1em 0.1em 1em;
 }
 
 #logo_azienda {
@@ -283,6 +284,10 @@ h3 {
 
     form label, form input {
         margin: 1em;
+    }
+    
+    .mobile_menu_bar {
+        width: unset;
     }
 
     .thin_column {
