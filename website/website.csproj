@@ -86,6 +86,7 @@
     <Content Include="www\html\storia.html" />
     <Content Include="www\html\torte.html" />
     <Content Include="www\Images\favicon.png" />
+    <Content Include="www\Images\hamburger.png" />
     <Content Include="www\Images\logo.png" />
     <Content Include="www\Images\Mignon\bigne-alla-crema-al-cioccolato-grand-cru.png" />
     <Content Include="www\Images\Mignon\bigne-alla-crema-al-pistacchio-di-bronte.png" />
@@ -135,6 +136,7 @@
     <Content Include="www\Images\Torte\torta-perle-e-rubini.png" />
     <Content Include="www\Images\Torte\torta-rugiada.png" />
     <Content Include="www\Images\Torte\torta-sacher-zizzola.png" />
+    <Content Include="www\JS\dynamic.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
