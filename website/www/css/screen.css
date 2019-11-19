@@ -84,10 +84,9 @@ dd {
 }
 
 #header {
-    min-height: 3em;
     background-color: #EC7205;
     color: #FFFFFF;
-    min-height: 5.4em;
+    height: 6em;
 }
 
 #breadcrumb p {
@@ -162,6 +161,7 @@ dd {
     overflow: hidden;
 }
 
+/* per il menu usiamo dimensioni fisse in px per garantire il minimo di area touch */
 #menu_icon {
     border-left: 2px solid #bc5800;
     display: block;
@@ -169,22 +169,26 @@ dd {
     right: 0;
     top: 0;
     cursor: pointer;
-    padding: 6.5% 2em 3.5em 2em;
+    padding: 2em;
     min-width: 48px;
+    height: 2em;
 }
 
-/* dynamic menu icon */
+/* icona dinamica menu */
 .bar1, .bar2, .bar3 {
-    width: 44px;
-    height: 5px;
+    width: 2.75em;
+    height: 0.31em;
     background-color: #333;
-    margin: 7px 0;
+    margin: 0.44em 0em;
     transition: 0.4s;
 }
-/* hamburger animations */
+/* animazione hamburger, usiamo i prefissi per aumentare la compatibilità */
 .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
+    -webkit-transform: rotate(-45deg) translate(-0.56em, 0.38em);
+    -moz-transform: rotate(-45deg) translate(-0.56em, 0.38em);
+    -ms-transform: rotate(-45deg) translate(-0.56em, 0.38em);
+    -o-transform: rotate(-45deg) translate(-0.56em, 0.38em);
+    transform: rotate(-45deg) translate(-0.56em, 0.38em);
 }
 
 .change .bar2 {
@@ -192,8 +196,8 @@ dd {
 }
 
 .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+    -webkit-transform: rotate(45deg) translate(-0.5em, -0.5em);
+    transform: rotate(45deg) translate(-0.5em, -0.5em);
 }
 
     #menu dl dt {
