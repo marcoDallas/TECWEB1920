@@ -33,7 +33,7 @@
 <body>
     <div id="header" class="box a_column">
         <div class="a_quarter_column">
-            <a href="index.html" title="Vai alla pagina principale"><img id="logo" src="../images/logo.png" alt="Pasticceria Padovana" /></a>
+            <a href="index.html" title="Torna alla pagina principale"><img id="logo" src="../images/logo.png" alt="Torna alla pagina principale" /></a>
         </div>
         <div class="three_quarter_column mobile_hidden">
             <h1>Registrati, e potra recensire tutti i nostri prodotti</h1>
@@ -47,14 +47,14 @@
 
     <div id="general_container" class="box a_column">
         <div id="menu_container" class="thin_column">
-            <div id="menu" class="mobile_hidden">
+            <div id="menu" class="mobile_hidden" role="navigation">
                 <dl>
-                    <dt class="hidden"><a href="#content" tabindex="1">Vai al contenuto</a></dt>
-                    <dt xml:lang="en"><a href="index.html" tabindex="2">Home</a></dt>
-                    <dt><a href="paste.html" tabindex="3">Paste</a></dt>
-                    <dt><a href="torte.html" tabindex="3">Torte</a></dt>
-                    <dt><a href="storia.html" tabindex="4">Storia</a></dt>
-                    <dt><a href="contatti.html" tabindex="5">Contatti</a></dt>
+                    <dt class="hidden" role="tablist" aria-setsize="6" aria-posinset="1"><a href="#content" tabindex="1">Vai al contenuto</a></dt>
+                    <dt xml:lang="en" role="tablist" aria-setsize="6" aria-posinset="2"><a href="index.html" tabindex="2">Home</a></dt>
+                    <dt role="tablist" aria-setsize="6" aria-posinset="3"><a href="paste.html" tabindex="3">Paste</a></dt>
+                    <dt role="tablist" aria-setsize="6" aria-posinset="4"><a href="torte.html" tabindex="4">Torte</a></dt>
+                    <dt role="tablist" aria-setsize="6" aria-posinset="5"><a href="storia.html" tabindex="5">Storia</a></dt>
+                    <dt role="tablist" aria-setsize="6" aria-posinset="6"><a href="contatti.html" tabindex="6">Contatti</a></dt>
                 </dl>
             </div>
             <div id="menu_icon" onclick="toggleMenu(this)">
@@ -65,41 +65,42 @@
         </div>
 
         <!-- Nome e cognome verranno visualizzati sulla recensione che rilascerà un determinato utente loggato -->
-        <div id="content" class="box a_column">
-            <form id="registrationForm" action="" method="post">
+        <div id="content" class="large_column">
+            <form id="registrationForm" action="" method="post" role="form">
                 <fieldset>
                     <legend><strong>Registrazione nuovo utente</strong></legend>
+                    <p aria-hidden="true">Attenzione! I campi marcati con un asterisco (*) sono obbligatori</p>
                     <p>
-                        <label for="name">Nome:</label>
-                        <input type="text" name="name" id="name" placeholder="Mario" maxlength="20" required="required" />
+                        <label for="name">Nome: *</label>
+                        <input type="text" name="name" id="name" placeholder="Mario" maxlength="20" required="required" aria-required="true"/>
                     </p>
                     <p>
-                        <label for="surname">Cognome:</label>
-                        <input type="text" name="surname" id="surname" placeholder="Rossi" maxlength="20" required="required" />
+                        <label for="surname">Cognome: *</label>
+                        <input type="text" name="surname" id="surname" placeholder="Rossi" maxlength="20" required="required" aria-required="true"/>
                     </p>
                     <p>
-                        <label for="birthdate">Data di nascita:</label>
-                        <input type="date" name="birthdate" id="birthdate" required="required" />
+                        <label for="birthdate">Data di nascita: *</label>
+                        <input type="date" name="birthdate" id="birthdate" required="required" aria-required="true"/>
                     </p>
                     <p>
-                        <label for="mail"><span xml:lang="en">Mail</span>:</label>
-                        <input type="email" name="mail" placeholder="example@gmail.com" id="mail" required="required" />
+                        <label for="mail"><span xml:lang="en">Mail</span>: *</label>
+                        <input type="email" name="mail" placeholder="example@gmail.com" id="mail" required="required" aria-required="true"/>
                     </p>
                     <p>
                         <label for="phone">Numero di cellulare:</label>
-                        <input type="tel" name="phone" placeholder="3xxxxxxxxx" id="phone" />
+                        <input type="tel" name="phone" placeholder="3xxxxxxxxx" id="phone"/>
                     </p>
                     <p>
-                        <label for="username"><span xml:lang="en">Username</span>:</label>
-                        <input type="text" name="username" placeholder="Utente login" id="username" maxlength="20" required="required" />
+                        <label for="username"><span xml:lang="en">Username</span>: *</label>
+                        <input type="text" name="username" placeholder="Utente login" id="username" maxlength="20" required="required" aria-required="true"/>
                     </p>
                     <p>
-                        <label for="password"><span xml:lang="en">Password</span>:</label>
-                        <input type="password" name="password" placeholder="Password login" id="password" maxlength="20" required="required" />
+                        <label for="password"><span xml:lang="en">Password</span>: *</label>
+                        <input type="password" name="password" placeholder="Password login" id="password" maxlength="20" required="required" aria-required="true"/>
                     </p>
                     <p>
-                        <label for="confirmPassword">Conferma <span xml:lang="en">password</span>:</label>
-                        <input type="password" name="confirmPassword" placeholder="Conferma password login" id="confirmPassword" maxlength="20" required="required" />
+                        <label for="confirmPassword">Conferma <span xml:lang="en">password</span>: *</label>
+                        <input type="password" name="confirmPassword" placeholder="Conferma password login" id="confirmPassword" maxlength="20" required="required" aria-required="true"/>
                     </p>
                     <p>
                         <input type="submit" value="Registrati" />
@@ -142,10 +143,10 @@
                 <span class="hidden">Solo al mattino dalle 7 alle 12 e 30</span>
             </dt>
         </dl>
-        <p class="a_column footer_element">
-            <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Validazione XHTML 1.0 Strict" />
+        <p class="a_column footer_element" role="contentinfo">
+            <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Pagina validata secondo lo standard XHTML 1.0 Strict"/>
             Alberto Gobbo, Marco Dalla Libera, Riccardo Cestaro, Stefano Lazzaroni. <span xml:lang="en">All rights reserved.</span>
-            <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Validazione CSS" />
+            <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Pagina valida secondo lo standard CSS"/>    
         </p>
     </div>
 </body>
