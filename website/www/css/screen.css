@@ -74,7 +74,7 @@ dd {
 #logo {
     content: url("../images/logo.png");
     padding: 0.1em 0.1em 0.1em 1em;
-    max-height: 4em;
+    max-height: 3em;
 }
 
 #logo_storia {
@@ -352,7 +352,8 @@ h3 {
 
     /* other */
     .mobile_hidden {
-        position: initial;
+        position: relative;
+        left: 0px;
         height: auto;
     }
 
@@ -373,9 +374,8 @@ h3 {
 
     #logo {
         padding: 0em 0em 0em 1em;
-        max-height: unset;
-        min-height: 4.1em;
-        min-width: 9.5em;
+        max-height: 4.1em; /* forza sovrascrittura del max-height del mobile */
+        max-width: 9.39em;
     }
 
     #header h2 {
@@ -452,17 +452,17 @@ h3 {
     }
 
         #menu dl dt a {
+            text-align: left;
             float: none;
-            display: unset;
         }
 
     .footer_element {
-        display: initial;
+        display: inline;
     }
 
     #footer img {
         vertical-align: middle;
-        display: initial;
+        display: inline;
         margin: 0em;
     }
 }
