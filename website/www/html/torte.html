@@ -33,7 +33,7 @@
 <body>
     <div id="header" class="box a_column">
         <div class="a_quarter_column">
-            <a href="index.html" title="Vai alla pagina principale"><img id="logo" src="../images/logo.png" alt="Pasticceria Padovana" /></a>
+            <a href="index.html" title="Torna alla pagina principale"><img id="logo" src="../images/logo.png" alt="Torna alla pagina principale"/></a>
         </div>
         <div class="three_quarter_column mobile_hidden">
             <h1>Una vasta gamma di torte, a voi basta solo scegliere</h1>
@@ -42,14 +42,14 @@
     <div id="breadcrumb" class="box a_column"><p>Ti trovi in: <strong>Torte</strong></p></div>
     <div id="general_container" class="box a_column">
         <div id="menu_container" class="thin_column">
-            <div id="menu" class="mobile_hidden">
+            <div id="menu" class="mobile_hidden" role="navigation">
                 <dl>
-                    <dt class="hidden"><a href="#content" tabindex="1">Vai al contenuto</a></dt>
-                    <dt><a href="index.html" xml:lang="en" tabindex="2">Home</a></dt>
-                    <dt><a href="paste.html" tabindex="3">Paste</a></dt>
+                    <dt class="hidden" role="tablist" aria-setsize="5" aria-posinset="1"><a href="#content" tabindex="1">Vai al contenuto</a></dt>
+                    <dt role="tablist" aria-setsize="5" aria-posinset="2"><a href="index.html" xml:lang="en" tabindex="2">Home</a></dt>
+                    <dt role="tablist" aria-setsize="5" aria-posinset="3"><a href="paste.html" tabindex="3">Paste</a></dt>
                     <dt><strong>Torte</strong></dt>
-                    <dt><a href="storia.html" tabindex="4">Storia</a></dt>
-                    <dt><a href="contatti.html" tabindex="5">Contatti</a></dt>
+                    <dt role="tablist" aria-setsize="5" aria-posinset="4"><a href="storia.html" tabindex="4">Storia</a></dt>
+                    <dt role="tablist" aria-setsize="5" aria-posinset="5"><a href="contatti.html" tabindex="5">Contatti</a></dt>
                 </dl>
             </div>
             <div id="menu_icon" onclick="toggleMenu(this)">
@@ -60,23 +60,23 @@
         </div>
         <div class="medium_column login_column">
             <div id="login" class="mobile_hidden">
-                <form action="" method="post">
+                <form action="" method="post" role="form">
                     <fieldset id="fieldsetLogin">
                         <legend><strong>Accedi</strong></legend>
                         <label for="username"><span xml:lang="en">Username</span></label>
                         <!--<input type="text" name="username" placeholder="Username" id="username" maxlength="20" tabindex="6" required="required" />-->
-                        <input type="text" name="username" id="username" maxlength="20" tabindex="6" />
+                        <input type="text" name="username" id="username" maxlength="20" tabindex="6" aria-required="true"/>
                         <label for="password"><span xml:lang="en">Password</span></label>
                         <!--<input type="password" name="password" placeholder="Password" id="password" maxlength="20" tabindex="7" required="required" />-->
-                        <input type="password" name="password" id="password" maxlength="20" tabindex="7" />
+                        <input type="password" name="password" id="password" maxlength="20" tabindex="7" aria-required="true"/>
                         <input type="submit" value="Accedi" tabindex="8" />
                         <a href="registrazione.html" tabindex="9"> Non sei ancora registrato?</a>
                     </fieldset>
                 </form>
             </div>
             <div class="news_container">
-                <p class="news_title">Sconti speciali a natale!</p>
-                <p class="news_content"> dal 15 dicembre al 15 gennaio se prendi 2 torte la meno cara la paghi la metà</p>
+                <p class="news_title">Sconti speciali a Natale!</p>
+                <p class="news_content">Dal 15 dicembre al 15 gennaio, se prendi 2 torte la meno cara la paghi la metà</p>
             </div>
             <div class="news_container">
                 <a class="news_title" href="../html/contatti.html">
@@ -84,15 +84,30 @@
                     <span id="maps_icon"></span> <!-- tag vuoto per l'icona -->
                 </a>
                 <dl class="news_content">
-                    <dd><abbr title="lunedì">lun</abbr>-<abbr title="venerdì">ven</abbr>:</dd>
-                    <dt>7:00 - 12:30</dt>
-                    <dt>14:30 - 18:00</dt>
-                    <dd><abbr title="sabato">sab</abbr>-<abbr title="domenica">dom</abbr>:</dd>
-                    <dt>7:00 - 12:30</dt>
+                    <dd>
+                        <span aria-hidden="true">Lunedì - Venerdì:</span>
+                        <span class="hidden">Dal lunedì al venerdì aperti</span>
+                    </dd>
+                    <dt>
+                        <span aria-hidden="true">7:00 - 12:30</span>
+                        <span class="hidden">Al mattino dalle 7 e 30 alle 12 e 30</span>  
+                    </dt>
+                    <dt>
+                        <span aria-hidden="true">14:30 - 18:00</span>
+                        <span class="hidden">Al pomeriggio dalle 14 e 30 alle 18</span>
+                    </dt>
+                    <dd>
+                        <span aria-hidden="true">Sabato - Domenica:</span>
+                        <span class="hidden">Sabato e domenica aperti</span>  
+                    </dd>
+                    <dt>
+                        <span aria-hidden="true">7:00 - 12:30</span>
+                        <span class="hidden">Solo al mattino dalle 7 alle 12 e 30</span>
+                    </dt>
                 </dl>
             </div>
         </div>
-        <div id="content" class="large_column">
+        <div id="content" class="large_column" role="article">
             <h1>
                 Titolo
             </h1>
@@ -152,10 +167,10 @@
                 <span class="hidden">Solo al mattino dalle 7 alle 12 e 30</span>
             </dt>
         </dl>
-        <p class="a_column footer_element">
-            <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Validazione XHTML 1.0 Strict" />
+        <p class="a_column footer_element" role="contentinfo">
+            <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Pagina validata secondo lo standard XHTML 1.0 Strict"/>
             Alberto Gobbo, Marco Dalla Libera, Riccardo Cestaro, Stefano Lazzaroni. <span xml:lang="en">All rights reserved.</span>
-            <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Validazione CSS" />
+            <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Pagina valida secondo lo standard CSS"/>
         </p>
     </div>
 </body>
