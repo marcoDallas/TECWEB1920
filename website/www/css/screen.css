@@ -72,15 +72,18 @@ dd {
 }
 
 #logo {
-    content: url("../images/logo.png");
-    padding: 0.1em 0.1em 0.1em 1em;
-    max-height: 3em;
+    padding: 0.1em 0.1em 0.1em 0.2em;
+    max-height: 4em;
+    max-width: 9em;
+    font-size: 1.5em;
+    text-align: center;
+    display: block;
 }
 
-#logo_storia {
+#logo_storia::before {
     content: url("../images/logo.png");
-    margin-left: auto;
-    margin-right: auto;
+    display: block;
+    margin-top: 1em;
 }
 
 #header {
@@ -284,7 +287,7 @@ dd {
         padding: 1em;
     }
 
-h3 {
+h2 {
     color: red;
 }
 
@@ -374,11 +377,11 @@ h3 {
 
     #logo {
         padding: 0em 0em 0em 1em;
-        max-height: 4.1em; /* forza sovrascrittura del max-height del mobile */
-        max-width: 9.39em;
+        max-height: 9em; /* forza sovrascrittura del max-height del mobile */
+        max-width: 14em;
     }
 
-    #header h2 {
+    #header h1 {
         font-size: 1.7em;
         text-align: right;
         margin-top: 5%;
