@@ -302,166 +302,167 @@ h3 {
         width: 40%;
     }
 
-    /**************************************************************************
-     ************************* DESKTOP LAYOUT *********************************
-     **************************************************************************/
-    @media only screen and (min-width: 830px) {
-        /*tags*/
-        input[type=text], input[type=password] {
-            width: 8em;
+}
+
+/**************************************************************************
+ ************************* DESKTOP LAYOUT *********************************
+ **************************************************************************/
+@media only screen and (min-width: 830px) {
+    /*tags*/
+    input[type=text], input[type=password] {
+        width: 8em;
+    }
+
+    form legend {
+        text-align: center;
+    }
+
+    form fieldset {
+        padding: 1em 5% 1em;
+        border: 1px solid brown;
+    }
+
+    form label, form input {
+        margin: 1em;
+    }
+
+    .thin_column {
+        width: 20%;
+    }
+
+    .medium_column {
+        width: 25%;
+    }
+
+    .a_quarter_column {
+        width: 25%;
+    }
+
+    .one_third_column {
+        width: 33.33%;
+    }
+
+    .three_quarter_column {
+        width: 75%;
+    }
+
+    .large_column {
+        width: 55%;
+    }
+
+    /* other */
+    .mobile_hidden {
+        position: initial;
+        height: auto;
+    }
+
+    .element {
+        background-color: #FFF7E6;
+        border: 0.1em solid #FFAC61;
+    }
+
+        .element p {
+            padding: 2em;
         }
 
-        form legend {
-            text-align: center;
-        }
-
-        form fieldset {
-            padding: 1em 5% 1em;
-            border: 1px solid brown;
-        }
-
-        form label, form input {
-            margin: 1em;
-        }
-
-        .thin_column {
-            width: 20%;
-        }
-
-        .medium_column {
-            width: 25%;
-        }
-
-        .a_quarter_column {
-            width: 25%;
-        }
-
-        .one_third_column {
-            width: 33.33%;
-        }
-
-        .three_quarter_column {
-            width: 75%;
-        }
-
-        .large_column {
-            width: 55%;
-        }
-
-        /* other */
-        .mobile_hidden {
-            position: initial;
-            height: auto;
-        }
-
-        .element {
-            background-color: #FFF7E6;
-            border: 0.1em solid #FFAC61;
-        }
-
-            .element p {
-                padding: 2em;
-            }
-
-            .element strong {
-                display: block;
-            }
-
-        /*specific*/
-
-        #logo {
-            padding: 0em 0em 0em 1em;
-            max-height: unset;
-            min-height: 4.1em;
-            min-width: 9.5em;
-        }
-
-        #header h2 {
-            font-size: 1.7em;
-            text-align: right;
-            margin-top: 5%;
-            padding-right: 5%;
-            margin-left: 25%;
-        }
-
-        #header {
-            min-height: 9em;
-        }
-
-        #breadcrumb p {
-            font-size: 1em;
-            padding-left: 1em;
-        }
-
-        .login_column {
-            float: right;
-        }
-
-        #login {
-            border: none;
-            margin: 0em;
-        }
-
-            #login form label, #login form input, #login a {
-                margin: 0.5em;
-                text-align: left;
-            }
-
-        #registrationForm {
-            margin: 5% 26%;
-            width: 48%;
-        }
-
-            #registrationForm input {
-                width: 20em;
-            }
-
-                #registrationForm input[type="submit"] {
-                    height: 2em;
-                    width: 10em;
-                }
-
-        .news_container {
-            margin: 0em 1em 1em 1em;
-            width: auto;
-            display:block;
-        }
-
-        #general_container {
-            background-color: #FFF7E6;
-            min-height: 59.3%;
-        }
-
-        #maps_icon {
+        .element strong {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-            padding-bottom: 0.2em;
         }
 
-        #menu_icon {
-            display: none; /* l'icona del menu' è superflua per lo screen reader in questo caso */
-        }
+    /*specific*/
 
-        #menu dl dt {
+    #logo {
+        padding: 0em 0em 0em 1em;
+        max-height: unset;
+        min-height: 4.1em;
+        min-width: 9.5em;
+    }
+
+    #header h2 {
+        font-size: 1.7em;
+        text-align: right;
+        margin-top: 5%;
+        padding-right: 5%;
+        margin-left: 25%;
+    }
+
+    #header {
+        min-height: 9em;
+    }
+
+    #breadcrumb p {
+        font-size: 1em;
+        padding-left: 1em;
+    }
+
+    .login_column {
+        float: right;
+    }
+
+    #login {
+        border: none;
+        margin: 0em;
+    }
+
+        #login form label, #login form input, #login a {
+            margin: 0.5em;
             text-align: left;
-            padding: 0.5em 1em 0em 1em;
-            border: none;
         }
 
-            #menu dl dt a {
-                float: none;
-                display: unset;
+    #registrationForm {
+        margin: 5% 26%;
+        width: 48%;
+    }
+
+        #registrationForm input {
+            width: 20em;
+        }
+
+            #registrationForm input[type="submit"] {
+                height: 2em;
+                width: 10em;
             }
 
-        .footer_element {
-            display: initial;
+    .news_container {
+        margin: 0em 1em 1em 1em;
+        width: auto;
+        display:block;
+    }
+
+    #general_container {
+        background-color: #FFF7E6;
+        min-height: 59.3%;
+    }
+
+    #maps_icon {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 0.2em;
+    }
+
+    #menu_icon {
+        display: none; /* l'icona del menu' è superflua per lo screen reader in questo caso */
+    }
+
+    #menu dl dt {
+        text-align: left;
+        padding: 0.5em 1em 0em 1em;
+        border: none;
+    }
+
+        #menu dl dt a {
+            float: none;
+            display: unset;
         }
 
-        #footer img {
-            vertical-align: middle;
-            display: initial;
-            margin: 0em;
-        }
+    .footer_element {
+        display: initial;
+    }
+
+    #footer img {
+        vertical-align: middle;
+        display: initial;
+        margin: 0em;
     }
 }
