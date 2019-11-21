@@ -283,12 +283,20 @@ dd {
     padding-left: 2.5em;
 }
 
-    #contentContatti p, #contentContatti dl {
+#contentContatti p, #contentContatti dl {
         padding: 1em;
-    }
+}
 
 h2 {
     color: red;
+}
+
+#maps{
+    width:80%;
+    height:20em;
+    display:block;
+    padding-left: 1em;
+    padding-bottom: 1em;
 }
 
 /**************************************************************************
