@@ -187,11 +187,11 @@ dd {
 }
 /* animazione hamburger, usiamo i prefissi per aumentare la compatibilità */
 .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-0.56em, 0.38em);
-    -moz-transform: rotate(-45deg) translate(-0.56em, 0.38em);
-    -ms-transform: rotate(-45deg) translate(-0.56em, 0.38em);
-    -o-transform: rotate(-45deg) translate(-0.56em, 0.38em);
-    transform: rotate(-45deg) translate(-0.56em, 0.38em);
+    -webkit-transform: translate(0em, 0.75em) rotate(-45deg);
+    -moz-transform: translate(0em, 0.75em) rotate(-45deg);
+    -ms-transform: translate(0em, 0.75em) rotate(-45deg);
+    -o-transform: translate(0em, 0.75em) rotate(-45deg);
+    transform: translate(0em, 0.75em) rotate(-45deg);
 }
 
 .change .bar2 {
@@ -199,8 +199,11 @@ dd {
 }
 
 .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-0.5em, -0.5em);
-    transform: rotate(45deg) translate(-0.5em, -0.5em);
+    -webkit-transform: translate(0em, -0.75em) rotate(45deg);
+	-moz-transform: translate(0em, -0.75em) rotate(45deg);
+    -ms-transform: translate(0em, -0.75em) rotate(45deg);
+    -o-transform: translate(0em, -0.75em) rotate(45deg);
+    transform: translate(0em, -0.75em) rotate(45deg);
 }
 
     #menu dl dt {
