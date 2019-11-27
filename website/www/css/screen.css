@@ -72,7 +72,7 @@ dd {
 }
 
 #logo {
-    padding: 0.1em 0.1em 0.1em 0.2em;
+    padding: 0.22em 0.1em 0.1em 0.2em;
     max-height: 4em;
     max-width: 9em;
     font-size: 1.5em;
@@ -123,6 +123,7 @@ dd {
 }
 
 #login {
+    display: none;
     padding: 0 1em 1em 1em;
     overflow: hidden;
     border-bottom: 5px solid #bc5800;
@@ -210,7 +211,7 @@ dd {
         text-align: center;
         padding: 0em;
         border-bottom: 2px solid #bc5800;
-        padding: 0.4em 0em 0.4em 0em;
+        padding: 0.2em 0em 0.2em 0em;
     }
 
         #menu dl dt a {
@@ -287,10 +288,11 @@ dd {
 }
 
 #contentContatti p, #contentContatti dl {
-        padding: 1em;
+    padding: 1em;
 }
 
 h2 {
+    padding-top: 0.3em;
     color: red;
 }
 
@@ -327,6 +329,12 @@ h2 {
         width: 8em;
     }
 
+    .mobile_hidden {
+        position: relative;
+        left: 0px;
+        height: auto;
+    }
+
     form legend {
         text-align: center;
     }
@@ -352,8 +360,14 @@ h2 {
         width: 25%;
     }
 
-    .one_third_column {
-        width: 33.33%;
+    .logo_column {
+        max-width: 30%;
+        height: 100%;
+    }
+
+    .title_column {
+        width: 70%;
+        height: 100%;
     }
 
     .three_quarter_column {
@@ -365,11 +379,7 @@ h2 {
     }
 
     /* other */
-    .mobile_hidden {
-        position: relative;
-        left: 0px;
-        height: auto;
-    }
+    
 
     .element {
         background-color: #FFF7E6;
@@ -387,15 +397,15 @@ h2 {
     /*specific*/
 
     #logo {
-        padding: 0em 0em 0em 1em;
-        max-height: 9em; /* forza sovrascrittura del max-height del mobile */
+        padding: 0.22em 0em 0em 0.5em;
         max-width: 14em;
+        max-height: 9em; /* forza sovrascrittura del max-height del mobile */
     }
 
     #header h1 {
         font-size: 1.7em;
         text-align: right;
-        margin-top: 5%;
+        margin-top: 1.2em;
         padding-right: 5%;
         margin-left: 25%;
     }
