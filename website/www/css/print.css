@@ -18,8 +18,8 @@
     margin: 0em;
     padding: 0em;
     max-width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5em;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    line-height: 1.2em;
     text-align: justify;
     text-justify: inter-word;
 }
@@ -38,10 +38,11 @@ body {
     margin: auto;
 }
 
-/**************************************************************************
- *********************** MOBILE LAYOUT ************************************
- **************************************************************************/
-/*containers*/
+.defaultImageSize {
+    max-height: 200px;
+    max-width: 200px;
+}
+
 .box {
     overflow: hidden;
 }
@@ -51,9 +52,6 @@ body {
         display: inline-block;
     }
 
-.half_column {
-    width: 100%;
-}
 
 .medium_column {
     width: 100%;
@@ -88,13 +86,21 @@ body {
 dd {
     font-weight: bold;
 }
-
+/*
 #logo_storia::before {
     content: url("../images/logo.png");
     display: block;
-    margin-top: 1em;
+    text-align: center;
 }
-
+*/
+#logo_storia {
+    content: url("../images/logo.png");
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 200px;
+    max-width: 200px;
+}
 /*#header {
     height: 6em;
 }*/
@@ -127,7 +133,6 @@ dd {
 }
 
     #footer dl {
-        text-align: center;
         padding-top: 1em;
     }
 
@@ -141,17 +146,20 @@ dd {
     text-align: center;
 }
 
-#content > p {
-    padding: 1.5em;
+#content p {
+    padding: 1em;
+}
+#content img {
+    float: left;
 }
 
 #content > h1 {
     padding: 0.5em;
 }
-
+/*
 #content > dl {
     padding: 1em;
-}
+}*/
 
 #content {
     text-align: center;
@@ -241,10 +249,10 @@ form label, form input {
 /* other */
 
 
-.element {
+/*.element {
     background-color: #FFF7E6;
     border: 0.1em solid #FFAC61;
-}
+}*/
 
     .element p {
         padding: 2em;
@@ -263,11 +271,9 @@ form label, form input {
 }
 
 #header h1 {
+    text-align: center;
     font-size: 1.7em;
-    /*text-align: right;*/
-    margin-top: 1.2em;
-    padding-right: 5%;
-    /*margin-left: 25%;*/
+    padding: 0.3em;
 }
 
 /*#header {
@@ -333,10 +339,30 @@ form label, form input {
     display: inline;
 }
 
-    #footer > dl {
+    #footer dl {
         width: 50%;
+    }
+
+    #footer dd, #footer dt{
+        text-align: center;
     }
 
 #footer img {
     display:none;
+}
+
+#logo {
+    display: none
+}
+
+#menu {
+    display: none
+}
+
+#breadcrumb {
+    display: none
+}
+
+#login {
+    display: none
 }
