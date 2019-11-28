@@ -1,0 +1,79 @@
+*{
+	html{
+		body{
+			#header{
+				.box .a_column{
+					.logo_column{
+						#logo{
+						
+						}
+					.title_column .mobile_hidden{
+						h1{
+
+						}
+					}
+				}
+			}
+
+			#breadcrumb{
+				.box .a_column{
+				
+				}
+			}
+
+			#general_container{
+				.box .a_column{
+					#menu_container{
+						.thin_column{
+							#menu{
+								.mobile_hidden{
+									.hidden{
+
+									}
+								}
+							}
+							#menu_icon{
+							
+							}
+						}
+					}
+					.medium_column .login_column{
+						#login{
+							.mobile_hidden{
+							
+							}
+						}
+						.news_container{
+
+						}
+						.news_container{
+							.news_content{
+								.hidden{
+								
+								}
+							}
+						}
+					}
+					#content{
+						.large_column{
+						
+						}
+					}
+				}
+			}
+			#footer{
+				.box .a_column{
+					.half_column .footer_element{
+					
+					}
+					.half_column .footer_element{
+					
+					}
+					.a_column .footer_element{
+					
+					}
+				}
+			}
+		}
+	}
+}
