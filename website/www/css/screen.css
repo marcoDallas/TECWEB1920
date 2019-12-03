@@ -282,6 +282,11 @@ dd {
     text-align: center;
 }
 
+.imgHome{
+    height: auto;
+    width: 90%; 
+}
+
 #contentContatti {
     text-align: left;
     padding-left: 2.5em;
