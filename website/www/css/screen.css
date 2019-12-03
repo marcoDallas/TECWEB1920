@@ -206,14 +206,15 @@ dd {
     transform: translate(0em, -0.75em) rotate(45deg);
 }
 
-    #menu dl dt {
+    #menu ul li {
+        list-style-type: none;
         text-align: center;
         padding: 0em;
         border-bottom: 2px solid #bc5800;
         padding: 0.4em 0em 0.4em 0em;
     }
 
-        #menu dl dt a {
+        #menu ul li a {
             color: black;
             float: left;
             display: block;
@@ -221,11 +222,11 @@ dd {
             text-decoration: none;
         }
 
-            #menu dl dt a:visited {
+            #menu ul li a:visited {
                 color: purple;
             }
 
-            #menu dl dt a:hover {
+            #menu ul li a:hover {
                 color: red;
             }
 
@@ -234,7 +235,7 @@ dd {
     position: relative;
 }
 
-#menu.mobile dt a{
+#menu.mobile li a{
     float: none;
     display: block;
 }
@@ -459,13 +460,13 @@ h2 {
         display: none; /* l'icona del menu' è superflua per lo screen reader in questo caso */
     }
 
-    #menu dl dt {
+    #menu ul li {
         text-align: left;
         padding: 0.5em 1em 0em 1em;
         border: none;
     }
 
-        #menu dl dt a {
+        #menu ul li a {
             text-align: left;
             float: none;
         }
