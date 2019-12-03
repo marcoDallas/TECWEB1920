@@ -65,7 +65,9 @@ class Print_content{
         return $content;
     }
 
-    
+    public static function login_form(){
+        return file_get_contents("../html/components/login_form.html");
+    }
 
     public static function footer(){
         return file_get_contents("../html/components/footer.html");
