@@ -60,13 +60,19 @@ class Print_content{
             <dt role="tablist" aria-setsize="5" aria-posinset="4"><a href="storia.php" tabindex="4">Storia</a></dt>'."\r".'
             <dt role="tablist" aria-setsize="5" aria-posinset="5"><a href="contatti.php" tabindex="5">Contatti</a></dt>';
         }
-        $content=$content."\r".'</dl>'."\r".'</div>'."\r".'<div id="menu_icon" onclick="toggleMenu(this)">'."\r".'<div class="bar1"></div>'."\r".'
-        <div class="bar2"></div>'."\r".'<div class="bar3"></div>'."\r".'</div>'."\r".'</div>';
+        $content=$content."\r".'</dl>'."\r".'</div>'."\r".'<div id="menu_icon" onclick="toggleMenu(this)">'."\r".'<div class="bar1"></div>'."\r".'<div class="bar2"></div>'."\r".'<div class="bar3"></div>'."\r".'</div>'."\r".'</div>';
         return $content;
     }
 
     public static function login_form(){
         return file_get_contents("../html/components/login_form.html");
+    }
+
+    public static function news($page){
+        $content = file_get_contents("../html/components/news.html");
+        if(!strcmp($page,"contatti.php"))
+            return '<div class="news_container">'."\r".'<p class="news_title">Sconti speciali a Natale!</p>'."\r".'<p class="news_content">Dal 15 dicembre al 15 gennaio, se prendi 2 torte la meno cara la paghi la metà</p>'."\r".'</div>'."\r".'';
+        return $content;
     }
 
     public static function footer(){
