@@ -1,5 +1,5 @@
 <?php
-require_once 'print_content.php';
+require_once 'backend/print_content.php';
 echo(Print_content::top('xhtml+aria'));
 echo(Print_content::openHTML());
 echo(Print_content::head('Home'));
