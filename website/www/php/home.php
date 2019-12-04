@@ -1,16 +1,17 @@
 <?php
 require_once 'print_content.php';
 echo(Print_content::top('xhtml+aria'));
+echo(Print_content::openHTML());
 echo(Print_content::head('Home'));
-echo("\r<body>\r");
+echo(Print_content::openBody());
 echo(Print_content::header('La miglior pasticceria di Padova')."\r");
 echo(Print_content::breadcrumb('<strong xml:lang="en">Home</strong>')."\r");
-echo('<div id="general_container" class="box a_column">'."\r");
+echo(Print_content::openGeneralContainer());
 echo(Print_content::menu("home.php"));
-echo('<div class="medium_column login_column">'."\r");
+echo(Print_content::openLoginNewsContainer());
 echo(Print_content::login_form());
 echo(Print_content::news("home.php"));
-echo("\r</div>\r");
+echo(Print_content::closeDiv());
 ?>
     <div id="content" class="large_column" role="article">
         <p>
@@ -35,7 +36,8 @@ echo("\r</div>\r");
         </p>
     </div>
 <?php
-echo("</div>\r");
+echo(Print_content::closeDiv());
 echo(Print_content::footer());
-echo("\r</body>\r</html>")
+echo(Print_content::closeBody());
+echo(Print_content::closeHTML());
 ?>
