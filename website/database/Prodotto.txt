@@ -1,1 +1,39 @@
+1	Bignè con crema al cioccolato	Pasta	NULL	Preparati con una pastella che verrà suddivisa negli stampini e cotta in forno. A parte si preparerà la crema al cioccolato, che andrà poi a farcire i bignè una volta che si saranno raffreddati.	NULL
 
+2	Bignè alla crema al pistacchio	Pasta	NULL	Preparati con una pastella che verrà suddivisa negli stampini e cotta in forno. A parte si preparerà la crema al pistacchio, che andrà poi a farcire i bignè una volta che si saranno raffreddati.	NULL
+
+3	Bignè alla crema chantilly	Pasta	NULL	Preparati con una pastella che verrà suddivisa negli stampini e cotta in forno. A parte si preparerà la crema chantilly, che andrà poi a farcire i bignè una volta che si saranno raffreddati. La crema chantilly è composta da panna montata, zucchero a velo, e un aroma alla vaniglia.	NULL
+
+4	Bignè allo zabaione	Pasta	NULL	Preparati con una pastella che verrà suddivisa negli stampini e cotta in forno. A parte si preparerà la crema al cioccolato, che andrà poi a farcire i bignè una volta che si saranno raffreddati. La nostra crema allo zabaione ha una base di uova, zucchero e vermut.	NULL
+
+5	Bresciana	Pasta	NULL	Preparato con crema al cioccolato, e scaglie di cioccolato che si adagiano sulla sua superficie.	NULL
+
+6	Cannoncino con crema pasticcera	Pasta	NULL	Un classico, fatto con la pasta sfoglia, crema pasticcera e un pizzico di granella di nocciole.	NULL
+
+7	Crostatina al caramello e cioccolato al latte	Pasta	NULL	Crostatina con amaretto, strato di caramello e crema di cioccolato al latte. 	NULL
+
+8	Crostatina al cioccolato e arancio	Pasta	NULL	Crostatina con crema di cioccolato e arancio.	NULL
+
+9	Crostatina al cioccolato fondente e banane	Pasta	NULL	Crostatina con crema di cioccolato fondente e banane.	NULL
+
+10	Crostatina alla crema chantilly e frutta secca	Pasta	NULL	Crostatina con crema chantilly e lamponi.	NULL
+
+11	Crostatina alle mandorle e ananas	Pasta	NULL	Crostatina con crema alle mandorle e ananas.	NULL
+
+12	Cubo alle mandorle	Pasta	NULL	Cubo con strati di mandorle, amaretti e nocciole.	NULL
+
+13	Cubo cioco-mango	Pasta	NULL	Cubo con strati di cioccolato e mango.	NULL
+
+14	Cubo vaniglia e fragola	Pasta	NULL	Cubo con strati di ricotta, vaniglia e glassa alla fragola.	NULL
+
+15	Opera	Pasta	Cubo di zuppa inglese.	NULL
+
+16	Tarletta al cioccolato e pera	Pasta	NULL	Impasto con farina di lenticchie e pasta di mandorle, riempito con cioccolato e pera.	NULL
+
+17	Tarletta alle mele e frutta secca	Pasta	NULL	Impasto con farina di lenticchie e pasta di mandorle, riempito con listarelle di mela e frutta secca.	NULL
+
+18	Tortino carabaico	Pasta	NULL	Tortino con impasto e crema al cioccolato.	NULL
+
+19	Tortino cremoso di nocciole	Pasta	NULL	Tortino con crema alle nocciole.	NULL
+
+20	Tortino lamponi e cioccolato	Pasta	NULL	Tortino con fondo di cioccolato e glassa di lamponi.	NULL
