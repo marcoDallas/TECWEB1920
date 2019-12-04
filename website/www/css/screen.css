@@ -282,9 +282,9 @@ dt {
     text-align: center;
 }
 
-.imgHome{
+.imgHome, .imgStoria{
     height: auto;
-    width: 90%; 
+    width: 90%;
 }
 
 #contentContatti {
