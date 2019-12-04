@@ -1,0 +1,3 @@
+DirectoryIndex index.html
+ErrorDocument 404 http://localhost/html/fallback.html
+php_flag display_errors on
