@@ -37,3 +37,61 @@
 19	Tortino cremoso di nocciole	Pasta	NULL	Tortino con crema alle nocciole.	NULL
 
 20	Tortino lamponi e cioccolato	Pasta	NULL	Tortino con fondo di cioccolato e glassa di lamponi.	NULL
+
+
+
+21  Abbraccio di cioccolato Pasta NULL  Biscotto morbido al cioccolato e mandorle. Cremoso di cioccolato al latte e mousse al cioccolato fondente.	NULL
+
+22  Amalfi  Pasta NULL	Biscotto alle mandorle profumato al limone. Polpa di lamponi freschi. Soffice crema al limone.	NULL
+
+23  Angelina	Pasta	NULL	Frolla croccante alle nocciole. Biscotto al cioccolato profumato al maraschino. Soffice crema alle mandorle tostate.	NULL
+
+24  Caramel all’arancia	Pasta	NULL	Biscotto al cioccolato fondente all'olio di olive extravergine, crema vellutata al caramello, cremoso al cioccolato bianco e arancio.	NULL
+
+25  Cheope	Pasta	NULL	Sottili gusci di bignè farciti con crema chantilly, zabaione e cioccolato 60% e morbida glassa al cioccolato.	NULL
+
+26  Cuore di velluto	Pasta	NULL	Meringa morbida alle nocciole. Cremoso di cioccolato al latte e nocciole pralinate. Crema chantilly di cioccolato al latte.	NULL
+
+27  Exotica	Pasta	NULL	Morbida meringa al cocco, cremoso al frutto della passione, sfoglie di cioccolato bianco e mousse al cocco.	NULL
+
+28  Perle e rubini	Pasta	NULL	Biscotto morbido alle mandorle. Polpa di lamponi freschi. Mousse al cioccolato bianco.	NULL
+
+29  Rugiada	Pasta	NULL	Biscotto morbido al cioccolato. Mousse ai frutti di bosco cremosa.	NULL
+
+30  Settepetali	Pasta	NULL	Mousse al cioccolato fondente 70%. Bavarese alle nocciole pralinate. Sfoglie di cioccolato fondente.	NULL
+
+31	Abbraccio di cioccolato	Torta	NULL	Biscotto morbido al cioccolato, crema di cioccolato al latte e mousse al cioccolato fondente.	NULL
+
+32	Angelina	Torta	NULL	Fondo croccante di frolla alle nocciole, biscotto profumato al maraschino avvolto da una soffice crema alle mandorle tostate, decorata con foglie di cioccolato bianco.	NULL
+
+33	Caramel all’arancia	Torta	NULL	Biscotto al cioccolato, crema vellutata al caramello, albicocche candite e crema al cioccolato bianco e arancio.	NULL
+
+34	Crostata ai frutti di bosco	Torta	NULL	Fondo di pasta frolla alle mandorle, marmellata ai mirtilli ricoperta di frutti di bosco freschi.	NULL
+
+35	Cuore di velluto	Torta	NULL	Fondo di meringa alle nocciole, crema di cioccolato al latte e nocciole, cuore avvolto da una leggera crema chantilly di cioccolato al latte.	NULL
+
+36	Cupola al torroncino	Torta	NULL	Pan di spagna al cioccolato, crema leggera al torrone, cubetti di meringa, soffice crema al cioccolato fondente avvolta da granella di amaretto.	NULL
+
+37	Exotica	Torta	NULL	Fondo morbido di meringa al cocco, cremosa al frutto della passione, sfoglie di cioccolato bianco, leggera mousse al latte di cocco.	NULL
+
+38	Meringata alla frutta	Torta	NULL	Fondo croccante di meringa, panna montata e frutta fresca.	NULL
+
+39	Mimosa	Torta	NULL	Morbido pan di spagna al limone, crema leggera al limone, cubetti di meringa e ananas freschi.	NULL
+
+40	Settepetali	Torta	NULL	Biscotto morbido al cioccolato e nocciole con cereali, mousse al cioccolato fondente, sfoglie di cioccolato fondente.	NULL
+
+41	Torta alle mandorle	Torta	NULL	Fondo di friabile pasta frolla, pan di spagna profumato al maraschino e amaretto morbido alle mandorle, ricoperta di mandorle tostate.	NULL
+
+42	Torta Amalfi	Torta	NULL	Soffice pan di spagna alle mandorle profumato al limone, polpa di lamponi freschi avvolti da una leggerissima mousse al limone.	NULL
+
+43	Torta bresciana	Torta	NULL	Croccante frolla al cioccolato e mandorle, biscotto al cioccolato bagnato al caffè e crema leggera al mascarpone ricoperta da sottili sfoglie di cioccolato fondente.	NULL
+
+44	Torta Langhe	Torta	NULL	Fondo di friabile pasta frolla con morbido cake alle nocciole ricoperto di crema al cioccolato e nocciole.	NULL
+
+45	Torta noci e caramello	Torta	NULL	Fondo di friabile pasta alle mandorle ricoperta di noci caramellate.	NULL
+
+46	Torta perle e rubini	Torta	NULL	Biscotto morbido alle mandorle, polpa di lamponi freschi avvolta da una leggera mousse al cioccolato bianco.	NULL
+
+47	Torta rugiada	Torta	NULL	Biscotto morbido al cioccolato, sottile strato di cioccolato fondente avvolto da una delicata mousse ai frutti di bosco.	NULL
+
+48	Torta sacher	Torta	NULL	Morbido pan di spagna al cioccolato e mandorle farcito con marmellata di albicocche al 70%, ricoperto da una morbida glassa al cioccolato fondente.	NULL
