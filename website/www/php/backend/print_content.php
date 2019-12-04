@@ -24,8 +24,18 @@ class Print_content{
         return '<body>';
     }
 
-    public static function header($title){
-        return str_replace("%",$title,file_get_contents("../html/components/header.html"));
+    public static function header($title,$page){
+        $content='<div id="header" class="box a_column">
+                     <div class="logo_column">';
+        if(!strcmp($page,"home.php"))
+        $content=$content.'<img id="logo" src="../images/logo.png" alt="Ti trovi nella pagina principale di Pasticceria Padovana"/>';
+        else
+        $content=$content.'<a href="home.html" title="Torna alla pagina principale"><img id="logo" src="../images/logo.png" alt="Torna alla pagina principale di Pasticceria Padovana"/></a>';
+        return $content.'</div>
+                            <div class="title_column mobile_hidden">
+                                <h1>'.$title.'</h1>
+                            </div>
+                        </div>';
     }
 
     public static function breadcrumb($page){

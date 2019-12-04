@@ -4,7 +4,7 @@ echo(Print_content::top('xhtml+aria'));
 echo(Print_content::openHTML());
 echo(Print_content::head('Home'));
 echo(Print_content::openBody());
-echo(Print_content::header('La miglior pasticceria di Padova')."\r");
+echo(Print_content::header('La miglior pasticceria di Padova','home.php')."\r");
 echo(Print_content::breadcrumb('<strong xml:lang="en">Home</strong>')."\r");
 echo(Print_content::openGeneralContainer());
 echo(Print_content::menu("home.php"));
