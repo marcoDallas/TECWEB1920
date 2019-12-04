@@ -5,17 +5,23 @@
 class Print_content{
 
     public static function top($type){
-        $content;
         if(!strcmp($type,"html5"))
-            $content='<!DOCTYPE html>';
+            return '<!DOCTYPE html>';
         else if(!strcmp($type,"xhtml+aria"))
-            $content='<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML + ARIA 1.0//EN""http://www.w3.org/WAI/ARIA/schemata/xhtml-aria-1.dtd">';
+            return '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML + ARIA 1.0//EN""http://www.w3.org/WAI/ARIA/schemata/xhtml-aria-1.dtd">';
         else throw new Exception("Failed to load document schema");
-        return $content."\r".'<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">';   
+    }
+
+    public static function openHTML(){
+        return '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">';
     }
 
     public static function head($title){
         return str_replace("%",$title,file_get_contents("../html/components/head.html"));
+    }
+
+    public static function openBody(){
+        return '<body>';
     }
 
     public static function header($title){
@@ -24,6 +30,10 @@ class Print_content{
 
     public static function breadcrumb($page){
         return '<div id="breadcrumb" class="box a_column"><p>Ti trovi in: '.$page.'</p></div>';
+    }
+
+    public static function openGeneralContainer(){
+        return '<div id="general_container" class="box a_column">';
     }
 
     public static function menu($page){
@@ -64,6 +74,10 @@ class Print_content{
         return $content;
     }
 
+    public static function openLoginNewsContainer(){
+        return '<div class="medium_column login_column">';
+    }
+
     public static function login_form(){
         return file_get_contents("../html/components/login_form.html");
     }
@@ -75,10 +89,21 @@ class Print_content{
         return $content;
     }
 
+    public static function closeDiv(){
+        return '</div>';
+    }
+
     public static function footer(){
         return file_get_contents("../html/components/footer.html");
     }
 
+    public static function closeBody(){
+        return '</body>';
+    }
+
+    public static function closeHTML(){
+        return '</html>';
+    }
 
 } 
 ?>
