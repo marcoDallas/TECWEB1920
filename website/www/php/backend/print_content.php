@@ -30,7 +30,7 @@ class Print_content{
         if(!strcmp($page,"home.php"))
         $content=$content.'<img id="logo" src="../images/logo.png" alt="Ti trovi nella pagina principale di Pasticceria Padovana"/>';
         else
-        $content=$content.'<a href="home.html" title="Torna alla pagina principale"><img id="logo" src="../images/logo.png" alt="Torna alla pagina principale di Pasticceria Padovana"/></a>';
+        $content=$content.'<a href="home.php" title="Torna alla pagina principale"><img id="logo" src="../images/logo.png" alt="Torna alla pagina principale di Pasticceria Padovana"/></a>';
         return $content.'</div>
                             <div class="title_column mobile_hidden">
                                 <h1>'.$title.'</h1>
