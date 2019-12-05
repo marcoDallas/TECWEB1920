@@ -14,6 +14,6 @@ Header set Cache-Control "max-age=604800, public"
 </FilesMatch>
 
 # Index e fallback
-DirectoryIndex index.html
+DirectoryIndex index.php
 ErrorDocument 404 http://localhost/html/fallback.html
 php_flag display_errors on
