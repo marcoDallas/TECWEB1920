@@ -80,12 +80,6 @@ dt {
     display: block;
 }
 
-#logo_storia::before {
-    content: url("../images/logo.png");
-    display: block;
-    margin-top: 1em;
-}
-
 #header {
     background-color: #EC7205;
     color: #FFFFFF;
@@ -293,11 +287,12 @@ dt {
 }
 
 #contentContatti p, #contentContatti dl {
-        padding: 1em;
+    padding: 1em;
 }
 
 h2 {
     color: red;
+    padding-top: 0.5em;
 }
 
 #maps{
