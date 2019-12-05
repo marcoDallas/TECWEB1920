@@ -51,31 +51,31 @@ class Print_content{
         '."\r".'<li class="hidden" role="tablist" aria-setsize="5" aria-posinset="1"><a href="#content" tabindex="1">Vai al contenuto</a></li>';
         if(!strcmp($page,"home.php")){
             $content=$content."\r".'<li xml:lang="en"><strong>Home</strong></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="2"><a href="prodotti.php?type=paste" tabindex="2">Paste</a></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="3"><a href="prodotti.php?type=torte" tabindex="3">Torte</a></li>'."\r".'
+            <li role="tablist" aria-setsize="5" aria-posinset="2"><a href="prodotti.php?type=Paste" tabindex="2">Paste</a></li>'."\r".'
+            <li role="tablist" aria-setsize="5" aria-posinset="3"><a href="prodotti.php?type=Torte" tabindex="3">Torte</a></li>'."\r".'
             <li role="tablist" aria-setsize="5" aria-posinset="4"><a href="storia.php" tabindex="4">Storia</a></li>'."\r".'
             <li role="tablist" aria-setsize="5" aria-posinset="5"><a href="contatti.php" tabindex="5">Contatti</a></li>';
         }else if(!strcmp($page,"storia.php")){
             $content=$content."\r".'<li role="tablist" aria-setsize="5" aria-posinset="2"><a href="home.php" xml:lang="en" tabindex="2">Home</a></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="3"><a href="prodotti.php?type=paste" tabindex="3">Paste</a></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="4"><a href="prodotti.php?type=torte" tabindex="4">Torte</a></li>'."\r".'
+            <li role="tablist" aria-setsize="5" aria-posinset="3"><a href="prodotti.php?type=Paste" tabindex="3">Paste</a></li>'."\r".'
+            <li role="tablist" aria-setsize="5" aria-posinset="4"><a href="prodotti.php?type=Torte" tabindex="4">Torte</a></li>'."\r".'
             <li><strong>Storia</strong></li>'."\r".'
             <li role="tablist" aria-setsize="5" aria-posinset="5"><a href="contatti.php" tabindex="5">Contatti</a></li>';
         }else if(!strcmp($page,"contatti.php")){
             $content=$content."\r".'<li role="tablist" aria-setsize="5" aria-posinset="2"><a href="home.php" xml:lang="en" tabindex="2">Home</a></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="3"><a href="prodotti.php?type=paste" tabindex="3">Paste</a></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="4"><a href="prodotti.php?type=torte" tabindex="4">Torte</a></li>'."\r".'
+            <li role="tablist" aria-setsize="5" aria-posinset="3"><a href="prodotti.php?type=Paste" tabindex="3">Paste</a></li>'."\r".'
+            <li role="tablist" aria-setsize="5" aria-posinset="4"><a href="prodotti.php?type=Torte" tabindex="4">Torte</a></li>'."\r".'
             <li role="tablist" aria-setsize="5" aria-posinset="5"><a href="storia.php" tabindex="5">Storia</a></li>'."\r".'
             <li><strong>Contatti</strong></li>';
-        }else if(!strcmp($page,"prodotti.php?type=paste")){
+        }else if(!strcmp($page,"prodotti.php?type=Paste")){
             $content=$content."\r".'<li xml:lang="en" role="tablist" aria-setsize="5" aria-posinset="2"><a href="home.php" tabindex="2">Home</a></li>'."\r".'
             <li><strong>Paste</strong></dt>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="3"><a href="prodotti.php?type=torte" tabindex="3">Torte</a></li>'."\r".'
+            <li role="tablist" aria-setsize="5" aria-posinset="3"><a href="prodotti.php?type=Torte" tabindex="3">Torte</a></li>'."\r".'
             <li role="tablist" aria-setsize="5" aria-posinset="4"><a href="storia.php" tabindex="4">Storia</a></li>'."\r".'
             <li role="tablist" aria-setsize="5" aria-posinset="5"><a href="contatti.php" tabindex="5">Contatti</a></li>';
-        }else if(!strcmp($page,"prodotti.php?type=torte")){
+        }else if(!strcmp($page,"prodotti.php?type=Torte")){
             $content=$content."\r".'<li role="tablist" aria-setsize="5" aria-posinset="2"><a href="home.php" xml:lang="en" tabindex="2">Home</a></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="3"><a href="prodotti.php?type=paste" tabindex="3">Paste</a></li>'."\r".'
+            <li role="tablist" aria-setsize="5" aria-posinset="3"><a href="prodotti.php?type=Paste" tabindex="3">Paste</a></li>'."\r".'
             <li><strong>Torte</strong></li>'."\r".'
             <li role="tablist" aria-setsize="5" aria-posinset="4"><a href="storia.php" tabindex="4">Storia</a></li>'."\r".'
             <li role="tablist" aria-setsize="5" aria-posinset="5"><a href="contatti.php" tabindex="5">Contatti</a></li>';
