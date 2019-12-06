@@ -323,22 +323,29 @@ h2 {
  ************************* DESKTOP LAYOUT *********************************
  **************************************************************************/
 @media only screen and (min-width: 830px) {
-    /*tags*/
-    input[type=text], input[type=password] {
-        width: 8em;
+
+
+    fieldset {
+        padding: 1.1em 10% 1.1em;
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid white;
+        border-bottom:1px solid white;
     }
 
-    form legend {
-        text-align: center;
-    }
-
-    form fieldset {
-        padding: 1em 20% 1em;
-        border: 1px solid brown;
+    fieldset > *{
+        display: block;
     }
 
     form label, form input {
         margin: 1em;
+    }
+
+    input[type=submit]{
+        margin-top: 1em;
+        padding-right: 1.5em;
+        padding-bottom: 0.6em;
+        font-size: 1em;
     }
 
     .thin_column {

@@ -12,7 +12,6 @@ else header('Location: html/fallback.html');
 echo(Print_content::breadcrumb('<strong>'.$_GET['type'].'</strong>')."\r");
 echo(Print_content::openGeneralContainer());
 echo(Print_content::menu('prodotti.php?type='.$_GET['type']));
-//echo(Print_content::openLoginNewsContainer());
 echo(Print_content::news("prodotti.php"));
 //echo(Print_content::login_form());
 echo(Print_content::closeDiv());
