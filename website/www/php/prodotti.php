@@ -21,11 +21,19 @@ echo(Print_content::closeDiv());
 
 
 $content = new Print_products();
-if(!strcmp($_GET['type'],'Paste'))
-    $content->print_paste();
-else if(!strcmp($_GET['type'],'Torte'))
-    $content->print_torte();
+if(!strcmp($_GET['type'],'Paste')){
+    if(isset($_GET['search']))
+        $content->print_searcheable_paste($_GET['search']);
+    else
+        $content->print_paste();
 
+}else if(!strcmp($_GET['type'],'Torte')){
+    if(isset($_GET['search']))
+        $content->print_searcheable_torte($_GET['search']);
+    else
+        $content->print_torte();
+
+}
 
 echo(Print_content::closeDiv());
 echo(Print_content::footer());

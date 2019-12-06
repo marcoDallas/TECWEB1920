@@ -17,8 +17,15 @@ class Print_products{
             $_GET['page']=1;
         if(sizeof($arr)>10){
             $arrpage=array_slice($arr,$_GET['page'].'0'-10,10);
-        }
+        }else
+            $arrpage=$arr;
         echo('<div class="large_column">');
+        echo('<form id="ricercaProdotti" method="get" action="prodotti.php"');
+        echo('<label for="cercaProdotti">Cerca '.$_GET['type'].'</label>');
+        echo('<input type="hidden" name="type" value="'.$_GET['type'].'"/>');
+        echo('<input type="text" id="cercaProdotti" name="search" tabindex="9"/>');
+        echo('<input type="submit" value="search" tabindex="10"/>');
+        echo('</form>');
         echo('<ul>');
         foreach($arrpage as &$prodotto){
             echo('<li>');
