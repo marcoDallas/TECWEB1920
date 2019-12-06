@@ -13,12 +13,18 @@ class Print_products{
     }
 
     public static function print_pr($arr){
+        echo('<div class="large_column">');
+        echo('<ul>');
         foreach($arr as &$prodotto){
-            echo('<div class="prodotto">');
+            echo('<li>');
+            echo('<div class="box a_column element">');
             echo('<h3>'.$prodotto['Nome'].'</h3>');
             echo('<p>'.$prodotto['Descrizione'].'</p>');
             echo('</div>');
+            echo('</li>');
         }
+        echo('</ul>');
+        echo('</div>');
     }
     
     public function print_paste(){
