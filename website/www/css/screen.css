@@ -417,10 +417,6 @@ h2 {
         padding-left: 1em;
     }
 
-    /*.login_column {
-        float: left;
-    }*/
-
     #login {
         border: none;
         margin: 0em 1em 1em 1em;
@@ -486,5 +482,13 @@ h2 {
         vertical-align: middle;
         display: inline;
         margin: 0em;
+    }
+
+    #imgFallback{
+        float: left;
+    }
+
+    #contentFallback{
+        margin-top: 30%;
     }
 }
