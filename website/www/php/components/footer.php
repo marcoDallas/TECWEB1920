@@ -1,15 +1,6 @@
+<?php require_once('backend/print_content.php'); ?>
 <div id="footer" class="box a_column">
-    <div  id="administrator_link" class="box thin_column">
-        <fieldset id="fieldsetLogin">
-            <legend>Area Amministratore</legend>
-            <label for="username"><span xml:lang="en">Username</span></label>
-            <input type="text" name="username" id="username" maxlength="20" tabindex="6" aria-required="true"/>
-            <label for="password"><span xml:lang="en">Password</span></label>
-            <input type="password" name="password" id="password" maxlength="20" tabindex="7" aria-required="true"/>
-            <input type="submit" value="Accedi" tabindex="8" />
-        </fieldset>
-
-    </div>
+    <?php echo(Print_content::adminAreaForm()); ?>
     <div class="box large_column">
         <dl class="half_column footer_element">
             <dt>Pasticceria Padovana</dt>

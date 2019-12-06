@@ -1,7 +1,4 @@
-<div class="news_container">
-    <p class="news_title">Sconti speciali a Natale!</p>
-    <p class="news_content">Dal 15 dicembre al 15 gennaio, se prendi 2 torte la meno cara la paghi la metà</p>
-</div>
+<?php require_once('backend/print_news.php'); $print = new Print_news(); $print->print_news(); ?>
 <div class="news_container">
     <a class="news_title" href="../php/contatti.php">
         Vieni a trovarci!
