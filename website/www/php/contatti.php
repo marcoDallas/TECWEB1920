@@ -8,9 +8,8 @@ echo(Print_content::header('Come e quando puoi contattarci','contatti.php')."\r"
 echo(Print_content::breadcrumb('<strong>Contatti</strong>')."\r");
 echo(Print_content::openGeneralContainer());
 echo(Print_content::menu("contatti.php"));
-echo(Print_content::openLoginNewsContainer());
-echo(Print_content::login_form());
 echo(Print_content::news("contatti.php"));
+//echo(Print_content::login_form());
 echo(Print_content::closeDiv());
 include_once('../html/contatti.html');
 echo(Print_content::closeDiv());

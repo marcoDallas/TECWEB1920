@@ -112,19 +112,15 @@ dt {
     display: block;
 }
 
-#login a {
-    font-size: 0.8em;
-}
-
 #login {
     padding: 0 1em 1em 1em;
     overflow: hidden;
     border-bottom: 5px solid #bc5800;
     border-top: 3px solid #bc5800;
-    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
-    #login form label, #login form input, #login a {
+    #login form label, #login form input{
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 1em;
@@ -156,6 +152,7 @@ dt {
 #menu {
     font-size: 1.5em;
     overflow: hidden;
+    margin-bottom: 2em;
 }
 
 /* per il menu usiamo dimensioni fisse in px per garantire il minimo di area touch */
@@ -227,6 +224,7 @@ dt {
 /* classe mobile aggiunta da JS alla pressione dell'icona*/
 #menu.mobile {
     position: relative;
+    margin-bottom: 0em;
 }
 
 #menu.mobile li a{
@@ -263,9 +261,9 @@ dt {
     padding: 1.5em;
 }
 
-#content > h1 {
+/*#content > h1 {
     padding: 0.5em;
-}
+}*/
 
 #content > dl {
     padding: 1em;
@@ -274,6 +272,8 @@ dt {
 #content {
     background-color: white;
     text-align: center;
+    float: right;
+    font-size: 120%;
 }
 
 .imgHome, .imgStoria{
@@ -283,7 +283,7 @@ dt {
 
 #contentContatti {
     text-align: left;
-    padding-left: 2.5em;
+    padding: 0em 2.5em 0em;
 }
 
 #contentContatti p, #contentContatti dl {
@@ -323,26 +323,33 @@ h2 {
  ************************* DESKTOP LAYOUT *********************************
  **************************************************************************/
 @media only screen and (min-width: 830px) {
-    /*tags*/
-    input[type=text], input[type=password] {
-        width: 8em;
+
+
+    fieldset {
+        padding: 1.1em 10% 1.1em;
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid white;
+        border-bottom:1px solid white;
     }
 
-    form legend {
-        text-align: center;
-    }
-
-    form fieldset {
-        padding: 1em 5% 1em;
-        border: 1px solid brown;
+    fieldset > *{
+        display: block;
     }
 
     form label, form input {
         margin: 1em;
     }
 
+    input[type=submit]{
+        margin-top: 1em;
+        padding-right: 1.5em;
+        padding-bottom: 0.6em;
+        font-size: 1em;
+    }
+
     .thin_column {
-        width: 20%;
+        width: 22%;
     }
 
     .medium_column {
@@ -362,7 +369,7 @@ h2 {
     }
 
     .large_column {
-        width: 55%;
+        width: 78%;
     }
 
     /* other */
@@ -410,16 +417,16 @@ h2 {
         padding-left: 1em;
     }
 
-    .login_column {
-        float: right;
-    }
+    /*.login_column {
+        float: left;
+    }*/
 
     #login {
         border: none;
-        margin: 0em;
+        margin: 0em 1em 1em 1em;
     }
 
-        #login form label, #login form input, #login a {
+        #login form label, #login form input{
             margin: 0.5em;
             text-align: left;
         }

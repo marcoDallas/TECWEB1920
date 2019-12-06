@@ -47,7 +47,7 @@ class Print_content{
     }
 
     public static function menu($page){
-        $content='<div id="menu_container" class="thin_column">'."\r".'<div id="menu" class="mobile_hidden" role="navigation">'."\r".'<ul>
+        $content='<div class="thin_column">'."\r".'<div id="menu" class="mobile_hidden" role="navigation">'."\r".'<ul>
         '."\r".'<li class="hidden" role="tablist" aria-setsize="5" aria-posinset="1"><a href="#content" tabindex="1">Vai al contenuto</a></li>';
         if(!strcmp($page,"home.php")){
             $content=$content."\r".'<li xml:lang="en"><strong>Home</strong></li>'."\r".'
@@ -80,12 +80,7 @@ class Print_content{
             <li role="tablist" aria-setsize="5" aria-posinset="4"><a href="storia.php" tabindex="4">Storia</a></li>'."\r".'
             <li role="tablist" aria-setsize="5" aria-posinset="5"><a href="contatti.php" tabindex="5">Contatti</a></li>';
         }
-        $content=$content."\r".'</ul>'."\r".'</div>'."\r".'<div id="menu_icon" onclick="toggleMenu(this)">'."\r".'<div class="bar1"></div>'."\r".'<div class="bar2"></div>'."\r".'<div class="bar3"></div>'."\r".'</div>'."\r".'</div>';
-        return $content;
-    }
-
-    public static function openLoginNewsContainer(){
-        return '<div class="medium_column login_column">';
+        return $content."\r".'</ul>'."\r".'</div>'."\r".'<div id="menu_icon" onclick="toggleMenu(this)">'."\r".'<div class="bar1"></div>'."\r".'<div class="bar2"></div>'."\r".'<div class="bar3"></div>'."\r".'</div>';    
     }
 
     public static function login_form(){
