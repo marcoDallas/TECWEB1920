@@ -18,8 +18,6 @@ echo(Print_content::openGeneralContainer());
 echo(Print_content::menu('prodotti.php?type='.$_GET['type']));
 echo(Print_content::news("prodotti.php"));
 echo(Print_content::closeDiv());
-
-
 $content = new Print_products();
 if(!strcmp($_GET['type'],'Paste')){
     if(isset($_GET['search']))
@@ -34,7 +32,6 @@ if(!strcmp($_GET['type'],'Paste')){
         $content->print_torte();
 
 }
-
 echo(Print_content::closeDiv());
 echo(Print_content::footer());
 echo(Print_content::closeBody());

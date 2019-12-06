@@ -2,6 +2,7 @@
 /*
  * Definisce metodi che elaborano parti di pagine
  */
+require_once('sessions.php');
 class Print_content{
 
     public static function top($type){
@@ -95,7 +96,29 @@ class Print_content{
     }
 
     public static function footer(){
-        return file_get_contents("../html/components/footer.html");
+        include_once("components/footer.php");
+    }
+
+    public static function adminAreaForm(){
+        if(Sessions::session_exists('admin')){
+            $content ='<div id="administrator_link" class="box thin_column">
+                        <p>Benvenuto amministratore!</p>
+                        </div>';
+        }else{
+            $content ='<div  id="administrator_link" class="box thin_column">
+                <form method="post" action="administration.php">
+                    <fieldset id="fieldsetLogin">
+                        <legend>Area Amministratore</legend>
+                        <label for="username"><span xml:lang="en">Username</span></label>
+                        <input type="text" name="username" id="username" maxlength="20" tabindex="6" aria-required="true"/>
+                        <label for="password"><span xml:lang="en">Password</span></label>
+                        <input type="password" name="password" id="password" maxlength="20" tabindex="7" aria-required="true"/>
+                        <input type="submit" value="Accedi" tabindex="8" />
+                    </fieldset>
+                </form>
+            </div>';
+        }
+        return $content;
     }
 
     public static function closeBody(){

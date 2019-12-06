@@ -29,5 +29,12 @@ class Get_products{
     public function search_torte($to_search){
         return mysqli_fetch_all($this->prodotti->execute("select * from Prodotto where TipoProdotto LIKE 'Torta' and Nome LIKE '%$to_search%' order by Nome"),MYSQLI_ASSOC);
     }
+
+    public function disconnect(){
+        return $this->prodotti->disconnect();
+    }
 }
+
+$a = new Get_products();
+$a->get_torte();
 ?>
