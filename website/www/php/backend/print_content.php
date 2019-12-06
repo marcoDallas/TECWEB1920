@@ -85,10 +85,13 @@ class Print_content{
     }
 
     public static function news($page){
-        $content = file_get_contents("../html/components/news.html");
-        if(!strcmp($page,"contatti.php"))
-            return '<div class="news_container">'."\r".'<p class="news_title">Sconti speciali a Natale!</p>'."\r".'<p class="news_content">Dal 15 dicembre al 15 gennaio, se prendi 2 torte la meno cara la paghi la metà</p>'."\r".'</div>'."\r".'';
-        return $content;
+        if(!strcmp($page,"contatti.php")){
+            require_once('print_news.php');
+            $print = new Print_news();
+            $print->print_news();
+        }else{
+            include_once("components/news.php");
+        }
     }
 
     public static function closeDiv(){
