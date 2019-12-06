@@ -3,6 +3,7 @@
  * Classe per stampare i prodotti nella pagina prodotti.php
  */
 require_once('get_products.php');
+require_once('sessions.php');
 
 class Print_products{
 
@@ -26,12 +27,19 @@ class Print_products{
         echo('<input type="text" id="cercaProdotti" name="search" tabindex="9"/>');
         echo('<input type="submit" value="search" tabindex="10"/>');
         echo('</form>');
+        if(Sessions::session_exists('admin') && Sessions::get_value('admin')==TRUE){
+            echo('<a href="#aggiungi">aggiungi prodotto</a>');
+        }
         echo('<ul>');
         foreach($arrpage as &$prodotto){
             echo('<li>');
             echo('<div class="box a_column element">');
             echo('<h3>'.$prodotto['Nome'].'</h3>');
             echo('<p>'.$prodotto['Descrizione'].'</p>');
+            if(Sessions::session_exists('admin') && Sessions::get_value('admin')==TRUE){
+                echo('<a href="#elimina">elimina prodotto</a>');
+                echo('<a href="#modifica">modifica prodotto</a>');
+            }
             echo('</div>');
             echo('</li>');
         }
