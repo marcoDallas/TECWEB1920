@@ -15,12 +15,19 @@ class Get_products{
     }
 
     public function get_paste(){
-        return $this->prodotti->execute("select * from Prodotto where TipoProdotto LIKE 'Pasta'");
+        return mysqli_fetch_all($this->prodotti->execute("select * from Prodotto where TipoProdotto LIKE 'Pasta' order by Nome"));
     }
 
     public function get_torte(){
-         return mysqli_fetch_all($this->prodotti->execute("select * from Prodotto where TipoProdotto LIKE 'Torta'"));
+        return mysqli_fetch_all($this->prodotti->execute("select * from Prodotto where TipoProdotto LIKE 'Torta' order by Nome"));
     }
 
+    public function search_paste($to_search){
+        return mysqli_fetch_all($this->prodotti->execute("select * from Prodotto where TipoProdotto LIKE 'Pasta' and Nome LIKE '%$to_search%' order by Nome"));
+    }
+
+    public function search_torte($to_search){
+        return mysqli_fetch_all($this->prodotti->execute("select * from Prodotto where TipoProdotto LIKE 'Torta' and Nome LIKE '%$to_search%' order by Nome"));
+    }
 }
 ?>
