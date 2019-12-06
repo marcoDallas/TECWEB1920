@@ -83,10 +83,6 @@ class Print_content{
         return $content."\r".'</ul>'."\r".'</div>'."\r".'<div id="menu_icon" onclick="toggleMenu(this)">'."\r".'<div class="bar1"></div>'."\r".'<div class="bar2"></div>'."\r".'<div class="bar3"></div>'."\r".'</div>';    
     }
 
-    public static function login_form(){
-        return file_get_contents("../html/components/login_form.html");
-    }
-
     public static function news($page){
         $content = file_get_contents("../html/components/news.html");
         if(!strcmp($page,"contatti.php"))
