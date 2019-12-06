@@ -1,6 +1,8 @@
 <?php
 if(!isset($_GET['type']) || (strcmp($_GET['type'],'Paste') && strcmp($_GET['type'],'Torte')))
     header('Location: html/fallback.html');  
+require_once 'backend/sessions.php';
+Sessions::init_session();
 require_once 'backend/print_content.php';
 require_once 'backend/print_products.php';
 echo(Print_content::top('xhtml+aria'));
