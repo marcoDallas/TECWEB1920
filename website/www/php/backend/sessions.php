@@ -21,6 +21,11 @@ class Sessions {
         if(isset($_SESSION[$name]))    
             unset($_SESSION[$name]);
     }
+
+    public static function set_expire($lifetime){
+        ini_set('session.gc_maxlifetime', $lifetime);
+        session_set_cookie_params($lifetime);
+    }
 }
 
 ?>
