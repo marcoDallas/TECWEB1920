@@ -37,8 +37,11 @@ class Print_products{
             echo('<h3>'.$prodotto['Nome'].'</h3>');
             echo('<p>'.$prodotto['Descrizione'].'</p>');
             if(Admin::verify()){
-                echo('<a href="#elimina">elimina prodotto</a>');
-                echo('<a href="#modifica">modifica prodotto</a>');
+                echo('<form method="post" action="'.$_SERVER['REQUEST_URI'].'">');
+                echo('<input type="hidden" name="product" value="'.$prodotto['Codice'].'"/>');
+                echo('<input type="submit" name="remove" value="Rimuovi prodotto"/>');
+                echo('<input type="submit" name="edit" value="Modifica prodotto"/>');
+                echo('</form>');
             }
             echo('</div>');
             echo('</li>');
