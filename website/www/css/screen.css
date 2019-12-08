@@ -278,7 +278,7 @@ dt {
 
 .imgHome, .imgStoria{
     height: auto;
-    width: 90%;
+    width: 80%;
 }
 
 #contentContatti {
@@ -491,4 +491,9 @@ h2 {
     #contentFallback{
         margin-top: 30%;
     }
+	
+	.imgHome, .imgStoria{	/*RISCRITTURA DEL MOBILE*/
+    height: auto;
+    width: 60%;
+}
 }
