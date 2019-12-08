@@ -20,9 +20,12 @@ class Edit_products{
     }
 
     public static function edit(){
+
         require_once 'backend/get_products.php';
         if(isset($_POST['id']) && isset($_POST['title']) && isset($_POST['type']) && isset($_POST['description'])){
             (new Get_products())->edit_product($_POST['id'],$_POST['type'],$_POST['title'],$_POST['description']);
+        }else if(isset($_POST['title']) && isset($_POST['type']) && isset($_POST['description'])){
+            (new Get_products())->add_product($_POST['type'],$_POST['title'],$_POST['description']);
         }
         return FALSE;
     }

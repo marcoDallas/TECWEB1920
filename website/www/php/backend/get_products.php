@@ -38,6 +38,10 @@ class Get_products{
         return $this->product->execute("delete from Prodotto where Codice = $id");
     }
 
+    public function add_product($type,$title,$description){
+        return $this->product->execute("insert into Prodotto (Nome,TipoProdotto,Descrizione) values ('$title','$type','$description');");
+    }
+
     public function edit_product($id,$type,$title,$description){
         return $this->product->execute("update Prodotto set TipoProdotto = '$type' , Nome = '$title' , Descrizione = '$description' where Codice = $id");
     }

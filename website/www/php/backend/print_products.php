@@ -28,7 +28,10 @@ class Print_products{
         echo('<input type="submit" value="search" tabindex="10"/>');
         echo('</form>');
         if(Admin::verify()){
-            echo('<a href="#aggiungi">aggiungi prodotto</a>');
+            echo('<form method="post" action="modifica_prodotto.php">');
+            echo('<input type="hidden" name="prevpage" value="'.$_SERVER['REQUEST_URI'].'"/>');
+            echo('<input type="submit" name="add" value="Aggiungi Prodotto" tabindex="10"/>');
+            echo('</form>');
         }
         echo('<ul>');
         foreach($arrpage as &$prodotto){
