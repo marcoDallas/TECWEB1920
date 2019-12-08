@@ -1,6 +1,4 @@
 ﻿﻿<?php
-require_once 'backend/sessions.php';
-Sessions::init_session();
 require_once 'backend/print_content.php';
 echo(Print_content::top('xhtml+aria'));
 echo(Print_content::openHTML());

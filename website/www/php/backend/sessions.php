@@ -6,7 +6,7 @@ class Sessions {
     }
 
     public static function new_session($name,$value){
-        return $_SESSION[$name]=$value;
+        return $_SESSION[$name]=$value; /* Se richiamata sulla stessa sessione sovrascrive */
     }
 
     public static function session_exists($name){
@@ -15,6 +15,11 @@ class Sessions {
 
     public static function get_value($name){
         return $_SESSION[$name];
+    }
+
+    public static function delete_session($name){
+        if(isset($_SESSION[$name]))    
+            unset($_SESSION[$name]);
     }
 }
 
