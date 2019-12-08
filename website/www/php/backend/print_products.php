@@ -40,6 +40,10 @@ class Print_products{
                 echo('<form method="post" action="'.$_SERVER['REQUEST_URI'].'">');
                 echo('<input type="hidden" name="product" value="'.$prodotto['Codice'].'"/>');
                 echo('<input type="submit" name="remove" value="Rimuovi prodotto"/>');
+                echo('</form>');
+                echo('<form method="post" action="modifica_prodotto.php">');
+                echo('<input type="hidden" name="product" value="'.$prodotto['Codice'].'"/>');
+                echo('<input type="hidden" name="prevpage" value="'.$_SERVER['REQUEST_URI'].'"/>');
                 echo('<input type="submit" name="edit" value="Modifica prodotto"/>');
                 echo('</form>');
             }

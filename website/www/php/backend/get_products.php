@@ -1,45 +1,50 @@
  
 <?php
 /*
- *  Classe per la gestione dei prodotti
+ *  Classe per la gestione dei product
  */
 
 require_once('database_connection.php');
 
 class Get_products{
 
-    private $prodotti='';
+    private $product='';
 
     public function __construct(){
-        $this->prodotti = new database_connection();
+        $this->product = new database_connection();
     }
 
     public function get_paste(){
-        return mysqli_fetch_all($this->prodotti->execute("select * from Prodotto where TipoProdotto LIKE 'Pasta' order by Nome"),MYSQLI_ASSOC);
+        return mysqli_fetch_all($this->product->execute("select * from Prodotto where TipoProdotto LIKE 'Pasta' order by Nome"),MYSQLI_ASSOC);
     }
 
     public function get_torte(){
-        return mysqli_fetch_all($this->prodotti->execute("select * from Prodotto where TipoProdotto LIKE 'Torta' order by Nome"),MYSQLI_ASSOC);
+        return mysqli_fetch_all($this->product->execute("select * from Prodotto where TipoProdotto LIKE 'Torta' order by Nome"),MYSQLI_ASSOC);
     }
 
     public function search_paste($to_search){
-        return mysqli_fetch_all($this->prodotti->execute("select * from Prodotto where TipoProdotto LIKE 'Pasta' and Nome LIKE '%$to_search%' order by Nome"),MYSQLI_ASSOC);
+        return mysqli_fetch_all($this->product->execute("select * from Prodotto where TipoProdotto LIKE 'Pasta' and Nome LIKE '%$to_search%' order by Nome"),MYSQLI_ASSOC);
     }
 
     public function search_torte($to_search){
-        return mysqli_fetch_all($this->prodotti->execute("select * from Prodotto where TipoProdotto LIKE 'Torta' and Nome LIKE '%$to_search%' order by Nome"),MYSQLI_ASSOC);
+        return mysqli_fetch_all($this->product->execute("select * from Prodotto where TipoProdotto LIKE 'Torta' and Nome LIKE '%$to_search%' order by Nome"),MYSQLI_ASSOC);
+    }
+
+    public function search_by_code($id){
+        return mysqli_fetch_assoc($this->product->execute("select * from Prodotto where Codice = $id"));
     }
 
     public function delete_product($id){
-        return $this->prodotti->execute("delete from Prodotto where Codice = $id");
+        return $this->product->execute("delete from Prodotto where Codice = $id");
+    }
+
+    public function edit_product($id,$type,$title,$description){
+        return $this->product->execute("update Prodotto set TipoProdotto = '$type' , Nome = '$title' , Descrizione = '$description' where Codice = $id");
     }
 
     public function disconnect(){
-        return $this->prodotti->disconnect();
+        return $this->product->disconnect();
     }
 
 }
-
-$a = new Get_products();
-$a->get_torte();
 ?>
