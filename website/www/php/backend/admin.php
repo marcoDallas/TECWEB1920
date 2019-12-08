@@ -7,7 +7,9 @@ include_once('sessions.php');
 class Admin{
 
     public static function init_admin(){
+        Sessions::set_expire(1800); //30 minuti di vita alle sessioni
         Sessions::init_session();
+        
         if(!Admin::verify() && isset($_POST['Login']))
             Admin::login();
         if(isset($_POST['Logout']))
