@@ -16,10 +16,13 @@ class Print_news{
     public function print_news(){
         $content=$this->news->get_news();
         echo('<div class="news_container">');
-        echo('<p class="news_title">'.$content['Title'].'</p>');
-        echo('<p class="news_content">'.$content['Content'].'</p>');
+        echo('<p class="news_title">'.$content['Titolo'].'</p>');
+        echo('<p class="news_content">'.$content['Contenuto'].'</p>');
         if(Admin::verify()){
-            echo('<a href="#modifica">modifica sezione news</a>');
+            echo('<form method="post" action="modifica_news.php">');
+            echo('<input type="hidden" name="prevpage" value="'.$_SERVER['REQUEST_URI'].'"/>');
+            echo('<input type="submit" name="editNews" value="Modifica news" tabindex="10"/>');
+            echo('</form>');
         }
         echo('</div>');
     }

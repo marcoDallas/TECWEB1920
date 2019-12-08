@@ -1,6 +1,10 @@
 <?php
 require_once 'backend/admin.php';
 Admin::init_admin();
+if(Admin::verify()){
+    require_once 'backend/edit_news.php';
+    Edit_news::edit();
+}
 require_once 'backend/print_content.php';
 echo(Print_content::top('xhtml+aria'));
 echo(Print_content::openHTML());

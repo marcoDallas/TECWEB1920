@@ -14,12 +14,11 @@ class Get_news{
     }
 
     public function get_news(){
-        //return mysqli_fetch_all($this->admin->execute("select * from News"),MYSQLI_ASSOC);
-        return array("Title"=>"Sconti speciali a Natale!", "Content"=>"Dal 15 dicembre al 15 gennaio, se prendi 2 torte la meno cara la paghi la metà");
+        return mysqli_fetch_assoc($this->news->execute("select * from News where Codice = 1"));
     }
 
-    public function set_news(){
-        return FALSE;
+    public function set_news($title,$content){
+        return $this->news->execute("update News set Titolo = '$title', Contenuto = '$content' where Codice = 1");
     }
 
 }
