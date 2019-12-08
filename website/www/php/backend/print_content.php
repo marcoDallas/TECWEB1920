@@ -106,17 +106,20 @@ class Print_content{
         if(Sessions::session_exists('admin')){
             $content ='<div id="administrator_link" class="box thin_column">
                         <p>Benvenuto amministratore!</p>
+                        <form method="post" action="'.$_SERVER['REQUEST_URI'].'">
+                            <input type="submit" value="Logout" name="Logout" tabindex="8" />
+                        </form>
                         </div>';
         }else{
             $content ='<div  id="administrator_link" class="box thin_column">
-                <form method="post" action="administration.php">
+                <form method="post" action="'.$_SERVER['REQUEST_URI'].'">
                     <fieldset id="fieldsetLogin">
                         <legend>Area Amministratore</legend>
                         <label for="username"><span xml:lang="en">Username</span></label>
                         <input type="text" name="username" id="username" maxlength="20" tabindex="6" aria-required="true"/>
                         <label for="password"><span xml:lang="en">Password</span></label>
                         <input type="password" name="password" id="password" maxlength="20" tabindex="7" aria-required="true"/>
-                        <input type="submit" value="Accedi" tabindex="8" />
+                        <input type="submit" value="Accedi" name="Login" tabindex="8" />
                     </fieldset>
                 </form>
             </div>';

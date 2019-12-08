@@ -3,7 +3,7 @@
  * Classe per stampare i prodotti nella pagina prodotti.php
  */
 require_once('get_news.php');
-require_once('sessions.php');
+require_once('admin.php');
 
 class Print_news{
 
@@ -18,7 +18,7 @@ class Print_news{
         echo('<div class="news_container">');
         echo('<p class="news_title">'.$content['Title'].'</p>');
         echo('<p class="news_content">'.$content['Content'].'</p>');
-        if(Sessions::session_exists('admin') && Sessions::get_value('admin')==TRUE){
+        if(Admin::verify()){
             echo('<a href="#modifica">modifica sezione news</a>');
         }
         echo('</div>');
