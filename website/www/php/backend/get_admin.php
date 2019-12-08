@@ -14,8 +14,7 @@ class Get_admin{
     }
 
     public function admin($username,$password){
-        //return mysqli_fetch_all($this->admin->execute("select Email,Pwd from Utente where Email LIKE '$username' and Pwd LIKE '$password';"),MYSQLI_ASSOC);
-        return mysqli_fetch_all($this->admin->execute("select * from Utente"),MYSQLI_ASSOC);
+        return mysqli_fetch_assoc($this->admin->execute("select * from Utente where Email = '$username' and Pwd = '$password'"));
     }
 
 }
