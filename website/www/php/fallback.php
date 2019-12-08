@@ -1,4 +1,6 @@
 ﻿﻿<?php
+require_once 'backend/admin.php';
+Admin::init_admin();
 require_once 'backend/print_content.php';
 echo(Print_content::top('xhtml+aria'));
 echo(Print_content::openHTML());
