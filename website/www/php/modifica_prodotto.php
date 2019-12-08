@@ -4,6 +4,10 @@ Sessions::init_session();
 if(!Admin::verify() || ( (!isset($_POST['edit']) || !isset($_POST['product']) || !isset($_POST['prevpage'])) && ( !isset($_POST['add'] ) ))){
     header('Location: fallback.php');
 }
+if(Admin::verify()){
+    require_once 'backend/edit_news.php';
+    Edit_news::edit();
+}
 if(isset($_POST['add']))
     $edit=FALSE;
 require_once 'backend/print_content.php';

@@ -6,6 +6,8 @@ Admin::init_admin();
 if(Admin::verify()){
     require_once 'backend/edit_products.php';
     Edit_products::check_edit();
+    require_once 'backend/edit_news.php';
+    Edit_news::edit();
 }
 require_once 'backend/print_content.php';
 require_once 'backend/print_products.php';
