@@ -3,6 +3,12 @@ if(!isset($_GET['type']) || (strcmp($_GET['type'],'Paste') && strcmp($_GET['type
     header('Location: html/fallback.html');  
 require_once 'backend/admin.php';
 Admin::init_admin();
+if(isset($_POST['remove']) && Admin::verify()){
+    require_once 'backend/get_products.php';
+    echo($_POST['product']);
+    (new Get_products())->delete_product($_POST['product']);
+}
+
 require_once 'backend/print_content.php';
 require_once 'backend/print_products.php';
 echo(Print_content::top('xhtml+aria'));
