@@ -14,6 +14,8 @@ class Print_products{
     }
 
     public function print_pr($arr){
+        if(!$arr)
+            return;
         if(!isset($_GET['page']))
             $_GET['page']=1;
         if(sizeof($arr)>10){
@@ -37,7 +39,7 @@ class Print_products{
         foreach($arrpage as &$prodotto){
             echo('<li>');
             echo('<div class="box a_column element">');
-            echo('<img src="#"/>');
+            echo('<img src="'.$prodotto['Immagine'].'"/>');
             echo('<h3>'.$prodotto['Nome'].'</h3>');
             echo('<p>'.$prodotto['Descrizione'].'</p>');
             if(Admin::verify()){

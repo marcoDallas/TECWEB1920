@@ -12,8 +12,9 @@
     private $current_connection;
 
     public function __construct(){
-        if(!($this->current_connection = mysqli_connect($this->host,$this->user,$this->pass,$this->database))){
+        if(!($this->current_connection = @mysqli_connect($this->host,$this->user,$this->pass,$this->database))){
             error_log("Debugging errno: " . mysqli_connect_errno()."Debugging error: " . mysqli_connect_error());
+            echo "Momentaneamente i dati non sono disponibili. Riprovare più tardi.";
         }
     }
 
@@ -27,7 +28,7 @@
     }
 
     public function execute($query) {
-		return mysqli_query($this->current_connection,$query);
+		return @mysqli_query($this->current_connection,$query);
     }
     
     

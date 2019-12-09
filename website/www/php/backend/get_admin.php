@@ -14,7 +14,7 @@ class Get_admin{
     }
 
     public function admin($username,$password){
-        return mysqli_fetch_assoc($this->admin->execute("select * from Utente where Email = '$username' and Pwd = '$password'"));
+        return @mysqli_fetch_assoc($this->admin->execute("select * from Utente where Email = '$username' and Pwd = '$password'"));
     }
 
 }

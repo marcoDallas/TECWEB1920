@@ -15,23 +15,23 @@ class Get_products{
     }
 
     public function get_paste(){
-        return mysqli_fetch_all($this->product->execute("select * from Prodotto where TipoProdotto LIKE 'Pasta' order by Nome"),MYSQLI_ASSOC);
+        return @mysqli_fetch_all($this->product->execute("select * from Prodotto where TipoProdotto LIKE 'Pasta' order by Nome"),MYSQLI_ASSOC);
     }
 
     public function get_torte(){
-        return mysqli_fetch_all($this->product->execute("select * from Prodotto where TipoProdotto LIKE 'Torta' order by Nome"),MYSQLI_ASSOC);
+        return @mysqli_fetch_all($this->product->execute("select * from Prodotto where TipoProdotto LIKE 'Torta' order by Nome"),MYSQLI_ASSOC);
     }
 
     public function search_paste($to_search){
-        return mysqli_fetch_all($this->product->execute("select * from Prodotto where TipoProdotto LIKE 'Pasta' and Nome LIKE '%$to_search%' order by Nome"),MYSQLI_ASSOC);
+        return @mysqli_fetch_all($this->product->execute("select * from Prodotto where TipoProdotto LIKE 'Pasta' and Nome LIKE '%$to_search%' order by Nome"),MYSQLI_ASSOC);
     }
 
     public function search_torte($to_search){
-        return mysqli_fetch_all($this->product->execute("select * from Prodotto where TipoProdotto LIKE 'Torta' and Nome LIKE '%$to_search%' order by Nome"),MYSQLI_ASSOC);
+        return @mysqli_fetch_all($this->product->execute("select * from Prodotto where TipoProdotto LIKE 'Torta' and Nome LIKE '%$to_search%' order by Nome"),MYSQLI_ASSOC);
     }
 
     public function search_by_code($id){
-        return mysqli_fetch_assoc($this->product->execute("select * from Prodotto where Codice = $id"));
+        return @mysqli_fetch_assoc($this->product->execute("select * from Prodotto where Codice = $id"));
     }
 
     public function delete_product($id){
