@@ -6,7 +6,7 @@
 class Input_security_check{
 
     public static function general_controls($field){
-        return strip_tags(trim($field));
+        return trim(htmlentities(strip_tags($field)));
     }
 
     public static function username_check($field){
