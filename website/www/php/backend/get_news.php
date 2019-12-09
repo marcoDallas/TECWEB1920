@@ -14,7 +14,7 @@ class Get_news{
     }
 
     public function get_news(){
-        return mysqli_fetch_assoc($this->news->execute("select * from News where Codice = 1"));
+        return @mysqli_fetch_assoc($this->news->execute("select * from News where Codice = 1"));
     }
 
     public function set_news($title,$content){
