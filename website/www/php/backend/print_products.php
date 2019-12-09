@@ -37,6 +37,7 @@ class Print_products{
         foreach($arrpage as &$prodotto){
             echo('<li>');
             echo('<div class="box a_column element">');
+            echo('<img src="#"/>');
             echo('<h3>'.$prodotto['Nome'].'</h3>');
             echo('<p>'.$prodotto['Descrizione'].'</p>');
             if(Admin::verify()){
