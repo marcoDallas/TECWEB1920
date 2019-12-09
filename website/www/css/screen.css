@@ -16,9 +16,13 @@ body {
     height: 100%; /* riferimento per le percentuali successive */
     width: 100%; /* riferimento per le percentuali successive */
     max-width: 1200px;
-    min-width: 360px;
+    min-width: 330px;
     margin: auto;
     background-color: #FFAC61;
+}
+
+dt {
+    font-weight: bold;
 }
 
 /**************************************************************************
@@ -32,6 +36,14 @@ body {
     color: #FFFFFF;
 }
 
+#logo {
+    max-height: 4em;
+    max-width: 9em;
+    font-size: 1.5em;
+    text-align: center;
+    display: block;
+}
+
 .box {
     overflow: hidden;
 }
@@ -41,150 +53,21 @@ body {
     display: inline-block;
 }
 
-.full_column{
-	width: 100%;
-}
 
-.logo_column{
-	width: 75%;
-}
-
-/*DESKTOP*/
-@media only screen and (min-width: 830px) {
-	
-	.logo_column{
-		width: 30%;
-	}
-
-	.title_column{
-		width: 70%;
-		height: 100%;
-	}
-	
-	#header h1{
-		font-size: 1.7em;
-        text-align: right;
-		padding-top: 1.8em;
-        padding-right: 5%;
-	}
-
-}
-
-.half_column {
-    width: 100%;
-}
-
-.medium_column {
-    width: 100%;
-}
-
-.a_quarter_column {
-    width: 54%;
-}
-
-.thin_column {
-    width: 100%;
-}
-
-
-
-.hidden {
-    font-size: 0px;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.mobile_hidden {
-    position: absolute;
-    left: -100000px;
-    overflow: hidden;
-}
-
-dt {
-    font-weight: bold;
-}
-
-#logo {
-    max-height: 4em;
-    max-width: 9em;
-    font-size: 1.5em;
-    text-align: center;
-    display: block;
-}
-
-
-
-#breadcrumb p {
-    font-size: 1em;
-    padding-left: 0.5em;
-}
 
 #breadcrumb {
     background-color: #BC5800;
     color: white;
-    padding: 0.575em 0 0.575em 0;
 }
+	
+	#breadcrumb p {
+		font-size: 1em;
+		padding: 0.5em;
+	}
+	
 
-#breadcrumb a {
-    float: right;
-    padding-right: 1em;
-    color: white;
-    text-decoration: none;
-}
+/*------------------------------------------------------*/
 
-#breadcrumb a:hover {
-    text-decoration: underline;
-}
-
-#login * {
-    display: block;
-}
-
-#login {
-    padding: 0 1em 1em 1em;
-    overflow: hidden;
-    border-bottom: 5px solid #bc5800;
-    border-top: 3px solid #bc5800;
-    margin-top: 2em;
-}
-
-    #login form label, #login form input{
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 1em;
-        text-align: center;
-    }
-
-.news_container {
-    border: 1px solid;
-    margin: 1em;
-    padding: 1em;
-    text-align: center;
-}
-
-.news_title {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.news_content {
-    padding-bottom: 1em;
-}
-
-#maps_icon {
-    content: url("../images/navigation.png");
-    vertical-align: middle;
-    padding-left: 0.5em;
-}
-
-#menu {
-    font-size: 1.5em;
-    overflow: hidden;
-    margin-bottom: 2em;
-}
-
-/* per il menu usiamo dimensioni fisse in px per garantire il minimo di area touch */
 #menu_icon {
     border-left: 2px solid #bc5800;
     display: block;
@@ -192,10 +75,39 @@ dt {
     right: 0;
     top: 0;
     cursor: pointer;
-    padding: 2em;
+    padding: 1.4em 2em 1.4em 2em;
     min-width: 48px;
-    height: 2em;
 }
+
+#menu {
+		font-size: 1.5em;
+		overflow: hidden;
+		margin-bottom: 2em;
+	}
+	
+		#menu ul li {
+			list-style-type: none;
+			text-align: center;
+			padding: 0em;
+			border-bottom: 2px solid #bc5800;
+			padding: 0.4em 0em 0.4em 0em;
+		}
+
+		#menu ul li a {
+			color: black;
+			float: left;
+			display: block;
+			text-align: center;
+			text-decoration: none;
+		}
+
+		#menu ul li a:visited {
+			color: purple;
+		}
+
+		#menu ul li a:hover {
+			color: red;
+		}
 
 /* icona dinamica menu */
 .bar1, .bar2, .bar3 {
@@ -205,6 +117,7 @@ dt {
     margin: 0.44em 0em;
     transition: 0.4s;
 }
+
 /* animazione hamburger, usiamo i prefissi per aumentare la compatibilità */
 .change .bar1 {
     -webkit-transform: translate(0em, 0.75em) rotate(-45deg);
@@ -226,30 +139,6 @@ dt {
     transform: translate(0em, -0.75em) rotate(45deg);
 }
 
-    #menu ul li {
-        list-style-type: none;
-        text-align: center;
-        padding: 0em;
-        border-bottom: 2px solid #bc5800;
-        padding: 0.4em 0em 0.4em 0em;
-    }
-
-        #menu ul li a {
-            color: black;
-            float: left;
-            display: block;
-            text-align: center;
-            text-decoration: none;
-        }
-
-            #menu ul li a:visited {
-                color: purple;
-            }
-
-            #menu ul li a:hover {
-                color: red;
-            }
-
 /* classe mobile aggiunta da JS alla pressione dell'icona*/
 #menu.mobile {
     position: relative;
@@ -259,6 +148,118 @@ dt {
 #menu.mobile li a{
     float: none;
     display: block;
+}
+
+/*------------------------------------------------------*/
+
+.logo_column{
+	width: 75%;
+}
+.full_column{
+	width: 100%;
+}
+.menu_column{
+	width: 100%;
+}
+.body_column{
+	width: 100%;
+}
+.footer_column {
+    width: 100%;
+}
+.footer_wrapper{
+	width: 100%;
+}
+.admin_column{
+	width: 100%;
+}
+
+
+
+
+
+
+
+.news_container {
+    border: 1px solid;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+}
+
+.news_title {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.news_content {
+	padding-bottom: 1em;
+}
+
+.content {
+    background-color: white;
+    text-align: center;
+    float: right;
+    font-size: 120%;
+}
+	.content > p {		/*SOLO I P DIRETTAMENTE FIGLI*/
+		padding: 0.5em;
+	}
+
+
+	.content > dl {		/*SOLO I DL DIRETTAMENTE FIGLI  CREDO UNUSED*/
+		padding: 1em;
+	}
+	
+	.content > h2 {
+		color: red;
+		padding-top: 1em;
+	}
+	
+	/*VARIAZIONE IN CONTATTI*/
+	
+#contatti{
+	text-align: left;
+}
+
+	#contatti p, #contatti dl {
+		padding: 1em 0 0 3em;
+	}
+	
+	#contatti h2 {
+		padding-left: 1em;
+	}
+
+#maps{
+    width: 95.5%;
+    height: 20em;
+    display: block;
+    padding: 1em;
+	text-align: center;
+}
+
+#maps_icon {
+    content: url("../images/navigation.png");
+    vertical-align: middle;
+	padding-left: 0.5em;
+}
+
+
+.imgHome, .imgStoria{
+    height: auto;
+    width: 80%;
+}
+.hidden {
+    font-size: 0px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.mobile_hidden {
+    position: absolute;
+    left: -100000px;
+    overflow: hidden;
 }
 
 #footer {
@@ -286,62 +287,166 @@ dt {
     text-align: center;
 }
 
-#content > p {
-    padding: 1.5em;
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* TABLET */
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+@media only screen and (min-width: 700px) {	
+	/*OVERRIDE*/
+	.news_container {	/*DARE UNA CONTROLLATA ALL'ALTEZZA DEL BOX NEWS*/
+        display: inline-block;
+        width: 40%;
+    }
+	
+	/*OVERRIDE*/
+	#content > h2 {
+		color: red;
+		padding-top: 0.5em;
+	}
+	
+	/*OVERRIDE*/
+	.footer_column {
+		width: 50%;
+	}
+	
+	
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*DESKTOP*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+@media only screen and (min-width: 830px) {
+	/*OVERRIDE*/
+	#logo {
+        max-height: 9em;
+        max-width: 14em;
+    }
+	
+	/*OVERRIDE*/
+	.logo_column{
+		width: 30%;
+	}
+
+	/*OVERRIDE*/
+	.title_column{
+		width: 70%;
+		height: 100%;
+	}
+	
+	/*OVERRIDE*/
+	.menu_column{
+		width: 25%;
+	}
+	
+	/*OVERRIDE*/
+	.body_column{
+		width: 75%;
+	}
+	
+	/*OVERRIDE*/
+	.footer_wrapper{
+		width: 70%;
+	}
+	
+	/*OVERRIDE*/
+	.admin_column{
+		width: 30%;
+	}
+	
+	
+	#header h1{
+		font-size: 1.7em;
+        text-align: right;
+		padding-top: 1.8em;
+        padding-right: 5%;
+	}
+	
+	/*OVERRIDE*/
+	#menu ul li {
+        text-align: left;
+        padding: 0.5em 1em 0em 1em;
+        border: none;
+    }
+
+	/*OVERRIDE*/
+	#menu ul li a {
+		text-align: left;
+		float: none;
+	}
+	
+	/*OVERRIDE*/
+	.news_container {	/*DARE UNA CONTROLLATA ALL'ALTEZZA DEL BOX NEWS*/
+       width: auto;
+       display:block;
+    }
+	
+	/*OVERRIDE*/
+	.imgHome, .imgStoria{	/*RISCRITTURA DEL MOBILE*/
+		height: auto;
+		width: 60%;
+	}
+	
+	/*OVERRIDE*/
+	#maps_icon {
+		content: url("../images/navigation.png");
+		vertical-align: middle;
+	}
+	
+	
 }
 
 
-#content > dl {
-    padding: 1em;
+
+#login * {
+    display: block;
 }
 
-#content {
-    background-color: white;
-    text-align: center;
-    float: right;
-    font-size: 120%;
+#login {
+    padding: 0 1em 1em 1em;
+    overflow: hidden;
+    border-bottom: 5px solid #bc5800;
+    border-top: 3px solid #bc5800;
+    margin-top: 2em;
 }
 
-.imgHome, .imgStoria{
-    height: auto;
-    width: 80%;
-}
+    #login form label, #login form input{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1em;
+        text-align: center;
+    }
 
-#contentContatti {
-    text-align: left;
-    padding: 0em 2.5em 0em;
-}
 
-#contentContatti p, #contentContatti dl {
-    padding: 1em;
-}
 
-h2 {
-    color: red;
-    padding-top: 0.5em;
-}
 
-#maps{
-    width:80%;
-    height:20em;
-    display:block;
-    padding-left: 1em;
-    padding-bottom: 1em;
-}
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**************************************************************************
  ************************* TABLET LAYOUT **********************************
  **************************************************************************/
 @media only screen and (min-width: 700px) {
 
-    .half_column {
-        width: 50%;
-    }
+    
 
-    .news_container {
-        display:inline-block;
-        width: 40%;
-    }
+    
 
 }
 
@@ -374,29 +479,8 @@ h2 {
         font-size: 1em;
     }
 
-    .thin_column {
-        width: 22%;
-    }
-
-    .medium_column {
-        width: 25%;
-    }
-
-    .a_quarter_column {
-        width: 25%;
-    }
-
-    .one_third_column {
-        width: 33.33%;
-    }
-
-    .three_quarter_column {
-        width: 75%;
-    }
-
-    .large_column {
-        width: 78%;
-    }
+    
+    
 
     /* other */
     .mobile_hidden {
@@ -419,10 +503,7 @@ h2 {
 
     /*specific*/
 
-    #logo {
-        max-height: 9em; /* forza sovrascrittura del max-height del mobile */
-        max-width: 14em;
-    }
+    
 	
     #breadcrumb p {
         font-size: 1em;
@@ -453,11 +534,11 @@ h2 {
                 width: 10em;
             }
 
-    .news_container {
+    /*.news_container {
         margin: 0em 1em 1em 1em;
         width: auto;
         display:block;
-    }
+    }*/
 
     #general_container {
         background-color: #FFF7E6;
@@ -475,16 +556,7 @@ h2 {
         display: none; /* l'icona del menu' è superflua per lo screen reader in questo caso */
     }
 
-    #menu ul li {
-        text-align: left;
-        padding: 0.5em 1em 0em 1em;
-        border: none;
-    }
-
-        #menu ul li a {
-            text-align: left;
-            float: none;
-        }
+   
 
     .footer_element {
         display: inline;
@@ -504,8 +576,6 @@ h2 {
         margin-top: 30%;
     }
 	
-	.imgHome, .imgStoria{	/*RISCRITTURA DEL MOBILE*/
-    height: auto;
-    width: 60%;
+	
 }
 }

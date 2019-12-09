@@ -20,7 +20,7 @@ class Print_products{
             $arrpage=array_slice($arr,$_GET['page'].'0'-10,10);
         }else
             $arrpage=$arr;
-        echo('<div class="large_column">');
+        echo('<div class="body_column">');
         echo('<form id="ricercaProdotti" method="get" action="prodotti.php"');
         echo('<label for="cercaProdotti">Cerca '.$_GET['type'].'</label>');
         echo('<input type="hidden" name="type" value="'.$_GET['type'].'"/>');
