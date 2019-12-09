@@ -23,9 +23,9 @@ class Input_security_check{
         return FALSE;
     }
  
-    public static function general_inputs_check($field){
+    public static function general_input_check($field){
         $field = Input_security_check::general_controls($field);
-        if(!preg_match('/[^a-z 0-9]/i', $field)) //caratteri supportati: a-z A-Z 0-9 e spazio
+        if(!preg_match("/\^(.(?!'))/i", $field)) //caratteri supportati: tutti tranne '
             return $field;
         return FALSE;
     }

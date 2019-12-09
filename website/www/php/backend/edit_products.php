@@ -20,12 +20,21 @@ class Edit_products{
     }
 
     public static function edit(){
-
         require_once 'backend/get_products.php';
-        if(isset($_POST['id']) && isset($_POST['title']) && isset($_POST['type']) && isset($_POST['description'])){
-            (new Get_products())->edit_product($_POST['id'],$_POST['type'],$_POST['title'],$_POST['description']);
-        }else if(isset($_POST['title']) && isset($_POST['type']) && isset($_POST['description'])){
-            (new Get_products())->add_product($_POST['type'],$_POST['title'],$_POST['description']);
+        if(isset($_POST['title']) && isset($_POST['type']) && isset($_POST['description'])){
+            require_once 'backend/input_security_check.php';
+            $title = Input_security_check::general_input_check($_POST['title']);
+            $type = Input_security_check::general_input_check($_POST['type']);
+            $description = Input_security_check::general_input_check($_POST['description']);
+            if(!$title || !$type || !$description){
+                error_log("Security check failed");
+                return FALSE;
+            }
+            if(isset($_POST['id'])){
+                (new Get_products())->edit_product($_POST['id'],$_POST['type'],$_POST['title'],$_POST['description']);
+            }else{
+                (new Get_products())->add_product($_POST['type'],$_POST['title'],$_POST['description']);
+            }
         }
         return FALSE;
     }

@@ -8,6 +8,7 @@ if(Admin::verify()){
     require_once 'backend/edit_news.php';
     Edit_news::edit();
 }
+$edit=TRUE;
 if(isset($_POST['add']))
     $edit=FALSE;
 require_once 'backend/print_content.php';

@@ -30,10 +30,21 @@ class Admin{
 
     public static function login(){
         if(isset($_POST['username']) && isset($_POST['password'])){
+            require_once 'backend/input_security_check.php';
+            $username = Input_security_check::username_check($_POST['username']);
+            $password = Input_security_check::password_check($_POST['password']);
+            if(!$username || !$password){
+                error_log("Security check failed");
+                return FALSE;
+            }
             require_once 'backend/get_admin.php';
-            $verify = new Get_admin();
-            if($verify->admin($_POST['username'],$_POST['password']))
+            if((new Get_admin())->admin($_POST['username'],$_POST['password'])){
                 Sessions::new_session('admin',TRUE);
+                return TRUE;
+            }else{
+                error_log("Wrong password");
+                return FALSE;
+            }
         }
     }
 
