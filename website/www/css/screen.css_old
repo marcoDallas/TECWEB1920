@@ -8,8 +8,8 @@
 
 html {
     box-sizing: border-box;
-    height: 100%; 
-    width: 100%; 
+    height: 100%; /* riferimento per le percentuali successive */
+    width: 100%; /* riferimento per le percentuali successive */
 }
 
 body {
@@ -24,14 +24,7 @@ body {
 /**************************************************************************
  *********************** MOBILE LAYOUT ************************************
  **************************************************************************/
-
- /*containers*/
-
-#header {
-    background-color: #EC7205;
-    color: #FFFFFF;
-}
-
+/*containers*/
 .box {
     overflow: hidden;
 }
@@ -39,35 +32,6 @@ body {
 .box > * {
     float: left;
     display: inline-block;
-}
-
-.full_column{
-	width: 100%;
-}
-
-.logo_column{
-	width: 75%;
-}
-
-/*DESKTOP*/
-@media only screen and (min-width: 830px) {
-	
-	.logo_column{
-		width: 30%;
-	}
-
-	.title_column{
-		width: 70%;
-		height: 100%;
-	}
-	
-	#header h1{
-		font-size: 1.7em;
-        text-align: right;
-		padding-top: 1.8em;
-        padding-right: 5%;
-	}
-
 }
 
 .half_column {
@@ -86,7 +50,9 @@ body {
     width: 100%;
 }
 
-
+.a_column {
+    width: 100%;
+}
 
 .hidden {
     font-size: 0px;
@@ -106,6 +72,7 @@ dt {
 }
 
 #logo {
+    padding: 0.1em 0.1em 0.1em 0.2em;
     max-height: 4em;
     max-width: 9em;
     font-size: 1.5em;
@@ -113,7 +80,11 @@ dt {
     display: block;
 }
 
-
+#header {
+    background-color: #EC7205;
+    color: #FFFFFF;
+    height: 6em;
+}
 
 #breadcrumb p {
     font-size: 1em;
@@ -290,6 +261,9 @@ dt {
     padding: 1.5em;
 }
 
+/*#content > h1 {
+    padding: 0.5em;
+}*/
 
 #content > dl {
     padding: 1em;
@@ -402,6 +376,7 @@ h2 {
     .mobile_hidden {
         position: relative;
         left: 0px;
+        height: auto;
     }
 
     .element {
@@ -420,10 +395,23 @@ h2 {
     /*specific*/
 
     #logo {
+        padding: 0em 0em 0em 1em;
         max-height: 9em; /* forza sovrascrittura del max-height del mobile */
         max-width: 14em;
     }
-	
+
+    #header h1 {
+        font-size: 1.7em;
+        text-align: right;
+        margin-top: 5%;
+        padding-right: 5%;
+        margin-left: 25%;
+    }
+
+    #header {
+        min-height: 9em;
+    }
+
     #breadcrumb p {
         font-size: 1em;
         padding-left: 1em;

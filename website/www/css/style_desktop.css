@@ -1,0 +1,177 @@
+body{
+    margin:auto;
+    background-color: #e60000;
+}
+
+#logo{
+    max-height:6.5em;
+}
+
+#logocontainer{
+    max-height:6.5em;
+}
+
+#header{
+    min-height:6.5em;
+}
+
+#menu{
+    text-align:right;
+    font-size:0.9em;
+    margin-top:1.5em;
+    margin-right:1em;
+	max-width:none;
+}
+
+#menu li{
+	display:initial;
+    margin:-3px;
+	padding:0.8em;
+	border:none;
+}
+
+#menu > li:not(#currentLink){
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}
+
+#menu > li:last-of-type, #menu > li:first-of-type {
+	margin-bottom:auto;
+}
+
+#menu li > a{
+    padding:0.6em;
+    display:inline;
+    width:unset;
+    height:unset;
+}
+
+#breadcrumbs{
+    padding: 0.5em;
+}
+#content{
+	background-color:#f1f1f1;
+    padding:2em;
+}
+#content h1{
+    font-size:1.5em;
+}
+#content h2{
+    font-size:1.1em;
+}
+#content.contentwhite{
+    background-color:white;
+    padding:2em;
+}
+#content.contentwhite h1{
+    font-size:1.5em;
+}
+#content.contentwhite h2{
+    font-size:1.1em;
+}
+
+#formRicerca input[type=text]{
+	width:11em;
+}
+
+#eventoprincipale{
+    padding-right:2em;
+}
+#eventoprincipale h1{
+    margin-bottom:0.5em;
+}
+
+#eventiprossimi p{
+    padding-top:1em;
+}
+#eventiprossimi .treColonne{
+    padding-top:1em;
+    padding-left:1em;
+    padding-right:1em;  
+}
+
+/*MOSTRE*/
+.riquadro{
+	padding:2em;
+}
+
+#elencoMostre ul {
+	padding:1em;
+}
+
+#presentazionegenerale{
+    padding-left:6em;
+    padding-right:6em;
+}
+
+#presentazionegenerale p{
+    margin-top:1em;
+}
+
+.infomodello{
+	margin-bottom:0.9em;
+    padding-right:2em;
+}
+
+.pulsantePag{
+	width:33.3%;
+	margin-top:2em;
+}
+
+#next, #back, #current{
+	width:50%;
+}
+
+#prenotabiglietti p, #prenotabiglietti h1{
+	padding:0.3em;
+}
+
+#prenotabiglietti h1{
+	font-size:1.5em;
+}
+
+.formfield p{
+	padding-left:1em;
+}
+
+#newsletter, #comeRaggiungerci, #contattaci{
+	padding:1em;
+}
+
+#newsletter fieldset{
+    width:75%;
+}
+
+#maps{
+	width:80%;
+	height:20em;
+}
+
+#totop{
+    width:3em;
+    height:3em;
+}
+
+/*FOOTER*/
+#footer p{
+	margin-top:auto;
+	margin-bottom:auto;
+}
+
+.desktopnone{
+    display: none;
+}
+
+.treColonne {
+	width:33.33%;
+    margin:auto;
+}
+
+.center{
+	text-align:center;
+}
+
+.col-xl-1 {width: 25%;}
+.col-xl-2 {width: 50%;}
+.col-xl-3 {width: 75%;}
+.col-xl-4 {width: 100%;}

@@ -26,7 +26,7 @@ class Print_content{
     }
 
     public static function header($title,$page){
-        $content='<div id="header" class="box a_column">
+        $content='<div id="header" class="box full_column">
                      <div class="logo_column">';
         if(!strcmp($page,"home.php"))
         $content=$content.'<img id="logo" src="../images/logo.png" alt="Ti trovi nella pagina principale di Pasticceria Padovana"/>';
