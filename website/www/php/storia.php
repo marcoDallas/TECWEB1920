@@ -8,7 +8,7 @@ if(Admin::verify()){
 require_once 'backend/print_content.php';
 echo(Print_content::top('xhtml+aria'));
 echo(Print_content::openHTML());
-echo(Print_content::head('Storia'));
+Print_content::head();
 echo(Print_content::openBody());
 echo(Print_content::header('Dietro ad una grande pasticceria, c\'è anche una grande tradizione','storia.php')."\r");
 echo(Print_content::breadcrumb('<strong>Storia</strong>')."\r");

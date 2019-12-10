@@ -17,8 +17,8 @@ class Print_content{
         return '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">';
     }
 
-    public static function head($title){
-        return str_replace("%",$title,file_get_contents("../html/components/head.html"));
+    public static function head(){
+        return include_once "components/head.php";
     }
 
     public static function openBody(){
