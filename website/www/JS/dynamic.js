@@ -1,6 +1,6 @@
 function toggleMenu(icon) {
     toggleMobileVisibility(document.getElementById("menu"));
-    toggleMobileVisibility(document.getElementById("login"));
+    /*toggleMobileVisibility(document.getElementById("login"));*/
     icon.classList.toggle("change");
 }
 

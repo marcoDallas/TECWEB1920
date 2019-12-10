@@ -1,8 +1,8 @@
 <?php require_once('backend/print_content.php'); ?>
-<div id="footer" class="box a_column">
+<div id="footer" class="box full_column">
     <?php echo(Print_content::adminAreaForm()); ?>
-    <div class="box large_column">
-        <dl class="half_column footer_element">
+    <div class="box footer_wrapper">
+        <dl class="footer_column footer_element">
             <dt>Pasticceria Padovana</dt>
             <dt>Telefono:</dt>
             <dd>049-000000</dd>
@@ -12,7 +12,7 @@
                 <span class="hidden">Via Trieste numero 63, cap 35121, Padova</span>
             </dd>
         </dl>
-        <dl class="half_column footer_element">
+        <dl class="footer_column footer_element">
             <dt>Orari</dt>
             <dt>
                 <span aria-hidden="true">lunedì - venerdì:</span>
@@ -36,7 +36,7 @@
             </dd>
         </dl>
     </div>
-    <p class="a_column footer_element" role="contentinfo">
+    <p class="full_column footer_element" role="contentinfo">
         <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Pagina validata secondo lo standard XHTML 1.0 Strict"/>
         Alberto Gobbo, Marco Dalla Libera, Riccardo Cestaro, Stefano Lazzaroni. <span xml:lang="en">All rights reserved.</span>
         <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Pagina valida secondo lo standard CSS"/>

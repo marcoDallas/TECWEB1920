@@ -1,0 +1,499 @@
+*{
+    margin: 0em;
+    padding: 0em;
+    max-width:100%;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%; /* riferimento per le percentuali successive */
+    width: 100%; /* riferimento per le percentuali successive */
+}
+
+body {
+    height: 100%; /* riferimento per le percentuali successive */
+    width: 100%; /* riferimento per le percentuali successive */
+    max-width: 1200px;
+    min-width: 360px;
+    margin: auto;
+    background-color: #FFAC61;
+}
+
+/**************************************************************************
+ *********************** MOBILE LAYOUT ************************************
+ **************************************************************************/
+/*containers*/
+.box {
+    overflow: hidden;
+}
+
+.box > * {
+    float: left;
+    display: inline-block;
+}
+
+.half_column {
+    width: 100%;
+}
+
+.medium_column {
+    width: 100%;
+}
+
+.a_quarter_column {
+    width: 54%;
+}
+
+.thin_column {
+    width: 100%;
+}
+
+.a_column {
+    width: 100%;
+}
+
+.hidden {
+    font-size: 0px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.mobile_hidden {
+    position: absolute;
+    left: -100000px;
+    overflow: hidden;
+}
+
+dt {
+    font-weight: bold;
+}
+
+#logo {
+    padding: 0.1em 0.1em 0.1em 0.2em;
+    max-height: 4em;
+    max-width: 9em;
+    font-size: 1.5em;
+    text-align: center;
+    display: block;
+}
+
+#header {
+    background-color: #EC7205;
+    color: #FFFFFF;
+    height: 6em;
+}
+
+#breadcrumb p {
+    font-size: 1em;
+    padding-left: 0.5em;
+}
+
+#breadcrumb {
+    background-color: #BC5800;
+    color: white;
+    padding: 0.575em 0 0.575em 0;
+}
+
+#breadcrumb a {
+    float: right;
+    padding-right: 1em;
+    color: white;
+    text-decoration: none;
+}
+
+#breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+#login * {
+    display: block;
+}
+
+#login {
+    padding: 0 1em 1em 1em;
+    overflow: hidden;
+    border-bottom: 5px solid #bc5800;
+    border-top: 3px solid #bc5800;
+    margin-top: 2em;
+}
+
+    #login form label, #login form input{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+
+.news_container {
+    border: 1px solid;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+}
+
+.news_title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.news_content {
+    padding-bottom: 1em;
+}
+
+#maps_icon {
+    content: url("../images/navigation.png");
+    vertical-align: middle;
+    padding-left: 0.5em;
+}
+
+#menu {
+    font-size: 1.5em;
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+
+/* per il menu usiamo dimensioni fisse in px per garantire il minimo di area touch */
+#menu_icon {
+    border-left: 2px solid #bc5800;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    padding: 2em;
+    min-width: 48px;
+    height: 2em;
+}
+
+/* icona dinamica menu */
+.bar1, .bar2, .bar3 {
+    width: 2.75em;
+    height: 0.31em;
+    background-color: #333;
+    margin: 0.44em 0em;
+    transition: 0.4s;
+}
+/* animazione hamburger, usiamo i prefissi per aumentare la compatibilità */
+.change .bar1 {
+    -webkit-transform: translate(0em, 0.75em) rotate(-45deg);
+    -moz-transform: translate(0em, 0.75em) rotate(-45deg);
+    -ms-transform: translate(0em, 0.75em) rotate(-45deg);
+    -o-transform: translate(0em, 0.75em) rotate(-45deg);
+    transform: translate(0em, 0.75em) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: translate(0em, -0.75em) rotate(45deg);
+	-moz-transform: translate(0em, -0.75em) rotate(45deg);
+    -ms-transform: translate(0em, -0.75em) rotate(45deg);
+    -o-transform: translate(0em, -0.75em) rotate(45deg);
+    transform: translate(0em, -0.75em) rotate(45deg);
+}
+
+    #menu ul li {
+        list-style-type: none;
+        text-align: center;
+        padding: 0em;
+        border-bottom: 2px solid #bc5800;
+        padding: 0.4em 0em 0.4em 0em;
+    }
+
+        #menu ul li a {
+            color: black;
+            float: left;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+        }
+
+            #menu ul li a:visited {
+                color: purple;
+            }
+
+            #menu ul li a:hover {
+                color: red;
+            }
+
+/* classe mobile aggiunta da JS alla pressione dell'icona*/
+#menu.mobile {
+    position: relative;
+    margin-bottom: 0em;
+}
+
+#menu.mobile li a{
+    float: none;
+    display: block;
+}
+
+#footer {
+    background-color: #BC5800;
+    color: white;
+}
+
+#footer img {
+    display: block;
+    margin: 1em auto 1em auto;
+}
+
+#footer dl {
+    text-align: center;
+    padding-top: 1em;
+}
+
+#footer > p {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.footer_element {
+    display: block;
+    text-align: center;
+}
+
+#content > p {
+    padding: 1.5em;
+}
+
+/*#content > h1 {
+    padding: 0.5em;
+}*/
+
+#content > dl {
+    padding: 1em;
+}
+
+#content {
+    background-color: white;
+    text-align: center;
+    float: right;
+    font-size: 120%;
+}
+
+.imgHome, .imgStoria{
+    height: auto;
+    width: 80%;
+}
+
+#contentContatti {
+    text-align: left;
+    padding: 0em 2.5em 0em;
+}
+
+#contentContatti p, #contentContatti dl {
+    padding: 1em;
+}
+
+h2 {
+    color: red;
+    padding-top: 0.5em;
+}
+
+#maps{
+    width:80%;
+    height:20em;
+    display:block;
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+
+/**************************************************************************
+ ************************* TABLET LAYOUT **********************************
+ **************************************************************************/
+@media only screen and (min-width: 700px) {
+
+    .half_column {
+        width: 50%;
+    }
+
+    .news_container {
+        display:inline-block;
+        width: 40%;
+    }
+
+}
+
+/**************************************************************************
+ ************************* DESKTOP LAYOUT *********************************
+ **************************************************************************/
+@media only screen and (min-width: 830px) {
+
+
+    fieldset {
+        padding: 1.1em 10% 1.1em;
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid white;
+        border-bottom:1px solid white;
+    }
+
+    fieldset > *{
+        display: block;
+    }
+
+    form label, form input {
+        margin: 1em;
+    }
+
+    input[type=submit]{
+        margin-top: 1em;
+        padding-right: 1.5em;
+        padding-bottom: 0.6em;
+        font-size: 1em;
+    }
+
+    .thin_column {
+        width: 22%;
+    }
+
+    .medium_column {
+        width: 25%;
+    }
+
+    .a_quarter_column {
+        width: 25%;
+    }
+
+    .one_third_column {
+        width: 33.33%;
+    }
+
+    .three_quarter_column {
+        width: 75%;
+    }
+
+    .large_column {
+        width: 78%;
+    }
+
+    /* other */
+    .mobile_hidden {
+        position: relative;
+        left: 0px;
+        height: auto;
+    }
+
+    .element {
+        background-color: #FFF7E6;
+        border: 0.1em solid #FFAC61;
+    }
+
+        .element p {
+            padding: 2em;
+        }
+
+        .element strong {
+            display: block;
+        }
+
+    /*specific*/
+
+    #logo {
+        padding: 0em 0em 0em 1em;
+        max-height: 9em; /* forza sovrascrittura del max-height del mobile */
+        max-width: 14em;
+    }
+
+    #header h1 {
+        font-size: 1.7em;
+        text-align: right;
+        margin-top: 5%;
+        padding-right: 5%;
+        margin-left: 25%;
+    }
+
+    #header {
+        min-height: 9em;
+    }
+
+    #breadcrumb p {
+        font-size: 1em;
+        padding-left: 1em;
+    }
+
+    #login {
+        border: none;
+        margin: 0em 1em 1em 1em;
+    }
+
+        #login form label, #login form input{
+            margin: 0.5em;
+            text-align: left;
+        }
+
+    #registrationForm {
+        margin: 5% 26%;
+        width: 48%;
+    }
+
+        #registrationForm input {
+            width: 20em;
+        }
+
+            #registrationForm input[type="submit"] {
+                height: 2em;
+                width: 10em;
+            }
+
+    .news_container {
+        margin: 0em 1em 1em 1em;
+        width: auto;
+        display:block;
+    }
+
+    #general_container {
+        background-color: #FFF7E6;
+        min-height: 59.3%;
+    }
+
+    #maps_icon {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 0.2em;
+    }
+
+    #menu_icon {
+        display: none; /* l'icona del menu' è superflua per lo screen reader in questo caso */
+    }
+
+    #menu ul li {
+        text-align: left;
+        padding: 0.5em 1em 0em 1em;
+        border: none;
+    }
+
+        #menu ul li a {
+            text-align: left;
+            float: none;
+        }
+
+    .footer_element {
+        display: inline;
+    }
+
+    #footer img {
+        vertical-align: middle;
+        display: inline;
+        margin: 0em;
+    }
+
+    #imgFallback{
+        float: left;
+    }
+
+    #contentFallback{
+        margin-top: 30%;
+    }
+	
+	.imgHome, .imgStoria{	/*RISCRITTURA DEL MOBILE*/
+    height: auto;
+    width: 60%;
+}
+}

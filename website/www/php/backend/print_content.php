@@ -26,7 +26,7 @@ class Print_content{
     }
 
     public static function header($title,$page){
-        $content='<div id="header" class="box a_column">
+        $content='<div id="header" class="box full_column">
                      <div class="logo_column">';
         if(!strcmp($page,"home.php"))
         $content=$content.'<img id="logo" src="../images/logo.png" alt="Ti trovi nella pagina principale di Pasticceria Padovana"/>';
@@ -40,15 +40,15 @@ class Print_content{
     }
 
     public static function breadcrumb($page){
-        return '<div id="breadcrumb" class="box a_column"><p>Ti trovi in: '.$page.'</p></div>';
+        return '<div id="breadcrumb" class="box full_column"><p>Ti trovi in: '.$page.'</p></div>';
     }
 
     public static function openGeneralContainer(){
-        return '<div id="general_container" class="box a_column">';
+        return '<div id="general_container" class="box full_column">';
     }
 
     public static function menu($page){
-        $content='<div class="thin_column">'."\r".'<div id="menu" class="mobile_hidden" role="navigation">'."\r".'<ul>
+        $content='<div class="menu_column">'."\r".'<div id="menu" class="mobile_hidden" role="navigation">'."\r".'<ul>
         '."\r".'<li class="hidden" role="tablist" aria-setsize="5" aria-posinset="1"><a href="#content" tabindex="1">Vai al contenuto</a></li>';
         if(!strcmp($page,"home.php")){
             $content=$content."\r".'<li xml:lang="en"><strong>Home</strong></li>'."\r".'
@@ -104,14 +104,14 @@ class Print_content{
 
     public static function adminAreaForm(){
         if(Sessions::session_exists('admin')){
-            $content ='<div id="administrator_link" class="box thin_column">
+            $content ='<div id="administrator_link" class="box admin_column">
                         <p>Benvenuto amministratore!</p>
                         <form method="post" action="'.$_SERVER['REQUEST_URI'].'">
                             <input type="submit" value="Logout" name="Logout" tabindex="8" />
                         </form>
                         </div>';
         }else{
-            $content ='<div  id="administrator_link" class="box thin_column">
+            $content ='<div  id="administrator_link" class="box admin_column">
                 <form method="post" action="'.$_SERVER['REQUEST_URI'].'">
                     <fieldset id="fieldsetLogin">
                         <legend>Area Amministratore</legend>
