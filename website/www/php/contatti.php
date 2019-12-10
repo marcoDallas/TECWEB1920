@@ -8,7 +8,7 @@ if(Admin::verify()){
 require_once 'backend/print_content.php';
 echo(Print_content::top('xhtml+aria'));
 echo(Print_content::openHTML());
-echo(Print_content::head('Contatti'));
+Print_content::head();
 echo(Print_content::openBody());
 echo(Print_content::header('Come e quando puoi contattarci','contatti.php')."\r");
 echo(Print_content::breadcrumb('<strong>Contatti</strong>')."\r");

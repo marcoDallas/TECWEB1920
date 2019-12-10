@@ -1,0 +1,8 @@
+# Group 1
+User-agent: *
+Disallow: /html/
+Disallow: /php/backend/
+Disallow: /php/modifica_prodotto.php
+Disallow: /php/modifica_news.php
+Disallow: /images/
+
