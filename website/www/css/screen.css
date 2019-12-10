@@ -44,6 +44,10 @@ dt {
     display: block;
 }
 
+#general_container {
+	background-color: #FFF7E6;
+}
+
 .box {
     overflow: hidden;
 }
@@ -175,11 +179,6 @@ dt {
 }
 
 
-
-
-
-
-
 .news_container {
     border: 1px solid;
     margin: 1em;
@@ -262,6 +261,28 @@ dt {
     overflow: hidden;
 }
 
+/*PASTE E TORTE STYLES*/
+
+.element {
+	background-color: #FFF7E6;
+	border: 0.1em solid #FFAC61;
+	margin: 1em;
+}
+
+	.element p {
+		padding: 2em;
+	}
+
+	.element strong {
+		display: block;
+	}
+	
+.product{
+	list-style-type: none;
+}
+
+/*FOOTER STYLES*/
+
 #footer {
     background-color: #BC5800;
     color: white;
@@ -286,7 +307,6 @@ dt {
     display: block;
     text-align: center;
 }
-
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /* TABLET */
@@ -323,6 +343,10 @@ dt {
         max-height: 9em;
         max-width: 14em;
     }
+	
+	#general_container{
+		min-height: 59.3%;		/*DARE UNA OCCHIATA*/
+	}
 	
 	/*OVERRIDE*/
 	.logo_column{
@@ -376,6 +400,11 @@ dt {
 		float: none;
 	}
 	
+	/*OVERRIDE -> in modalità desktop non si deve vedere*/	
+	#menu_icon {
+        display: none; 
+    }
+	
 	/*OVERRIDE*/
 	.news_container {	/*DARE UNA CONTROLLATA ALL'ALTEZZA DEL BOX NEWS*/
        width: auto;
@@ -391,191 +420,31 @@ dt {
 	/*OVERRIDE*/
 	#maps_icon {
 		content: url("../images/navigation.png");
-		vertical-align: middle;
-	}
-	
-	
-}
-
-
-
-#login * {
-    display: block;
-}
-
-#login {
-    padding: 0 1em 1em 1em;
-    overflow: hidden;
-    border-bottom: 5px solid #bc5800;
-    border-top: 3px solid #bc5800;
-    margin-top: 2em;
-}
-
-    #login form label, #login form input{
+		display: block;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 1em;
-        text-align: center;
-    }
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**************************************************************************
- ************************* TABLET LAYOUT **********************************
- **************************************************************************/
-@media only screen and (min-width: 700px) {
-
-    
-
-    
-
-}
-
-/**************************************************************************
- ************************* DESKTOP LAYOUT *********************************
- **************************************************************************/
-@media only screen and (min-width: 830px) {
-
-
-    fieldset {
-        padding: 1.1em 10% 1.1em;
-        border-left: none;
-        border-right: none;
-        border-top: 1px solid white;
-        border-bottom:1px solid white;
-    }
-
-    fieldset > *{
-        display: block;
-    }
-
-    form label, form input {
-        margin: 1em;
-    }
-
-    input[type=submit]{
-        margin-top: 1em;
-        padding-right: 1.5em;
-        padding-bottom: 0.6em;
-        font-size: 1em;
-    }
-
-    
-    
-
-    /* other */
-    .mobile_hidden {
+		padding: 0em;
+	}
+	
+	/*OVERRIDE*/
+	.mobile_hidden {
         position: relative;
         left: 0px;
     }
-
-    .element {
-        background-color: #FFF7E6;
-        border: 0.1em solid #FFAC61;
-    }
-
-        .element p {
-            padding: 2em;
-        }
-
-        .element strong {
-            display: block;
-        }
-
-    /*specific*/
-
-    
 	
-    #breadcrumb p {
-        font-size: 1em;
-        padding-left: 1em;
-    }
-
-    #login {
-        border: none;
-        margin: 0em 1em 1em 1em;
-    }
-
-        #login form label, #login form input{
-            margin: 0.5em;
-            text-align: left;
-        }
-
-    #registrationForm {
-        margin: 5% 26%;
-        width: 48%;
-    }
-
-        #registrationForm input {
-            width: 20em;
-        }
-
-            #registrationForm input[type="submit"] {
-                height: 2em;
-                width: 10em;
-            }
-
-    /*.news_container {
-        margin: 0em 1em 1em 1em;
-        width: auto;
-        display:block;
-    }*/
-
-    #general_container {
-        background-color: #FFF7E6;
-        min-height: 59.3%;
-    }
-
-    #maps_icon {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        padding-bottom: 0.2em;
-    }
-
-    #menu_icon {
-        display: none; /* l'icona del menu' è superflua per lo screen reader in questo caso */
-    }
-
-   
-
-    .footer_element {
-        display: inline;
-    }
-
-    #footer img {
+	#footer img {
         vertical-align: middle;
         display: inline;
         margin: 0em;
     }
-
-    #imgFallback{
+	
+	
+	/* SOLO IN PAGINA FALLBACK*/
+	#imgFallback{
         float: left;
     }
-
-    #contentFallback{
+	
+	#contentFallback{
         margin-top: 30%;
     }
-	
-	
-}
 }

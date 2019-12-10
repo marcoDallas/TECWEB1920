@@ -35,7 +35,7 @@ class Print_products{
         }
         echo('<ul>');
         foreach($arrpage as &$prodotto){
-            echo('<li>');
+            echo('<li class="product">');
             echo('<div class="box a_column element">');
             echo('<h3>'.$prodotto['Nome'].'</h3>');
             echo('<p>'.$prodotto['Descrizione'].'</p>');

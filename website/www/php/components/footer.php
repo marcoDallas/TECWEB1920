@@ -36,7 +36,7 @@
             </dd>
         </dl>
     </div>
-    <p class="a_column footer_element" role="contentinfo">
+    <p class="full_column footer_element" role="contentinfo">
         <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Pagina validata secondo lo standard XHTML 1.0 Strict"/>
         Alberto Gobbo, Marco Dalla Libera, Riccardo Cestaro, Stefano Lazzaroni. <span xml:lang="en">All rights reserved.</span>
         <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Pagina valida secondo lo standard CSS"/>
