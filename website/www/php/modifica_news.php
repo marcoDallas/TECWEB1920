@@ -7,8 +7,8 @@ if(!Admin::verify() || !isset($_POST['editNews'])){
 require_once 'backend/print_content.php';
 echo(Print_content::top('xhtml+aria'));
 echo(Print_content::openHTML());
-echo(Print_content::head());
-Print_content::openBody();
+Print_content::head();
+echo(Print_content::openBody());
 echo(Print_content::header('La miglior pasticceria di Padova','home.php')."\r");
 echo(Print_content::breadcrumb('<strong xml:lang="en">Home</strong>')."\r");
 echo(Print_content::openGeneralContainer());
