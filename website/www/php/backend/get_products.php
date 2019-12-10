@@ -46,9 +46,5 @@ class Get_products{
         return $this->product->execute("update Prodotto set TipoProdotto = '$type' , Nome = '$title' , Descrizione = '$description' where Codice = $id");
     }
 
-    public function disconnect(){
-        return $this->product->disconnect();
-    }
-
 }
 ?>

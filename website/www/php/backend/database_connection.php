@@ -18,17 +18,14 @@
         }
     }
 
-    public function disconnect() {
-		if ($this->current_connection)
-            mysqli_close($this->current_connection);
-	}
-
     public function getCurrent(){
         return $this->current_connection;
     }
 
     public function execute($query) {
-		return @mysqli_query($this->current_connection,$query);
+        $result = @mysqli_query($this->current_connection,$query);
+        @mysqli_close($this->current_connection);
+        return $result;
     }
     
     
