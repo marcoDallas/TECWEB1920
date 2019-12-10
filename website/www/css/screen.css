@@ -267,14 +267,37 @@ dt {
 	background-color: #FFF7E6;
 	border: 0.1em solid #FFAC61;
 	margin: 1em;
+	width: auto;
 }
 
 	.element p {
-		padding: 2em;
+		padding: 1em 1em 1em 1em;
+		vertical-align: center;
 	}
 
 	.element strong {
 		display: block;
+	}
+	
+	.element img {
+		padding: 0 1em 0.5em 0.5em;
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	
+	.element h3 {
+		padding: 0.5em 0 1em 1em;
+		width: 100%;
+	}
+	
+	.element div:first-of-type{
+		width: 40%;
+	}
+	
+	.element div:last-of-type{
+		width: 60%;
 	}
 	
 .product{
@@ -330,7 +353,22 @@ dt {
 		width: 50%;
 	}
 	
+
 	
+	/*OVERRIDE*/
+	.element img {
+		width:auto;
+	}
+	
+	/*OVERRIDE*/
+	.element div:first-of-type{
+		width: 30%;
+	}
+	
+	/*OVERRIDE*/
+	.element div:last-of-type{
+		width: 70%;
+	}
 }
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
