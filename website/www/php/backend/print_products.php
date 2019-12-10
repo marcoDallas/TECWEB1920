@@ -18,6 +18,8 @@ class Print_products{
             return;
         if(!isset($_GET['page']))
             $_GET['page']=1;
+        if(!array_slice($arr,$_GET['page'].'0'-10,10))
+            $_GET['page']=1;
         if(sizeof($arr)>10){
             $arrpage=array_slice($arr,$_GET['page'].'0'-10,10);
         }else
@@ -71,7 +73,6 @@ class Print_products{
             }
         }
         echo('</div>');
-        $this->arr_prodotti->disconnect();
     }
     
     public function print_paste(){
