@@ -10,7 +10,7 @@ echo(Print_content::top('xhtml+aria'));
 echo(Print_content::openHTML());
 Print_content::head();
 echo(Print_content::openBody());
-echo(Print_content::header('Dietro ad una grande pasticceria, c\'è anche una grande tradizione','storia.php')."\r");
+echo(Print_content::header('Dietro una grande pasticceria, c\'è una grande tradizione','storia.php')."\r");
 echo(Print_content::breadcrumb('<strong>Storia</strong>')."\r");
 echo(Print_content::openGeneralContainer());
 echo(Print_content::menu("storia.php"));
