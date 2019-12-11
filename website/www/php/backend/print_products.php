@@ -47,14 +47,14 @@ class Print_products{
                 echo('<div>');
                 echo('<p>'.$prodotto['Descrizione'].'</p>');
                 if(Admin::verify()){
-                    echo('<form method="post" action="'.$_SERVER['REQUEST_URI'].'">');
+                    echo('<form class="general_form" method="post" action="'.$_SERVER['REQUEST_URI'].'">');
                     echo('<input type="hidden" name="product" value="'.$prodotto['Codice'].'"/>');
-                    echo('<input type="submit" name="remove" value="Rimuovi prodotto"/>');
+                    echo('<input class="general_button" type="submit" name="remove" value="Rimuovi prodotto"/>');
                     echo('</form>');
-                    echo('<form method="post" action="modifica_prodotto.php">');
+                    echo('<form class="general_form" method="post" action="modifica_prodotto.php">');
                     echo('<input type="hidden" name="product" value="'.$prodotto['Codice'].'"/>');
                     echo('<input type="hidden" name="prevpage" value="'.$_SERVER['REQUEST_URI'].'"/>');
-                    echo('<input type="submit" name="edit" value="Modifica prodotto"/>');
+                    echo('<input class="general_button" type="submit" name="edit" value="Modifica prodotto"/>');
                     echo('</form>');
                 }
                 echo('</div>');
@@ -63,13 +63,16 @@ class Print_products{
             }
             echo('</ul>');
             if(sizeof($arr)>10){
+                echo('<div id="nav_page">');
                 $nextpage=$_GET['page']+1;
-                if(array_slice($arr,$nextpage.'0'-10,10))
-                    echo('<a href="?type='.$_GET['type'].'&page='.$nextpage.'">NEXTPAGE</a>');
                 if($_GET['page']>1){
                     $previouspage=$_GET['page']-1;
-                    echo('<a href="?type='.$_GET['type'].'&page='.$previouspage.'">PREVIOUSPAGE</a>');
+                    echo('<a class="general_button anchor_button" href="?type='.$_GET['type'].'&page='.$previouspage.'">Pagina precedente</a>');
                 }
+                if(array_slice($arr,$nextpage.'0'-10,10))
+                    echo('<a class="general_button anchor_button" href="?type='.$_GET['type'].'&page='.$nextpage.'">Pagina successiva</a>');
+
+                echo('</div>');
             }
         }else{
             echo('<p>Nessun prodotto trovato</p>');
