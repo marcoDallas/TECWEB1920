@@ -35,6 +35,7 @@ class Admin{
             $password = Input_security_check::password_check($_POST['password']);
             if(!$username || !$password){
                 error_log("Security check failed");
+                echo('<div id="login_error"><p>Hai inserito simboli non consentiti</p><div id="close_error">X</div></div>');
                 return FALSE;
             }
             require_once 'backend/get_admin.php';
@@ -43,6 +44,7 @@ class Admin{
                 return TRUE;
             }else{
                 error_log("Wrong password");
+                echo('<div id="login_error"><p>Password errata!</p><div id="close_error">X</div></div>');
                 return FALSE;
             }
         }

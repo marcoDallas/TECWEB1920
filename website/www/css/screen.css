@@ -331,6 +331,31 @@ dt {
     text-align: center;
 }
 
+/* LOGIN ERROR MESSAGE */
+#login_error {
+	position: fixed;
+	top:0;
+	left:0;
+	z-index:1;
+	width: 100%;
+	height: 4em;
+	background-color: red;
+	text-align: center;
+}
+
+	#login_error p{
+		color:white;
+		font-size: 1.2em;
+	}
+
+#close_error{
+	position: fixed;
+	top:0;
+	right:1em;
+	color:white;
+	font-size: 1.4em;
+}
+
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /* TABLET */
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
