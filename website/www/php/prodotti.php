@@ -1,6 +1,12 @@
 <?php
 if(!isset($_GET['type']) || (strcmp($_GET['type'],'Paste') && strcmp($_GET['type'],'Torte')))
-    header('Location: html/fallback.html');  
+    header('Location: html/fallback.html'); 
+require_once 'backend/print_content.php';
+require_once 'backend/print_products.php';
+echo(Print_content::top('xhtml+aria'));
+echo(Print_content::openHTML());
+Print_content::head();
+echo(Print_content::openBody()); 
 require_once 'backend/admin.php';
 Admin::init_admin();
 if(Admin::verify()){
@@ -9,12 +15,7 @@ if(Admin::verify()){
     require_once 'backend/edit_news.php';
     Edit_news::edit();
 }
-require_once 'backend/print_content.php';
-require_once 'backend/print_products.php';
-echo(Print_content::top('xhtml+aria'));
-echo(Print_content::openHTML());
-Print_content::head();
-echo(Print_content::openBody());
+
 if(!strcmp($_GET['type'],'Paste'))
     echo(Print_content::header('Una grande varietà di paste, una prelibatezza dietro l\'altra','prodotti.php')."\r");
 else if(!strcmp($_GET['type'],'Torte'))
