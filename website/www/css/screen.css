@@ -263,6 +263,10 @@ dt {
 
 /*PASTE E TORTE STYLES*/
 
+#ricerca_prodotti{
+	padding:2em;
+}
+
 .element {
 	background-color: #FFF7E6;
 	border: 0.1em solid #FFAC61;
@@ -302,6 +306,37 @@ dt {
 	
 .product{
 	list-style-type: none;
+}
+
+/* GENERAL FORM */
+
+.general_form{
+
+}
+
+.general_button{
+	background-color:#a73f2d;
+	border:1px solid #241d13;
+	cursor:pointer;
+	color:white;
+	font-size:0.95em;
+	font-weight:bold;
+	padding:0.6em 2em;
+}
+
+	.general_button:hover {
+		background-color:#b34332;
+	}
+	.general_button:active {
+		position:relative;
+		top:1px;
+	}
+
+.general_input{
+		padding: 0.5em;
+		font-size: 1em;
+		border: 1px solid black;
+		border-radius: 4px;
 }
 
 /*FOOTER STYLES*/

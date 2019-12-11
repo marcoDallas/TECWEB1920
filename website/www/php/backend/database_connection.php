@@ -5,14 +5,14 @@
  */
  class database_connection{
     
-    private $host="localhost";
-    private $user="root";
-    private $pass="";
-    private $database="pasticceria";
+    private const HOST = 'localhost';
+    private const USERNAME = 'root';
+    private const PASSWORD = '';
+    private const DATABASE_NAME = 'pasticceria';
     private $current_connection;
 
     public function __construct(){
-        if(!($this->current_connection = @mysqli_connect($this->host,$this->user,$this->pass,$this->database))){
+        if(!($this->current_connection = @mysqli_connect(static::HOST,static::USERNAME,static::PASSWORD,static::DATABASE_NAME))){
             error_log("Debugging errno: " . mysqli_connect_errno()."Debugging error: " . mysqli_connect_error());
             echo "Momentaneamente i dati non sono disponibili. Riprovare più tardi.";
         }
@@ -28,6 +28,9 @@
         return $result;
     }
     
+    public function disconnect(){
+        @mysqli_close($this->current_connection);
+    }
     
 }
 
