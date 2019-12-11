@@ -325,6 +325,13 @@ dt {
 	border-radius: 4px;
 }
 
+.anchor_button{
+	margin: 1em;
+	margin-bottom: 2em;
+	text-decoration: none;
+	font-size: 1em;
+}
+
 	.general_button:hover {
 		background-color:#b34332;
 	}
@@ -338,6 +345,11 @@ dt {
 		font-size: 1em;
 		border: 1px solid black;
 		border-radius: 4px;
+}
+
+#nav_page{
+	padding-top:1em;
+	padding-bottom:2em;
 }
 
 /*FOOTER STYLES*/
