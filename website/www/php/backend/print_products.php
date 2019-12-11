@@ -15,7 +15,13 @@ class Print_products{
 
     public function print_pr($arr){
         echo('<div class="body_column content">');
-        echo('<form class="general_form" id="ricerca_prodotti" method="get" action="prodotti.php"');
+        if(Admin::verify()){
+            echo('<form class="general_form inline" method="post" action="modifica_prodotto.php">');
+            echo('<input type="hidden" name="prevpage" value="'.$_SERVER['REQUEST_URI'].'"/>');
+            echo('<input class="general_button" type="submit" name="add" value="Aggiungi Prodotto" tabindex="10"/>');
+            echo('</form>');
+        }
+        echo('<form class="general_form inline" id="ricerca_prodotti" method="get" action="prodotti.php"');
         echo('<label for="cercaProdotti">Cerca '.$_GET['type'].': </label>');
         echo('<input type="hidden" name="type" value="'.$_GET['type'].'"/>');
         echo('<input class="general_input" type="text" id="cercaProdotti" name="search" tabindex="9"/>');
@@ -30,12 +36,7 @@ class Print_products{
                 $arrpage=array_slice($arr,$_GET['page'].'0'-10,10);
             }else
                 $arrpage=$arr;
-            if(Admin::verify()){
-                echo('<form method="post" action="modifica_prodotto.php">');
-                echo('<input type="hidden" name="prevpage" value="'.$_SERVER['REQUEST_URI'].'"/>');
-                echo('<input type="submit" name="add" value="Aggiungi Prodotto" tabindex="10"/>');
-                echo('</form>');
-            }
+
             echo('<ul>');
             foreach($arrpage as &$prodotto){
                 echo('<li class="product">');

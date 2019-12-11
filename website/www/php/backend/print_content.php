@@ -104,14 +104,16 @@ class Print_content{
 
     public static function adminAreaForm(){
         if(Sessions::session_exists('admin')){
-            $content ='<div id="administrator_link" class="box admin_column">
-                        <p>Benvenuto amministratore!</p>
-                        <form method="post" action="'.$_SERVER['REQUEST_URI'].'">
-                            <input type="submit" value="Logout" name="Logout" tabindex="8" />
+            $content ='<div id="logout">
+                        <form class="general_form" method="post" action="'.$_SERVER['REQUEST_URI'].'">
+                            <fieldset id="fieldset_login">
+                            <legend>Benvenuto amministratore!</legend>
+                                <input id="submit_login_form" class="general_button" type="submit" value="Esci" name="Logout" tabindex="8" />
+                            </fieldset>
                         </form>
                         </div>';
         }else{
-            $content ='<div  id="administrator_link" class="box admin_column">
+            $content ='<div  class="box admin_column">
                 <form class="general_form" method="post" action="'.$_SERVER['REQUEST_URI'].'">
                     <fieldset id="fieldset_login">
                         <legend>Area Amministratore</legend>
@@ -123,7 +125,7 @@ class Print_content{
                         <label for="password"><span xml:lang="en">Password: </span></label>
                         <input class="general_input" type="password" name="password" id="password" maxlength="20" tabindex="7" aria-required="true"/>
                         </div>
-                        <input id="submit_login" class="general_button" type="submit" value="Accedi" name="Login" tabindex="8" />
+                        <input id="submit_login_form" class="general_button" type="submit" value="Accedi" name="Login" tabindex="8" />
                     </fieldset>
                 </form>
             </div>';

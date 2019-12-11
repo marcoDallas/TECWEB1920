@@ -363,9 +363,13 @@ dt {
 	padding: 0.2em;
 }
 
-#submit_login{
+#submit_login_form{
 	margin-left:40%;
 	margin-bottom:0.5em;
+}
+
+.inline{
+	display:inline-block;
 }
 
 
@@ -396,6 +400,10 @@ dt {
     text-align: center;
 }
 
+#logout{
+	margin: 1em 1em 1em 1em;
+}
+
 /* LOGIN ERROR MESSAGE */
 #login_error {
 	position: fixed;
@@ -420,6 +428,29 @@ dt {
 	color:white;
 	font-size: 1.4em;
 }
+
+/* EDIT PRODUCT AND NEWS PAGES */
+
+#edit_form{
+	text-align: left;
+}
+
+#edit_form *{
+	padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.input_textarea > *{
+	display: block;
+}
+
+.general_textarea{
+	padding-left: 1em;
+}
+
+#edit_form_submit{
+	margin-left: 42%;
+}
+
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /* TABLET */
