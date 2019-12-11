@@ -28,24 +28,26 @@ if($edit){
     $product = (new Get_products())->search_by_code($_POST['product']);
 }
 ?>
-<form method="post" action="<?php echo($_POST['prevpage']);?>">
-    <fieldset>
-        <legend><?php if($edit) echo("Modifica ".$product['Nome']); else echo("Aggiungi Prodotto");?></legend>
-        <label for="title">Nome Prodotto</label>
-        <input type="text" name="title" id="title" aria-required="true" value="<?php if($edit) echo($product['Nome']);?>"/>
-        <p>Tipo Prodotto</p>
-        <label for="pasta">Pasta</label>
-        <input type="radio" name="type" value="Pasta" id="pasta" aria-required="true" <?php if($edit) if(!strcmp($product['TipoProdotto'],'Pasta')) echo('checked="checked"');?>/>
-        <label for="torta">Torta</label>
-        <input type="radio" name="type" value="Torta" id="torta" aria-required="true" <?php if($edit) if(!strcmp($product['TipoProdotto'],'Torta')) echo('checked="checked"');?>/>
-        <label for="description">Descrizione Prodotto</label>
-        <textarea cols="20" name="description" id="description"> 
-            <?php if($edit) echo($product['Descrizione']);?>
-        </textarea> 
-        <?php if($edit) echo('<input type="hidden" name="id" value="'.$product['Codice'].'"/>'); ?>
-        <input type="submit" value="Modifica" name="writeEdits" />
-    </fieldset>
-</form>
+<div class="body_column content">
+    <h2>Da questa pagina puoi aggiungere/modificare un prodotto</h2>
+    <form id="edit_form" class="general_form" method="post" action="<?php echo($_POST['prevpage']);?>">
+        <fieldset>
+            <legend><?php if($edit) echo("Modifica ".$product['Nome']); else echo("Aggiungi Prodotto");?></legend>
+            <div class="input_line">
+                <label for="title">Nome Prodotto</label>
+                <input class="general_input" type="text" name="title" id="title" aria-required="true" value="<?php if($edit) echo($product['Nome']);?>"/>
+            </div>
+            <div class="input_textarea">
+                <label for="description">Descrizione Prodotto</label>
+                <textarea class="general_input general_textarea" rows="12" cols="70" name="description" id="description"> 
+                    <?php if($edit) echo($product['Descrizione']);?>
+                </textarea> 
+            </div>
+            <?php if($edit) echo('<input type="hidden" name="id" value="'.$product['Codice'].'"/>'); ?>
+            <input id="edit_form_submit" class="general_button" type="submit" value="Modifica" name="writeEdits" />
+        </fieldset>
+    </form>
+</div>
 <?php
 echo(Print_content::closeDiv());
 echo(Print_content::footer());

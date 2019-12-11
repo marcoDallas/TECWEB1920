@@ -19,9 +19,9 @@ class Print_news{
         echo('<p class="news_title">'.$content['Titolo'].'</p>');
         echo('<p class="news_content">'.$content['Contenuto'].'</p>');
         if(Admin::verify()){
-            echo('<form method="post" action="modifica_news.php">');
+            echo('<form class="general_form" method="post" action="modifica_news.php">');
             echo('<input type="hidden" name="prevpage" value="'.$_SERVER['REQUEST_URI'].'"/>');
-            echo('<input type="submit" name="editNews" value="Modifica news" tabindex="10"/>');
+            echo('<input class="general_button" type="submit" name="editNews" value="Modifica news" tabindex="10"/>');
             echo('</form>');
         }
         echo('</div>');
