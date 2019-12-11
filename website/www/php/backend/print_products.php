@@ -40,12 +40,13 @@ class Print_products{
             foreach($arrpage as &$prodotto){
                 echo('<li class="product">');
                 echo('<div class="box full_column element">');
-                echo('<h3>'.$prodotto['Nome'].'</h3>');
-                echo('<div>');
-                echo('<img src="'.$prodotto['Immagine'].'"/>');
+                echo('<div id="img_product">');
+                echo('<img src="'.$prodotto['Immagine'].'" alt=""/>');
                 echo('</div>');
-                echo('<div>');
+                echo('<div id="cont_product">');
+                echo('<h3>'.$prodotto['Nome'].'</h3>');
                 echo('<p>'.$prodotto['Descrizione'].'</p>');
+                echo('</div>');
                 if(Admin::verify()){
                     echo('<form class="general_form" method="post" action="'.$_SERVER['REQUEST_URI'].'">');
                     echo('<input type="hidden" name="product" value="'.$prodotto['Codice'].'"/>');
@@ -57,7 +58,6 @@ class Print_products{
                     echo('<input class="general_button" type="submit" name="edit" value="Modifica prodotto"/>');
                     echo('</form>');
                 }
-                echo('</div>');
                 echo('</div>');
                 echo('</li>');
             }

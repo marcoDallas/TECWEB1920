@@ -292,15 +292,14 @@ dt {
 	}
 	
 	.element h3 {
-		padding: 0.5em 0 1em 1em;
-		width: 100%;
+		padding-top: 0.5em;
 	}
 	
-	.element div:first-of-type{
+	.element #img_product{
 		width: 40%;
 	}
 	
-	.element div:last-of-type{
+	.element #cont_product{
 		width: 60%;
 	}
 	
