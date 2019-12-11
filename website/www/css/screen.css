@@ -352,6 +352,24 @@ dt {
 	padding-bottom:2em;
 }
 
+.input_line > input[type=password]{
+	margin-left:0.2em;
+}
+
+#fieldset_login{
+	border: 2px solid white;
+}
+
+#fieldset_login > *{
+	padding: 0.2em;
+}
+
+#submit_login{
+	margin-left:40%;
+	margin-bottom:0.5em;
+}
+
+
 /*FOOTER STYLES*/
 
 #footer {
