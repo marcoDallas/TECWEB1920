@@ -113,13 +113,17 @@ class Print_content{
         }else{
             $content ='<div  id="administrator_link" class="box admin_column">
                 <form class="general_form" method="post" action="'.$_SERVER['REQUEST_URI'].'">
-                    <fieldset id="fieldsetLogin">
+                    <fieldset id="fieldset_login">
                         <legend>Area Amministratore</legend>
-                        <label for="username"><span xml:lang="en">Username</span></label>
-                        <input class="general_input" type="text" name="username" id="username" maxlength="20" tabindex="6" aria-required="true"/>
-                        <label for="password"><span xml:lang="en">Password</span></label>
+                        <div class="input_line">
+                            <label for="username"><span xml:lang="en">Username: </span></label>
+                            <input class="general_input" type="text" name="username" id="username" maxlength="20" tabindex="6" aria-required="true"/>
+                        </div>
+                        <div class="input_line">
+                        <label for="password"><span xml:lang="en">Password: </span></label>
                         <input class="general_input" type="password" name="password" id="password" maxlength="20" tabindex="7" aria-required="true"/>
-                        <input class="general_button" type="submit" value="Accedi" name="Login" tabindex="8" />
+                        </div>
+                        <input id="submit_login" class="general_button" type="submit" value="Accedi" name="Login" tabindex="8" />
                     </fieldset>
                 </form>
             </div>';
