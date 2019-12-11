@@ -16,7 +16,7 @@ class Print_products{
     public function print_pr($arr){
         echo('<div class="body_column">');
         echo('<form class="general_form" id="ricerca_prodotti" method="get" action="prodotti.php"');
-        echo('<label for="cercaProdotti">Cerca '.$_GET['type'].'</label>');
+        echo('<label for="cercaProdotti">Cerca '.$_GET['type'].': </label>');
         echo('<input type="hidden" name="type" value="'.$_GET['type'].'"/>');
         echo('<input class="general_input" type="text" id="cercaProdotti" name="search" tabindex="9"/>');
         echo('<input class="general_button" type="submit" value="cerca" tabindex="10"/>');

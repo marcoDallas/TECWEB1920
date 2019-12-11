@@ -310,8 +310,8 @@ dt {
 
 /* GENERAL FORM */
 
-.general_form{
-
+.general_form > *{
+	margin: 0.1em;
 }
 
 .general_button{
@@ -322,6 +322,7 @@ dt {
 	font-size:0.95em;
 	font-weight:bold;
 	padding:0.6em 2em;
+	border-radius: 4px;
 }
 
 	.general_button:hover {
