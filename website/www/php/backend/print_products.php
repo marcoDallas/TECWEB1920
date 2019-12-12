@@ -14,18 +14,18 @@ class Print_products{
     }
 
     public function print_pr($arr){
-        echo('<div class="body_column content">');
+        echo('<div id="content" class="body_column content">');
         if(Admin::verify()){
             echo('<form class="general_form inline" method="post" action="modifica_prodotto.php">');
             echo('<input type="hidden" name="prevpage" value="'.$_SERVER['REQUEST_URI'].'"/>');
-            echo('<input class="general_button" type="submit" name="add" value="Aggiungi Prodotto" tabindex="10"/>');
+            echo('<input class="general_button" type="submit" name="add" value="Aggiungi Prodotto"/>');
             echo('</form>');
         }
         echo('<form class="general_form inline" id="ricerca_prodotti" method="get" action="prodotti.php"');
         echo('<label for="cercaProdotti">Cerca '.$_GET['type'].': </label>');
         echo('<input type="hidden" name="type" value="'.$_GET['type'].'"/>');
-        echo('<input class="general_input" type="text" id="cercaProdotti" name="search" tabindex="9"/>');
-        echo('<input class="general_button" type="submit" value="cerca" tabindex="10"/>');
+        echo('<input class="general_input" type="text" id="cercaProdotti" name="search"/>');
+        echo('<input class="general_button" type="submit" value="cerca"/>');
         echo('</form>');
         if($arr){
             if(!isset($_GET['page']))

@@ -49,37 +49,37 @@ class Print_content{
 
     public static function menu($page){
         $content='<div class="menu_column">'."\r".'<div id="menu" class="mobile_hidden" role="navigation">'."\r".'<ul role="tablist">
-        '."\r".'<li class="hidden" role="tab"><a href="#content" tabindex="1">Vai al contenuto</a></li>';
+        '."\r".'<li class="hidden" role="tab" aria-setsize="5" aria-posinset="1"><a href="#content">Vai al contenuto</a></li>';
         if(!strcmp($page,"home.php")){
-            $content=$content."\r".'<li xml:lang="en" role="tab"><strong>Home</strong></li>'."\r".'
-            <li role="tab" aria-setsize="5" aria-posinset="2"><a href="prodotti.php?type=Paste" tabindex="2">Paste</a></li>'."\r".'
-            <li role="tab" aria-setsize="5" aria-posinset="3"><a href="prodotti.php?type=Torte" tabindex="3">Torte</a></li>'."\r".'
-            <li role="tab" aria-setsize="5" aria-posinset="4"><a href="storia.php" tabindex="4">Storia</a></li>'."\r".'
-            <li role="tab" aria-setsize="5" aria-posinset="5"><a href="contatti.php" tabindex="5">Contatti</a></li>';
+            $content=$content."\r".'<li role="tab" aria-setsize="6" aria-posinset="2" xml:lang="en"><strong>Home</strong></li>'."\r".'
+            <li role="tab" aria-setsize="6" aria-posinset="3"><a href="prodotti.php?type=Paste">Paste</a></li>'."\r".'
+            <li role="tab" aria-setsize="6" aria-posinset="4"><a href="prodotti.php?type=Torte">Torte</a></li>'."\r".'
+            <li role="tab" aria-setsize="6" aria-posinset="5"><a href="storia.php">Storia</a></li>'."\r".'
+            <li role="tab" aria-setsize="6" aria-posinset="6"><a href="contatti.php">Contatti</a></li>';
         }else if(!strcmp($page,"storia.php")){
-            $content=$content."\r".'<li role="tablist" aria-setsize="5" aria-posinset="2"><a href="home.php" xml:lang="en" tabindex="2">Home</a></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="3"><a href="prodotti.php?type=Paste" tabindex="3">Paste</a></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="4"><a href="prodotti.php?type=Torte" tabindex="4">Torte</a></li>'."\r".'
-            <li><strong>Storia</strong></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="5"><a href="contatti.php" tabindex="5">Contatti</a></li>';
+            $content=$content."\r".'<li role="tab" aria-setsize="6" aria-posinset="2"><a href="home.php" xml:lang="en">Home</a></li>'."\r".'
+            <li role="tab" aria-setsize="6" aria-posinset="3"><a href="prodotti.php?type=Paste">Paste</a></li>'."\r".'
+            <li role="tab" aria-setsize="6" aria-posinset="4"><a href="prodotti.php?type=Torte">Torte</a></li>'."\r".'
+            <li role="tab" aria-setsize="6" aria-posinset="5"><strong>Storia</strong></li>'."\r".'
+            <li role="tab" aria-setsize="6" aria-posinset="6"><a href="contatti.php">Contatti</a></li>';
         }else if(!strcmp($page,"contatti.php")){
-            $content=$content."\r".'<li role="tablist" aria-setsize="5" aria-posinset="2"><a href="home.php" xml:lang="en" tabindex="2">Home</a></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="3"><a href="prodotti.php?type=Paste" tabindex="3">Paste</a></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="4"><a href="prodotti.php?type=Torte" tabindex="4">Torte</a></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="5"><a href="storia.php" tabindex="5">Storia</a></li>'."\r".'
-            <li><strong>Contatti</strong></li>';
+            $content=$content."\r".'<li role="tab" aria-setsize="6" aria-posinset="2"><a href="home.php" xml:lang="en">Home</a></li>'."\r".'
+            <li role="tab" aria-setsize="6" aria-posinset="3"><a href="prodotti.php?type=Paste">Paste</a></li>'."\r".'
+            <li role="tab" aria-setsize="6" aria-posinset="4"><a href="prodotti.php?type=Torte">Torte</a></li>'."\r".'
+            <li role="tab" aria-setsize="6" aria-posinset="5"><a href="storia.php">Storia</a></li>'."\r".'
+            <li role="tab" aria-setsize="6" aria-posinset="6"><strong>Contatti</strong></li>';
         }else if(!strcmp($page,"prodotti.php?type=Paste")){
-            $content=$content."\r".'<li xml:lang="en" role="tablist" aria-setsize="5" aria-posinset="2"><a href="home.php" tabindex="2">Home</a></li>'."\r".'
-            <li><strong>Paste</strong></dt>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="3"><a href="prodotti.php?type=Torte" tabindex="3">Torte</a></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="4"><a href="storia.php" tabindex="4">Storia</a></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="5"><a href="contatti.php" tabindex="5">Contatti</a></li>';
+            $content=$content."\r".'<li xml:lang="en" role="tab" aria-setsize="6" aria-posinset="2"><a href="home.php">Home</a></li>'."\r".'
+            <li role="tab" aria-setsize="6" aria-posinset="3"><strong>Paste</strong></dt>'."\r".'
+            <li role="tab" aria-setsize="6" aria-posinset="4"><a href="prodotti.php?type=Torte">Torte</a></li>'."\r".'
+            <li role="tab" aria-setsize="6" aria-posinset="5"><a href="storia.php">Storia</a></li>'."\r".'
+            <li role="tab" aria-setsize="6" aria-posinset="6"><a href="contatti.php">Contatti</a></li>';
         }else if(!strcmp($page,"prodotti.php?type=Torte")){
-            $content=$content."\r".'<li role="tablist" aria-setsize="5" aria-posinset="2"><a href="home.php" xml:lang="en" tabindex="2">Home</a></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="3"><a href="prodotti.php?type=Paste" tabindex="3">Paste</a></li>'."\r".'
-            <li><strong>Torte</strong></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="4"><a href="storia.php" tabindex="4">Storia</a></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="5"><a href="contatti.php" tabindex="5">Contatti</a></li>';
+            $content=$content."\r".'<li role="tab" aria-setsize="6" aria-posinset="2"><a href="home.php" xml:lang="en">Home</a></li>'."\r".'
+            <li role="tab" aria-setsize="6" aria-posinset="3"><a href="prodotti.php?type=Paste">Paste</a></li>'."\r".'
+            <li role="tab" aria-setsize="6" aria-posinset="4"><strong>Torte</strong></li>'."\r".'
+            <li role="tab" aria-setsize="6" aria-posinset="5"><a href="storia.php">Storia</a></li>'."\r".'
+            <li role="tab" aria-setsize="6" aria-posinset="6"><a href="contatti.php">Contatti</a></li>';
         }
         return $content."\r".'</ul>'."\r".'</div>'."\r".'<div id="menu_icon" onclick="toggleMenu(this)">'."\r".'<div class="bar1"></div>'."\r".'<div class="bar2"></div>'."\r".'<div class="bar3"></div>'."\r".'</div>';    
     }
@@ -108,7 +108,7 @@ class Print_content{
                         <form class="general_form" method="post" action="'.$_SERVER['REQUEST_URI'].'">
                             <fieldset id="fieldset_login">
                             <legend>Benvenuto amministratore!</legend>
-                                <input id="submit_login_form" class="general_button" type="submit" value="Esci" name="Logout" tabindex="8" />
+                                <input id="submit_login_form" class="general_button" type="submit" value="Esci" name="Logout"/>
                             </fieldset>
                         </form>
                         </div>';
@@ -119,13 +119,13 @@ class Print_content{
                         <legend>Area Amministratore</legend>
                         <div class="input_line">
                             <label for="username"><span xml:lang="en">Username: </span></label>
-                            <input class="general_input" type="text" name="username" id="username" maxlength="20" tabindex="6" aria-required="true"/>
+                            <input class="general_input" type="text" name="username" id="username" maxlength="20" aria-required="true"/>
                         </div>
                         <div class="input_line">
                         <label for="password"><span xml:lang="en">Password: </span></label>
-                        <input class="general_input" type="password" name="password" id="password" maxlength="20" tabindex="7" aria-required="true"/>
+                        <input class="general_input" type="password" name="password" id="password" maxlength="20" aria-required="true"/>
                         </div>
-                        <input id="submit_login_form" class="general_button" type="submit" value="Accedi" name="Login" tabindex="8" />
+                        <input id="submit_login_form" class="general_button" type="submit" value="Accedi" name="Login"/>
                     </fieldset>
                 </form>
             </div>';
