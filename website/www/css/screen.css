@@ -21,10 +21,6 @@ body {
     background-color: #FFAC61;
 }
 
-dt {
-    font-weight: bold;
-}
-
 /**************************************************************************
  *********************** MOBILE LAYOUT ************************************
  **************************************************************************/
@@ -56,7 +52,6 @@ dt {
     float: left;
     display: inline-block;
 }
-
 
 
 #breadcrumb {
@@ -201,7 +196,7 @@ dt {
     float: right;
     font-size: 120%;
 }
-	.content > p {		/*SOLO I P DIRETTAMENTE FIGLI*/
+	.content p {		/*SOLO I P DIRETTAMENTE FIGLI*/
 		padding: 0.5em;
 	}
 
@@ -214,6 +209,10 @@ dt {
 		color: red;
 		padding-top: 1em;
 	}
+
+dt {
+	font-weight: bold;
+}
 	
 	/*VARIAZIONE IN CONTATTI*/
 	
@@ -221,9 +220,15 @@ dt {
 	text-align: left;
 }
 
-	#contatti p, #contatti dl {
-		padding: 1em 0 0 3em;
+	#contatti p, #contatti ul {
+		padding: 1em 1em 1em 3em;
 	}
+
+	#contatti ul {
+		list-style: none;
+	}
+
+
 	
 	#contatti h2 {
 		padding-left: 1em;
@@ -244,7 +249,7 @@ dt {
 }
 
 
-.imgHome, .imgStoria{
+.general_image{
     height: auto;
     width: 80%;
 }
@@ -291,7 +296,7 @@ dt {
 		box-sizing: border-box;
 	}
 	
-	.element h3 {
+	.element h3, h2{
 		padding-top: 0.5em;
 	}
 	
@@ -571,7 +576,8 @@ dt {
     }
 	
 	/*OVERRIDE*/
-	.imgHome, .imgStoria{	/*RISCRITTURA DEL MOBILE*/
+	.general_image{	/*RISCRITTURA DEL MOBILE*/
+		
 		height: auto;
 		width: 60%;
 	}
