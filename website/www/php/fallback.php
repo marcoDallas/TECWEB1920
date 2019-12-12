@@ -26,7 +26,7 @@ unset($news);
 if(Admin::verify())
     $DOM = str_replace('<edit_news_admin_to_replace/>',Print_news::admin_zone(),$DOM);
 
-    $DOM = str_replace('<timetable_to_insert/>',file_get_contents('../html/components/timetable.html'),$DOM);
+$DOM = str_replace('<timetable_to_insert/>',file_get_contents('../html/components/timetable.html'),$DOM);
 $DOM = str_replace('<page_to_insert/>',file_get_contents('../html/fallback.html'),$DOM);
 $DOM = str_replace('<login_admin_to_insert/>',Print_content::admin_form(),$DOM);
 
