@@ -44,7 +44,7 @@ class Admin{
                 return TRUE;
             }else{
                 error_log("Wrong password");
-                echo('<div id="login_error"><p id="text_error">Password errata!</p><div class="close"></div></div>');
+                echo('<div id="login_error"><p id="text_error">Credenziali errate!</p><div class="close"></div></div>');
                 return FALSE;
             }
         }
