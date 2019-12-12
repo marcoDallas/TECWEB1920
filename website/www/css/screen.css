@@ -149,6 +149,7 @@ body {
     display: block;
 }
 
+
 /*------------------------------------------------------*/
 
 .logo_column{
@@ -300,11 +301,11 @@ dt {
 		padding-top: 0.5em;
 	}
 	
-	.element #img_product{
+	.element .img_product{
 		width: 40%;
 	}
 	
-	.element #cont_product{
+	.element .cont_product{
 		width: 60%;
 	}
 	
@@ -421,17 +422,28 @@ dt {
 	text-align: center;
 }
 
-	#login_error p{
-		color:white;
-		font-size: 1.2em;
-	}
 
-#close_error{
-	position: fixed;
-	top:0;
-	right:1em;
-	color:white;
-	font-size: 1.4em;
+#text_error{
+	position: absolute;
+	width: 80%;
+	left: 0;
+	top: 0.2em;
+	font-size: 2em;
+	color: white;
+	padding-left: 3em;
+}
+
+/* close button */
+
+.close {
+	position: absolute;
+	right: 1em;
+	top: 0.5em;
+	width: 3em;
+	height: 3em;
+	background-image: url('../images/close.png');
+	background-repeat: none;
+	background-size: 100% 100%;
 }
 
 /* EDIT PRODUCT AND NEWS PAGES */
