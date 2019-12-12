@@ -48,14 +48,14 @@ class Print_content{
     }
 
     public static function menu($page){
-        $content='<div class="menu_column">'."\r".'<div id="menu" class="mobile_hidden" role="navigation">'."\r".'<ul>
-        '."\r".'<li class="hidden" role="tablist" aria-setsize="5" aria-posinset="1"><a href="#content" tabindex="1">Vai al contenuto</a></li>';
+        $content='<div class="menu_column">'."\r".'<div id="menu" class="mobile_hidden" role="navigation">'."\r".'<ul role="tablist">
+        '."\r".'<li class="hidden" role="tab"><a href="#content" tabindex="1">Vai al contenuto</a></li>';
         if(!strcmp($page,"home.php")){
-            $content=$content."\r".'<li xml:lang="en"><strong>Home</strong></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="2"><a href="prodotti.php?type=Paste" tabindex="2">Paste</a></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="3"><a href="prodotti.php?type=Torte" tabindex="3">Torte</a></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="4"><a href="storia.php" tabindex="4">Storia</a></li>'."\r".'
-            <li role="tablist" aria-setsize="5" aria-posinset="5"><a href="contatti.php" tabindex="5">Contatti</a></li>';
+            $content=$content."\r".'<li xml:lang="en" role="tab"><strong>Home</strong></li>'."\r".'
+            <li role="tab" aria-setsize="5" aria-posinset="2"><a href="prodotti.php?type=Paste" tabindex="2">Paste</a></li>'."\r".'
+            <li role="tab" aria-setsize="5" aria-posinset="3"><a href="prodotti.php?type=Torte" tabindex="3">Torte</a></li>'."\r".'
+            <li role="tab" aria-setsize="5" aria-posinset="4"><a href="storia.php" tabindex="4">Storia</a></li>'."\r".'
+            <li role="tab" aria-setsize="5" aria-posinset="5"><a href="contatti.php" tabindex="5">Contatti</a></li>';
         }else if(!strcmp($page,"storia.php")){
             $content=$content."\r".'<li role="tablist" aria-setsize="5" aria-posinset="2"><a href="home.php" xml:lang="en" tabindex="2">Home</a></li>'."\r".'
             <li role="tablist" aria-setsize="5" aria-posinset="3"><a href="prodotti.php?type=Paste" tabindex="3">Paste</a></li>'."\r".'
