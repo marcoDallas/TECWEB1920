@@ -289,7 +289,7 @@ dt {
 	}
 	
 	.element img {
-		padding: 0 1em 0.5em 0.5em;
+		padding: 1em 1em 0.5em 0.5em;
 		width: 100%;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
