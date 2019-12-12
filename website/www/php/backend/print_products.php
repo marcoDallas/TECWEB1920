@@ -14,19 +14,19 @@ class Print_products{
     }
 
     public function print_pr($arr){
-        echo('<div class="body_column content">');
+        $content='<div class="body_column content">';
         if(Admin::verify()){
-            echo('<form class="general_form inline" method="post" action="modifica_prodotto.php">');
-            echo('<input type="hidden" name="prevpage" value="'.$_SERVER['REQUEST_URI'].'"/>');
-            echo('<input class="general_button" type="submit" name="add" value="Aggiungi Prodotto" tabindex="10"/>');
-            echo('</form>');
+            $content.='<form class="general_form inline" method="post" action="modifica_prodotto.php">
+                        <input type="hidden" name="prevpage" value="'.$_SERVER['REQUEST_URI'].'"/>
+                        <input class="general_button" type="submit" name="add" value="Aggiungi Prodotto"/>
+                    </form>';
         }
-        echo('<form class="general_form inline" id="ricerca_prodotti" method="get" action="prodotti.php"');
-        echo('<label for="cercaProdotti">Cerca '.$_GET['type'].': </label>');
-        echo('<input type="hidden" name="type" value="'.$_GET['type'].'"/>');
-        echo('<input class="general_input" type="text" id="cercaProdotti" name="search" tabindex="9"/>');
-        echo('<input class="general_button" type="submit" value="cerca" tabindex="10"/>');
-        echo('</form>');
+        $content.='<form class="general_form inline" id="ricerca_prodotti" method="get" action="prodotti.php"
+                    <label for="cercaProdotti">Cerca '.$_GET['type'].': </label>
+                    <input class="general_input" type="text" id="cercaProdotti" name="search"/>
+                    <input type="hidden" name="type" value="'.$_GET['type'].'"/>
+                    <input class="general_button" type="submit" value="cerca"/>
+                </form>';
         if($arr){
             if(!isset($_GET['page']))
                 $_GET['page']=1;
@@ -37,64 +37,65 @@ class Print_products{
             }else
                 $arrpage=$arr;
 
-            echo('<ul>');
+            $content.='<ul>';
             foreach($arrpage as &$prodotto){
-                echo('<li class="product">');
-                echo('<div class="box full_column element">');
-                echo('<div class="img_product">');
-                echo('<img src="'.$prodotto['Immagine'].'" alt=""/>');
-                echo('</div>');
-                echo('<div class="cont_product">');
-                echo('<h3>'.$prodotto['Nome'].'</h3>');
-                echo('<p>'.$prodotto['Descrizione'].'</p>');
-                echo('</div>');
+                $content.='<li class="product">
+                            <div class="box full_column element">
+                                <div class="img_product">
+                                    <img src="'.$prodotto['Immagine'].'" alt=""/>
+                                </div>
+                                <div class="cont_product">
+                                    <h3>'.$prodotto['Nome'].'</h3>
+                                    <p>'.$prodotto['Descrizione'].'</p>
+                                </div>';
                 if(Admin::verify()){
-                    echo('<form class="general_form" method="post" action="'.$_SERVER['REQUEST_URI'].'">');
-                    echo('<input type="hidden" name="product" value="'.$prodotto['Codice'].'"/>');
-                    echo('<input class="general_button" type="submit" name="remove" value="Rimuovi prodotto"/>');
-                    echo('</form>');
-                    echo('<form class="general_form" method="post" action="modifica_prodotto.php">');
-                    echo('<input type="hidden" name="product" value="'.$prodotto['Codice'].'"/>');
-                    echo('<input type="hidden" name="prevpage" value="'.$_SERVER['REQUEST_URI'].'"/>');
-                    echo('<input class="general_button" type="submit" name="edit" value="Modifica prodotto"/>');
-                    echo('</form>');
+                    $content.='<form class="general_form" method="post" action="'.$_SERVER['REQUEST_URI'].'">
+                                <input type="hidden" name="product" value="'.$prodotto['Codice'].'"/>
+                                <input class="general_button" type="submit" name="remove" value="Rimuovi prodotto"/>
+                            </form>
+                                <form class="general_form" method="post" action="modifica_prodotto.php">
+                                <input type="hidden" name="product" value="'.$prodotto['Codice'].'"/>
+                                <input type="hidden" name="prevpage" value="'.$_SERVER['REQUEST_URI'].'"/>
+                                <input class="general_button" type="submit" name="edit" value="Modifica prodotto"/>
+                            </form>';
                 }
-                echo('</div>');
-                echo('</li>');
+                $content.='</div>
+                        </li>';
             }
-            echo('</ul>');
+            $content.='</ul>';
             if(sizeof($arr)>10){
-                echo('<div id="nav_page">');
+                $content.='<div id="nav_page">';
                 $nextpage=$_GET['page']+1;
                 if($_GET['page']>1){
                     $previouspage=$_GET['page']-1;
-                    echo('<a class="general_button anchor_button" href="?type='.$_GET['type'].'&page='.$previouspage.'">Pagina precedente</a>');
+                    $content.='<a class="general_button anchor_button" href="?type='.$_GET['type'].'&page='.$previouspage.'">Pagina precedente</a>';
                 }
                 if(array_slice($arr,$nextpage.'0'-10,10))
-                    echo('<a class="general_button anchor_button" href="?type='.$_GET['type'].'&page='.$nextpage.'">Pagina successiva</a>');
+                    $content.='<a class="general_button anchor_button" href="?type='.$_GET['type'].'&page='.$nextpage.'">Pagina successiva</a>';
 
-                echo('</div>');
+                $content.='</div>';
             }
         }else{
-            echo('<p>Nessun prodotto trovato</p>');
+            $content.='<p>Nessun prodotto trovato</p>';
         }
-        echo('</div>');
+        $content.='</div>';
+        return $content;
     }
     
     public function print_paste(){
-        $this->print_pr($this->arr_prodotti->get_paste());
+        return $this->print_pr($this->arr_prodotti->get_paste());
     }
 
     public function print_torte(){
-        $this->print_pr($this->arr_prodotti->get_torte());
+        return $this->print_pr($this->arr_prodotti->get_torte());
     }
 
     public function print_searcheable_paste($to_search){
-        $this->print_pr($this->arr_prodotti->search_paste($to_search));
+        return $this->print_pr($this->arr_prodotti->search_paste($to_search));
     }
 
     public function print_searcheable_torte($to_search){
-        $this->print_pr($this->arr_prodotti->search_torte($to_search));
+        return $this->print_pr($this->arr_prodotti->search_torte($to_search));
     }
 
 }

@@ -352,6 +352,10 @@ dt {
 		border-radius: 4px;
 }
 
+#login_input{
+	width:57%;
+}
+
 #nav_page{
 	padding-top:1em;
 	padding-bottom:2em;
@@ -404,10 +408,6 @@ dt {
 .footer_element {
     display: block;
     text-align: center;
-}
-
-#logout{
-	margin: 1em 1em 1em 1em;
 }
 
 /* LOGIN ERROR MESSAGE */
@@ -532,7 +532,6 @@ dt {
 	/*OVERRIDE*/
 	.title_column{
 		width: 70%;
-		height: 100%;
 	}
 	
 	/*OVERRIDE*/
