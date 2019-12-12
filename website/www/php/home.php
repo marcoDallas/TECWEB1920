@@ -11,7 +11,7 @@ $DOM = str_replace('<no_index_to_insert/>','',$DOM);
 $DOM = str_replace('<login_error_to_insert/>',Admin::init_admin(),$DOM);
 $DOM = str_replace('<logo_to_insert/>',Print_content::logo(Utilities::get_page_name()),$DOM);
 $DOM = str_replace('<title_h1_to_insert/>','La miglior pasticceria di Padova',$DOM);
-$DOM = str_replace('<breadcrumb_path_to_insert/>','Home',$DOM);
+$DOM = str_replace('<breadcrumb_path_to_insert/>','<strong xml:lang="en">Home</strong>',$DOM);
 $DOM = str_replace('<menu_to_insert/>',Print_content::menu('home.php'),$DOM);
 
 if(Admin::verify()){
@@ -28,7 +28,6 @@ if(Admin::verify())
 
 $DOM = str_replace('<timetable_to_insert/>',file_get_contents('../html/components/timetable.html'),$DOM);
 $DOM = str_replace('<page_to_insert/>',file_get_contents('../html/home.html'),$DOM);
-
 $DOM = str_replace('<login_admin_to_insert/>',Print_content::admin_form(),$DOM);
 
 echo($DOM);
