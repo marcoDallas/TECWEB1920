@@ -41,10 +41,10 @@ class Print_products{
             foreach($arrpage as &$prodotto){
                 echo('<li class="product">');
                 echo('<div class="box full_column element">');
-                echo('<div id="img_product">');
+                echo('<div class="img_product">');
                 echo('<img src="'.$prodotto['Immagine'].'" alt=""/>');
                 echo('</div>');
-                echo('<div id="cont_product">');
+                echo('<div class="cont_product">');
                 echo('<h3>'.$prodotto['Nome'].'</h3>');
                 echo('<p>'.$prodotto['Descrizione'].'</p>');
                 echo('</div>');
