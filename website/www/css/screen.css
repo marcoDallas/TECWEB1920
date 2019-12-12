@@ -352,6 +352,10 @@ dt {
 		border-radius: 4px;
 }
 
+#login_input{
+	width:57%;
+}
+
 #nav_page{
 	padding-top:1em;
 	padding-bottom:2em;
