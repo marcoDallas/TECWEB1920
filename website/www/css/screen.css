@@ -406,10 +406,6 @@ dt {
     text-align: center;
 }
 
-#logout{
-	margin: 1em 1em 1em 1em;
-}
-
 /* LOGIN ERROR MESSAGE */
 #login_error {
 	position: fixed;
