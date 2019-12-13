@@ -40,11 +40,17 @@ class Print_products{
 
             $content.='<ul>';
             foreach($arrpage as &$prodotto){
+
                 $content.='<li class="product">
                             <div class="box full_column element" tabindex="0">
-                                <div class="img_product">
-                                    <img src="'.$prodotto['Immagine'].'" alt=""/>
-                                </div>
+                                <div class="img_product">';
+                if(!strcmp($prodotto['Immagine'],''))
+                    $content.='<p>Forse l\'admin non ha inserito la foto <abbr title="cosa triste">:\'(</abbr></p>';
+                else
+                    $content.='<img src="'.$prodotto['Immagine'].'" alt=""/>';
+                                    
+                $content.='</div>
+
                                 <div class="cont_product">
                                     <h3>'.$prodotto['Nome'].'</h3>
                                     <p>'.$prodotto['Descrizione'].'</p>

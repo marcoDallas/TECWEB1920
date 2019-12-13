@@ -45,7 +45,7 @@ if($edit)
 
 $content = file_get_contents('../html/components/edit.html');
 $content = str_replace('<title_h2_to_insert/>','Da questa pagina puoi aggiungere/modificare un prodotto',$content);
-$content = str_replace('<prev_page_to_insert/>','<form id="edit_form" class="general_form" method="post" action="'.$_POST['prevpage'].'">',$content);
+$content = str_replace('<prev_page_to_insert/>','<form enctype="multipart/form-data" id="edit_form" class="general_form" method="post" action="'.$_POST['prevpage'].'">',$content);
 if($edit)
     $input="Modifica ".$product['Nome'];
 else $input="Aggiungi Prodotto";
@@ -60,6 +60,11 @@ if($edit)
 
 $content = str_replace('<content_to_insert/>',$input,$content);
 $content = str_replace('<type_to_insert/>','<input type=hidden name="type" value="'.substr($_POST['type'],0,-1).'a'.'"/>',$content);
+$path='';
+if($edit){
+    $path=$product['Immagine'];
+}
+$content = str_replace('<file_to_insert/>','<img src="'.$path.'" alt=""><div class="input_line"><label for="image">Cambia immagine: </label><input name="image" type="file" id="image"/></div><input type="hidden" name="oldimage" value="'.$path.'"/>',$content);
 $content = str_replace('<submit_to_insert/>','<input id="edit_form_submit" class="general_button" type="submit" value="Modifica" name="writeEdits"/>',$content);
 if($edit)
     $content = str_replace('<id_to_insert/>','<input type="hidden" value="'.$_POST['id'].'" name="id"/>',$content);
