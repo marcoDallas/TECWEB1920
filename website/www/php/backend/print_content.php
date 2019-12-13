@@ -16,7 +16,7 @@ class Print_content{
 
   public static function menu($page){
         if(!strcmp($page,"home.php")){
-            $content='<li xml:lang="en" role="menuitem"><strong>Home</strong></li>
+            $content='<li xml:lang="en" role="none"><strong>Home</strong></li>
             <li role="none"><a href="prodotti.php?type=Paste" role="menuitem">Paste</a></li>
             <li role="none"><a href="prodotti.php?type=Torte" role="menuitem">Torte</a></li>
             <li role="none"><a href="storia.php" role="menuitem">Storia</a></li>
@@ -25,24 +25,24 @@ class Print_content{
             $content='<li xml:lang="en"><a href="home.php" xml:lang="en" role="menuitem">Home</a></li>
             <li role="none"><a href="prodotti.php?type=Paste" role="menuitem">Paste</a></li>
             <li role="none"><a href="prodotti.php?type=Torte" role="menuitem">Torte</a></li>
-            <li role="menuitem"><strong>Storia</strong></li>
+            <li role="none"><strong>Storia</strong></li>
             <li role="none"><a href="contatti.php" role="menuitem">Contatti</a></li>';
         }else if(!strcmp($page,"contatti.php")){
             $content='<li xml:lang="en"><a href="home.php" xml:lang="en" role="menuitem">Home</a></li>
             <li role="none"><a href="prodotti.php?type=Paste" role="menuitem">Paste</a></li>
             <li role="none"><a href="prodotti.php?type=Torte" role="menuitem">Torte</a></li>
             <li role="none"><a href="storia.php" role="menuitem">Storia</a></li>
-            <li role="menuitem"><strong>Contatti</strong></li>';
+            <li role="none"><strong>Contatti</strong></li>';
         }else if(!strcmp($page,"prodotti.php?type=Paste")){
             $content='<li xml:lang="en"><a href="home.php" xml:lang="en" role="menuitem">Home</a></li>
-            <li role="menuitem"><strong>Paste</strong></li>
+            <li role="none"><strong>Paste</strong></li>
             <li role="none"><a href="prodotti.php?type=Torte" role="menuitem">Torte</a></li>
             <li role="none"><a href="storia.php" role="menuitem">Storia</a></li>
             <li role="none"><a href="contatti.php" role="menuitem">Contatti</a></li>';
         }else if(!strcmp($page,"prodotti.php?type=Torte")){
             $content='<li xml:lang="en"><a href="home.php" xml:lang="en" role="menuitem">Home</a></li>
             <li role="none"><a href="prodotti.php?type=Paste" role="menuitem">Paste</a></li>
-            <li role="menuitem"><strong>Torte</strong></li>
+            <li role="none"><strong>Torte</strong></li>
             <li role="none"><a href="storia.php" role="menuitem">Storia</a></li>
             <li role="none"><a href="contatti.php" role="menuitem">Contatti</a></li>';
         }else{
