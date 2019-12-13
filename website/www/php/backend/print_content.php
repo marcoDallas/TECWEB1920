@@ -69,7 +69,7 @@ class Print_content{
                         </div>';
         }else{
             $content ='<div class="box admin_column">
-                            <form class="general_form" method="post" action="'.$_SERVER['REQUEST_URI'].'">
+                            <form class="mobile_hidden general_form" id="admin_login_form" method="post" action="'.$_SERVER['REQUEST_URI'].'">
                                 <fieldset id="fieldset_login">
                                     <legend>Area Amministratore</legend>
                                     <div class="input_line">
@@ -81,8 +81,12 @@ class Print_content{
                                         <input class="general_input" id="login_input" type="password" name="password" id="password" maxlength="20" tabindex="7" aria-required="true"/>
                                     </div>
                                     <input id="submit_login_form" class="general_button" type="submit" value="Accedi" name="Login" tabindex="8" />
+                                    <a class="desktop_hidden general_button" id="exit_login_form" onclick="toggleLogin(this)">Esci</a>  
                                 </fieldset>
                             </form>
+                            <div id="login_admin">
+                                <a class="desktop_hidden general_button" onclick="toggleLogin(this)">Accesso amministratore</a>   
+                            </div>                     
                         </div>';
         }
         return $content;

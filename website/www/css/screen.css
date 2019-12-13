@@ -338,7 +338,7 @@ dt {
 }
 
 	.general_button:hover {
-		background-color:#b34332;
+		background-color:#d4a8a1;
 	}
 	.general_button:active {
 		position:relative;
@@ -353,7 +353,7 @@ dt {
 }
 
 #login_input{
-	width:57%;
+	width:68%;
 }
 
 #nav_page{
@@ -374,7 +374,7 @@ dt {
 }
 
 #submit_login_form{
-	margin-left:40%;
+	margin-left:30%;
 	margin-bottom:0.5em;
 }
 
@@ -382,6 +382,30 @@ dt {
 	display:inline-block;
 }
 
+#login_admin{
+	text-align: center;
+	padding-top: 1.2em;
+	padding-bottom: 1.2em;
+	width: inherit;
+	margin-top: 1em;
+}
+
+	#login_admin > a{
+		padding: 1.2em 20% 1.2em 20%;
+	}
+
+#admin_login_form{
+	width:100%;
+}
+
+	#admin_login_form input[type=submit]{
+		padding: 1em;
+	}
+
+#exit_login_form{
+	padding: 1.2em;
+	margin-left: 2em;
+}
 
 /*FOOTER STYLES*/
 
@@ -491,7 +515,6 @@ dt {
 		width: 50%;
 	}
 	
-
 	
 	/*OVERRIDE*/
 	.element img {
@@ -576,7 +599,7 @@ dt {
 	}
 	
 	/*OVERRIDE -> in modalità desktop non si deve vedere*/	
-	#menu_icon {
+	.desktop_hidden {
         display: none; 
     }
 	
@@ -622,5 +645,14 @@ dt {
 	
 	#contentFallback{
         margin-top: 30%;
-    }
+	}
+	
+	#submit_login_form{
+		margin-left:40%;
+		margin-bottom:0.5em;
+	}
+
+	#login_input{
+		width:56%;
+	}
 }
