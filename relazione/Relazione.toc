@@ -14,7 +14,12 @@
 \contentsline {paragraph}{\numberline {2.2.1.6}Visualizzazione pagina "Storia"}{4}{paragraph.2.2.1.6}%
 \contentsline {paragraph}{\numberline {2.2.1.7}Visualizzazione pagina "Contatti"}{4}{paragraph.2.2.1.7}%
 \contentsline {subsubsection}{\numberline {2.2.2}Amministratore}{4}{subsubsection.2.2.2}%
-\contentsline {paragraph}{\numberline {2.2.2.1}Accesso al pannello amministratore}{5}{paragraph.2.2.2.1}%
-\contentsline {paragraph}{\numberline {2.2.2.2}Inserimento libri in catalogo}{5}{paragraph.2.2.2.2}%
-\contentsline {paragraph}{\numberline {2.2.2.3}Rimozione libri da catalogo}{5}{paragraph.2.2.2.3}%
-\contentsline {paragraph}{\numberline {2.2.2.4}Login}{5}{paragraph.2.2.2.4}%
+\contentsline {paragraph}{\numberline {2.2.2.1}Login "Area Amministratore"}{5}{paragraph.2.2.2.1}%
+\contentsline {paragraph}{\numberline {2.2.2.2}Aggiungi prodotto in "Paste"}{5}{paragraph.2.2.2.2}%
+\contentsline {paragraph}{\numberline {2.2.2.3}Modifica prodotto in "Paste"}{5}{paragraph.2.2.2.3}%
+\contentsline {paragraph}{\numberline {2.2.2.4}Elimina prodotto in "Paste"}{6}{paragraph.2.2.2.4}%
+\contentsline {paragraph}{\numberline {2.2.2.5}Aggiungi prodotto in "Torte"}{6}{paragraph.2.2.2.5}%
+\contentsline {paragraph}{\numberline {2.2.2.6}Modifica prodotto in "Torte"}{6}{paragraph.2.2.2.6}%
+\contentsline {paragraph}{\numberline {2.2.2.7}Elimina prodotto in "Torte"}{6}{paragraph.2.2.2.7}%
+\contentsline {paragraph}{\numberline {2.2.2.8}Modifica la sezione "News"}{6}{paragraph.2.2.2.8}%
+\contentsline {paragraph}{\numberline {2.2.2.9}Logout "Area Amministratore"}{6}{paragraph.2.2.2.9}%
