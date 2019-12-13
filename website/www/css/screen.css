@@ -149,6 +149,7 @@ body {
     display: block;
 }
 
+
 /*------------------------------------------------------*/
 
 .logo_column{
@@ -300,11 +301,11 @@ dt {
 		padding-top: 0.5em;
 	}
 	
-	.element #img_product{
+	.element .img_product{
 		width: 40%;
 	}
 	
-	.element #cont_product{
+	.element .cont_product{
 		width: 60%;
 	}
 	
@@ -337,7 +338,7 @@ dt {
 }
 
 	.general_button:hover {
-		background-color:#b34332;
+		background-color:#d4a8a1;
 	}
 	.general_button:active {
 		position:relative;
@@ -349,6 +350,10 @@ dt {
 		font-size: 1em;
 		border: 1px solid black;
 		border-radius: 4px;
+}
+
+#login_input{
+	width:68%;
 }
 
 #nav_page{
@@ -369,7 +374,7 @@ dt {
 }
 
 #submit_login_form{
-	margin-left:40%;
+	margin-left:30%;
 	margin-bottom:0.5em;
 }
 
@@ -377,6 +382,30 @@ dt {
 	display:inline-block;
 }
 
+#login_admin{
+	text-align: center;
+	padding-top: 1.2em;
+	padding-bottom: 1.2em;
+	width: inherit;
+	margin-top: 1em;
+}
+
+	#login_admin > a{
+		padding: 1.2em 20% 1.2em 20%;
+	}
+
+#admin_login_form{
+	width:100%;
+}
+
+	#admin_login_form input[type=submit]{
+		padding: 1em;
+	}
+
+#exit_login_form{
+	padding: 1.2em;
+	margin-left: 2em;
+}
 
 /*FOOTER STYLES*/
 
@@ -405,10 +434,6 @@ dt {
     text-align: center;
 }
 
-#logout{
-	margin: 1em 1em 1em 1em;
-}
-
 /* LOGIN ERROR MESSAGE */
 #login_error {
 	position: fixed;
@@ -421,17 +446,28 @@ dt {
 	text-align: center;
 }
 
-	#login_error p{
-		color:white;
-		font-size: 1.2em;
-	}
 
-#close_error{
-	position: fixed;
-	top:0;
-	right:1em;
-	color:white;
-	font-size: 1.4em;
+#text_error{
+	position: absolute;
+	width: 80%;
+	left: 0;
+	top: 0.2em;
+	font-size: 2em;
+	color: white;
+	padding-left: 3em;
+}
+
+/* close button */
+
+.close {
+	position: absolute;
+	right: 1em;
+	top: 0.5em;
+	width: 3em;
+	height: 3em;
+	background-image: url('../images/close.png');
+	background-repeat: none;
+	background-size: 100% 100%;
 }
 
 /* EDIT PRODUCT AND NEWS PAGES */
@@ -479,7 +515,6 @@ dt {
 		width: 50%;
 	}
 	
-
 	
 	/*OVERRIDE*/
 	.element img {
@@ -520,7 +555,6 @@ dt {
 	/*OVERRIDE*/
 	.title_column{
 		width: 70%;
-		height: 100%;
 	}
 	
 	/*OVERRIDE*/
@@ -565,7 +599,7 @@ dt {
 	}
 	
 	/*OVERRIDE -> in modalità desktop non si deve vedere*/	
-	#menu_icon {
+	.desktop_hidden {
         display: none; 
     }
 	
@@ -611,5 +645,14 @@ dt {
 	
 	#contentFallback{
         margin-top: 30%;
-    }
+	}
+	
+	#submit_login_form{
+		margin-left:40%;
+		margin-bottom:0.5em;
+	}
+
+	#login_input{
+		width:56%;
+	}
 }
