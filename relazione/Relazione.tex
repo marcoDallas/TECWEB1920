@@ -1,36 +1,47 @@
 \documentclass[a4paper, oneside, openany, dvipsnames, table]{article}
 \usepackage[utf8]{inputenc}
 
-
 \usepackage{lmodern}
 \usepackage{breakurl}
 \usepackage[T1]{fontenc}
 \usepackage[italian]{babel}
 \usepackage{stile}
 
-
 \begin{document}
 \copertina
 \tableofcontents
+%Introduzione
 \newpage
 \section{Introduzione}
-	\input{sez/Introduzione.tex} %può anche rimanere vuoto
+	\input{sezioni/Introduzione.tex}
 	\subsection{Abstract}
-		\input{sez/Introduzione/Abstract.tex}
-	
-	
+		\input{sezioni/Introduzione/Abstract.tex}
+%Analisi	
 \newpage
 \section{Analisi}
-	\input{sez/Analisi.tex}
+	\input{sezioni/Analisi.tex}
 	\subsection{Studio dell'utenza finale}
-		\input{sez/Analisi/stud_utenza.tex}
+		\input{sezioni/Analisi/studio_utenza.tex}
 	\subsection{Casi d'uso}
-		\input{sez/Analisi/Casi_Uso.tex}
+		\input{sezioni/Analisi/casi_uso.tex}
 		\subsubsection{Utente generico}
-			\input{sez/Analisi/CasiUso/UtGenerico.tex}
+			\input{sezioni/Analisi/CasiUso/utente_generico.tex}
 		\subsubsection{Amministratore}
-			\input{sez/Analisi/CasiUso/Admin.tex}
-
+			\input{sezioni/Analisi/CasiUso/admin.tex}
+%Progettazione
 \newpage
+\section{Progettazione}
+%Presentazione
+\newpage
+\section{Presentazione}
+%Implementazione
+\newpage
+\section{Implementazione}
+%Validazione
+\newpage
+\section{Validazione}
+%Fase di test
+\newpage
+\section{Fase di Test}
 
 \end{document}

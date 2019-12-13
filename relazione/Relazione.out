@@ -4,12 +4,25 @@
 \BOOKMARK [2][-]{subsection.2.1}{Studio dell'utenza finale}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.2}{Casi d'uso}{section.2}% 5
 \BOOKMARK [3][-]{subsubsection.2.2.1}{Utente generico}{subsection.2.2}% 6
-\BOOKMARK [4][-]{paragraph.2.2.1.1}{Visualizzazione Homepage del sito}{subsubsection.2.2.1}% 7
-\BOOKMARK [4][-]{paragraph.2.2.1.2}{Visualizzazione dei prodotti in vendita}{subsubsection.2.2.1}% 8
-\BOOKMARK [4][-]{paragraph.2.2.1.3}{Visualizzazione pagina "La storia"}{subsubsection.2.2.1}% 9
-\BOOKMARK [4][-]{paragraph.2.2.1.4}{Visualizzazione pagina "Chi siamo"}{subsubsection.2.2.1}% 10
-\BOOKMARK [4][-]{paragraph.2.2.1.5}{Registrazione}{subsubsection.2.2.1}% 11
-\BOOKMARK [4][-]{paragraph.2.2.1.6}{Login}{subsubsection.2.2.1}% 12
-\BOOKMARK [3][-]{subsubsection.2.2.2}{Amministratore}{subsection.2.2}% 13
-\BOOKMARK [4][-]{paragraph.2.2.2.1}{Accesso al pannello amministratore}{subsubsection.2.2.2}% 14
-\BOOKMARK [4][-]{paragraph.2.2.2.2}{Eliminazione di recensioni}{subsubsection.2.2.2}% 15
+\BOOKMARK [4][-]{paragraph.2.2.1.1}{Visualizzazione pagina "Home"}{subsubsection.2.2.1}% 7
+\BOOKMARK [4][-]{paragraph.2.2.1.2}{Visualizzazione pagina "Paste"}{subsubsection.2.2.1}% 8
+\BOOKMARK [4][-]{paragraph.2.2.1.3}{Cerca prodotti in "Paste"}{subsubsection.2.2.1}% 9
+\BOOKMARK [4][-]{paragraph.2.2.1.4}{Visualizzazione pagina "Torte"}{subsubsection.2.2.1}% 10
+\BOOKMARK [4][-]{paragraph.2.2.1.5}{Cerca prodotti in "Torte"}{subsubsection.2.2.1}% 11
+\BOOKMARK [4][-]{paragraph.2.2.1.6}{Visualizzazione pagina "Storia"}{subsubsection.2.2.1}% 12
+\BOOKMARK [4][-]{paragraph.2.2.1.7}{Visualizzazione pagina "Contatti"}{subsubsection.2.2.1}% 13
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Amministratore}{subsection.2.2}% 14
+\BOOKMARK [4][-]{paragraph.2.2.2.1}{Login "Area Amministratore"}{subsubsection.2.2.2}% 15
+\BOOKMARK [4][-]{paragraph.2.2.2.2}{Aggiungi prodotto in "Paste"}{subsubsection.2.2.2}% 16
+\BOOKMARK [4][-]{paragraph.2.2.2.3}{Modifica prodotto in "Paste"}{subsubsection.2.2.2}% 17
+\BOOKMARK [4][-]{paragraph.2.2.2.4}{Elimina prodotto in "Paste"}{subsubsection.2.2.2}% 18
+\BOOKMARK [4][-]{paragraph.2.2.2.5}{Aggiungi prodotto in "Torte"}{subsubsection.2.2.2}% 19
+\BOOKMARK [4][-]{paragraph.2.2.2.6}{Modifica prodotto in "Torte"}{subsubsection.2.2.2}% 20
+\BOOKMARK [4][-]{paragraph.2.2.2.7}{Elimina prodotto in "Torte"}{subsubsection.2.2.2}% 21
+\BOOKMARK [4][-]{paragraph.2.2.2.8}{Modifica la sezione "News"}{subsubsection.2.2.2}% 22
+\BOOKMARK [4][-]{paragraph.2.2.2.9}{Logout "Area Amministratore"}{subsubsection.2.2.2}% 23
+\BOOKMARK [1][-]{section.3}{Progettazione}{}% 24
+\BOOKMARK [1][-]{section.4}{Presentazione}{}% 25
+\BOOKMARK [1][-]{section.5}{Implementazione}{}% 26
+\BOOKMARK [1][-]{section.6}{Validazione}{}% 27
+\BOOKMARK [1][-]{section.7}{Fase di Test}{}% 28
