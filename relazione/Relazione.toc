@@ -23,3 +23,8 @@
 \contentsline {paragraph}{\numberline {2.2.2.7}Elimina prodotto in "Torte"}{6}{paragraph.2.2.2.7}%
 \contentsline {paragraph}{\numberline {2.2.2.8}Modifica la sezione "News"}{6}{paragraph.2.2.2.8}%
 \contentsline {paragraph}{\numberline {2.2.2.9}Logout "Area Amministratore"}{6}{paragraph.2.2.2.9}%
+\contentsline {section}{\numberline {3}Progettazione}{7}{section.3}%
+\contentsline {section}{\numberline {4}Presentazione}{8}{section.4}%
+\contentsline {section}{\numberline {5}Implementazione}{9}{section.5}%
+\contentsline {section}{\numberline {6}Validazione}{10}{section.6}%
+\contentsline {section}{\numberline {7}Fase di Test}{11}{section.7}%
