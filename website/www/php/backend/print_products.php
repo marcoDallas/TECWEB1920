@@ -18,6 +18,7 @@ class Print_products{
         if(Admin::verify()){
             $content.='<form class="general_form inline" method="post" action="modifica_prodotto.php">
                         <input type="hidden" name="prevpage" value="'.$_SERVER['REQUEST_URI'].'"/>
+                        <input type="hidden" name="type" value="'.$_GET['type'].'"/>
                         <input class="general_button" type="submit" name="add" value="Aggiungi Prodotto"/>
                     </form>';
         }
@@ -54,8 +55,9 @@ class Print_products{
                                 <input class="general_button" type="submit" name="remove" value="Rimuovi prodotto"/>
                             </form>
                                 <form class="general_form" method="post" action="modifica_prodotto.php">
-                                <input type="hidden" name="product" value="'.$prodotto['Codice'].'"/>
+                                <input type="hidden" name="id" value="'.$prodotto['Codice'].'"/>
                                 <input type="hidden" name="prevpage" value="'.$_SERVER['REQUEST_URI'].'"/>
+                                <input type="hidden" name="type" value="'.$_GET['type'].'"/>
                                 <input class="general_button" type="submit" name="edit" value="Modifica prodotto"/>
                             </form>';
                 }

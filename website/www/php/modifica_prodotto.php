@@ -2,7 +2,7 @@
 require_once('backend/sessions.php');
 require_once('backend/admin.php');
 Sessions::init_session();
-if(!Admin::verify() || ( (!isset($_POST['edit']) || !isset($_POST['product']) || !isset($_POST['prevpage'])) && ( !isset($_POST['add'] ) ))){
+if(!Admin::verify() || ( (!isset($_POST['edit']) || !isset($_POST['id']) || !isset($_POST['prevpage'])) && ( !isset($_POST['add'] ) ))){
     header('Location: fallback.php');
 }
 if(Admin::verify()){
@@ -12,7 +12,6 @@ if(Admin::verify()){
 $edit=TRUE;
 if(isset($_POST['add']))
     $edit=FALSE;
-
 
 require_once('backend/print_content.php');
 require_once('backend/utilities.php');
@@ -42,25 +41,27 @@ $DOM = str_replace('<edit_news_admin_to_replace/>',Print_news::admin_zone(),$DOM
 $DOM = str_replace('<timetable_to_insert/>',file_get_contents('../html/components/timetable.html'),$DOM);
 
 if($edit)
-    $product = (new Get_products())->search_by_code($_POST['product']);
-
+    $product = (new Get_products())->search_by_code($_POST['id']);
 
 $content = file_get_contents('../html/components/edit.html');
 $content = str_replace('<title_h2_to_insert/>','Da questa pagina puoi aggiungere/modificare un prodotto',$content);
 $content = str_replace('<prev_page_to_insert/>','<form id="edit_form" class="general_form" method="post" action="'.$_POST['prevpage'].'">',$content);
-if($edit) 
-    $input="Modifica ".$product['Nome']; 
+if($edit)
+    $input="Modifica ".$product['Nome'];
 else $input="Aggiungi Prodotto";
 $content = str_replace('<legend_to_insert/>',$input,$content);
-if($edit) 
+if($edit)
     $input=$product['Nome'];
-else   
+else
     $input="";
 $content = str_replace('<title_to_insert/>','<input class="general_input" type="text" name="title" id="title" value="'.$input.'"/>',$content);
-if($edit) 
+if($edit)
     $input=$product['Descrizione'];
 $content = str_replace('<content_to_insert/>',$input,$content);
+$content = str_replace('<type_to_insert/>','<input type=hidden name="type" value="'.substr($_POST['type'],0,-1).'a'.'"/>',$content);
 $content = str_replace('<submit_to_insert/>','<input id="edit_form_submit" class="general_button" type="submit" value="Modifica" name="writeEdits"/>',$content);
+if($edit)
+    $content = str_replace('<id_to_insert/>','<input type="hidden" value="'.$_POST['id'].'" name="id"/>',$content);
 
 $DOM = str_replace('<page_to_insert/>',$content,$DOM);
 $DOM = str_replace('<login_admin_to_insert/>',Print_content::admin_form(),$DOM);
