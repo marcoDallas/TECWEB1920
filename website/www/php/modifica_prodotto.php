@@ -57,6 +57,7 @@ else
 $content = str_replace('<title_to_insert/>','<input class="general_input" type="text" name="title" id="title" value="'.$input.'"/>',$content);
 if($edit)
     $input=$product['Descrizione'];
+
 $content = str_replace('<content_to_insert/>',$input,$content);
 $content = str_replace('<type_to_insert/>','<input type=hidden name="type" value="'.substr($_POST['type'],0,-1).'a'.'"/>',$content);
 $content = str_replace('<submit_to_insert/>','<input id="edit_form_submit" class="general_button" type="submit" value="Modifica" name="writeEdits"/>',$content);

@@ -25,9 +25,7 @@ class Input_security_check{
  
     public static function general_input_check($field){
         $field = Input_security_check::general_controls($field);
-        if(!preg_match("/\^(.(?!'))/i", $field)) //caratteri supportati: tutti tranne '
-            return $field;
-        return FALSE;
+        return addslashes($field);
     }
 
 }
