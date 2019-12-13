@@ -16,7 +16,7 @@ class Edit_news{
                 return FALSE;
             }
             include_once('backend/get_news.php');
-            (new Get_news())->set_news($_POST['title'],$_POST['description']);
+            (new Get_news())->set_news($title,$description);
         }
         return FALSE;
     }

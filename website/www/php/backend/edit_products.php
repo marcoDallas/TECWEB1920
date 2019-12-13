@@ -26,18 +26,13 @@ class Edit_products{
             $title = Input_security_check::general_input_check($_POST['title']);
             $type = Input_security_check::general_input_check($_POST['type']);
             $description = Input_security_check::general_input_check($_POST['description']);
-            if(!$title || !$type || !$description){
-                error_log("Security check failed");
-                return FALSE;
-            }
             if(isset($_POST['id'])){
-                (new Get_products())->edit_product($_POST['id'],$_POST['type'],$_POST['title'],$_POST['description']);
+                (new Get_products())->edit_product($_POST['id'],$type,$title,$description);
             }else{
-                (new Get_products())->add_product($_POST['type'],$_POST['title'],$_POST['description']);
+                (new Get_products())->add_product($type,$title,$description);
             }
         }
         return FALSE;
     }
-
 }
 ?>

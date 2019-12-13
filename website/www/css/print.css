@@ -24,23 +24,9 @@
     text-justify: inter-word;
 }
 
-html {
-    box-sizing: border-box;
-    height: 100%; /* riferimento per le percentuali successive */
-    width: 100%; /* riferimento per le percentuali successive */
-}
-
-body {
-    height: 100%; /* riferimento per le percentuali successive */
-    width: 100%; /* riferimento per le percentuali successive */
-    max-width: 1200px;
-    min-width: 360px;
-    margin: auto;
-}
-
 .defaultImageSize {
-    max-height: 200px;
-    max-width: 200px;
+    max-height: 100px;
+    max-width: 100px;
 }
 
 .box {
