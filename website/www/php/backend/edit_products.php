@@ -27,15 +27,15 @@ class Edit_products{
             $type = Input_security_check::general_input_check($_POST['type']);
             $image='';
             if(is_uploaded_file($_FILES['image']['tmp_name'])){
-                //echo($_FILES['image']['name']);
                 $image = '../images/uploaded/'.$_FILES['image']['name'];
-                //echo($image);
                 Edit_products::upload_image();
+                if(isset($_POST['oldimage'])){
+                    @unlink($_POST['oldimage']);
+                }
             }
             $description = Input_security_check::general_input_check($_POST['description']);
             if(isset($_POST['id'])){
                 if(strcmp($image,'')){
-                    echo($image);
                     (new Get_products())->edit_product($_POST['id'],$type,$title,$description,$image);
                 }else{
                     (new Get_products())->edit_product_noimage($_POST['id'],$type,$title,$description);
@@ -60,10 +60,5 @@ class Edit_products{
             echo 'Upload NON riuscito!'; 
     }
 
-    public static function remove_image(){
-
-
-
-    }
 }
 ?>
