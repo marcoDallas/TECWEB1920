@@ -39,10 +39,11 @@ $news = (new Get_news())->get_news();
 
 $content = file_get_contents('../html/components/edit.html');
 $content = str_replace('<title_h2_to_insert/>','Da questa pagina puoi modificare la news laterale',$content);
-$content = str_replace('<prev_page_to_insert/>','<form id="edit_form" class="general_form" method="post" action="'.$_POST['prevpage'].'">',$content);
+$content = str_replace('<prev_page_to_insert/>','<form enctype="multipart/form-data" id="edit_form" class="general_form" method="post" action="'.$_POST['prevpage'].'">',$content);
 $content = str_replace('<legend_to_insert/>','Modifica News',$content);
 $content = str_replace('<title_to_insert/>','<input class="general_input" type="text" name="title" id="title" value="'.$news['Titolo'].'"/>',$content);
 $content = str_replace('<content_to_insert/>',$news['Contenuto'],$content);
+$content = str_replace('<file_to_insert/>','',$content);
 $content = str_replace('<submit_to_insert/>','<input id="edit_form_submit" class="general_button" type="submit" value="Modifica" name="submitEditNews"/>',$content);
 
 $DOM = str_replace('<page_to_insert/>',$content,$DOM);
