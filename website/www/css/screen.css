@@ -67,7 +67,18 @@ body {
 
 /*------------------------------------------------------*/
 
-#menu_icon {
+/*#menu_icon {
+    border-left: 2px solid #bc5800;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    padding: 1.4em 2em 1.4em 2em;
+    min-width: 48px;
+}*/
+
+.menu_icon {
     border-left: 2px solid #bc5800;
     display: block;
     position: absolute;
@@ -81,7 +92,7 @@ body {
 #menu {
 		font-size: 1.5em;
 		overflow: hidden;
-		margin-bottom: 2em;
+		margin-bottom: 1em;
 	}
 	
 		#menu ul li {
@@ -216,22 +227,20 @@ dt {
 }
 	
 	/*VARIAZIONE IN CONTATTI*/
-	
-#contatti{
+
+.contatti{
 	text-align: left;
 }
 
-	#contatti p, #contatti ul {
+	.contatti p, .contatti ul {
 		padding: 1em 1em 1em 3em;
 	}
 
-	#contatti ul {
+	.contatti ul {
 		list-style: none;
 	}
-
-
 	
-	#contatti h2 {
+	.contatti h2 {
 		padding-left: 1em;
 	}
 

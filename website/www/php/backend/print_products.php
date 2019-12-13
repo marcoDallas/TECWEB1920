@@ -39,7 +39,7 @@ class Print_products{
 
             $content.='<ul>';
             foreach($arrpage as &$prodotto){
-                $content.='<li class="product">
+                $content.='<li class="product" tabindex="0">
                             <div class="box full_column element">
                                 <div class="img_product">
                                     <img src="'.$prodotto['Immagine'].'" alt=""/>
