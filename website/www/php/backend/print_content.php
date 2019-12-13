@@ -14,7 +14,7 @@ class Print_content{
         return $content;
     }
 
-    public static function menu($page){
+  public static function menu($page){
         if(!strcmp($page,"home.php")){
             $content='<li xml:lang="en" role="menuitem"><strong>Home</strong></li>
             <li role="none"><a href="prodotti.php?type=Paste" role="menuitem">Paste</a></li>
@@ -63,7 +63,7 @@ class Print_content{
                             <form class="general_form" method="post" action="'.$_SERVER['REQUEST_URI'].'">
                                 <fieldset id="fieldset_login">
                                 <legend>Benvenuto amministratore!</legend>
-                                    <input id="submit_login_form" class="general_button" type="submit" value="Esci" name="Logout" tabindex="8" />
+                                    <input id="submit_login_form" class="general_button" type="submit" value="Esci" name="Logout"/>
                                 </fieldset>
                             </form>
                         </div>';
@@ -74,13 +74,13 @@ class Print_content{
                                     <legend>Area Amministratore</legend>
                                     <div class="input_line">
                                         <label for="username"><span xml:lang="en">Username: </span></label>
-                                        <input class="general_input" id="login_input" type="text" name="username" id="username" maxlength="20" tabindex="6" aria-required="true"/>
+                                        <input class="general_input" id="login_input" type="text" name="username" id="username" maxlength="20" aria-required="true"/>
                                     </div>
                                     <div class="input_line">
                                         <label for="password"><span xml:lang="en">Password:  </span></label>
-                                        <input class="general_input" id="login_input" type="password" name="password" id="password" maxlength="20" tabindex="7" aria-required="true"/>
+                                        <input class="general_input" id="login_input" type="password" name="password" id="password" maxlength="20" aria-required="true"/>
                                     </div>
-                                    <input id="submit_login_form" class="general_button" type="submit" value="Accedi" name="Login" tabindex="8" />
+                                    <input id="submit_login_form" class="general_button" type="submit" value="Accedi" name="Login"/>
                                     <a class="desktop_hidden general_button" id="exit_login_form" onclick="toggleLogin(this)">Esci</a>  
                                 </fieldset>
                             </form>
