@@ -30,6 +30,7 @@ body {
 #header {
     background-color: #EC7205;
     color: #FFFFFF;
+	outline: none;
 }
 
 #logo {
