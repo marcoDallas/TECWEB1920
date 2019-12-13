@@ -25,22 +25,32 @@ class Edit_products{
             require_once 'backend/input_security_check.php';
             $title = Input_security_check::general_input_check($_POST['title']);
             $type = Input_security_check::general_input_check($_POST['type']);
-            $image = '../images/uploaded/'.$_FILES['image']['name'];
-            Edit_products::upload_image();
+            $image='';
+            if(is_uploaded_file($_FILES['image']['tmp_name'])){
+                //echo($_FILES['image']['name']);
+                $image = '../images/uploaded/'.$_FILES['image']['name'];
+                //echo($image);
+                Edit_products::upload_image();
+            }
             $description = Input_security_check::general_input_check($_POST['description']);
             if(isset($_POST['id'])){
-                (new Get_products())->edit_product($_POST['id'],$type,$title,$description,$image);
-            }else{
+                if(strcmp($image,'')){
+                    echo($image);
+                    (new Get_products())->edit_product($_POST['id'],$type,$title,$description,$image);
+                }else{
+                    (new Get_products())->edit_product_noimage($_POST['id'],$type,$title,$description);
+                }
+            }else if(strcmp($image,''))
                 (new Get_products())->add_product($type,$title,$description,$image);
-            }
+            else
+                (new Get_products())->add_product_noimage($type,$title,$description);
         }
         return FALSE;
     }
 
     public static function upload_image(){
         if (!isset($_FILES['image']) || !is_uploaded_file($_FILES['image']['tmp_name'])) {
-            echo 'Non hai inviato nessun file...';
-            exit;    
+            return;    
         }
         $uploaddir = '../images/uploaded/';
         $userfile_tmp = $_FILES['image']['tmp_name'];
@@ -48,6 +58,12 @@ class Edit_products{
 
         if (!move_uploaded_file($userfile_tmp, $uploaddir . $userfile_name)) 
             echo 'Upload NON riuscito!'; 
+    }
+
+    public static function remove_image(){
+
+
+
     }
 }
 ?>

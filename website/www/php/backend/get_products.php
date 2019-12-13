@@ -42,8 +42,16 @@ class Get_products{
         return $this->product->execute("insert into Prodotto (Nome,TipoProdotto,Descrizione,Immagine) values ('$title','$type','$description','$image');");
     }
 
+    public function add_product_noimage($type,$title,$description){
+        return $this->product->execute("insert into Prodotto (Nome,TipoProdotto,Descrizione) values ('$title','$type','$description');");
+    }
+
     public function edit_product($id,$type,$title,$description,$image){
         return $this->product->execute("update Prodotto set TipoProdotto = '$type' , Nome = '$title' , Descrizione = '$description' , Immagine= '$image' where Codice = $id");
+    }
+
+    public function edit_product_noimage($id,$type,$title,$description){
+        return $this->product->execute("update Prodotto set TipoProdotto = '$type' , Nome = '$title' , Descrizione = '$description' where Codice = $id");
     }
 
 }
