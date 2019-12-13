@@ -4,12 +4,15 @@
 \BOOKMARK [2][-]{subsection.2.1}{Studio dell'utenza finale}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.2}{Casi d'uso}{section.2}% 5
 \BOOKMARK [3][-]{subsubsection.2.2.1}{Utente generico}{subsection.2.2}% 6
-\BOOKMARK [4][-]{paragraph.2.2.1.1}{Visualizzazione Homepage del sito}{subsubsection.2.2.1}% 7
-\BOOKMARK [4][-]{paragraph.2.2.1.2}{Visualizzazione dei prodotti in vendita}{subsubsection.2.2.1}% 8
-\BOOKMARK [4][-]{paragraph.2.2.1.3}{Visualizzazione pagina "La storia"}{subsubsection.2.2.1}% 9
-\BOOKMARK [4][-]{paragraph.2.2.1.4}{Visualizzazione pagina "Chi siamo"}{subsubsection.2.2.1}% 10
-\BOOKMARK [4][-]{paragraph.2.2.1.5}{Registrazione}{subsubsection.2.2.1}% 11
-\BOOKMARK [4][-]{paragraph.2.2.1.6}{Login}{subsubsection.2.2.1}% 12
-\BOOKMARK [3][-]{subsubsection.2.2.2}{Amministratore}{subsection.2.2}% 13
-\BOOKMARK [4][-]{paragraph.2.2.2.1}{Accesso al pannello amministratore}{subsubsection.2.2.2}% 14
-\BOOKMARK [4][-]{paragraph.2.2.2.2}{Eliminazione di recensioni}{subsubsection.2.2.2}% 15
+\BOOKMARK [4][-]{paragraph.2.2.1.1}{Visualizzazione pagina "Home"}{subsubsection.2.2.1}% 7
+\BOOKMARK [4][-]{paragraph.2.2.1.2}{Visualizzazione pagina "Paste"}{subsubsection.2.2.1}% 8
+\BOOKMARK [4][-]{paragraph.2.2.1.3}{Cerca prodotti in "Paste"}{subsubsection.2.2.1}% 9
+\BOOKMARK [4][-]{paragraph.2.2.1.4}{Visualizzazione pagina "Torte"}{subsubsection.2.2.1}% 10
+\BOOKMARK [4][-]{paragraph.2.2.1.5}{Cerca prodotti in "Torte"}{subsubsection.2.2.1}% 11
+\BOOKMARK [4][-]{paragraph.2.2.1.6}{Visualizzazione pagina "Storia"}{subsubsection.2.2.1}% 12
+\BOOKMARK [4][-]{paragraph.2.2.1.7}{Visualizzazione pagina "Contatti"}{subsubsection.2.2.1}% 13
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Amministratore}{subsection.2.2}% 14
+\BOOKMARK [4][-]{paragraph.2.2.2.1}{Accesso al pannello amministratore}{subsubsection.2.2.2}% 15
+\BOOKMARK [4][-]{paragraph.2.2.2.2}{Inserimento libri in catalogo}{subsubsection.2.2.2}% 16
+\BOOKMARK [4][-]{paragraph.2.2.2.3}{Rimozione libri da catalogo}{subsubsection.2.2.2}% 17
+\BOOKMARK [4][-]{paragraph.2.2.2.4}{Login}{subsubsection.2.2.2}% 18

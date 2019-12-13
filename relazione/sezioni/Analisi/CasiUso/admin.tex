@@ -1,0 +1,27 @@
+L'amministratore è l'utente caratterizzato dall'indirizzo email fittizio \texttt{admin@admin.com}. Eredita tutti gli use case di \textit{utente loggato}, e dispone di alcune funzionalità extra:
+\begin{itemize}
+	\item \hyperref[par:PanAm]{Accesso al pannello amministratore (\ref{par:PanAm})};
+	\item \hyperref[par:InsCat]{Inserimento libri in catalogo (\ref{par:InsCat})};
+	\item \hyperref[par:RimCat]{Rimozione libri da catalogo (\ref{par:RimCat})};
+\end{itemize}
+
+\paragraph{Accesso al pannello amministratore}\mbox{}\\
+\label{par:PanAm}
+L'amministratore può accedere al pannello amministratore cliccando il link \textit{Pannello Amministratore} sulla navbar. Mentre l'utente normale viene bloccato da un messaggio di errore, l'amministratore visualizza il pannello che consiste in:
+\begin{itemize}
+	\item Un form per l'inserimento nei libri in catalogo;
+	\item La lista dei libri in catalogo, con annessi id interno del database e bottone \textit{Elimina}.
+\end{itemize}
+
+\paragraph{Inserimento libri in catalogo}\mbox{}\\
+\label{par:InsCat}
+Una volta nel pannello, l'amministratore può usare il form presente per inserire libri nel catalogo. Se inserisce dati validi, la pagina verrà aggiornata, e sarà possibile visualizzare a schermo la nuova entry; altrimenti verrà mostrato un messaggio d'errore.
+
+\paragraph{Rimozione libri da catalogo}\mbox{}\\
+\label{par:RimCat}
+Una volta nel pannello, l'amministratore può decidere di rimuovere uno qualsiasi dei libri dal catalogo premendo il tasto \textit{Elimina}. Dopo un aggiornamento automatico della pagina, tale libro non sarà più visibile. Da notare che tale operazione non elimina le istanze dei libri presenti nel database, che verranno invece dissociate dal libro in catalogo durante la procedura di eliminazione di quest'ultimo.
+
+\paragraph{Login}\mbox{}\\
+\label{par:Login}
+L'utente entra nella pagina di login cliccando la sezione "Accedi" presente nell'header".\\
+La pagina offre all'utente già in possesso di un account la possibilità di accedervi, inserendo le proprie credenziali (email e password).
