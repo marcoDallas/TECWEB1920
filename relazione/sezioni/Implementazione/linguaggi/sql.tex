@@ -1,0 +1,8 @@
+Per il salvataggio dei dati il gruppo ha deciso di utilizzare SQL tramite \emph{MariaDB}.\\
+Il database è molto semplice e contiene 3 tabelle principali:
+\begin{itemize}
+    \item \emph{Utente}: contiene le informazioni relative agli account abilitati alla modifica del sito;
+    \item \emph{Prodotto}: contiene le informazioni di ogni prodotto, quali la tipologia, il nome, la descrizione e il path dell'immagine;
+    \item \emph{News}: contiene le informazioni quali titolo e descrizione dell'ultima news;
+\end{itemize}
+Per eseguire le interrogazioni o aggiornare il database è stata usata la libreria \emph{mysqli} di \emph{PHP}.

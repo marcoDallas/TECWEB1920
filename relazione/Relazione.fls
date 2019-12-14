@@ -138,6 +138,7 @@ INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
@@ -326,6 +327,12 @@ INPUT /opt/lampp/htdocs/TECWEB1920/relazione/sezioni/Implementazione.tex
 INPUT /opt/lampp/htdocs/TECWEB1920/relazione/sezioni/Implementazione.tex
 INPUT /opt/lampp/htdocs/TECWEB1920/relazione/sezioni/Implementazione/linguaggi.tex
 INPUT /opt/lampp/htdocs/TECWEB1920/relazione/sezioni/Implementazione/linguaggi.tex
+INPUT /opt/lampp/htdocs/TECWEB1920/relazione/sezioni/Implementazione/linguaggi/xhtmlcss3.tex
+INPUT /opt/lampp/htdocs/TECWEB1920/relazione/sezioni/Implementazione/linguaggi/xhtmlcss3.tex
+INPUT /opt/lampp/htdocs/TECWEB1920/relazione/sezioni/Implementazione/linguaggi/php.tex
+INPUT /opt/lampp/htdocs/TECWEB1920/relazione/sezioni/Implementazione/linguaggi/php.tex
+INPUT /opt/lampp/htdocs/TECWEB1920/relazione/sezioni/Implementazione/linguaggi/sql.tex
+INPUT /opt/lampp/htdocs/TECWEB1920/relazione/sezioni/Implementazione/linguaggi/sql.tex
 INPUT /opt/lampp/htdocs/TECWEB1920/relazione/Relazione.aux
 INPUT /opt/lampp/htdocs/TECWEB1920/relazione/Relazione.out
 INPUT /opt/lampp/htdocs/TECWEB1920/relazione/Relazione.out
