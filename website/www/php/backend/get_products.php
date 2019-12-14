@@ -54,5 +54,10 @@ class Get_products{
         return $this->product->execute("update Prodotto set TipoProdotto = '$type' , Nome = '$title' , Descrizione = '$description' where Codice = $id");
     }
 
+    public function get_image($id){
+        return @mysqli_fetch_assoc($this->product->execute("select Immagine from Prodotto where Codice = $id"));
+    
+    }
+
 }
 ?>
