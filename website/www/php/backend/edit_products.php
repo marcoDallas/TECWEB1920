@@ -17,7 +17,8 @@ class Edit_products{
     public static function remove(){
         require_once 'backend/get_products.php';
         $path = (new Get_products())->get_image($_POST['product']);
-        unlink($path['Immagine']);
+        if(strcmp($path['Immagine'],''))
+            unlink($path['Immagine']);
         return (new Get_products())->delete_product($_POST['product']);
     }
 

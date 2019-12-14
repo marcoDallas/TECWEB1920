@@ -22,7 +22,7 @@ class Print_products{
                         <input class="general_button" type="submit" name="add" value="Aggiungi Prodotto"/>
                     </form>';
         }
-        $content.='<form class="general_form inline" id="ricerca_prodotti" method="get" action="prodotti.php"
+        $content.='<form class="general_form inline" id="ricerca_prodotti" method="get" action="prodotti.php">
                     <label for="cercaProdotti">Cerca '.$_GET['type'].': </label>
                     <input class="general_input" type="text" id="cercaProdotti" name="search"/>
                     <input type="hidden" name="type" value="'.$_GET['type'].'"/>
