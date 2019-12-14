@@ -1,33 +1,35 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
-\contentsline {section}{\numberline {1}Introduzione}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Abstract}{2}{subsection.1.1}%
-\contentsline {section}{\numberline {2}Analisi}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Studio dell'utenza finale}{3}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Casi d'uso}{3}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Utente generico}{3}{subsubsection.2.2.1}%
-\contentsline {paragraph}{\numberline {2.2.1.1}Visualizzazione pagina "Home"}{3}{paragraph.2.2.1.1}%
-\contentsline {paragraph}{\numberline {2.2.1.2}Visualizzazione pagina "Paste"}{3}{paragraph.2.2.1.2}%
-\contentsline {paragraph}{\numberline {2.2.1.3}Cerca prodotti in "Paste"}{4}{paragraph.2.2.1.3}%
-\contentsline {paragraph}{\numberline {2.2.1.4}Visualizzazione pagina "Torte"}{4}{paragraph.2.2.1.4}%
-\contentsline {paragraph}{\numberline {2.2.1.5}Cerca prodotti in "Torte"}{4}{paragraph.2.2.1.5}%
-\contentsline {paragraph}{\numberline {2.2.1.6}Visualizzazione pagina "Storia"}{4}{paragraph.2.2.1.6}%
-\contentsline {paragraph}{\numberline {2.2.1.7}Visualizzazione pagina "Contatti"}{4}{paragraph.2.2.1.7}%
-\contentsline {subsubsection}{\numberline {2.2.2}Amministratore}{4}{subsubsection.2.2.2}%
-\contentsline {paragraph}{\numberline {2.2.2.1}Login "Area Amministratore"}{5}{paragraph.2.2.2.1}%
-\contentsline {paragraph}{\numberline {2.2.2.2}Aggiungi prodotto in "Paste"}{5}{paragraph.2.2.2.2}%
-\contentsline {paragraph}{\numberline {2.2.2.3}Modifica prodotto in "Paste"}{5}{paragraph.2.2.2.3}%
-\contentsline {paragraph}{\numberline {2.2.2.4}Elimina prodotto in "Paste"}{6}{paragraph.2.2.2.4}%
-\contentsline {paragraph}{\numberline {2.2.2.5}Aggiungi prodotto in "Torte"}{6}{paragraph.2.2.2.5}%
-\contentsline {paragraph}{\numberline {2.2.2.6}Modifica prodotto in "Torte"}{6}{paragraph.2.2.2.6}%
-\contentsline {paragraph}{\numberline {2.2.2.7}Elimina prodotto in "Torte"}{6}{paragraph.2.2.2.7}%
-\contentsline {paragraph}{\numberline {2.2.2.8}Modifica la sezione "News"}{6}{paragraph.2.2.2.8}%
-\contentsline {paragraph}{\numberline {2.2.2.9}Logout "Area Amministratore"}{6}{paragraph.2.2.2.9}%
-\contentsline {section}{\numberline {3}Progettazione}{7}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Obiettivi}{7}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Design del sito}{8}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Database}{10}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Presentazione}{11}{section.4}%
-\contentsline {section}{\numberline {5}Implementazione}{12}{section.5}%
-\contentsline {section}{\numberline {6}Validazione}{13}{section.6}%
-\contentsline {section}{\numberline {7}Fase di Test}{14}{section.7}%
+\contentsline {section}{\numberline {1}Introduzione}{2}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}Abstract}{2}{subsection.1.1}% 
+\contentsline {section}{\numberline {2}Analisi}{3}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Studio dell'utenza finale}{3}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}Casi d'uso}{3}{subsection.2.2}% 
+\contentsline {subsubsection}{\numberline {2.2.1}Utente generico}{3}{subsubsection.2.2.1}% 
+\contentsline {paragraph}{\numberline {2.2.1.1}Visualizzazione pagina "Home"}{3}{paragraph.2.2.1.1}% 
+\contentsline {paragraph}{\numberline {2.2.1.2}Visualizzazione pagina "Paste"}{3}{paragraph.2.2.1.2}% 
+\contentsline {paragraph}{\numberline {2.2.1.3}Cerca prodotti in "Paste"}{4}{paragraph.2.2.1.3}% 
+\contentsline {paragraph}{\numberline {2.2.1.4}Visualizzazione pagina "Torte"}{4}{paragraph.2.2.1.4}% 
+\contentsline {paragraph}{\numberline {2.2.1.5}Cerca prodotti in "Torte"}{4}{paragraph.2.2.1.5}% 
+\contentsline {paragraph}{\numberline {2.2.1.6}Visualizzazione pagina "Storia"}{4}{paragraph.2.2.1.6}% 
+\contentsline {paragraph}{\numberline {2.2.1.7}Visualizzazione pagina "Contatti"}{4}{paragraph.2.2.1.7}% 
+\contentsline {subsubsection}{\numberline {2.2.2}Amministratore}{4}{subsubsection.2.2.2}% 
+\contentsline {paragraph}{\numberline {2.2.2.1}Login "Area Amministratore"}{5}{paragraph.2.2.2.1}% 
+\contentsline {paragraph}{\numberline {2.2.2.2}Aggiungi prodotto in "Paste"}{5}{paragraph.2.2.2.2}% 
+\contentsline {paragraph}{\numberline {2.2.2.3}Modifica prodotto in "Paste"}{5}{paragraph.2.2.2.3}% 
+\contentsline {paragraph}{\numberline {2.2.2.4}Elimina prodotto in "Paste"}{6}{paragraph.2.2.2.4}% 
+\contentsline {paragraph}{\numberline {2.2.2.5}Aggiungi prodotto in "Torte"}{6}{paragraph.2.2.2.5}% 
+\contentsline {paragraph}{\numberline {2.2.2.6}Modifica prodotto in "Torte"}{6}{paragraph.2.2.2.6}% 
+\contentsline {paragraph}{\numberline {2.2.2.7}Elimina prodotto in "Torte"}{6}{paragraph.2.2.2.7}% 
+\contentsline {paragraph}{\numberline {2.2.2.8}Modifica la sezione "News"}{6}{paragraph.2.2.2.8}% 
+\contentsline {paragraph}{\numberline {2.2.2.9}Logout "Area Amministratore"}{6}{paragraph.2.2.2.9}% 
+\contentsline {section}{\numberline {3}Progettazione}{7}{section.3}% 
+\contentsline {section}{\numberline {4}Presentazione}{8}{section.4}% 
+\contentsline {section}{\numberline {5}Implementazione}{9}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Linguaggi}{9}{subsection.5.1}% 
+\contentsline {subsubsection}{\numberline {5.1.1}XHTML e CSS3}{9}{subsubsection.5.1.1}% 
+\contentsline {subsubsection}{\numberline {5.1.2}PHP}{9}{subsubsection.5.1.2}% 
+\contentsline {subsubsection}{\numberline {5.1.3}SQL}{10}{subsubsection.5.1.3}% 
+\contentsline {subsubsection}{\numberline {5.1.4}JavaScript e JQuery}{10}{subsubsection.5.1.4}% 
+\contentsline {section}{\numberline {6}Validazione}{11}{section.6}% 
+\contentsline {section}{\numberline {7}Fase di Test}{12}{section.7}% 

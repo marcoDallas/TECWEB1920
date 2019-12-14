@@ -1,0 +1,31 @@
+Il gruppo ha deciso di elaborare le pagine server-side tramite il linguaggio \emph{PHP}. Questa operazione è necessaria, in quanto ogni pagina deve specializzarsi in base 
+al tipo di utenza.\\
+Il linguaggio \emph{PHP} consente di leggere e scrivere nel database, oltre che eseguire operazioni sul filesystem quali inserimento e cancellazione delle foto dei prodotti.\\
+Importante è sottolineare la separazione tra struttura e comportamento, il cui significato e dimostrazione sarà nelle prossime righe.\\
+Il sito internet è principalmente strutturato in questo modo: 
+\begin{itemize}
+    \item un file \emph{template.html} contenente tutte le parti statiche condivise da tutte le pagine;
+    \item dei file \emph{'pagina'.php} le quali elaborano il contenuto del template in infine ritornano la pagina modificata;
+    \item dei file \emph{storia.html, home.html} e \emph{contatti.html} usati dalle corrispondenti pagine php per recuperare le parti statiche;
+    \item classi php per l'elaborazione e stampa delle parti più dinamiche, come il menù o la pagina dei prodotti;
+    \item classi php per l'elaborazione di dati per il database o il salvataggio (o eliminazione) delle immagini;
+\end{itemize}
+Così facendo il ruolo del \emph{PHP} non sarà quello di andare a modificare la struttura della pagina, ma quel compito verrà lasciato ad \emph{XHTML}.\\
+Il \emph{PHP} si occupa di elaborare informazioni e modificare quello che è il contenuto della pagina, ma non la sua struttura.\\
+
+
+Viene lasciato al lato server un ulteriore controllo di sicurezza sugli input dell'utente. Banalmente, un utente avanzato potrebbe alterare il comportamento
+del \emph{JavaScript} per oltrepassare i controlli, ma non potrà mai modificare il comportamento \emph{PHP} poichè è codice server-side.\\
+Per questo è fornita una classe \emph{Input\_security\_check} contenente tutti i metodi necessari ai vari controlli, che operano controllando i singoli caratteri in input.
+\begin{itemize}
+    \item Il metodo \emph{general\_controls(input)} esegue operazioni fondamentali per quanto riguarda la sicurezza. Dato un input il metodo si occupa di passarlo tramite una serie di tre funzioni: 
+    \begin{itemize}
+        \item \emph{trim()}: elimina gli spazi prima e dopo la stringa in input;
+        \item \emph{htmlentities()}: converte tutti i possibili caratteri in entità \emph{HTML};
+        \item \emph{strip\_tags()}: elimina tutti i possibili tag \emph{HTML} all'interno;
+    \end{itemize}
+    \item I metodi \emph{username\_check()} e \emph{password\_check}, dopo aver richiamato il metodo di controllo generale si occupano di verificare se i possibili caratteri in input sono stati rispettati;
+    \item Il metodo \emph{general\_input\_check()} dopo aver richiamato il metodo di controllo generale si occupa di aggiungere uno slash a tutti i caratteri che potrebbero influire all'esecuzione di una query tramite la funzione \emph{addslashes()};
+\end{itemize}
+
+Test di query injection saranno descritti nella sezione test.
