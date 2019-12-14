@@ -16,6 +16,9 @@ class Edit_products{
     
     public static function remove(){
         require_once 'backend/get_products.php';
+        if(!strcmp($_POST['product'],'')){
+            unlink($_POST['id']);
+        }
         return (new Get_products())->delete_product($_POST['product']);
     }
 
