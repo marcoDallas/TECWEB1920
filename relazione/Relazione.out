@@ -24,5 +24,10 @@
 \BOOKMARK [1][-]{section.3}{Progettazione}{}% 24
 \BOOKMARK [1][-]{section.4}{Presentazione}{}% 25
 \BOOKMARK [1][-]{section.5}{Implementazione}{}% 26
-\BOOKMARK [1][-]{section.6}{Validazione}{}% 27
-\BOOKMARK [1][-]{section.7}{Fase di Test}{}% 28
+\BOOKMARK [2][-]{subsection.5.1}{Linguaggi}{section.5}% 27
+\BOOKMARK [3][-]{subsubsection.5.1.1}{XHTML e CSS3}{subsection.5.1}% 28
+\BOOKMARK [3][-]{subsubsection.5.1.2}{PHP}{subsection.5.1}% 29
+\BOOKMARK [3][-]{subsubsection.5.1.3}{SQL}{subsection.5.1}% 30
+\BOOKMARK [3][-]{subsubsection.5.1.4}{JavaScript e JQuery}{subsection.5.1}% 31
+\BOOKMARK [1][-]{section.6}{Validazione}{}% 32
+\BOOKMARK [1][-]{section.7}{Fase di Test}{}% 33
