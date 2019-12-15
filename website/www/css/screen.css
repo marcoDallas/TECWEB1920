@@ -68,17 +68,6 @@ body {
 
 /*------------------------------------------------------*/
 
-/*#menu_icon {
-    border-left: 2px solid #bc5800;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    cursor: pointer;
-    padding: 1.4em 2em 1.4em 2em;
-    min-width: 48px;
-}*/
-
 .menu_icon {
     border-left: 2px solid #bc5800;
     display: block;
@@ -160,6 +149,12 @@ body {
     float: none;
     display: block;
 }
+
+.hide{
+	display: none;
+}
+
+
 
 
 /*------------------------------------------------------*/
@@ -446,12 +441,12 @@ dt {
 
 /* LOGIN ERROR MESSAGE */
 #login_error {
-	position: fixed;
+	position: absolute;
 	top:0;
-	left:0;
+	left:13em;
+	right:7em;
 	z-index:1;
-	width: 100%;
-	height: 4em;
+	height: 5.5em;
 	background-color: red;
 	text-align: center;
 }
@@ -459,12 +454,10 @@ dt {
 
 #text_error{
 	position: absolute;
-	width: 80%;
 	left: 0;
 	top: 0.2em;
-	font-size: 2em;
+	font-size: 1.4em;
 	color: white;
-	padding-left: 3em;
 }
 
 /* close button */
@@ -476,8 +469,9 @@ dt {
 	width: 3em;
 	height: 3em;
 	background-image: url('../images/close.png');
-	background-repeat: none;
+	background-repeat: no-repeat;
 	background-size: 100% 100%;
+	cursor: pointer;
 }
 
 /* EDIT PRODUCT AND NEWS PAGES */
@@ -559,12 +553,12 @@ dt {
 	
 	/*OVERRIDE*/
 	.logo_column{
-		width: 30%;
+		width: 40%;
 	}
 
 	/*OVERRIDE*/
 	.title_column{
-		width: 70%;
+		width: 60%;
 	}
 	
 	/*OVERRIDE*/
@@ -664,5 +658,33 @@ dt {
 
 	#login_input{
 		width:56%;
+	}
+
+	/* LOGIN ERROR MESSAGE */
+	#login_error {
+		position: fixed;
+		top:0;
+		left:0;
+		z-index:1;
+		width: 100%;
+		height: 4em;
+		background-color: red;
+		text-align: center;
+	}
+
+
+	#text_error{
+		position: absolute;
+		width: 80%;
+		left: 0;
+		top: 0.2em;
+		font-size: 2em;
+		color: white;
+		padding-left: 3em;
+	}
+
+	.shift_down{
+		position:relative;
+		top: 4em;
 	}
 }

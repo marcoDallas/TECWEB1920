@@ -11,7 +11,7 @@ class Admin{
         Sessions::init_session();
         
         if(!Admin::verify() && isset($_POST['Login']))
-            Admin::login();
+            return Admin::login();
         if(isset($_POST['Logout']))
             Admin::logout();
     }
@@ -35,8 +35,7 @@ class Admin{
             $password = Input_security_check::password_check($_POST['password']);
             if(!$username || !$password){
                 error_log("Security check failed");
-                echo('<div id="login_error"><p id="text_error">Hai inserito simboli non consentiti</p><div class="close"></div></div>');
-                return FALSE;
+                return '<div id="login_error"><p id="text_error">Hai inserito simboli non consentiti</p><a class="close" onclick="close_error(this)"></a></div>';
             }
             require_once 'backend/get_admin.php';
             if((new Get_admin())->admin($_POST['username'],$_POST['password'])){
@@ -44,8 +43,7 @@ class Admin{
                 return TRUE;
             }else{
                 error_log("Wrong password");
-                echo('<div id="login_error"><p id="text_error">Credenziali errate!</p><div class="close"></div></div>');
-                return FALSE;
+                return '<div id="login_error"><p id="text_error">Credenziali errate!</p><a class="close" onclick="close_error(this)"></a></div>';
             }
         }
     }
