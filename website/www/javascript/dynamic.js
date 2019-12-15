@@ -59,3 +59,24 @@ function input_image(){
         reader.readAsDataURL(this.files[0]);
     };
 };
+
+$(document).ready(function(){
+
+    if($("#login_error").length != 0){
+
+        $("#header").addClass("shift_down");
+        $("#breadcrumb").addClass("shift_down");
+        $("#general_container").addClass("shift_down");
+        $("#footer").addClass("shift_down");
+    }
+});
+
+
+function close_error(){
+    $('#login_error').addClass('hide');
+    $('#login_error').removeAttr('id');
+    $("#header").removeClass("shift_down");
+    $("#breadcrumb").removeClass("shift_down");
+    $("#general_container").removeClass("shift_down");
+    $("#footer").removeClass("shift_down");
+}
