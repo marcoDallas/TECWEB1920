@@ -350,7 +350,3 @@ healthchecksdb
 *.gz
 *.toc
 
-Relazione.aux
-Relazione.fls
-Relazione.out
-Relazione.toc
