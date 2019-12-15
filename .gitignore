@@ -3,6 +3,7 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+
 # User-specific files
 *.rsuser
 *.suo
@@ -87,6 +88,7 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
+
 
 # Chutzpah Test files
 _Chutzpah*
@@ -347,3 +349,8 @@ healthchecksdb
 *.out
 *.gz
 *.toc
+
+Relazione.aux
+Relazione.fls
+Relazione.out
+Relazione.toc
