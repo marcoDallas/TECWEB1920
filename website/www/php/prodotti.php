@@ -38,6 +38,8 @@ unset($news);
     
 if(Admin::verify())
     $DOM = str_replace('<edit_news_admin_to_replace/>',Print_news::admin_zone(),$DOM);
+else
+    $DOM = str_replace('<edit_news_admin_to_replace/>','',$DOM);
     
 $DOM = str_replace('<timetable_to_insert/>',file_get_contents('../html/components/timetable.html'),$DOM);
 
