@@ -1,7 +1,7 @@
 # TECWEB1920
 Progetto Tecnologie WEB 2019/2020
 
-![Image of Yaktocat](website/www/images/logo.png)
+![Image of Yaktocat](website/www/images/logo_vecchio.png)
 
 ## Regole di buona condotta
 
