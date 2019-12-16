@@ -14,7 +14,9 @@ class Print_products{
     }
 
     public function print_pr($arr){
-        $content='<div id="content" class="body_column content">';
+        $content='<div id="content" class="body_column content">
+                <h2>'.$_GET['type'].'</h2>
+                ';
         if(Admin::verify()){
             $content.='<form class="general_form inline" method="post" action="modifica_prodotto.php">
                         <input type="hidden" name="prevpage" value="'.$_SERVER['REQUEST_URI'].'"/>
