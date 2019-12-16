@@ -80,3 +80,21 @@ function close_error(){
     $("#general_container").removeClass("shift_down");
     $("#footer").removeClass("shift_down");
 }
+$(document).ready(function() {
+    $('#admin_login_form').submit(function(e) {
+        
+        $.ajax({
+            type: "POST",
+            url: "../php/backend/admin_handler.php",
+            data: {Login: "Accedi",username: $("#username").val(),password: $("#password").val()},
+            async: false,
+            success: function(correct) {
+                if(correct != 1){
+                    e.preventDefault();
+                    $("#login_error_ajax").text(correct);
+                }
+                    
+            }
+        });
+    });
+});
