@@ -6,11 +6,11 @@ class Print_content{
 
     public static function logo($page){
         if(!strcmp($page,"Home"))
-        $content='<img id="logo" src="../images/logo.png" alt="Ti trovi nella pagina principale di Pasticceria Padovana"/>';
+            $content='<img id="logo" src="../images/logo.png" alt="Ti trovi nella pagina principale di Pasticceria Padovana"/>';
         else
-        $content='<a href="home.php" title="Torna alla pagina principale">
-                    <img id="logo" src="../images/logo.png" alt="Torna alla pagina principale di Pasticceria Padovana"/>
-                  </a>';
+            $content='<a href="home.php" title="Torna alla pagina principale">
+                        <img id="logo" src="../images/logo.png" alt="Torna alla pagina principale di Pasticceria Padovana"/>
+                      </a>';
         return $content;
     }
 

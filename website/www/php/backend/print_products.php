@@ -15,8 +15,7 @@ class Print_products{
 
     public function print_pr($arr){
         $content='<div id="content" class="body_column content">
-                <h2>'.$_GET['type'].'</h2>
-                ';
+                    <h2>'.$_GET['type'].'</h2>';
         if(Admin::verify()){
             $content.='<form class="general_form inline" method="post" action="modifica_prodotto.php">
                         <input type="hidden" name="prevpage" value="'.$_GET['type'].'"/>
@@ -49,10 +48,9 @@ class Print_products{
                 if(!strcmp($prodotto['Immagine'],''))
                     $content.='<p>Forse l\'admin non ha inserito la foto <abbr title="cosa triste">:\'(</abbr></p>';
                 else
-                    $content.='<img src="'.$prodotto['Immagine'].'" alt=""/>';
+                    $content.='<img src="'.$prodotto['Immagine'].'" alt="Immagine della sezione '.$_GET['type'].':'.$prodotto['Nome'].'"/>';
                                     
                 $content.='</div>
-
                                 <div class="cont_product">
                                     <h3>'.$prodotto['Nome'].'</h3>
                                     <p>'.$prodotto['Descrizione'].'</p>
