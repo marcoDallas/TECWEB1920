@@ -18,5 +18,4 @@ class Get_admin{
     }
 
 }
-
 ?>

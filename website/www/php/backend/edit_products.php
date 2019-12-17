@@ -26,8 +26,8 @@ class Edit_products{
         require_once 'backend/get_products.php';
         if(isset($_POST['title']) && isset($_POST['type']) && isset($_POST['description'])){
             require_once 'backend/input_security_check.php';
-            $title = Input_security_check::general_input_check($_POST['title']);
-            $type = Input_security_check::general_input_check($_POST['type']);
+            $title = Input_security_check::title_input_check($_POST['title']);
+            $type = Input_security_check::title_input_check($_POST['type']);
             $image='';
             if(is_uploaded_file($_FILES['image']['tmp_name'])){
                 $image = '../images/uploaded/'.$_FILES['image']['name'];
@@ -36,7 +36,9 @@ class Edit_products{
                     @unlink($_POST['oldimage']);
                 }
             }
-            $description = Input_security_check::general_input_check($_POST['description']);
+            $description = Input_security_check::description_input_check($_POST['description']);
+            if(!$title || !$description)
+                return FALSE;
             if(isset($_POST['id'])){
                 if(strcmp($image,'')){
                     (new Get_products())->edit_product($_POST['id'],$type,$title,$description,$image);
