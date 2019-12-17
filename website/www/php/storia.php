@@ -10,8 +10,11 @@ $DOM = str_replace('<title_page_to_insert/>','Storia',$DOM);
 $DOM = str_replace('<no_index_to_insert/>','',$DOM);
 $DOM = str_replace('<login_error_to_insert/>',Admin::init_admin(),$DOM);
 $DOM = str_replace('<logo_to_insert/>',Print_content::logo(Utilities::get_page_name()),$DOM);
-$DOM = str_replace('<title_h1_to_insert/>','Dietro una grande pasticceria, c\'Ã¨ una grande tradizione',$DOM);
-$DOM = str_replace('<breadcrumb_path_to_insert/>','<strong>Storia</strong>',$DOM);
+$DOM = str_replace('<title_h1_to_insert/>','Dietro una grande pasticceria, c\'è una grande tradizione',$DOM);
+if(Admin::verify())
+    $DOM = str_replace('<breadcrumb_path_to_insert/>','<strong>Storia (Amministratore)</strong>',$DOM);
+else
+    $DOM = str_replace('<breadcrumb_path_to_insert/>','<strong>Storia</strong>',$DOM);  
 $DOM = str_replace('<menu_to_insert/>',Print_content::menu('storia.php'),$DOM);
 
 if(Admin::verify()){

@@ -19,9 +19,12 @@ if(!strcmp($_GET['type'],'Paste'))
     $DOM = str_replace('<title_h1_to_insert/>','Una vasta gamma di paste, a voi basta solo scegliere',$DOM);
 else if(!strcmp($_GET['type'],'Torte'))
     $DOM = str_replace('<title_h1_to_insert/>','Una vasta gamma di torte, a voi basta solo scegliere',$DOM);
-    
-    
-$DOM = str_replace('<breadcrumb_path_to_insert/>','<strong>'.$_GET['type'].'</strong>',$DOM);
+
+if(Admin::verify())
+    $DOM = str_replace('<breadcrumb_path_to_insert/>','<strong>'.$_GET['type'].' (Amministratore)</strong>',$DOM);
+else
+    $DOM = str_replace('<breadcrumb_path_to_insert/>','<strong>'.$_GET['type'].'</strong>',$DOM);
+
 $DOM = str_replace('<menu_to_insert/>',Print_content::menu('prodotti.php?type='.$_GET['type']),$DOM);
     
 if(Admin::verify()){
