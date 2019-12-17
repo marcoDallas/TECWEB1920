@@ -26,8 +26,8 @@ $DOM = str_replace('<login_error_to_insert/>','',$DOM);
 $DOM = str_replace('<logo_to_insert/>',Print_content::logo(Utilities::get_page_name()),$DOM);
 $DOM = str_replace('<title_h1_to_insert/>','Modifica Prodotto',$DOM);
 
-if(isset($_POST['prevpage'])){
-    $prevpage = Utilities::shrink_page($_POST['prevpage']);
+if(isset($_POST['type'])){
+    $prevpage = ucfirst($_POST['type']);
     if($edit)
         $DOM = str_replace('<breadcrumb_path_to_insert/>','<strong>'.$prevpage.' / Modifica prodotto (Amministratore)</strong>',$DOM);
     else

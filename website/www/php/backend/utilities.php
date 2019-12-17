@@ -11,7 +11,7 @@ class Utilities{
     public static function shrink_page($page){
         $array=explode('/',$page); 
         $page=explode('.',end($array));
-        return ucfirst($page[0]);
+        return $page[0];
     }
 
 }
