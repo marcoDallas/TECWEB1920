@@ -1,2 +1,1 @@
 admin	admin	admin	admin	1970-01-01
-user	user	user	user	1970-01-01

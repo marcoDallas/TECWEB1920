@@ -1,1 +1,1 @@
-1	Test news	Questo Ã¨ il testo della nuova news
+1	Test news	Questo è il testo della nuova news

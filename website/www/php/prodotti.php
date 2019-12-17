@@ -16,7 +16,7 @@ $DOM = str_replace('<no_index_to_insert/>','',$DOM);
 $DOM = str_replace('<login_error_to_insert/>',Admin::init_admin(),$DOM);
 $DOM = str_replace('<logo_to_insert/>',Print_content::logo(Utilities::get_page_name()),$DOM);
 if(!strcmp($_GET['type'],'Paste'))
-    $DOM = str_replace('<title_h1_to_insert/>','Una grande varietà di paste, una prelibatezza dietro l\'altra',$DOM);
+    $DOM = str_replace('<title_h1_to_insert/>','Una vasta gamma di paste, a voi basta solo scegliere',$DOM);
 else if(!strcmp($_GET['type'],'Torte'))
     $DOM = str_replace('<title_h1_to_insert/>','Una vasta gamma di torte, a voi basta solo scegliere',$DOM);
     
