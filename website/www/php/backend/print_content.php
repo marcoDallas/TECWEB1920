@@ -16,7 +16,7 @@ class Print_content{
 
   public static function menu($page){
         if(!strcmp($page,"home.php")){
-            $content='<li xml:lang="en" role="menuitem"><strong>Home</strong></li>
+            $content='<li role="menuitem"><strong xml:lang="en">Home</strong></li>
             <li role="none"><a href="prodotti.php?type=Paste" role="menuitem">Paste</a></li>
             <li role="none"><a href="prodotti.php?type=Torte" role="menuitem">Torte</a></li>
             <li role="none"><a href="storia.php" role="menuitem">Storia</a></li>
@@ -71,7 +71,7 @@ class Print_content{
                         </div>';
         }else{
             $content ='<div class="box admin_column">
-                            <form class="mobile_hidden general_form" id="admin_login_form" method="POST" action="'.$_SERVER['REQUEST_URI'].'">
+                            <form class="mobile_hidden general_form" id="admin_login_form" method="post" action="'.$_SERVER['REQUEST_URI'].'">
                                 <fieldset id="fieldset_login">
                                     <legend>Area Amministratore</legend>
                                     <p id="login_error_ajax"></p>
