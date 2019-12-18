@@ -71,7 +71,7 @@ class Print_content{
                         </div>';
         }else{
             $content ='<div class="box admin_column">
-                            <form class="mobile_hidden general_form" id="admin_login_form" method="post" action="'.$_SERVER['REQUEST_URI'].'">
+                            <form class="mobile_hidden general_form" id="admin_login_form" method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">
                                 <fieldset id="fieldset_login">
                                     <legend>Area Amministratore</legend>
                                     <p id="login_error_ajax"></p>
