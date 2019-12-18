@@ -15,20 +15,23 @@ class Print_products{
 
     public function print_pr($arr){
         $content='<div id="content" class="body_column content">
-                <h2>'.$_GET['type'].'</h2>
-                ';
+                    <h2>'.$_GET['type'].'</h2>';
         if(Admin::verify()){
             $content.='<form class="general_form inline" method="post" action="modifica_prodotto.php">
-                        <input type="hidden" name="prevpage" value="'.$_SERVER['REQUEST_URI'].'"/>
-                        <input type="hidden" name="type" value="'.$_GET['type'].'"/>
-                        <input class="general_button" type="submit" name="add" value="Aggiungi Prodotto"/>
-                    </form>';
+                        <p>
+                         <input type="hidden" name="prevpage" value="'.$_SERVER['REQUEST_URI'].'"/>
+                         <input type="hidden" name="type" value="'.$_GET['type'].'"/>
+                         <input class="general_button" type="submit" name="add" value="Aggiungi Prodotto"/>
+                        </p> 
+                       </form>';
         }
         $content.='<form class="general_form inline" id="ricerca_prodotti" method="get" action="prodotti.php">
-                    <label for="cercaProdotti">Cerca '.$_GET['type'].': </label>
-                    <input class="general_input" type="text" id="cercaProdotti" name="search"/>
-                    <input type="hidden" name="type" value="'.$_GET['type'].'"/>
-                    <input class="general_button" type="submit" value="cerca"/>
+                    <p>
+                     <label for="cercaProdotti">Cerca '.$_GET['type'].': </label>
+                     <input class="general_input" type="text" id="cercaProdotti" name="search"/>
+                     <input type="hidden" name="type" value="'.$_GET['type'].'"/>
+                     <input class="general_button" type="submit" value="cerca"/>
+                    </p>    
                 </form>';
         if($arr){
             if(!isset($_GET['page']))
@@ -49,24 +52,27 @@ class Print_products{
                 if(!strcmp($prodotto['Immagine'],''))
                     $content.='<p>Forse l\'admin non ha inserito la foto <abbr title="cosa triste">:\'(</abbr></p>';
                 else
-                    $content.='<img class="product_image" src="'.$prodotto['Immagine'].'" alt=""/>';
+                    $content.='<img class="product_image" src="'.$prodotto['Immagine'].'" alt="Immagine della sezione '.$_GET['type'].' : '.$prodotto['Nome'].'"/>';
                                     
                 $content.='</div>
-
                                 <div class="cont_product">
                                     <h3>'.$prodotto['Nome'].'</h3>
                                     <p>'.$prodotto['Descrizione'].'</p>
                                 </div>';
                 if(Admin::verify()){
                     $content.='<form class="general_form" method="post" action="'.$_SERVER['REQUEST_URI'].'">
-                                <input type="hidden" name="product" value="'.$prodotto['Codice'].'"/>
-                                <input class="general_button" type="submit" name="remove" value="Rimuovi prodotto"/>
-                            </form>
-                                <form class="general_form" method="post" action="modifica_prodotto.php">
-                                <input type="hidden" name="id" value="'.$prodotto['Codice'].'"/>
-                                <input type="hidden" name="prevpage" value="'.$_SERVER['REQUEST_URI'].'"/>
-                                <input type="hidden" name="type" value="'.$_GET['type'].'"/>
-                                <input class="general_button" type="submit" name="edit" value="Modifica prodotto"/>
+                                <p>
+                                 <input type="hidden" name="product" value="'.$prodotto['Codice'].'"/>
+                                 <input class="general_button" type="submit" name="remove" value="Rimuovi prodotto"/>
+                                </p> 
+                               </form>
+                               <form class="general_form" method="post" action="modifica_prodotto.php">
+                                <p>
+                                 <input type="hidden" name="id" value="'.$prodotto['Codice'].'"/>
+                                 <input type="hidden" name="prevpage" value="'.$_SERVER['REQUEST_URI'].'"/>
+                                 <input type="hidden" name="type" value="'.$_GET['type'].'"/>
+                                 <input class="general_button" type="submit" name="edit" value="Modifica prodotto"/>
+                                </p> 
                             </form>';
                 }
                 $content.='</div>
