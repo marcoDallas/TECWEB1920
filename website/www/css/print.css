@@ -1,275 +1,58 @@
-#logo {
+*{
+	padding: 0;
+    margin: 0;
+    line-height: 1.5em;
+}
+
+body{
+	font-family: Georgia, "Times New Roman", sans-serif;
+}
+
+.logo_column, .general_image, .news_container, .hidden, .map, .general_form, .general_button, .print_hide{
     display: none;
 }
 
-#menu {
+#menu, #breadcrumb, #footer > p{
     display: none;
 }
 
-#breadcrumb {
-    display: none;
-}
-
-#login {
-    display: none;
-}
-
-* {
-    margin: 0em;
-    padding: 0em;
-    max-width: 100%;
-    font-family: 'Times New Roman', Times, serif, sans-serif;
-    line-height: 1.2em;
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-.defaultImageSize {
-    max-height: 100px;
-    max-width: 100px;
-}
-
-.box {
-    overflow: hidden;
-}
-
-    .box > * {
-        float: left;
-        display: inline-block;
-    }
-
-
-.medium_column {
-    width: 100%;
-}
-
-.a_quarter_column {
-    width: 54%;
-}
-
-.thin_column {
-    width: 100%;
-}
-
-.a_column {
-    text-align: center;
-    width: 100%;
-}
-
-.hidden {
-    font-size: 0px;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.mobile_hidden {
-    position: absolute;
-    left: -100000px;
-    overflow: hidden;
-}
-
-dd {
-    font-weight: bold;
-}
-
-.news_container {
-    border: 1px solid;
-    margin: 1em;
-    padding: 1em;
-    text-align: center;
-}
-
-.news_title {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.news_content {
-    padding-bottom: 1em;
-}
-
-#maps_icon {
-    content: url("../images/navigation.png");
-    vertical-align: middle;
-    padding-left: 0.5em;
-}
-
-
-    #footer dl {
-        padding-top: 1em;
-    }
-
-    #footer > p {
-        padding-top: 1em;
-        padding-bottom: 1em;
-    }
-
-.footer_element {
-    display: block;
-    text-align: center;
-}
-
-#content p {
+h2{
     padding: 1em;
 }
-#content img {
-    float: left;
+
+.footer_wrapper{
+    padding-top: 1em;
 }
 
-#content > h1 {
-    padding: 0.5em;
-}
-
-#content {
-    text-align: center;
-}
-
-#contentContatti {
-    text-align: left;
-    padding-left: 2.5em;
-}
-
-    #contentContatti p, #contentContatti dl {
-        padding: 1em;
-    }
-
-h2 {
-    padding-top: 0.3em;
-}
-
-#maps {
-    width: 80%;
-    height: 20em;
-    display: block;
-    padding-left: 1em;
-    padding-bottom: 1em;
-}
-
-/*tags*/
-
-.news_container {
-    display: inline-block;
-    width: 40%;
-}
-
-.mobile_hidden {
-    position: relative;
-    left: 0px;
-    height: auto;
-}
-
-.thin_column {
-    width: 20%;
-}
-
-.medium_column {
-    width: 25%;
-}
-
-.a_quarter_column {
-    width: 25%;
-}
-
-.logo_column {
-    max-width: 30%;
-    height: 100%;
-}
-
-.title_column {
-    width: 100%;
-    height: 100%;
-}
-
-.three_quarter_column {
-    width: 75%;
-}
-
-    .element p {
-        padding: 2em;
-    }
-
-    .element strong {
+    .footer_wrapper > dl{
         display: block;
-    }
-
-/*specific*/
-
-#logo {
-    padding: 0.22em 0em 0em 0.5em;
-    max-width: 14em;
-    max-height: 9em; /* forza sovrascrittura del max-height del mobile */
-}
-
-#header h1 {
-    text-align: center;
-    font-size: 1.7em;
-    padding: 0.3em;
-}
-
-/*#header {
-    min-height: 9em;
-}*/
-
-#breadcrumb p {
-    font-size: 1em;
-    padding-left: 1em;
-}
-
-.login_column {
-    display:none;
-    float: right;
-}
-
-#login {
-    border: none;
-    margin: 0em;
-}
-
-    #login form label, #login form input, #login a {
-        margin: 0.5em;
-        text-align: left;
-    }
-
-#registrationForm {
-    margin: 5% 26%;
-    width: 48%;
-}
-
-    #registrationForm input {
-        width: 20em;
-    }
-
-        #registrationForm input[type="submit"] {
-            height: 2em;
-            width: 10em;
-        }
-
-.news_container {
-    margin: 0em 1em 1em 1em;
-    width: auto;
-    display: block;
-}
-
-#maps_icon {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 0.2em;
-}
-
-.footer_element {
-    display: inline;
-}
-
-    #footer dl {
         width: 50%;
-    }
-
-    #footer dd, #footer dt{
+        float:left;
         text-align: center;
     }
 
-#footer img {
-    display:none;
+.element{
+    overflow: hidden;
+    margin-top: -1em;
+}
+
+    .element > div{
+        float:left;
+    }
+
+.img_product{
+    width:20%;
+}
+
+.cont_product{
+    width:80%;
+}
+
+.product{
+    border-bottom: 1px solid black;
+}
+
+.product_image{
+    width: 5em;
+    height: auto;
 }
