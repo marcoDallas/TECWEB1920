@@ -36,10 +36,10 @@ class Print_products{
         if($arr){
             if(!isset($_GET['page']))
                 $_GET['page']=1;
-            if(!array_slice($arr,$_GET['page'].'0'-10,10))
+            if(!array_slice($arr,intval($_GET['page'])*7-7,7))
                 $_GET['page']=1;
             if(sizeof($arr)>10){
-                $arrpage=array_slice($arr,$_GET['page'].'0'-10,10);
+                $arrpage=array_slice($arr,intval($_GET['page'])*7-7,7);
             }else
                 $arrpage=$arr;
 
@@ -86,7 +86,7 @@ class Print_products{
                     $previouspage=$_GET['page']-1;
                     $content.='<a class="general_button anchor_button" href="?type='.$_GET['type'].'&amp;page='.$previouspage.'">Pagina precedente</a>';
                 }
-                if(array_slice($arr,$nextpage.'0'-10,10))
+                if(array_slice($arr,intval($_GET['page'])*7-7,7))
                     $content.='<a class="general_button anchor_button" href="?type='.$_GET['type'].'&amp;page='.$nextpage.'">Pagina successiva</a>';
 
                 $content.='</div>';
