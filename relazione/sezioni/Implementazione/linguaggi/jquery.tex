@@ -1,0 +1,10 @@
+Un primo uso di JQuery è occupato dai controlli input lato client. Ogni input utente viene controllato prima di essere spedito, in modo da non mandare lavoro inutile al server.\\
+DA CONTINUARE DOPO CONTROLLI JS
+Importante è far notare che, da lato mobile, viene implementato un uso maggiore di JQuery per poter inserire elementi a comparsa. Questo poichè lo spazio a schermo è molto inferiore
+rispetto al desktop. Infatti è stato scelto di implementare un menù ad hamburger, e un bottone per la comparsa del form di login per l'admin, nel footer.\\
+
+La validazione dell'utente, nel form di login, avviene attraverso Ajax. Questo poichè il form di login si trova nel footer, e viene scomodo inserire un messaggio di login
+errato dopo il ricaricamento della pagina. I vecchi browser che non riescono a supportare questa funzionalità visualizzeranno comunque un messaggio di errore sopra la pagina, dopo
+il caricamento.\\
+Ajax entra in funzione nel momento in cui avviene un click nel submit. L'evento, reso asincrono, si occuperà in primis di controllare se le credenziali sono corrette o meno,
+se non sono corrette, viene disabilitato il comportamento standard del submit, per visualizzare un messaggio di errore.\\
