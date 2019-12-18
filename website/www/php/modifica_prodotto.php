@@ -85,6 +85,7 @@ if($edit)
 else
     $content = str_replace('<id_to_insert/>','',$content);
 $DOM = str_replace('<page_to_insert/>',$content,$DOM);
+$DOM = str_replace('<footer_to_replace/>','<footer id="footer" class="box full_column">',$DOM);
 $DOM = str_replace('<login_admin_to_insert/>',Print_content::admin_form(),$DOM);
 
 echo($DOM);
