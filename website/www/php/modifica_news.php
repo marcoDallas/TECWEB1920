@@ -50,6 +50,8 @@ $content = str_replace('<legend_to_insert/>','Modifica News',$content);
 $content = str_replace('<title_to_insert/>','<input class="general_input" type="text" name="title" id="title" value="'.$news['Titolo'].'"/>',$content);
 $content = str_replace('<content_to_insert/>',$news['Contenuto'],$content);
 $content = str_replace('<file_to_insert/>','',$content);
+$content = str_replace('<type_to_insert/>','',$content);
+$content = str_replace('<id_to_insert/>','',$content);
 $content = str_replace('<submit_to_insert/>','<input id="edit_form_submit" class="general_button" type="submit" value="Modifica" name="submitEditNews"/>',$content);
 
 $DOM = str_replace('<page_to_insert/>',$content,$DOM);

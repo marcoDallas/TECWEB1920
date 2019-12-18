@@ -82,7 +82,8 @@ $content = str_replace('<file_to_insert/>','<img id="preview" src="'.$path.'" al
 $content = str_replace('<submit_to_insert/>','<input id="edit_form_submit" class="general_button" type="submit" value="Modifica" name="writeEdits"/>',$content);
 if($edit)
     $content = str_replace('<id_to_insert/>','<input type="hidden" value="'.$_POST['id'].'" name="id"/>',$content);
-
+else
+    $content = str_replace('<id_to_insert/>','',$content);
 $DOM = str_replace('<page_to_insert/>',$content,$DOM);
 $DOM = str_replace('<login_admin_to_insert/>',Print_content::admin_form(),$DOM);
 
