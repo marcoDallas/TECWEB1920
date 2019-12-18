@@ -7,7 +7,7 @@ require_once('backend/print_news.php');
 $DOM = file_get_contents('../html/template.html');
 
 $DOM = str_replace('<title_page_to_insert/>','Fallback',$DOM);
-$DOM = str_replace('<no_index_to_insert/>','<meta name="robots" content="noindex">',$DOM);
+$DOM = str_replace('<no_index_to_insert/>','<meta name="robots" content="noindex"/>',$DOM);
 $DOM = str_replace('<login_error_to_insert/>',Admin::init_admin(),$DOM);
 $DOM = str_replace('<logo_to_insert/>',Print_content::logo(Utilities::get_page_name()),$DOM);
 $DOM = str_replace('<title_h1_to_insert/>','Come e quando puoi contattarci',$DOM);
