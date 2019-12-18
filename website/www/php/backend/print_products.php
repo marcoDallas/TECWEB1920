@@ -84,10 +84,10 @@ class Print_products{
                 $nextpage=$_GET['page']+1;
                 if($_GET['page']>1){
                     $previouspage=$_GET['page']-1;
-                    $content.='<a class="general_button anchor_button" href="?type='.$_GET['type'].'&page='.$previouspage.'">Pagina precedente</a>';
+                    $content.='<a class="general_button anchor_button" href="?type='.$_GET['type'].'&amp;page='.$previouspage.'">Pagina precedente</a>';
                 }
                 if(array_slice($arr,$nextpage.'0'-10,10))
-                    $content.='<a class="general_button anchor_button" href="?type='.$_GET['type'].'&page='.$nextpage.'">Pagina successiva</a>';
+                    $content.='<a class="general_button anchor_button" href="?type='.$_GET['type'].'&amp;page='.$nextpage.'">Pagina successiva</a>';
 
                 $content.='</div>';
             }
