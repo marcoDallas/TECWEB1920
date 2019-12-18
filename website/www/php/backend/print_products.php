@@ -49,7 +49,7 @@ class Print_products{
                 if(!strcmp($prodotto['Immagine'],''))
                     $content.='<p>Forse l\'admin non ha inserito la foto <abbr title="cosa triste">:\'(</abbr></p>';
                 else
-                    $content.='<img src="'.$prodotto['Immagine'].'" alt=""/>';
+                    $content.='<img class="product_image" src="'.$prodotto['Immagine'].'" alt=""/>';
                                     
                 $content.='</div>
 

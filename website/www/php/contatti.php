@@ -33,6 +33,7 @@ else
 
 $DOM = str_replace('<timetable_to_insert/>','',$DOM);
 $DOM = str_replace('<page_to_insert/>',file_get_contents('../html/contatti.html'),$DOM);
+$DOM = str_replace('<footer_to_replace/>','<footer id="footer" class="box full_column print_hide">',$DOM);
 $DOM = str_replace('<login_admin_to_insert/>',Print_content::admin_form(),$DOM);
 
 echo($DOM);
