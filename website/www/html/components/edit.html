@@ -2,19 +2,32 @@
     <h2><title_h2_to_insert/></h2>
      <prev_page_to_insert/>
             <fieldset>
-                <legend><legend_to_insert/></legend>
+                <legend><legend_to_insert/> </legend>
+
+                <p>Si invita l'amministratore a collaborare per mantenere l'accessibilità(1) e semanticità(2)(3) al sito seguendo queste istruzioni:
+                    <ol>
+                        <li>Inserire una parola in lingua straniera con la sintassi: [lingua=testo] (ex. [en=hello])</li>
+                        <li>Inserire una parola o frase in grassetto con la sintassi: [*testo*] (ex. [*Maestro*])</li>
+                        <li>Inserire una parola o frase in corsivo con la sintassi: [-testo-] (ex. [-Maestro-])</li>
+                    </ol>
+                    Nel titolo (2) e (3) per ovvi motivi non possono essere utilizzati.
+                    
+                </p>
+                <p>I campi contrassegnati con (*) sono obbligatori.</p>
                 <div class="input_line">
-                    <label for="title">Titolo: </label>
+                    <label for="title">Titolo*: </label>
                     <title_to_insert/><span class="input_suggestion">(minimo 3 caratteri)</span>
                 </div>
                 <file_to_insert/>
                 <div class="input_textarea">
-                <label for="description">Descrizione: <span class="input_suggestion">(minimo 20 caratteri)</span></label>
+                <label for="description">Descrizione*: <span class="input_suggestion">(minimo 20 caratteri)</span></label>
+                
                 <textarea class="general_input general_textarea" rows="12" cols="70" name="description" id="description"><content_to_insert/></textarea>
                 <type_to_insert/>
                 <id_to_insert/>
                 </div>
                 <submit_to_insert/>
+                <input class="general_button" type="reset" value="Ripristina" name="reset"/>
             </fieldset>
         </form>
     </div>
