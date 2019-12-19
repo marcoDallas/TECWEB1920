@@ -19,7 +19,7 @@ class Print_products{
         if(Admin::verify()){
             $content.='<form class="general_form inline" method="post" action="modifica_prodotto.php">
                         <p>
-                         <input type="hidden" name="prevpage" value="'.$_SERVER['REQUEST_URI'].'"/>
+                         <input type="hidden" name="prevpage" value="'.htmlentities($_SERVER['REQUEST_URI']).'"/>
                          <input type="hidden" name="type" value="'.$_GET['type'].'"/>
                          <input class="general_button" type="submit" name="add" value="Aggiungi Prodotto"/>
                         </p> 

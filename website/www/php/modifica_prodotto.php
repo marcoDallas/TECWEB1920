@@ -59,7 +59,7 @@ if($edit)
 
 $content = file_get_contents('../html/components/edit.html');
 $content = str_replace('<title_h2_to_insert/>','Da questa pagina puoi aggiungere/modificare un prodotto',$content);
-$content = str_replace('<prev_page_to_insert/>','<form enctype="multipart/form-data" id="edit_form" class="general_form" method="post" action="'.$_POST['prevpage'].'">',$content);
+$content = str_replace('<prev_page_to_insert/>','<form enctype="multipart/form-data" id="edit_form" class="general_form" method="post" action="'.htmlentities($_POST['prevpage']).'">',$content);
 if($edit)
     $input="Modifica ".$product['Nome'];
 else $input="Aggiungi Prodotto";

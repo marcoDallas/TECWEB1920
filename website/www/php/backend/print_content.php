@@ -60,7 +60,7 @@ class Print_content{
         require_once('sessions.php');
         if(Sessions::session_exists('admin')){
             $content ='<div class="box admin_column">
-                            <form class="general_form" method="post" action="'.$_SERVER['REQUEST_URI'].'">
+                            <form class="general_form" method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">
                                 <fieldset id="fieldset_login">
                                 <legend>Benvenuto amministratore!</legend>
                                     <div class="input_line">
