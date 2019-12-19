@@ -25,10 +25,10 @@ class Print_news{
 
     public static function admin_zone(){
         return '<form class="general_form" method="post" action="modifica_news.php">
-                 <p>
+                 <div>
                   <input type="hidden" name="prevpage" value="'.htmlentities($_SERVER['REQUEST_URI']).'"/>
                   <input class="general_button" type="submit" name="editNews" value="Modifica news" tabindex="0"/>
-                 </p>
+                 </div>
                 </form>';
     }
 }
