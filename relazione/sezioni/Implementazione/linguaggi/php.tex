@@ -28,4 +28,6 @@ Per questo è fornita una classe \emph{Input\_security\_check} contenente tutti 
     \item Il metodo \emph{general\_input\_check()} dopo aver richiamato il metodo di controllo generale si occupa di aggiungere uno slash a tutti i caratteri che potrebbero influire all'esecuzione di una query tramite la funzione \emph{addslashes()};
 \end{itemize}
 
+Ognuno di questi metodi si occuperà anche di verificare la lunghezza dell'input. Infatti ogni campo inserito ha una lunghezza minima e una massima.\\
+
 Test di query injection saranno descritti nella sezione test.

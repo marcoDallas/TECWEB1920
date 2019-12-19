@@ -18,7 +18,7 @@ class Edit_products{
         require_once 'backend/get_products.php';
         $path = (new Get_products())->get_image($_POST['product']);
         if(strcmp($path['Immagine'],''))
-            unlink($path['Immagine']);
+            @unlink($path['Immagine']);
         return (new Get_products())->delete_product($_POST['product']);
     }
 
