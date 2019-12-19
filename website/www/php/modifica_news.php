@@ -15,6 +15,11 @@ require_once('backend/get_products.php');
 $DOM = file_get_contents('../html/template.html');
 
 $DOM = str_replace('<title_page_to_insert/>','Modifica News',$DOM);
+
+$DOM = str_replace('<meta_title_to_insert/>','<meta name="title" content="Modifica News - Pasticceria Padovana"/>',$DOM);
+$DOM = str_replace('<meta_description_to_insert/>','<meta name="description" content="La Pasticceria Padovana, modifica delle news" />',$DOM);
+$DOM = str_replace('<meta_keyword_to_insert/>','<meta name="keywords" content="Pasticceria,Veneto,Padova,Padovana,News" />',$DOM);
+
 $DOM = str_replace('<no_index_to_insert/>','<meta name="robots" content="noindex"/>',$DOM);
 $DOM = str_replace('<login_error_to_insert/>','',$DOM);
 $DOM = str_replace('<logo_to_insert/>',Print_content::logo(Utilities::get_page_name()),$DOM);

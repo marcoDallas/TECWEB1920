@@ -12,6 +12,11 @@ require_once('backend/print_products.php');
 $DOM = file_get_contents('../html/template.html');
     
 $DOM = str_replace('<title_page_to_insert/>',$_GET['type'],$DOM);
+
+$DOM = str_replace('<meta_title_to_insert/>','<meta name="title" content="Prodotti - Pasticceria Padovana"/>',$DOM);
+$DOM = str_replace('<meta_description_to_insert/>','<meta name="description" content="La Pasticceria Padovana offre uno svariato numero di prodotti, sempre in evoluzione!" />',$DOM);
+$DOM = str_replace('<meta_keyword_to_insert/>','<meta name="keywords" content="Pasticceria,Veneto,Padova,Padovana,Prodotti,Paste,Torte,Panna,Cioccolato" />',$DOM);
+
 $DOM = str_replace('<no_index_to_insert/>','',$DOM);
 $DOM = str_replace('<login_error_to_insert/>',Admin::init_admin(),$DOM);
 $DOM = str_replace('<logo_to_insert/>',Print_content::logo(Utilities::get_page_name()),$DOM);
