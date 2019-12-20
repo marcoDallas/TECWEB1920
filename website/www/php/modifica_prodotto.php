@@ -66,16 +66,16 @@ $content = file_get_contents('../html/components/edit.html');
 $content = str_replace('<title_h2_to_insert/>','Da questa pagina puoi aggiungere/modificare un prodotto',$content);
 $content = str_replace('<prev_page_to_insert/>','<form enctype="multipart/form-data" id="edit_form" class="general_form" method="post" action="'.htmlentities($_POST['prevpage']).'">',$content);
 if($edit)
-    $input="Modifica ".$product['Nome'];
+    $input="Modifica ".Input_security_check::tag_check($product['Nome']);
 else $input="Aggiungi Prodotto";
 $content = str_replace('<legend_to_insert/>',$input,$content);
 if($edit)
-    $input=$product['Nome'];
+    $input=Input_security_check::tag_check($product['Nome']);
 else
     $input="";
 $content = str_replace('<title_to_insert/>','<input class="general_input" type="text" name="title" id="title" value="'.$input.'"/>',$content);
 if($edit)
-    $input=$product['Descrizione'];
+    $input=Input_security_check::tag_check($product['Descrizione']);
 
 $content = str_replace('<content_to_insert/>',$input,$content);
 $content = str_replace('<type_to_insert/>','<input type="hidden" name="type" value="'.substr($_POST['type'],0,-1).'a'.'"/>',$content);

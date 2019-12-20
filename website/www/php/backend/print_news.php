@@ -4,6 +4,7 @@
  */
 require_once('get_news.php');
 require_once('admin.php');
+require_once('input_security_check.php');
 
 class Print_news{
 
@@ -16,11 +17,11 @@ class Print_news{
     }
     
     public function title(){
-        return $this->content['Titolo'];
+        return Input_security_check::tag_check($this->content['Titolo']);
     }
 
     public function content(){
-        return $this->content['Contenuto'];
+        return Input_security_check::tag_check($this->content['Contenuto']);
     }
 
     public static function admin_zone(){

@@ -33,7 +33,6 @@ class Input_security_check{
         $field = Input_security_check::general_controls($field);
         $field = Input_security_check::tag_conversion_language($field);
         $field = Input_security_check::tag_conversion_emph($field);
-        echo $field;
         return addslashes($field);
     }
 
@@ -42,13 +41,12 @@ class Input_security_check{
             return FALSE;
         $field = Input_security_check::general_controls($field);
         $field = Input_security_check::tag_conversion_language($field);
-        echo $field;
         return addslashes($field);
     }
 
 
     public static function tag_conversion_language($field){
-        if (preg_match('/\[([A-Za-z]{2}?)=(.*?)\]/', $field, $output)) { 
+        while (preg_match('/\[([A-Za-z]{2}?)=(.*?)\]/', $field, $output)) { 
             $tag='<span xml:lang="'.$output[1].'">'.$output[2].'</span>';
             $field = str_replace($output[0],$tag,$field);
         }
@@ -57,11 +55,11 @@ class Input_security_check{
 
     public static function tag_conversion_emph($field){
 
-        if (preg_match('/\*(.*?)\*/', $field, $output)) {
+        while (preg_match('/\[\*(.*?)\*\]/', $field, $output)) {
             $tag = "<strong>$output[1]</strong>";
             $field = str_replace($output[0],$tag,$field);
         }
-        if (preg_match('/\-(.*?)\-/', $field, $output)) {
+        while (preg_match('/\[\-(.*?)\-\]/', $field, $output)) {
             $tag = "<em>$output[1]</em>";
             $field = str_replace($output[0],$tag,$field);
         }
@@ -69,10 +67,20 @@ class Input_security_check{
     }
 
     public static function tag_check($field){
-      
-
+        while (preg_match('/<strong>(.*?)<\/strong>/', $field, $output)){
+            $rep= "[*$output[1]*]";
+            $field = str_replace($output[0],$rep,$field);
+        }
+        while (preg_match('/<em>(.*?)<\/em>/', $field, $output)){
+            $rep= "[-$output[1]-]";
+            $field = str_replace($output[0],$rep,$field);
+        }
+        while (preg_match('/<span xml:lang="(.*?)">(.*?)<\/span>/', $field, $output)){
+            $rep= "[$output[1]=$output[2]]";
+            $field = str_replace($output[0],$rep,$field);
+        }
+        return $field;
     }
 }
-
 
 ?>
