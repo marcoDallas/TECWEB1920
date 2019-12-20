@@ -59,39 +59,11 @@ class Print_content{
     public static function admin_form(){
         require_once('sessions.php');
         if(Sessions::session_exists('admin')){
-            $content ='<div class="box admin_column">
-                            <form class="general_form" method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">
-                                <fieldset id="fieldset_login">
-                                <legend>Benvenuto amministratore!</legend>
-                                    <div class="input_line">
-                                        <input id="submit_login_form" class="general_button" type="submit" value="Esci" name="Logout"/>
-                                    </div>
-                                </fieldset>
-                            </form>
-                        </div>';
+            $content = file_get_contents('../html/components/logout_admin_form.html');
+            $content = str_replace('<form_to_insert/>','<form class="general_form" method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">',$content);
         }else{
-            $content ='<div class="box admin_column">
-                            <form class="mobile_hidden general_form" id="admin_login_form" method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">
-                                <fieldset id="fieldset_login">
-                                    <legend>Area Amministratore</legend>
-                                    <p id="login_error_ajax"></p>
-                                    <div class="input_line">
-                                        <label for="username"><span xml:lang="en">Username: </span></label>
-                                        <input class="general_input" id="username" type="text" name="username"  maxlength="20" aria-required="true"/>
-                                    </div>
-                                    <div class="input_line">
-                                        <label for="password"><span xml:lang="en">Password:  </span></label>
-                                        <input class="general_input" id="password" type="password" name="password" maxlength="20" aria-required="true"/>
-                                    </div>
-                                    <input id="submit_login_form" class="general_button" type="submit" value="Accedi" name="Login" />
-                                    
-                                    <a class="desktop_hidden general_button" id="exit_login_form" onclick="toggleLogin(this)">Esci</a>  
-                                </fieldset>
-                            </form>
-                            <div id="login_admin">
-                                <a class="desktop_hidden general_button" onclick="toggleLogin(this)">Accesso amministratore</a>   
-                            </div>                     
-                        </div>';
+            $content = file_get_contents('../html/components/admin_form.html');
+            $content = str_replace('<form_to_insert/>','<form class="mobile_hidden general_form" id="admin_login_form" method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">',$content);
         }
         return $content;
     }
