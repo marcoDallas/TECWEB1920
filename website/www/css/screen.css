@@ -327,6 +327,7 @@ dt {
 	color:white;
 	font-size:0.95em;
 	font-weight:bold;
+	min-width: fit-content;
 	padding:0.6em 2em;
 	border-radius: 4px;
 }
