@@ -45,6 +45,14 @@ class Input_security_check{
     }
 
 
+    public static function search_input_check($field){
+        $field = Input_security_check::general_controls($field);
+        if(!preg_match('/[a-zA-Z ]/i', $field))
+            return FALSE;
+        return $field;
+    }
+
+
     public static function tag_conversion_language($field){
         while (preg_match('/\[([A-Za-z]{2}?)=(.*?)\]/', $field, $output)) { 
             $tag='<span xml:lang="'.$output[1].'">'.$output[2].'</span>';
