@@ -285,10 +285,6 @@ dt {
 		padding: 1em 1em 1em 1em;
 		vertical-align: center;
 	}
-
-	.element strong {
-		display: block;
-	}
 	
 	.element img {
 		padding: 1em 1em 0.5em 0.5em;
