@@ -186,7 +186,8 @@ body {
     border: 1px solid;
     margin: 1em;
     padding: 1em;
-    text-align: center;
+	text-align: center;
+	overflow: hidden;
 }
 
 .news_title {
@@ -256,7 +257,7 @@ dt {
     width: 80%;
 }
 .hidden {
-    font-size: 0px;
+    font-size: 0;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -264,7 +265,7 @@ dt {
 
 .mobile_hidden {
     position: absolute;
-    left: -100000px;
+    left: -999999em;
     overflow: hidden;
 }
 
@@ -629,7 +630,7 @@ dt {
 	/*OVERRIDE*/
 	.mobile_hidden {
         position: relative;
-        left: 0px;
+        left: 0;
     }
 	
 	#footer img {
