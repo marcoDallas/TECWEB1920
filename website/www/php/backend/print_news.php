@@ -17,11 +17,11 @@ class Print_news{
     }
     
     public function title(){
-        return Input_security_check::tag_check($this->content['Titolo']);
+        return $this->content['Titolo'];
     }
 
     public function content(){
-        return Input_security_check::tag_check($this->content['Contenuto']);
+        return $this->content['Contenuto'];
     }
 
     public static function admin_zone(){
