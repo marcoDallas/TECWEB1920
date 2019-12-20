@@ -79,7 +79,7 @@ class Print_products{
                         </li>';
             }
             $content.='</ul>';
-            if(sizeof($arr)>10){
+            if(sizeof($arr)>7){
                 $content.='<div id="nav_page">';
                 $nextpage=$_GET['page']+1;
                 if($_GET['page']>1){
@@ -92,7 +92,8 @@ class Print_products{
                 $content.='</div>';
             }
         }else{
-            $content.='<p>Nessun prodotto trovato</p>';
+            $content.='<p>Nessun prodotto trovato</p>
+                       <img class="general_image" src="../images/img_fallback.jpg" alt="Immagine di un pasticciere in stile cartone animato" />';
         }
         $content.='</div>';
         return $content;
