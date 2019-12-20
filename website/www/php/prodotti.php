@@ -8,6 +8,7 @@ require_once('backend/print_content.php');
 require_once('backend/utilities.php');
 require_once('backend/print_news.php');
 require_once('backend/print_products.php');
+require_once('backend/input_security_check.php');
     
 $DOM = file_get_contents('../html/template.html');
     
@@ -55,13 +56,13 @@ $DOM = str_replace('<timetable_to_insert/>',file_get_contents('../html/component
 $content = new Print_products();
 if(!strcmp($_GET['type'],'Paste')){
     if(isset($_GET['search']))
-        $products = $content->print_searcheable_paste($_GET['search']);
+        $products = $content->print_searcheable_paste(Input_security_check::search_input_check($_GET['search']));
     else
         $products = $content->print_paste();
 
 }else if(!strcmp($_GET['type'],'Torte')){
     if(isset($_GET['search']))
-        $products = $content->print_searcheable_torte($_GET['search']);
+        $products = $content->print_searcheable_torte(Input_security_check::search_input_check($_GET['search']));
     else
         $products = $content->print_torte();
 }
