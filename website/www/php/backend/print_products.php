@@ -97,7 +97,7 @@ class Print_products{
             }
         }else{
             $content.='<p>Nessun prodotto trovato</p>
-                       <img class="general_image" src="../images/img_fallback.jpg" alt="Immagine di un pasticciere in stile cartone animato" />';
+                       <img class="general_image" src="../images/img_fallback_and_empty_search.jpg" alt="Immagine di un pasticcere in stile cartone animato" />';
         }
         $content.='</div>';
         return $content;
