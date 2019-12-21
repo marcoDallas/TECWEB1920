@@ -508,6 +508,24 @@ dt {
 	font-size: 0.9em;
 }
 
+/*TO TOP PROPERTIES*/
+
+.to_top{
+	font-size: 1em;
+	position:fixed;
+	bottom: .8em;
+	right: .8em;
+	
+}
+.to_top_button{
+	content: url("../images/totop.png");
+	border:solid .2em black;
+	border-radius:10em;	
+	width:2em;
+	height:2em;
+	min-height: 48px;
+	min-width: 48px;
+}
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /* TABLET */
@@ -691,5 +709,24 @@ dt {
 	.shift_down{
 		position:relative;
 		top: 4em;
+	}
+	/*OVERRIDE*/
+	.to_top{
+		font-size: 1.5em;
+		position:fixed;
+		bottom: 2em;
+		right: 2em;
+	}
+	/*OVERRIDE*/
+	.to_top_button{
+		content: url("../images/totop.png");
+		border:solid .13em black;
+		border-radius:10em;
+		width:2em;
+		height:2em;
+		transition:transform .7s ease-in-out;
+	}
+	.to_top_button:hover{
+		transform: rotate(360deg);
 	}
 }
