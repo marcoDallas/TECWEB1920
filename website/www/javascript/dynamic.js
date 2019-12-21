@@ -60,6 +60,31 @@ function input_image(){
     };
 };
 
+function print_login_error(e, errorMessage) {
+    e.preventDefault();
+    $("#login_error_ajax").text(errorMessage);
+}
+
+function handle_login_form() {
+    $('#admin_login_form').submit(function(e) {
+        
+        // controlli lato client
+
+        // invio dati al server
+        $.ajax({
+            type: "POST",
+            url: "../php/backend/admin_handler.php",
+            data: {Login: "Accedi",username: $("#username").val(),password: $("#password").val()},
+            async: false,
+            success: function(correct) {
+                if(correct != 1){
+                    print_login_error(e, correct) 
+                }      
+            }
+        });
+    });
+}
+
 $(document).ready(function(){
 
     if($("#login_error").length != 0){
@@ -69,6 +94,8 @@ $(document).ready(function(){
         $("#general_container").addClass("shift_down");
         $("#footer").addClass("shift_down");
     }
+
+    handle_login_form();
 });
 
 
@@ -80,21 +107,3 @@ function close_error(){
     $("#general_container").removeClass("shift_down");
     $("#footer").removeClass("shift_down");
 }
-$(document).ready(function() {
-    $('#admin_login_form').submit(function(e) {
-        
-        $.ajax({
-            type: "POST",
-            url: "../php/backend/admin_handler.php",
-            data: {Login: "Accedi",username: $("#username").val(),password: $("#password").val()},
-            async: false,
-            success: function(correct) {
-                if(correct != 1){
-                    e.preventDefault();
-                    $("#login_error_ajax").text(correct);
-                }
-                    
-            }
-        });
-    });
-});
