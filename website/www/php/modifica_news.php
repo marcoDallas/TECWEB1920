@@ -57,7 +57,7 @@ $content = str_replace('<content_to_insert/>',Input_security_check::tag_check($n
 $content = str_replace('<file_to_insert/>','',$content);
 $content = str_replace('<type_to_insert/>','',$content);
 $content = str_replace('<id_to_insert/>','',$content);
-$content = str_replace('<submit_to_insert/>','<input id="edit_form_submit" class="general_button" type="submit" value="Modifica" name="submitEditNews"/>',$content);
+$content = str_replace('<submit_to_insert/>','<input id="edit_form_submit" class="general_button" type="submit" value="Modifica" name="submitEditNews" aria-label="Modifica:"/>',$content);
 
 $DOM = str_replace('<page_to_insert/>',$content,$DOM);
 $DOM = str_replace('<footer_to_replace/>','<div id="footer" class="box full_column">',$DOM);
