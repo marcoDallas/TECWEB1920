@@ -253,9 +253,10 @@ dt {
 
 
 .general_image{
+	width: 80%;
     height: auto;
-    width: 80%;
 }
+
 .hidden {
     font-size: 0;
     text-indent: 100%;
@@ -290,6 +291,7 @@ dt {
 	.element img {
 		padding: 1em 1em 0.5em 0.5em;
 		width: 100%;
+		height: auto;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
@@ -301,6 +303,7 @@ dt {
 	
 	.element .img_product{
 		width: 40%;
+		height: auto;
 	}
 	
 	.element .cont_product{
@@ -520,7 +523,8 @@ dt {
 	
 	/*OVERRIDE*/
 	.element img {
-		width:auto;
+		width: 80%;
+		height: auto;
 	}
 	
 	/*OVERRIDE*/
@@ -613,9 +617,8 @@ dt {
 	
 	/*OVERRIDE*/
 	.general_image{	/*RISCRITTURA DEL MOBILE*/
-		
-		height: auto;
 		width: 60%;
+		height: auto;
 	}
 	
 	/*OVERRIDE*/
@@ -641,13 +644,6 @@ dt {
 	
 	
 	/* SOLO IN PAGINA FALLBACK*/
-	#imgFallback{
-        float: left;
-    }
-	
-	#contentFallback{
-        margin-top: 30%;
-	}
 	
 	#submit_login_form{
 		margin-left:40%;

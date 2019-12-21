@@ -41,7 +41,8 @@ h2{
     }
 
 .img_product{
-    width:20%;
+    width: 20%;
+    height: auto;
 }
 
 .cont_product{
