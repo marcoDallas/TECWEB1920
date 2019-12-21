@@ -33,6 +33,16 @@ body {
 	outline: none;
 }
 
+	#header h1{
+		font-size: 1.4em;
+        text-align: center;
+		padding: 0.4em;
+	}
+
+.title_column{
+	width: 100%;
+}
+
 #logo {
     max-height: 4em;
     max-width: 9em;
@@ -70,6 +80,7 @@ body {
 
 .menu_icon {
     border-left: 2px solid #bc5800;
+	border-bottom: 2px solid #bc5800;
     display: block;
     position: absolute;
     right: 0;
@@ -583,7 +594,7 @@ dt {
 		width: 30%;
 	}
 	
-	
+	/*OVERRIDE*/
 	#header h1{
 		font-size: 1.7em;
         text-align: right;
