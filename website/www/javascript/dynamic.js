@@ -60,28 +60,38 @@ function input_image(){
     };
 };
 
+
 function print_login_error(e, errorMessage) {
     e.preventDefault();
     $("#login_error_ajax").text(errorMessage);
 }
 
+
+function perform_client_login_check(e) {
+
+    return true;
+}
+
+
+function process_server_login(e) {
+    $.ajax({
+        type: "POST",
+        url: "../php/backend/admin_handler.php",
+        data: {Login: "Accedi",username: $("#username").val(),password: $("#password").val()},
+        async: false,
+        success: function(correct) {
+            if(correct != 1){
+                print_login_error(e, correct);
+            } 
+        }
+    });
+}
+
+
 function handle_login_form() {
     $('#admin_login_form').submit(function(e) {
-        
-        // controlli lato client
-
-        // invio dati al server
-        $.ajax({
-            type: "POST",
-            url: "../php/backend/admin_handler.php",
-            data: {Login: "Accedi",username: $("#username").val(),password: $("#password").val()},
-            async: false,
-            success: function(correct) {
-                if(correct != 1){
-                    print_login_error(e, correct) 
-                }      
-            }
-        });
+        if (perform_client_login_check(e))
+            process_server_login(e);
     });
 }
 
