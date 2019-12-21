@@ -85,11 +85,9 @@ if($edit){
 }
 $content = str_replace('<file_to_insert/>','<img id="preview" src="'.$path.'" alt=""/><div class="input_line">
                                             <label for="image">Cambia immagine: </label>
-                                            <span class="hidden">Scegli fail</span>
-                                            <input name="image" type="file" id="image" onclick="input_image(this)"/>
+                                            <input name="image" type="file" id="image" onclick="input_image(this)" aria-label="Scegli fail"/>
                                             </div><input type="hidden" name="oldimage" value="'.$path.'"/>',$content);
-$content = str_replace('<submit_to_insert/>','<span class="hidden">Modifica:</span>
-                                              <input id="edit_form_submit" class="general_button" type="submit" value="Modifica" name="writeEdits"/>',$content);
+$content = str_replace('<submit_to_insert/>','<input id="edit_form_submit" class="general_button" type="submit" value="Modifica" name="writeEdits" aria-label="Modifica"/>',$content);
 if($edit)
     $content = str_replace('<id_to_insert/>','<input type="hidden" value="'.$_POST['id'].'" name="id"/>',$content);
 else

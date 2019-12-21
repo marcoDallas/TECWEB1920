@@ -17,12 +17,11 @@ class Print_products{
         $content='<div id="content" class="body_column content">
                     <h2>'.$_GET['type'].'</h2>';
         if(Admin::verify()){
-            $content.='<span class="hidden">Aggiungi prodotto</span>
-                       <form class="general_form inline" method="post" action="modifica_prodotto.php">
+            $content.='<form class="general_form inline" method="post" action="modifica_prodotto.php">
                         <div>
                          <input type="hidden" name="prevpage" value="'.htmlentities($_SERVER['REQUEST_URI']).'"/>
                          <input type="hidden" name="type" value="'.$_GET['type'].'"/>
-                         <input class="general_button" type="submit" name="add" value="Aggiungi Prodotto"/>
+                         <input class="general_button" type="submit" name="add" value="Aggiungi Prodotto" aria-label="Aggiungi prodotto"/>
                         </div> 
                        </form>';
         }
@@ -31,8 +30,7 @@ class Print_products{
                      <label for="cercaProdotti">Cerca '.$_GET['type'].': </label>
                      <input class="general_input" type="text" minlength="3" maxlength="40" id="cercaProdotti" name="search"/>
                      <input type="hidden" name="type" value="'.$_GET['type'].'"/>
-                     <span class="hidden">Cerca</span>
-                     <input class="general_button" type="submit" value="cerca"/>
+                     <input class="general_button" type="submit" value="cerca" aria-label="Cerca"/>
                     </div>    
                 </form>';
         if($arr){
@@ -62,20 +60,18 @@ class Print_products{
                                     <p>'.$prodotto['Descrizione'].'</p>
                                 </div>';
                 if(Admin::verify()){
-                    $content.='<span class="hidden">Rimuovi prodotto</span>
-                               <form class="general_form" method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">
+                    $content.='<form class="general_form" method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">
                                 <div>
                                  <input type="hidden" name="product" value="'.$prodotto['Codice'].'"/>
-                                 <input class="general_button" type="submit" name="remove" value="Rimuovi prodotto"/>
+                                 <input class="general_button" type="submit" name="remove" value="Rimuovi prodotto" aria-label="Rimuovi prodotto"/>
                                 </div> 
                                </form>
-                               <span class="hidden">Modifica prodotto</span>
                                <form class="general_form" method="post" action="modifica_prodotto.php">
                                 <div>
                                  <input type="hidden" name="id" value="'.$prodotto['Codice'].'"/>
                                  <input type="hidden" name="prevpage" value="'.htmlentities($_SERVER['REQUEST_URI']).'"/>
                                  <input type="hidden" name="type" value="'.$_GET['type'].'"/>
-                                 <input class="general_button" type="submit" name="edit" value="Modifica prodotto"/>
+                                 <input class="general_button" type="submit" name="edit" value="Modifica prodotto" aria-label="Modifica prodotto"/>
                                 </div> 
                             </form>';
                 }
