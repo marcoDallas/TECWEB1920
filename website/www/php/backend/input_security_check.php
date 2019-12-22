@@ -46,6 +46,8 @@ class Input_security_check{
 
 
     public static function search_input_check($field){
+        if(strlen($field) < 3  ||  strlen($field) > 40)
+            return FALSE;
         $field = Input_security_check::general_controls($field);
         if(!preg_match('/[a-zA-Z ]/i', $field))
             return FALSE;
