@@ -66,19 +66,23 @@ function print_login_error(e, errorMessage) {
 function username_check() {
     var strLength = $("#username").val().trim().length;
     if (strLength < 5 || strLength > 20)
-        return false;
+        return "Lunghezza username non valida!";
     
     var regex = /[a-z_\-0-9]/i;
-    return regex.test($("#username").val());
+    if (!regex.test($("#username").val()))
+        return "Lo username contiene simboli non consentiti!";
+    return "";
 }
 
 function password_check() {
     var strLength = $("#password").val().trim().length;
     if (strLength < 5 || strLength > 20)
-        return false;
+        return "Lunghezza password non valida!";
     
     var regex = /[a-z_!?\-0-9]/i;
-    return regex.test($("#password").val());
+    if (!regex.test($("#password").val()))
+        return "La password contiene simboli non consentiti!";
+    return "";
 }
 
 function search_input_check() {
@@ -92,10 +96,14 @@ function search_input_check() {
 }
 
 function perform_client_login_check(e) {
-    if (username_check() && password_check())
-        return true;
+    var errorMessage = username_check();
+    if ( errorMessage === "") 
+        errorMessage = password_check();
     
-    print_login_error(e, "Hai inserito simboli non consentiti");   
+    if ( errorMessage === "")
+        return true;
+
+    print_login_error(e, errorMessage);
     return false;
 }
 
