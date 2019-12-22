@@ -73,7 +73,7 @@ if($edit)
     $input=Input_security_check::tag_check($product['Nome']);
 else
     $input="";
-$content = str_replace('<title_to_insert/>','<input class="general_input" type="text" minlength="3" maxlength="40" name="title" id="title" value="'.$input.'"/>',$content);
+$content = str_replace('<title_to_insert/>','<input class="general_input" type="text" maxlength="40" name="title" id="title" value="'.$input.'"/>',$content);
 if($edit)
     $input=Input_security_check::tag_check($product['Descrizione']);
 
