@@ -2,6 +2,9 @@
 /*
  * Definisce metodi che elaborano parti di pagine
  */
+require_once('backend/utilities.php');
+require_once('sessions.php');
+
 class Print_content{
 
     public static function logo($page){
@@ -54,13 +57,14 @@ class Print_content{
         }
         return $content;
     }
-
-
+    
     public static function admin_form(){
-        require_once('sessions.php');
         if(Sessions::session_exists('admin')){
             $content = file_get_contents('../html/components/logout_admin_form.html');
-            $content = str_replace('<form_to_insert/>','<form class="general_form" method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">',$content);
+            if(!strcmp(Utilities::shrink_page($_SERVER['REQUEST_URI']),'modifica_prodotto') || !strcmp(Utilities::shrink_page($_SERVER['REQUEST_URI']),'modifica_news'))
+                $content = str_replace('<form_to_insert/>','<form class="general_form" method="post" action="home.php">',$content);
+            else
+                $content = str_replace('<form_to_insert/>','<form class="general_form" method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">',$content);
         }else{
             $content = file_get_contents('../html/components/admin_form.html');
             $content = str_replace('<form_to_insert/>','<form class="mobile_hidden general_form" id="admin_login_form" method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">',$content);
