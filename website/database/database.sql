@@ -7,8 +7,8 @@ DROP TABLE IF EXISTS Recensione;
 DROP TABLE IF EXISTS News;
 
 CREATE TABLE Utente (
-	Email VARCHAR(50) PRIMARY KEY,
-	Pwd VARCHAR(10) NOT NULL,
+	Username VARCHAR(20) PRIMARY KEY,
+	Pwd VARCHAR(20) NOT NULL,
 	Nome VARCHAR(50) NOT NULL,
 	Cognome VARCHAR(50) NOT NULL,
 	DataNascita DATE NOT NULL
@@ -26,13 +26,13 @@ CREATE TABLE Prodotto (
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE Recensione (
-	EmailUtente CHAR(50),
+	UsernameUtente CHAR(50),
 	CodiceProdotto INT(11),
 	Testo VARCHAR(500),
 	Valutazione TINYINT,
-	PRIMARY KEY (EmailUtente, CodiceProdotto),
+	PRIMARY KEY (UsernameUtente, CodiceProdotto),
 	FOREIGN KEY (CodiceProdotto) REFERENCES Prodotto(Codice) ON DELETE CASCADE,
-	FOREIGN KEY (EmailUtente) REFERENCES Utente(Email) ON DELETE CASCADE
+	FOREIGN KEY (UsernameUtente) REFERENCES Utente(Username) ON DELETE CASCADE
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE News (
