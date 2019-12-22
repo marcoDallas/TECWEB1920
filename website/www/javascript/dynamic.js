@@ -60,16 +60,53 @@ function input_image(){
     };
 };
 
-
 function print_login_error(e, errorMessage) {
     e.preventDefault();
     $("#login_error_ajax").text(errorMessage);
 }
 
 
-function perform_client_login_check(e) {
+function username_check() {
+    var strLength = $("#username").val().trim().length;
+    if (strLength < 5 || strLength > 20)
+        return false;
+    
+    var regex = /[a-z_\-0-9]/i;
+    return regex.test($("#username").val());
+}
 
+
+function password_check() {
+    var strLength = $("#password").val().trim().length;
+    if (strLength < 5 || strLength > 20)
+        return false;
+    
+    var regex = /[a-z_!?\-0-9]/i;
+    return regex.test($("#password").val());
+}
+
+
+function description_input_check() {
     return true;
+}
+
+
+function title_input_check() {
+    return true;
+}
+
+
+function search_input_check() {
+    return true;
+}
+
+
+function perform_client_login_check(e) {
+    if (username_check() && password_check())
+        return true;
+    
+    print_login_error(e, "Hai inserito simboli non consentiti");   
+    return false;
 }
 
 
@@ -94,6 +131,7 @@ function handle_login_form() {
             process_server_login(e);
     });
 }
+
 
 $(document).ready(function(){
 
