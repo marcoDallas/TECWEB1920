@@ -52,7 +52,7 @@ $content = file_get_contents('../html/components/edit.html');
 $content = str_replace('<title_h2_to_insert/>','Da questa pagina puoi modificare la news laterale',$content);
 $content = str_replace('<prev_page_to_insert/>','<form enctype="multipart/form-data" id="edit_form" class="general_form" method="post" action="'.$_POST['prevpage'].'">',$content);
 $content = str_replace('<legend_to_insert/>','Modifica News',$content);
-$content = str_replace('<title_to_insert/>','<input class="general_input" type="text" minlength="3" maxlength="40" name="title" id="title" value="'.Input_security_check::tag_check($news['Titolo']).'"/>',$content);
+$content = str_replace('<title_to_insert/>','<input class="general_input" type="text" maxlength="40" name="title" id="title" value="'.Input_security_check::tag_check($news['Titolo']).'"/>',$content);
 $content = str_replace('<content_to_insert/>',Input_security_check::tag_check($news['Contenuto']),$content);
 $content = str_replace('<file_to_insert/>','',$content);
 $content = str_replace('<type_to_insert/>','',$content);
