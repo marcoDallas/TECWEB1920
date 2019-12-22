@@ -86,16 +86,6 @@ function password_check() {
 }
 
 
-function description_input_check() {
-    return true;
-}
-
-
-function title_input_check() {
-    return true;
-}
-
-
 function search_input_check() {
     $("#cercaProdotti").keypress(function(e)
     {
