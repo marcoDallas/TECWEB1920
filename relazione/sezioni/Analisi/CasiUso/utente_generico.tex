@@ -3,11 +3,11 @@ L'utente generico dispone dei seguenti casi d'uso:
 \begin{itemize}
 	\item \hyperref[par:VisHome]{ Visualizzazione pagina "Home" (\ref{par:VisHome})};
 	\item \hyperref[par:VisPaste]{ Visualizzazione pagina "Paste"(\ref{par:VisPaste})};
-	\item \hyperref[par:CerPaste]{ Cerca prodotti in "Paste" (\ref{par:CerPaste})};
-	\item \hyperref[par:PrevNextPaste]{ Saltare alla pagina precedente/successiva in "Paste" (\ref{par:PrevNextPaste})};
+	\item \hyperref[par:CerPaste]{ Rierca prodotti in "Paste" (\ref{par:CerPaste})};
+	\item \hyperref[par:PrevNextPaste]{ Scorrimento pagine in "Paste" (\ref{par:PrevNextPaste})};
 	\item \hyperref[par:VisTorte]{ Visualizzazione pagina "Torte" (\ref{par:VisTorte})};
-	\item \hyperref[par:CerTorte]{ Cerca prodotti in "Torte" (\ref{par:CerTorte})};
-	\item \hyperref[par:PrevNextTorte]{ Saltare alla pagina precedente/successiva in "Torte" (\ref{par:PrevNextTorte})};
+	\item \hyperref[par:CerTorte]{ Ricerca prodotti in "Torte" (\ref{par:CerTorte})};
+	\item \hyperref[par:PrevNextTorte]{ Scorrimento pagine in "Torte" (\ref{par:PrevNextTorte})};
 	\item \hyperref[par:VisStoria]{ Visualizzazione pagina "Storia" (\ref{par:VisStoria})};
 	\item \hyperref[par:VisContatti]{ Visualizzazione pagina "Contatti" (\ref{par:VisContatti})};
 \end{itemize}
@@ -27,18 +27,25 @@ All'interno di questa pagina l'utente può visualizzare una breve presentazione 
 L'utente generico può entrare nella pagina \emph{Paste} cliccando la sezione "Paste" presente nel menu laterale.
 In questa pagina vengono visualizzate al massimo 7 paste alla volta. Ogni pasta conterrà un'immagine, il titolo e una descrizione.\\ 
 
-\paragraph{Cerca prodotti in "Paste"}\mbox{}\\
+\paragraph{Ricerca prodotti in "Paste"}\mbox{}\\
 \label{par:CerPaste}
 Una volta entrato nella pagina \emph{Paste}, si potrà visualizzare una barra di ricerca posta all'inizio del content.\\
-L'utente potrà cercare nella lista il prodotto desiderato inserendo il titolo, o una sottostringa del titolo, della pasta all'interno della barra di ricerca. Cliccando sul bottone \emph{cerca} visualizzerà instantaneamente le paste desiderate.
+L'utente può cercare il prodotto desiderato inserendo il titolo, o una sottostringa del titolo, della pasta all'interno della barra di ricerca. Cliccando sul bottone 
+\emph{cerca} visualizzerà instantaneamente le paste desiderate.
 
-\paragraph{Saltare alla pagina precedente/successiva in "Paste"}\mbox{}\\
+\paragraph{Scorrimento pagine in "Paste"}\mbox{}\\
 \label{par:PrevNextPaste}
-Una volta entrato nella pagina \emph{Paste}, l'utente può scorrere tutta la pagina arrivando fino alla fine del contenuto.\\
-Se si trova nella prima pagina e ci sono meno di 7 paste nel database, allora non verrà visualizzato nient'altro, altrimenti tra l'ultimo prodotto e il footer sarà presente un bottone \emph{Pagina successiva} che offre la possibilità di andare avanti di una pagina.\\
+Una volta entrato nella pagina \emph{Paste}, l'utente può scrollare tutta la pagina arrivando fino alla fine del contenuto.\\
+Sono due le possibilità che si possono verificare:
+\begin{enumerate}
+	\item se si trova nella prima pagina e ci sono meno di 7 paste nel database, non si visualizzerà alcuna modifica grafica alla pagina;
+	\item altrimenti tra l'ultimo prodotto visualizzabile e il footer, nel content sarà presente un bottone \emph{Pagina successiva} che offre la possibilità di andare avanti 
+	di una pagina.
+\end{enumerate}	
 Ammesso che si verifichi il secondo caso, alla pagina successiva possono verificarsi due casi:
 \begin{itemize}
-	\item se rimangono ancora più di 7 prodotti da visualizzare, allora si presenterà il bottone \emph{Pagina successiva} affiancato alla sua sinistra dal bottone \emph{Pagina precedente}, che offre la possibilità di tornare indietro di una pagina;
+	\item se rimangono ancora più di 7 prodotti da visualizzare, allora si presenterà il bottone \emph{Pagina successiva} affiancato alla sua sinistra dal 
+	bottone \emph{Pagina precedente}, che offre la possibilità di tornare indietro di una pagina;
 	\item in caso contrario, si visualizzerà solo il bottone \emph{Pagina precedente}.
 \end{itemize}	
 
@@ -47,26 +54,32 @@ Ammesso che si verifichi il secondo caso, alla pagina successiva possono verific
 L'utente generico può entrare nella pagina \emph{Torte} cliccando la sezione "Torte" presente nel menu laterale.
 In questa pagina vengono visualizzate al massimo 7 torte alla volta. Ogni pasta conterrà un'immagine, il titolo e una descrizione.\\
 
-\paragraph{Cerca prodotti in "Torte"}\mbox{}\\
+\paragraph{Ricerca prodotti in "Torte"}\mbox{}\\
 \label{par:CerTorte}
 Una volta entrato nella pagina \emph{Torte}, si potrà visualizzare una barra di ricerca posta all'inizio del content.\\
-L'utente potrà cercare nella lista il prodotto desiderato inserendo il titolo, o una sottostringa del titolo, della torta all'interno della barra di ricerca. Cliccando sul bottone \emph{cerca} visualizzerà instantaneamente le torte desiderate.
+L'utente può cercare il prodotto desiderato inserendo il titolo, o una sottostringa del titolo, della torta all'interno della barra di ricerca. Cliccando sul bottone 
+\emph{cerca} visualizzerà instantaneamente le torte desiderate.
 
-\paragraph{Saltare alla pagina precedente/successiva in "Torte"}\mbox{}\\
+\paragraph{Scorrimento pagine in "Torte"}\mbox{}\\
 \label{par:PrevNextTorte}
-Una volta entrato nella pagina \emph{Torte}, l'utente può scorrere tutta la pagina arrivando fino alla fine del contenuto.\\
-Se si trova nella prima pagina e ci sono meno di 7 torte nel database, allora non verrà visualizzato nient'altro, altrimenti tra l'ultimo prodotto e il footer sarà presente un bottone \emph{Pagina successiva} che offre la possibilità di andare avanti di una pagina.\\
+Una volta entrato nella pagina \emph{Torte}, l'utente può scrollare tutta la pagina arrivando fino alla fine del contenuto.\\
+Sono due le possibilità che si possono verificare:
+\begin{enumerate}
+	\item se si trova nella prima pagina e ci sono meno di 7 torte nel database, non si visualizzerà alcuna modifica grafica alla pagina;
+	\item altrimenti tra l'ultimo prodotto visualizzabile e il footer, nel content sarà presente un bottone \emph{Pagina successiva} che offre la possibilità di andare avanti 
+	di una pagina.
+\end{enumerate}	
 Ammesso che si verifichi il secondo caso, alla pagina successiva possono verificarsi due casi:
 \begin{itemize}
-	\item se rimangono ancora più di 7 prodotti da visualizzare, allora si presenterà il bottone \emph{Pagina successiva} affiancato alla sua sinistra dal bottone \emph{Pagina precedente}, che offre la possibilità di tornare indietro di una pagina;
+	\item se rimangono ancora più di 7 prodotti da visualizzare, allora si presenterà il bottone \emph{Pagina successiva} affiancato alla sua sinistra dal 
+	bottone \emph{Pagina precedente}, che offre la possibilità di tornare indietro di una pagina;
 	\item in caso contrario, si visualizzerà solo il bottone \emph{Pagina precedente}.
 \end{itemize}	
 
 \paragraph{Visualizzazione pagina "Storia"}\mbox{}\\
 \label{par:VisStoria}
 Attraverso questa pagina l'utente potrà visualizzare la storia della Pasticceria Padovana.\\
-Vengono fornite informazioni riguardanti la nascita dell'azienda e l'evoluzione del laboratorio,
-nonchè dei nostri pasticceri che da sempre deliziano il palato di moltissimi clienti.\\
+Vengono fornite informazioni riguardanti la nascita dell'azienda e l'evoluzione del laboratorio, nonchè dei nostri pasticceri che da sempre deliziano il palato di moltissimi clienti.\\
 Non mancano riferimenti ai prestigiosi premi vinti nel corso degli anni.
 
 \paragraph{Visualizzazione pagina "Contatti"}\mbox{}\\
@@ -74,7 +87,7 @@ Non mancano riferimenti ai prestigiosi premi vinti nel corso degli anni.
 L'utente generico può entrare nella pagina \emph{Contatti} in diversi modi: se si trova in "Home","Paste","Torte","Storia"
 \begin{itemize}
 	\item cliccando la sezione "Contatti" presente nel menu laterale; 
-	\item cliccando sul link \emph{Vieni a trovarci!} presente in un contenitore posto sotto il contenitore degli orari posto sotto il menu;
+	\item cliccando sul link \emph{Vieni a trovarci!} presente in un box, posto sotto il box degli orari che anch'esso è posto sotto il menu;
 \end{itemize}
 All'interno di questa pagina sono contenute le informazioni relative ai vari contatti aziendali (telefono e mail),
 gli orari di apertura e l'ubicazione dell'attività su Google Maps.
