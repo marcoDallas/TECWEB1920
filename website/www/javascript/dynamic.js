@@ -97,7 +97,13 @@ function title_input_check() {
 
 
 function search_input_check() {
-    return true;
+    $("#cercaProdotti").keypress(function(e)
+    {
+        var value = String.fromCharCode(e.keyCode);
+        if (!value.match(/[a-zA-Z ]/i)) { 
+            return false;
+        }
+    });
 }
 
 
@@ -144,6 +150,7 @@ $(document).ready(function(){
     }
 
     handle_login_form();
+    search_input_check();
 });
 
 
