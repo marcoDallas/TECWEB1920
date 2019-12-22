@@ -11,7 +11,6 @@ function toggleMobileVisibility(element) {
     }
 }
 
-
 function toggleLogin(icon) {
     var toShow = document.getElementById("admin_login_form");
     if(toShow.classList.contains("mobile_hidden")){
@@ -27,7 +26,6 @@ function toggleLogin(icon) {
     }
 
 }
-
 
 function input_image(){
     document.getElementById("image").onchange = function () {
@@ -65,7 +63,6 @@ function print_login_error(e, errorMessage) {
     $("#login_error_ajax").text(errorMessage);
 }
 
-
 function username_check() {
     var strLength = $("#username").val().trim().length;
     if (strLength < 5 || strLength > 20)
@@ -75,7 +72,6 @@ function username_check() {
     return regex.test($("#username").val());
 }
 
-
 function password_check() {
     var strLength = $("#password").val().trim().length;
     if (strLength < 5 || strLength > 20)
@@ -84,7 +80,6 @@ function password_check() {
     var regex = /[a-z_!?\-0-9]/i;
     return regex.test($("#password").val());
 }
-
 
 function search_input_check() {
     $("#cercaProdotti").keypress(function(e)
@@ -96,7 +91,6 @@ function search_input_check() {
     });
 }
 
-
 function perform_client_login_check(e) {
     if (username_check() && password_check())
         return true;
@@ -104,7 +98,6 @@ function perform_client_login_check(e) {
     print_login_error(e, "Hai inserito simboli non consentiti");   
     return false;
 }
-
 
 function process_server_login(e) {
     $.ajax({
@@ -120,14 +113,12 @@ function process_server_login(e) {
     });
 }
 
-
 function handle_login_form() {
     $('#admin_login_form').submit(function(e) {
         if (perform_client_login_check(e))
             process_server_login(e);
     });
 }
-
 
 $(document).ready(function(){
 
@@ -142,7 +133,6 @@ $(document).ready(function(){
     handle_login_form();
     search_input_check();
 });
-
 
 function close_error(){
     $('#login_error').addClass('hide');
