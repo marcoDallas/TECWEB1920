@@ -86,7 +86,7 @@ class Print_products{
                     $previouspage=$_GET['page']-1;
                     $content.='<a class="general_button anchor_button" href="?type='.$_GET['type'].'&amp;page='.$previouspage.'">Pagina precedente</a>';
                 }
-                if(array_slice($arr,intval($_GET['page'])*7-7,7))
+                if((sizeof($arr)-$_GET['page']*7) > 0)
                     $content.='<a class="general_button anchor_button" href="?type='.$_GET['type'].'&amp;page='.$nextpage.'">Pagina successiva</a>';
 
                 $content.='</div>';
