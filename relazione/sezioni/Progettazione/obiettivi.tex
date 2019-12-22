@@ -1,15 +1,30 @@
 Il progetto \emph{Pasticceria Padovana} si prefigge di rispettare le specifiche tecniche richieste, in particolare:
 \begin{itemize}
-	\item \textbf{Separazione tra contenuto, presentazione e comportamento:} primo requisito fondamentale. Il contenuto è stato progettato in modo statico in XHTML 1.0, la presentazione in CSS3 e il comportamento è gestito in modo dinamico con PHP7 e JavaScript.\\
+	\item \textbf{Separazione tra contenuto, presentazione e comportamento:} primo requisito fondamentale. 
+	Il contenuto è stato progettato in modo statico in XHTML 1.0, la presentazione in CSS3 e il comportamento è gestito in modo dinamico con PHP7 e JavaScript.\\
 	E' stato scelto di non progettare il contenuto in HTML5 per il fatto che HTML5 non ha raggiunto la piena compatibilità con i browser attualmente in circolazione.\\
-	\item \textbf{Accessibilità:} tutte le categorie di utenti devono poter utilizzare il sito senza particolari ostacoli.\\ Il sito è stato costruito per organizzare i propri contenuti in modo da poter essere facilmente reperiti da qualsiasi utente, in modo da non generare disorientamento e sovraccarico cognitivo. Le implementazioni più importanti sono:
+	\item \textbf{Accessibilità:} tutte le categorie di utenti devono poter utilizzare il sito senza particolari ostacoli.\\ 
+	Il sito è stato costruito per organizzare i propri contenuti in modo da poter essere facilmente reperiti da qualsiasi utente, 
+	in modo da non generare disorientamento e sovraccarico cognitivo.\\ 
+	Le implementazioni più importanti sono:
 	\begin{itemize}
-		\item attributo \emph{alt} nelle immagini, che rende disponibile un testo alternativo in caso in cui l'immagine non venga caricata.\\ Il testo alternativo deve essere coerente con l'immagine visualizzata: se è uno sfondo si inserisce un testo vuoto, altrimenti si dà una breve descrizione.
-		\item link \emph{Salta il contenuto}, nascosto di defualt ma visibile agli screen reader: implementato prima delle voci dell'intero menu nel caso non si voglia fare tab su tutte le voci del menu e saltare direttamente al contenuto della pagina.\\
+		\item attributo \emph{alt} nelle immagini, che rende disponibile un testo alternativo in caso in cui l'immagine non venga caricata.\\ 
+		Il testo alternativo deve essere coerente con l'immagine visualizzata: se è un'immagine decorativa e priva di significato si inserisce un testo vuoto, 
+		altrimenti si scrive una breve descrizione.
+		\item link \emph{Salta il contenuto}, nascosto di default ma visibile agli screen reader. E' la prima voce del menu, viene utilizzata nel caso in cui l'utente che
+		utilizza lo screen reader voglia saltare direttamente al contenuto della pagina, velocizzando la navigazione.\\
+		\item link {torna su}, sotto forma di bottone circolare sempre visibile, che si trova a lato del content: se invocato, ti porta all'inizio del content. 
+		Utile per evitare lo scroll e velocizzare la navigazione.
+		\item utilizzo della tecnologia \emph{WAI-ARIA}: abbinata ad XHTML nel doctype, è stata implementata per migliorare la lettura degli screen reader.\\
+		I comandi più utilizzati sono: \emph{aria-hidden="true"}, che impedisce che un elemento venga letto dal lettore di schermo, e \emph{aria-label="..."}, 
+		che legge il testo presente in aria-label quando il campo riceve il focus. 
 		\item buon contrasto dei colori, verificato per sopperire ai noti problemi dell'ipovedenza.\\
-		\item le parti più rilevanti del sito sono inserite nella comfort zone: per esempio, il menu ad hamburger che si genera nella versione mobile si posiziona in una zona facilmente raggiungibile dal pollice della mano, al pari del contenuto della pagina.\\
+		\item le parti più rilevanti del sito sono inserite nella comfort zone: per esempio, il menu ad hamburger presente nella versione mobile si posiziona in una zona 
+		facilmente raggiungibile dal pollice della mano destra, al pari del contenuto della pagina.\\
 	\end{itemize}
-	\item \textbf{Usabilità:} tutti gli utenti possono ottente quello che vogliono dal sito in un tempo ragionevole e in modo piacevole. E' la conseguenza dell'accessibilità.\\ 
+	\item \textbf{Usabilità:} tutti gli utenti possono ottenere quello che vogliono dal sito in un tempo ragionevole e in modo piacevole. E' la conseguenza dell'accessibilità: 
+	non ci può essere usabilità senza accessibilità.\\ 
 	\item \textbf{Punti di rottura del layout:} applicati per rendere flessibile il sito ai cambiamenti della risoluzione dello schermo, da quelli desktop a quelli mobile.\\
+	I punti di rottura sono definiti in css come: \emph{@media only screen and (min-width: ...px) }.
 	\item \textbf{Comprensibilità delle informazioni:} le informazioni presentate nel sito sono di semplice comprensione e mirate ad essere esaustive.\\
 \end{itemize}
