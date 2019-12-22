@@ -168,6 +168,23 @@ function handle_edit_form() {
     });
 }
 
+function check_search(e) {
+    $("#search_error").text("");
+    var strLength = $("#cercaProdotti").val().trim().length;
+    if (strLength > 0 && (strLength < 3 || strLength > 40))
+    {
+        $("#search_error").text("Lunghezza della ricerca non valida!");
+        e.preventDefault();
+    }
+    return true;
+}
+
+function handle_search_form() {
+    $('#ricerca_prodotti').submit(function(e) {
+        check_search(e);
+    });
+}
+
 $(document).ready(function(){
 
     if($("#login_error").length != 0){
@@ -180,6 +197,7 @@ $(document).ready(function(){
 
     handle_login_form();
     handle_edit_form();
+    handle_search_form();
     search_input_check();
 });
 
