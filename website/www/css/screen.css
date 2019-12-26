@@ -327,9 +327,7 @@ dt {
 
 /* GENERAL FORM */
 
-.general_form > *{
-	margin: 0.1em;
-}
+
 
 .general_button{
 	background-color:#a73f2d;
@@ -482,14 +480,33 @@ dt {
 	cursor: pointer;
 }
 
+.general_form{
+	background-color: #FFF7E6;
+	margin: 0 0.5em 0.5em 0.5em;
+}
+
 /* EDIT PRODUCT AND NEWS PAGES */
 
 #edit_form{
 	text-align: left;
 }
 
+#edit_form fieldset{
+
+}
+
+#edit_form textarea{
+	resize: horizontal;
+	width: 97%;
+}
+
 #edit_form *{
 	padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+#edit_form li {
+	margin-left: 1em;
+	
 }
 
 .input_textarea > *{
