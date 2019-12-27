@@ -189,7 +189,10 @@ body {
 	width: 100%;
 }
 .admin_column{
-	width: 100%;
+	width: 80%;
+	padding-top: 1em;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 
@@ -355,12 +358,13 @@ dt {
 		position:relative;
 		top:1px;
 	}
-
+	
 .general_input{
-		padding: 0.5em;
-		font-size: 1em;
-		border: 1px solid black;
-		border-radius: 4px;
+	width: 60%;
+	padding: 0.5em;
+	font-size: 1em;
+	border: 1px solid black;
+	border-radius: 4px;
 }
 
 #login_input{
@@ -372,9 +376,13 @@ dt {
 	padding-bottom:2em;
 }
 
-.input_line > input[type=password]{
-	margin-left:0.2em;
+.input_line p {
+	width: 25%;
+	min-width: 4.6em;
+	padding-left: 0.5em;
+	display: inline-block;
 }
+
 
 #fieldset_login{
 	border: 2px solid white;
@@ -394,15 +402,16 @@ dt {
 }
 
 #login_admin{
+	width:70%;
+	padding-left: 15%;
+	padding-right: 15%;
 	text-align: center;
 	padding-top: 1.2em;
 	padding-bottom: 1.2em;
-	width: inherit;
-	margin-top: 1em;
 }
 
 	#login_admin > a{
-		padding: 1.2em 20% 1.2em 20%;
+		padding: 1.2em 2% 1.2em 2%;
 	}
 
 #admin_login_form{
@@ -481,7 +490,6 @@ dt {
 }
 
 .general_form{
-	background-color: #FFF7E6;
 	margin: 0 0.5em 0.5em 0.5em;
 }
 
@@ -626,7 +634,10 @@ dt {
 	
 	/*OVERRIDE*/
 	.admin_column{
-		width: 30%;
+		width: 27%;
+		padding-top: 0em;
+		padding-left: 0%;
+		padding-right: 0%;
 	}
 	
 	/*OVERRIDE*/
@@ -745,5 +756,10 @@ dt {
 	}
 	.to_top_button:hover{
 		transform: rotate(360deg);
+	}
+	
+	/*OVERRIDE*/
+	.general_input{
+		width: 50%;
 	}
 }
