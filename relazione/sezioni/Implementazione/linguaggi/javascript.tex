@@ -1,0 +1,24 @@
+﻿\emph{JavaScript} è un linguaggio che si occupa del comportamento del sito. Nel nostro caso specifico, il suo principale uso è rivolto dai controlli 
+input lato client, dove ognuno di essi viene controllato prima di essere spedito, in modo da evitare elaborazioni inutili da parte del server.\\
+Va evidenziato che i controlli client-side sono speculari ai controlli server-side.\\
+L'utilizzo di JavaScript è importante anche per le animazioni del sito. Nel nostro progetto, le uniche animazioni da gestire sono implementate 
+lato mobile, in quanto sono presenti alcuni elementi a comparsa.\\
+La motivazione di questa scelta è molto semplice ed è giustificata dalla dimensione dello schermo, dove uno schermo mobile è più piccolo di uno schermo
+in modalità desktop, quindi gli elementi da considerare devono occupare poco spazio, non essere invasivi ed essere essenziali ai fini dell'utente. \\
+Quindi, è stato scelto di implementare:
+\begin{itemize}
+    \item un menù ad hamburger che mostra/nasconde le singole voci, rimpiazzando così il menu laterale lato desktop;
+    \item un bottone \emph{Accesso amministratore} nel footer che, una volta premuto, fa comparire il form di login per l'amministratore, e per farlo
+    scomparire può premere sul bottone \emph{Esci.} 
+\end{itemize}    
+
+La validazione dell'utente nel form di login avviene attraverso \emph{AJAX}, acronimo di \emph{Asynchronous JavaScript and XML}.\\ 
+La motivazione di tale scelta è per il messaggio d'errore in caso di input scorretto: il form di login si trova nel footer, e nel caso di errore 
+verrebbe inserito un messaggio d'errore dopo il ricaricamento della pagina, il che è scomodo perchè non si avrebbe accesso diretto ai campi del form
+se non scrollando la pagina.\\
+Grazie ad AJAX, l'errore viene visualizzato all'interno del form e la pagina non viene ricaricata.\\
+Nel caso i vecchi browser non riescano a supportare questa funzionalità, visualizzeranno comunque un messaggio di errore ad inizio pagina, 
+dopo il caricamento.\\
+AJAX entra in funzione nel momento in cui avviene un click nel submit. L'evento, reso asincrono, si occuperà in primo luogo di controllare 
+se le credenziali sono corrette: se non lo sono, viene disabilitato il comportamento standard del submit, per visualizzare 
+un messaggio d'errore.\\
