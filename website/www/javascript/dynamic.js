@@ -11,7 +11,6 @@ function toggleMobileVisibility(element) {
     }
 }
 
-
 function toggleLogin(icon) {
     var toShow = document.getElementById("admin_login_form");
     if(toShow.classList.contains("mobile_hidden")){
@@ -27,7 +26,6 @@ function toggleLogin(icon) {
     }
 
 }
-
 
 function input_image(){
     document.getElementById("image").onchange = function () {
@@ -60,6 +58,133 @@ function input_image(){
     };
 };
 
+function print_login_error(e, errorMessage) {
+    e.preventDefault();
+    $("#login_error_ajax").text(errorMessage);
+}
+
+function username_check() {
+    var strLength = $("#username").val().trim().length;
+    if (strLength < 5 || strLength > 20)
+        return "Lunghezza username non valida!";
+    
+    var regex = /[a-z_\-0-9]/i;
+    if (!regex.test($("#username").val()))
+        return "Lo username contiene simboli non consentiti!";
+    return "";
+}
+
+function password_check() {
+    var strLength = $("#password").val().trim().length;
+    if (strLength < 5 || strLength > 20)
+        return "Lunghezza password non valida!";
+    
+    var regex = /[a-z_!?\-0-9]/i;
+    if (!regex.test($("#password").val()))
+        return "La password contiene simboli non consentiti!";
+    return "";
+}
+
+function search_input_check() {
+    $("#cercaProdotti").keypress(function(e)
+    {
+        var value = String.fromCharCode(e.keyCode);
+        if (!value.match(/[a-zA-Z ]/i)) { 
+            return false;
+        }
+    });
+}
+
+function perform_client_login_check(e) {
+    var errorMessage = username_check();
+    if ( errorMessage === "") 
+        errorMessage = password_check();
+    
+    if ( errorMessage === "")
+        return true;
+
+    print_login_error(e, errorMessage);
+    return false;
+}
+
+function process_server_login(e) {
+    $.ajax({
+        type: "POST",
+        url: "../php/backend/admin_handler.php",
+        data: {Login: "Accedi",username: $("#username").val(),password: $("#password").val()},
+        async: false,
+        success: function(correct) {
+            if(correct != 1){
+                print_login_error(e, correct);
+            } 
+        }
+    });
+}
+
+function handle_login_form() {
+    $('#admin_login_form').submit(function(e) {
+        if (perform_client_login_check(e))
+            process_server_login(e);
+    });
+}
+
+function check_edit_title() {
+    var strLength = $("#title").val().trim().length;
+    if (strLength < 3 || strLength > 40)
+    {
+        $("#edit_title_error").text("Lunghezza del titolo non valida!");
+        return false;
+    }
+    return true;
+}
+
+function check_edit_description() {
+    var strLength = $("#description").val().trim().length;
+    if (strLength < 20 || strLength > 500)
+    {
+        $("#edit_description_error").text("Lunghezza della descrizione non valida!");
+        return false;
+    }
+    return true;
+}
+
+function perform_client_edit_check(e) {
+    $("#edit_title_error").text("");
+    $("#edit_description_error").text("");
+    if (check_edit_title() && check_edit_description())
+        return;
+
+    e.preventDefault();
+}
+
+function handle_edit_form() {
+    $('#edit_form').on('reset', function(e) {
+        $("#edit_title_error").text("");
+        $("#edit_description_error").text("");
+    });
+
+    $('#edit_form').submit(function(e) {
+        perform_client_edit_check(e);
+    });
+}
+
+function check_search(e) {
+    $("#search_error").text("");
+    var strLength = $("#cercaProdotti").val().trim().length;
+    if (strLength > 0 && (strLength < 3 || strLength > 40))
+    {
+        $("#search_error").text("Lunghezza della ricerca non valida!");
+        e.preventDefault();
+    }
+    return true;
+}
+
+function handle_search_form() {
+    $('#ricerca_prodotti').submit(function(e) {
+        check_search(e);
+    });
+}
+
 $(document).ready(function(){
 
     if($("#login_error").length != 0){
@@ -69,8 +194,12 @@ $(document).ready(function(){
         $("#general_container").addClass("shift_down");
         $("#footer").addClass("shift_down");
     }
-});
 
+    handle_login_form();
+    handle_edit_form();
+    handle_search_form();
+    search_input_check();
+});
 
 function close_error(){
     $('#login_error').addClass('hide');
@@ -80,21 +209,3 @@ function close_error(){
     $("#general_container").removeClass("shift_down");
     $("#footer").removeClass("shift_down");
 }
-$(document).ready(function() {
-    $('#admin_login_form').submit(function(e) {
-        
-        $.ajax({
-            type: "POST",
-            url: "../php/backend/admin_handler.php",
-            data: {Login: "Accedi",username: $("#username").val(),password: $("#password").val()},
-            async: false,
-            success: function(correct) {
-                if(correct != 1){
-                    e.preventDefault();
-                    $("#login_error_ajax").text(correct);
-                }
-                    
-            }
-        });
-    });
-});

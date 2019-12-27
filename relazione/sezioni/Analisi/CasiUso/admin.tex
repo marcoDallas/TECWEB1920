@@ -1,62 +1,82 @@
-L'utente \emph{amministratore} è l'unico utente addetto ad accedere all'area riservata: nessun altro può gestire il sito web, in quanto l'amministratore è l'unico utente ad avere le credenziali d'accesso.  Come richiesto dalle regole per la consegna del progetto, login e password sono uguali ad \textbf{admin}. Eredita tutti gli use case di \textit{utente generico}, e dispone di alcune funzionalità extra:
+L'utente \emph{amministratore} è l'unico utente ad avere i permessi per accedere all'area riservata.\\ 
+Nessun altro utente può gestire il sito web, in quanto l'amministratore è l'unico utente ad avere le credenziali d'accesso.\\  
+Come richiesto dalle regole per la consegna del progetto, login e password sono uguali ad \textbf{admin}.\\ 
+Eredita tutti gli use case di \textit{utente generico}, e dispone di alcune funzionalità extra:
 \begin{itemize}
 	\item \hyperref[par:LoginAA]{ Login "Area Amministratore" (\ref{par:LoginAA})};
-	\item \hyperref[par:AddP]{ Aggiungi prodotto in "Paste" (\ref{par:AddP})};
+	\item \hyperref[par:AddP]{ Aggiunta prodotto in "Paste" (\ref{par:AddP})};
 	\item \hyperref[par:ModP]{ Modifica prodotto in "Paste" (\ref{par:ModP})};
-	\item \hyperref[par:DelP]{ Elimina prodotto in "Paste" (\ref{par:DelP})};
-	\item \hyperref[par:AddT]{ Aggiungi prodotto in "Torte" (\ref{par:AddT})};
+	\item \hyperref[par:DelP]{ Eliminazione prodotto in "Paste" (\ref{par:DelP})};
+	\item \hyperref[par:AddT]{ Aggiunta prodotto in "Torte" (\ref{par:AddT})};
 	\item \hyperref[par:ModT]{ Modifica prodotto in "Torte" (\ref{par:ModT})};
-	\item \hyperref[par:DelT]{ Elimina prodotto in "Torte" (\ref{par:DelT})};
+	\item \hyperref[par:DelT]{ Eliminazione prodotto in "Torte" (\ref{par:DelT})};
 	\item \hyperref[par:ModN]{ Modifica la sezione "News" (\ref{par:ModN})};
 	\item \hyperref[par:LogoutAA]{ Logout "Area Amministratore" (\ref{par:LogoutAA})};
 \end{itemize}
 
 \paragraph{Login "Area Amministratore"}\mbox{}\\
 \label{par:LoginAA}
-L'amministratore può accedere alla zona riservata \emph{Area Amministratore} inserendo le credenziali username e password e cliccando sul bottone \emph{Accedi} posto all'interno del form presente nel footer.\\ Nella versione mobile, il form si visualizzerà solo quando si cliccherà l'apposito bottone \emph{Accesso amministratore}: una volta cliccato, si aprirà il form con gli annessi bottoni \emph{Accedi} ed \emph{Esci} (per non visualizzare più il form).\\ Se le credenziali sono corrette, allora il login è andato a buon fine e si visualizzerà sul footer il form \emph{Benvenuto amministratore!} con il relativo bottone \emph{Esci}, altrimenti si visualizzerà una barra di colore rosso ad inizio finestra con un errore specifico:
+L'amministratore può accedere alla zona riservata \emph{Area Amministratore} inserendo prima le credenziali username e password, poi cliccando sul bottone \emph{Accedi} 
+posto all'interno del form presente nel footer.\\ 
+Nella versione mobile, il form si visualizzerà solamente quando si cliccherà l'apposito bottone \emph{Accesso amministratore}: una volta cliccato, si aprirà il form con 
+gli annessi bottoni \emph{Accedi} (analogo al bottone desktop per funzionalità) ed \emph{Esci} (per non visualizzare più il form).\\ 
+Se le credenziali sono corrette, allora il login è andato a buon fine e si visualizzerà sul footer il form \emph{Benvenuto amministratore!} con il relativo bottone \emph{Esci}, 
+altrimenti si visualizzerà un messaggio di errore specifico all'interno del form:
 \begin{itemize}
 	\item se manca un campo da inserire od entrambi, il messaggio sarà \emph{Hai inserito simboli non consentiti};
-	\item Se le credenziali inserite non sono corrette, il messaggio sarà \emph{Credenziali non corrette}.
+	\item se le credenziali inserite non sono corrette, il messaggio sarà \emph{Credenziali errate!}.
 \end{itemize}
 
-\paragraph{Aggiungi prodotto in "Paste"}\mbox{}\\
+\paragraph{Aggiunta prodotto in "Paste"}\mbox{}\\
 \label{par:AddP}
-L'amministratore può aggiungere una pasta alla volta, cliccando sul bottone apposito \emph{Aggiungi prodotto} nel content di "Paste".\\ Una volta cliccato, si ha accesso ad un form all'interno del content che conterrà i campi: \emph{Nome Prodotto}, \emph{Immagine prodotto} e \emph{Descrizione Prodotto}.\\ 
-Una volta inseriti tutti i campi, allora si clicca sul bottone \emph{Modifica} e si viene reindirizzati alla pagina \emph{Paste} con il nuovo prodotto aggiunto all'elenco di paste in prima posizione.\\
+L'amministratore può aggiungere una pasta alla volta, cliccando sul bottone apposito \emph{Aggiungi prodotto} all'inizio del content di "Paste".\\ 
+Una volta cliccato, si aprirà una nuova pagina con annesso form che conterrà i campi: \emph{Nome Prodotto}, \emph{Immagine prodotto} e \emph{Descrizione Prodotto}.\\ 
+Una volta inseriti correttamente tutti i campi, allora si clicca sul bottone \emph{Modifica} e si viene reindirizzati alla pagina \emph{Paste}, con il nuovo prodotto 
+aggiunto all'elenco di paste in prima posizione.\\
+Se si vogliono resettare tutti i campi input, allora basterà cliccare sul bottone \emph{Ripristina}.
 
 \paragraph{Modifica prodotto in "Paste"}\mbox{}\\
 \label{par:ModP}
-L'amministratore può modificare una pasta alla volta cliccando sul bottone apposito \emph{Modifica prodotto}, che è associato ad ogni singola pasta.\\ 
-Una volta cliccato il bottone, si ha accesso ad un form all'interno del content dove si potranno modificare i singoli campi della pasta in questione. Il testo è precompilato, ovvero che riprende tutto il contenuto della pasta.\\
+L'amministratore può modificare una pasta alla volta, cliccando sul bottone apposito \emph{Modifica prodotto}, che è associato ad ogni singola pasta.\\ 
+Una volta cliccato il bottone, si aprirà una nuova pagina con annesso form dove si potranno modificare i singoli campi della pasta in questione. 
+Gli input sono precompilati, ovvero che riprendono il contenuto originale della pasta.\\
 Una volta cliccato il bottone \emph{Modifica}, allora si viene reindirizzati alla pagina "Paste" con l'elenco aggiornato.\\
+Se si vogliono ripristinare tutti i campi input e cancellare le modifiche, allora basterà cliccare sul bottone \emph{Ripristina}.
 
-\paragraph{Elimina prodotto in "Paste"}\mbox{}\\
+\paragraph{Eliminazione prodotto in "Paste"}\mbox{}\\
 \label{par:DelP}
 L'amministratore può eliminare una pasta alla volta cliccando sul bottone apposito \emph{Elimina prodotto}, che è associato ad ogni singola pasta.\\ 
-Una volta cliccato il bottone, la pasta viene eliminata una volta per tutte dalla pagina "Paste".\\
+Una volta cliccato il bottone, la pasta viene eliminata definitavamente dalla pagina "Paste".\\
 
-\paragraph{Aggiungi prodotto in "Torte"}\mbox{}\\
+\paragraph{Aggiunta prodotto in "Torte"}\mbox{}\\
 \label{par:AddT}
-L'amministratore può aggiungere una torta alla volta, cliccando sul bottone apposito \emph{Aggiungi prodotto} nel content di "Torte".\\ Una volta cliccato, si ha accesso ad un form all'interno del content che conterrà i campi: \emph{Nome Prodotto}, \emph{Immagine prodotto} e \emph{Descrizione Prodotto}.\\ 
-Una volta inseriti tutti i campi, allora si clicca sul bottone \emph{Modifica} e si viene reindirizzati alla pagina \emph{Torte} con il nuovo prodotto aggiunto all'elenco di torte in prima posizione.\\
+L'amministratore può aggiungere una torta alla volta, cliccando sul bottone apposito \emph{Aggiungi prodotto} nel content di "Torte".\\
+Una volta cliccato, si aprirà una nuova pagina con annesso form che conterrà i campi: \emph{Nome Prodotto}, \emph{Immagine prodotto} e \emph{Descrizione Prodotto}.\\ 
+Una volta inseriti correttamente tutti i campi, allora si clicca sul bottone \emph{Modifica} e si viene reindirizzati alla pagina \emph{Torte} con il nuovo prodotto 
+aggiunto all'elenco di torte in prima posizione.\\
+Se si vogliono resettare tutti i campi input, allora basterà cliccare sul bottone \emph{Ripristina}.
 
 \paragraph{Modifica prodotto in "Torte"}\mbox{}\\
 \label{par:ModT}
 L'amministratore può modificare una torta alla volta cliccando sul bottone apposito \emph{Modifica prodotto}, che è associato ad ogni singola torta.\\ 
-Una volta cliccato il bottone, si ha accesso ad un form all'interno del content dove si potranno modificare i singoli campi della torta in questione. Il testo è precompilato, ovvero che riprende tutto il contenuto della torta.\\ 
+Una volta cliccato il bottone, si aprirà una nuova pagina con annesso form dove si potranno modificare i singoli campi della torta in questione. 
+Gli input sono precompilati, ovvero che riprendono il contenuto originale della torta.\\
 Una volta cliccato il bottone \emph{Modifica}, allora si viene reindirizzati alla pagina "Torte" con l'elenco aggiornato.\\
+Se si vogliono ripristinare tutti i campi input e cancellare le modifiche, allora basterà cliccare sul bottone \emph{Ripristina}.
 
-\paragraph{Elimina prodotto in "Torte"}\mbox{}\\
+\paragraph{Eliminazione prodotto in "Torte"}\mbox{}\\
 \label{par:DelT}
-L'amministratore può eliminare una torta alla volta cliccando sul bottone apposito \emph{Elimina prodotto}, che è associato ad ogni singola torta.\\ 
-Una volta cliccato il bottone, la torta viene eliminata una volta per tutte dalla pagina "Torte".\\
+L'amministratore può eliminare una torta alla volta, cliccando sul bottone apposito \emph{Elimina prodotto}, che è associato ad ogni singola torta.\\ 
+Una volta cliccato il bottone, la torta viene eliminata definitavamente dalla pagina "Torte".\\
 
 \paragraph{Modifica la sezione "News"}\mbox{}\\
 \label{par:ModN}
 L'amministratore può modificare la sezione \emph{News}, posta sotto il menu laterale, cliccando il bottone \emph{Modifica news}.\\ 
 Una volta cliccato, si ha accesso ad un form all'interno del content dove si potranno modificare i campi \emph{Titolo News} e \emph{Descrizione News}.\\
 Concluse le modifiche, si clicca il bottone "Modifica" e si verrà reindirizzati alla pagina precedente, con la sezione "News" aggiornata.\\
+Se si vogliono ripristinare tutti i campi input e cancellare le modifiche, allora basterà cliccare sul bottone \emph{Ripristina}.
 
 \paragraph{Logout "Area Amministratore"}\mbox{}\\
 \label{par:LogoutAA}
-L'amministratore può fare logout dalla zona riservata cliccando sul bottone \emph{Esci} posizionato nel footer.\\ Una volta cliccato, ricomparirà il form per l'accesso all'area amministratore e si ritorna in modalità \emph{utente generico}.\\
+L'amministratore può fare logout dalla zona riservata, cliccando sul bottone \emph{Esci} posizionato nel footer.\\ 
+Una volta cliccato, ricomparirà il form per l'accesso all'area amministratore e si ritorna in modalità \emph{utente generico}.\\

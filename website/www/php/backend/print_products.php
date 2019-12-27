@@ -28,8 +28,9 @@ class Print_products{
         $content.='<form class="general_form inline" id="ricerca_prodotti" method="get" action="prodotti.php">
                     <div>
                      <label for="cercaProdotti">Cerca '.$_GET['type'].': </label>
-                     <input class="general_input" type="text" minlength="3" maxlength="40" id="cercaProdotti" name="search"/>
+                     <input class="general_input" type="text" maxlength="40" id="cercaProdotti" name="search"/>
                      <input type="hidden" name="type" value="'.$_GET['type'].'"/>
+                     <p id="search_error"></p>
                      <input class="general_button" type="submit" value="cerca" aria-label="Cerca"/>
                     </div>    
                 </form>';
@@ -86,7 +87,7 @@ class Print_products{
                     $previouspage=$_GET['page']-1;
                     $content.='<a class="general_button anchor_button" href="?type='.$_GET['type'].'&amp;page='.$previouspage.'">Pagina precedente</a>';
                 }
-                if(array_slice($arr,intval($_GET['page'])*7-7,7))
+                if((sizeof($arr)-$_GET['page']*7) > 0)
                     $content.='<a class="general_button anchor_button" href="?type='.$_GET['type'].'&amp;page='.$nextpage.'">Pagina successiva</a>';
 
                 $content.='</div>';
