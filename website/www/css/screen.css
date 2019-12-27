@@ -286,7 +286,12 @@ dt {
 /*PASTE E TORTE STYLES*/
 
 #ricerca_prodotti{
-	padding: 1em 0 0 0;
+	padding-top: 1em;
+	width: 100%;
+}
+
+#ricerca_prodotti label, input{
+	margin: 0.3em;
 }
 
 .element {
@@ -398,6 +403,11 @@ dt {
 
 .inline{
 	display:inline-block;
+}
+
+#search_error{
+	display:inline;
+	padding: 0 0 0 0;
 }
 
 #login_admin{
