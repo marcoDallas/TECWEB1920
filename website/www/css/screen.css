@@ -229,7 +229,7 @@ body {
 	
 	.content > h2 {
 		color: red;
-		padding-top: 1em;
+		padding-top: 0.5em;
 	}
 
 dt {
@@ -239,29 +239,36 @@ dt {
 	/*VARIAZIONE IN CONTATTI*/
 	
 	.contatti p, .contatti ul, .contatti address {
-		padding: 1em 1em 1em 3em;
+		padding: 1em 1em 1em 1em;
 	}
 
 	.contatti ul {
 		list-style: none;
 	}
 	
-	.contatti h2 {
-		padding-left: 1em;
-	}
-
+.map_container{
+	width: auto;
+	padding: 0 1em 1em 1em;
+}
+	
+.linebreak{
+	display: inline-block;
+}
 #maps{
-    width: 95.5%;
+    width: 100%;
     height: 20em;
     display: block;
-    padding: 1em;
 	text-align: center;
 }
 
 #maps_icon {
-    content: url("../images/navigation.png");
-    vertical-align: middle;
-	padding-left: 0.5em;
+	background-image: url("../images/navigation.png");
+	width:2em;
+	height:2em;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0em;
 }
 
 
@@ -286,7 +293,6 @@ dt {
 /*PASTE E TORTE STYLES*/
 
 #ricerca_prodotti{
-	padding-top: 1em;
 	width: 100%;
 }
 
@@ -302,8 +308,7 @@ dt {
 }
 
 	.element p {
-		padding: 1em 1em 1em 1em;
-		vertical-align: center;
+		padding: 1em 1em 0.5em 1em;
 	}
 	
 	.element img {
@@ -317,15 +322,6 @@ dt {
 	
 	.element h3, h2{
 		padding-top: 0.5em;
-	}
-	
-	.element .img_product{
-		width: 40%;
-		height: auto;
-	}
-	
-	.element .cont_product{
-		width: 60%;
 	}
 	
 .product{
@@ -343,14 +339,15 @@ dt {
 	color:white;
 	font-size:0.95em;
 	font-weight:bold;
-	min-width: fit-content;
-	padding:0.6em 2em;
+	min-width: 2em;
+	max-width: 100%;
+	width: fit-content;
+	padding:0.6em 10%;
 	border-radius: 4px;
 }
 
 .anchor_button{
-	margin: 1em;
-	margin-bottom: 2em;
+	margin: 0.5em;
 	text-decoration: none;
 	font-size: 1em;
 }
@@ -376,8 +373,11 @@ dt {
 }
 
 #nav_page{
-	padding-top:1em;
-	padding-bottom:2em;
+	padding-bottom: 0.5em;
+}
+
+#nav_page a{
+	display: inline-block;
 }
 
 .input_line p {
@@ -385,6 +385,10 @@ dt {
 	min-width: 4.6em;
 	padding-left: 0.5em;
 	display: inline-block;
+}
+
+.input_line {
+	text-align: center;
 }
 
 
@@ -397,7 +401,6 @@ dt {
 }
 
 #submit_login_form{
-	margin-left:30%;
 	margin-bottom:0.5em;
 }
 
@@ -411,9 +414,9 @@ dt {
 }
 
 #login_admin{
-	width:70%;
-	padding-left: 15%;
-	padding-right: 15%;
+	width:80%;
+	padding-left: 10%;
+	padding-right: 10%;
 	text-align: center;
 	padding-top: 1.2em;
 	padding-bottom: 1.2em;
@@ -500,6 +503,12 @@ dt {
 
 .general_form{
 	margin: 0 0.5em 0.5em 0.5em;
+	width: auto;
+}
+
+.login_logout_form{
+	margin: 0 0.5em 0.5em 0.5em;
+	width: 100%;
 }
 
 /* EDIT PRODUCT AND NEWS PAGES */
@@ -544,23 +553,43 @@ dt {
 
 /*TO TOP PROPERTIES*/
 
-.to_top{
-	font-size: 1em;
-	position:fixed;
-	bottom: .8em;
-	right: .8em;
-	
-}
+
 .to_top_button{
-	content: url("../images/totop.png");
-	border:solid .2em black;
-	border-radius:10em;	
+	position:fixed;
+	bottom: 1em;
+	right: 1.5em;
+	background-image: url("../images/totop.png");
 	width:2em;
 	height:2em;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0em;
 	min-height: 48px;
 	min-width: 48px;
+	color: transparent;
 }
 
+.product_Img_Container{
+	width: 100%;
+}	
+
+.product_Text_Container{
+	width: 100%;
+	padding-bottom: 0.7em;
+}
+
+.product_image{
+	max-width: 12em;
+}
+
+.login_buttons{
+	display: inline-block;
+	text-align: center;
+	width: 45%;
+}
+
+	
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /* TABLET */
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -574,7 +603,6 @@ dt {
 	
 	/*OVERRIDE*/
 	#content > h2 {
-		color: red;
 		padding-top: 0.5em;
 	}
 	
@@ -590,14 +618,18 @@ dt {
 		height: auto;
 	}
 	
-	/*OVERRIDE*/
-	.element div:first-of-type{
+	.product_Img_Container{
 		width: 30%;
+	}	
+	
+	.product_Text_Container{
+		width: 70%;
 	}
 	
-	/*OVERRIDE*/
-	.element div:last-of-type{
-		width: 70%;
+	.productButtons{
+		width: 45%;
+		display: inline-block;
+		padding-bottom: 1em;
 	}
 }
 
@@ -689,7 +721,9 @@ dt {
 	
 	/*OVERRIDE*/
 	#maps_icon {
-		content: url("../images/navigation.png");
+		background-image: url("../images/navigation.png");
+		width:2em;
+		height:2em;
 		display: block;
         margin-left: auto;
         margin-right: auto;
@@ -712,7 +746,6 @@ dt {
 	/* SOLO IN PAGINA FALLBACK*/
 	
 	#submit_login_form{
-		margin-left:40%;
 		margin-bottom:0.5em;
 	}
 
@@ -747,28 +780,26 @@ dt {
 		position:relative;
 		top: 4em;
 	}
-	/*OVERRIDE*/
-	.to_top{
-		font-size: 1.5em;
-		position:fixed;
-		bottom: 2em;
-		right: 2em;
-	}
-	/*OVERRIDE*/
-	.to_top_button{
-		content: url("../images/totop.png");
-		border:solid .13em black;
-		border-radius:10em;
-		width:2em;
-		height:2em;
-		transition:transform .7s ease-in-out;
-	}
-	.to_top_button:hover{
-		transform: rotate(360deg);
-	}
+	
 	
 	/*OVERRIDE*/
 	.general_input{
-		width: 50%;
+		width: 45%;
+	}
+	
+	/*OVERRIDE*/
+	.login_buttons{
+
+		text-align: center;
+		width: 100%;
+	}
+	
+	.to_top_button{
+		bottom: 1.5em;
+		right: 2.5em;
+	}
+	
+	.admin_login{
+		padding-top: .7em;
 	}
 }
