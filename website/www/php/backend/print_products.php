@@ -59,16 +59,16 @@ class Print_products{
                                 <div class="cont_product">
                                     <h3>'.$prodotto['Nome'].'</h3>
                                     <p>'.$prodotto['Descrizione'].'</p>
-                                </div>';
+                                ';
                 if(Admin::verify()){
-                    $content.='<form class="general_form" method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">
-                                <div>
+                    $content.='<form method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">
+                                <div class="footer_column">
                                  <input type="hidden" name="product" value="'.$prodotto['Codice'].'"/>
                                  <input class="general_button" type="submit" name="remove" value="Rimuovi prodotto" aria-label="Rimuovi prodotto"/>
                                 </div> 
                                </form>
-                               <form class="general_form" method="post" action="modifica_prodotto.php">
-                                <div>
+                               <form method="post" action="modifica_prodotto.php">
+                                <div class="footer_column">
                                  <input type="hidden" name="id" value="'.$prodotto['Codice'].'"/>
                                  <input type="hidden" name="prevpage" value="'.htmlentities($_SERVER['REQUEST_URI']).'"/>
                                  <input type="hidden" name="type" value="'.$_GET['type'].'"/>
@@ -77,6 +77,7 @@ class Print_products{
                             </form>';
                 }
                 $content.='</div>
+						</div>
                         </li>';
             }
             $content.='</ul>';
