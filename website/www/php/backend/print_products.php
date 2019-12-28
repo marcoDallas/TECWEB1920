@@ -17,7 +17,7 @@ class Print_products{
         $content='<div id="content" class="body_column content">
                     <h2>'.$_GET['type'].'</h2>';
         if(Admin::verify()){
-            $content.='<form class="general_form inline" method="post" action="modifica_prodotto.php">
+            $content.='<form class="inline full_column" method="post" action="modifica_prodotto.php">
                         <div>
                          <input type="hidden" name="prevpage" value="'.htmlentities($_SERVER['REQUEST_URI']).'"/>
                          <input type="hidden" name="type" value="'.$_GET['type'].'"/>
@@ -25,7 +25,7 @@ class Print_products{
                         </div> 
                        </form>';
         }
-        $content.='<form class="general_form inline" id="ricerca_prodotti" method="get" action="prodotti.php">
+        $content.='<form class="inline" id="ricerca_prodotti" method="get" action="prodotti.php">
                     <div>
                      <label for="cercaProdotti">Cerca '.$_GET['type'].': </label>
                      <input class="general_input" type="text" maxlength="40" id="cercaProdotti" name="search"/>
@@ -49,34 +49,38 @@ class Print_products{
 
                 $content.='<li class="product">
                             <div class="box full_column element" tabindex="0">
-                                <div class="img_product">';
+                                <div class="product_Img_Container">';
                 if(!strcmp($prodotto['Immagine'],''))
                     $content.='<p>Forse l\'admin non ha inserito la foto  title="cosa triste">:\'(</abbr></p>';
                 else
                     $content.='<img class="product_image" src="'.$prodotto['Immagine'].'" alt="Immagine della sezione '.$_GET['type'].' : '.$prodotto['Nome'].'"/>';
                                     
                 $content.='</div>
-                                <div class="cont_product">
+                                <div class="product_Text_Container">
                                     <h3>'.$prodotto['Nome'].'</h3>
                                     <p>'.$prodotto['Descrizione'].'</p>
-                                </div>';
+                                ';
                 if(Admin::verify()){
-                    $content.='<form class="general_form" method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">
+                    $content.='<div class="productButtons"><form method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">
                                 <div>
                                  <input type="hidden" name="product" value="'.$prodotto['Codice'].'"/>
                                  <input class="general_button" type="submit" name="remove" value="Rimuovi prodotto" aria-label="Rimuovi prodotto"/>
                                 </div> 
                                </form>
-                               <form class="general_form" method="post" action="modifica_prodotto.php">
-                                <div>
+							   </div>
+							   <div class="productButtons">
+                               <form method="post" action="modifica_prodotto.php">
+							   <div>
                                  <input type="hidden" name="id" value="'.$prodotto['Codice'].'"/>
                                  <input type="hidden" name="prevpage" value="'.htmlentities($_SERVER['REQUEST_URI']).'"/>
                                  <input type="hidden" name="type" value="'.$_GET['type'].'"/>
                                  <input class="general_button" type="submit" name="edit" value="Modifica prodotto" aria-label="Modifica prodotto"/>
-                                </div> 
-                            </form>';
+								</div>
+                            </form>
+							</div>';
                 }
                 $content.='</div>
+						</div>
                         </li>';
             }
             $content.='</ul>';

@@ -64,7 +64,7 @@ if($edit)
 
 $content = file_get_contents('../html/components/edit.html');
 $content = str_replace('<title_h2_to_insert/>','Da questa pagina puoi aggiungere/modificare un prodotto',$content);
-$content = str_replace('<prev_page_to_insert/>','<form enctype="multipart/form-data" id="edit_form" class="general_form" method="post" action="'.htmlentities($_POST['prevpage']).'">',$content);
+$content = str_replace('<prev_page_to_insert/>','<div class="general_form"><form enctype="multipart/form-data" id="edit_form" method="post" action="'.htmlentities($_POST['prevpage']).'">',$content);
 if($edit)
     $input="Modifica ".$product['Nome'];
 else $input="Aggiungi Prodotto";
@@ -83,7 +83,7 @@ $path='';
 if($edit){
     $path=$product['Immagine'];
 }
-$content = str_replace('<file_to_insert/>','<img id="preview" src="'.$path.'" alt=""/><div class="input_line">
+$content = str_replace('<file_to_insert/>','<img id="preview" src="'.$path.'" alt=""/><div>
                                             <label for="image">Cambia immagine: </label>
                                             <input name="image" type="file" id="image" onclick="input_image(this)" aria-label="Scegli fail"/>
                                             </div><input type="hidden" name="oldimage" value="'.$path.'"/>',$content);

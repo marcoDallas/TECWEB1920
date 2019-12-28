@@ -62,12 +62,12 @@ class Print_content{
         if(Sessions::session_exists('admin')){
             $content = file_get_contents('../html/components/logout_admin_form.html');
             if(!strcmp(Utilities::shrink_page($_SERVER['REQUEST_URI']),'modifica_prodotto') || !strcmp(Utilities::shrink_page($_SERVER['REQUEST_URI']),'modifica_news'))
-                $content = str_replace('<form_to_insert/>','<form class="general_form" method="post" action="home.php">',$content);
+                $content = str_replace('<form_to_insert/>','<form class="login_logout_form" method="post" action="home.php">',$content);
             else
-                $content = str_replace('<form_to_insert/>','<form class="general_form" method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">',$content);
+                $content = str_replace('<form_to_insert/>','<form class="login_logout_form" method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">',$content);
         }else{
             $content = file_get_contents('../html/components/admin_form.html');
-            $content = str_replace('<form_to_insert/>','<form class="mobile_hidden general_form" id="admin_login_form" method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">',$content);
+            $content = str_replace('<form_to_insert/>','<form class="mobile_hidden login_logout_form" id="admin_login_form" method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">',$content);
         }
         return $content;
     }
