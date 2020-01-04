@@ -11,12 +11,12 @@ Il sito Internet è principalmente strutturato in questo modo:
     \item classi PHP per l'elaborazione di dati per il database o il salvataggio (o eliminazione) delle immagini;
 \end{itemize}
 In questo modo, si mantiene la separazione tra struttura e comportamento, in quanto la struttura viene descritta in file XHTML, mentre il comportamento
-è compito esclusivo di file PHP. Non ci sono pezzi di codice PHP interni ai file PHP: tutto è separato, come richiesto dalle regole di progetto.\\
+è compito esclusivo di file PHP. \\
 Il ruolo del \emph{PHP} non sarà modificare la struttura della pagina, che sarà compito esclusivo di \emph{XHTML}, ma sarà elaborare 
 informazioni e modificare quello che è il contenuto della pagina richiesta.\\
 
-Per soddisfare un'altra importante richiesta del progetto, ovvero \emph{deve essere presente una forma di controllo dell’input inserito dall’utente, 
-sia lato client che lato server}, sono stati implementati controlli PHP (server-side) sugli input dei form presenti nel sito, che corrispondono ai 
+Per soddisfare un'altra importante richiesta del progetto, ovvero \emph{"deve essere presente una forma di controllo dell’input inserito dall’utente, 
+sia lato client che lato server"}, sono stati implementati controlli PHP (server-side) sugli input dei form presenti nel sito, che corrispondono ai 
 controlli client-side attuati con JavaScript/JQuery.\\
 Questo potrebbe risultare inutile, ma in realtà è un ulteriore controllo di sicurezza fondamentale. Basti pensare banalmente che un utente
 avanzato potrebbe alterare il comportamento client-side per oltrepassare i controlli. Putroppo per lui, e per fortuna del gestore e degli
@@ -31,7 +31,7 @@ i singoli caratteri in input.
         \item \emph{htmlentities()}: converte tutti i possibili caratteri in entità \emph{HTML};
         \item \emph{strip\_tags()}: elimina tutti i possibili tag \emph{HTML} all'interno;
     \end{itemize}
-    \item I metodi \emph{username\_check()} e \emph{password\_check}, dopo aver richiamato il metodo di controllo generale, si occupano di 
+    \item I metodi \emph{username\_check()} e \emph{password\_check()}, dopo aver richiamato il metodo di controllo generale, si occupano di 
     verificare se i possibili caratteri in input sono stati rispettati;
     \item Il metodo \emph{general\_input\_check()}, dopo aver richiamato il metodo di controllo generale, si occupa di aggiungere uno slash a 
     tutti i caratteri che potrebbero influire all'esecuzione di una query tramite la funzione \emph{addslashes()};
