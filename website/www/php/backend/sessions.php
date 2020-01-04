@@ -1,31 +1,38 @@
 <?php
 
-class Sessions {
-    public static function init_session(){
+class Sessions
+{
+    public static function init_session()
+    {
         session_start();
     }
 
-    public static function new_session($name,$value){
+    public static function new_session($name, $value)
+    {
         return $_SESSION[$name]=$value; /* Se richiamata sulla stessa sessione sovrascrive */
     }
 
-    public static function session_exists($name){
+    public static function session_exists($name)
+    {
         return isset($_SESSION[$name]);
     }
 
-    public static function get_value($name){
+    public static function get_value($name)
+    {
         return $_SESSION[$name];
     }
 
-    public static function delete_session($name){
-        if(isset($_SESSION[$name]))    
+    public static function delete_session($name)
+    {
+        if (isset($_SESSION[$name])) {
             unset($_SESSION[$name]);
+        }
     }
 
-    public static function set_expire($lifetime){
+    public static function set_expire($lifetime)
+    {
         ini_set('session.gc_maxlifetime', $lifetime);
         session_set_cookie_params($lifetime);
     }
 }
-
 ?>
