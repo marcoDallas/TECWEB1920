@@ -256,9 +256,6 @@ dt {
 	padding: 0 1em 1em 1em;
 }
 	
-.linebreak{
-	display: inline-block;
-}
 #maps{
     width: 100%;
     height: 20em;
