@@ -1,21 +1,19 @@
-﻿﻿<?php
+ 
+<?php
 require_once('backend/admin.php');
 require_once('backend/print_content.php');
 require_once('backend/utilities.php');
 require_once('backend/print_news.php');
-
 $DOM = file_get_contents('../html/template.html');
-
 $DOM = str_replace('<title_page_to_insert/>','Fallback',$DOM);
-
 $DOM = str_replace('<meta_title_to_insert/>','<meta name="title" content="Fallback - Pasticceria Padovana"/>',$DOM);
 $DOM = str_replace('<meta_description_to_insert/>','<meta name="description" content="La Pasticceria Padovana, ti perderai tra una moltitudine di paste e torte" />',$DOM);
-$DOM = str_replace('<meta_keyword_to_insert/>','<meta name="keywords" content="Pasticceria,Veneto,Padova,Padovana,Perso" />',$DOM);
+$DOM = str_replace('<meta_keyword_to_insert/>','<meta name="keywords" content="Pasticceria,Veneto,Padova,Padovana,Perso"/>',$DOM);
 
 $DOM = str_replace('<no_index_to_insert/>','<meta name="robots" content="noindex"/>',$DOM);
 $DOM = str_replace('<login_error_to_insert/>',Admin::init_admin(),$DOM);
 $DOM = str_replace('<logo_to_insert/>',Print_content::logo(Utilities::get_page_name()),$DOM);
-$DOM = str_replace('<title_h1_to_insert/>','Come e quando puoi contattarci',$DOM);
+$DOM = str_replace('<title_h1_to_insert/>','Ti sei perso?',$DOM);
 $DOM = str_replace('<breadcrumb_path_to_insert/>','<strong xml:lang="en">Fallback</strong>',$DOM);
 $DOM = str_replace('<menu_to_insert/>',Print_content::menu('fallback.php'),$DOM);
 
