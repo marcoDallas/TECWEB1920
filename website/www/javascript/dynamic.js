@@ -13,44 +13,44 @@ function toggleMobileVisibility(element) {
 
 function toggleLogin(icon) {
     var toShow = document.getElementById("admin_login_form");
-    if(toShow.classList.contains("mobile_hidden")){
+    if (toShow.classList.contains("mobile_hidden")) {
         toShow.classList.remove("mobile_hidden");
-    }else{
+    } else {
         toShow.classList.add("mobile_hidden");
     }
     var element = document.getElementById("login_admin");
-    if(element.classList.contains("hidden")){
+    if (element.classList.contains("hidden")) {
         element.classList.remove("hidden");
-    }else{
+    } else {
         element.classList.add("hidden");
     }
 
 }
 
-function input_image(){
-    document.getElementById("image").onchange = function () {
-        
+function input_image() {
+    document.getElementById("image").onchange = function() {
+
         var reader = new FileReader();
-        if(this.files[0].size>528385){
+        if (this.files[0].size > 528385) {
             alert("Image Size should not be greater than 500Kb");
-            $("#preview").attr("src","blank");
-            $("#preview").hide();  
+            $("#preview").attr("src", "blank");
+            $("#preview").hide();
             $('#image').wrap('<form>').closest('form').get(0).reset();
-            $('#image').unwrap();     
+            $('#image').unwrap();
             return false;
         }
-        if(this.files[0].type.indexOf("image")==-1){
+        if (this.files[0].type.indexOf("image") == -1) {
             alert("Invalid Type");
-            $("#preview").attr("src","blank");
-            $("#preview").hide();  
+            $("#preview").attr("src", "blank");
+            $("#preview").hide();
             $('#image').wrap('<form>').closest('form').get(0).reset();
-            $('#image').unwrap();         
+            $('#image').unwrap();
             return false;
-        }   
-        reader.onload = function (e) {
+        }
+        reader.onload = function(e) {
             // get loaded data and render thumbnail.
             document.getElementById("preview").src = e.target.result;
-            $("#preview").show(); 
+            $("#preview").show();
         };
 
         // read the image file as a data URL.
@@ -67,7 +67,7 @@ function username_check() {
     var strLength = $("#username").val().trim().length;
     if (strLength < 5 || strLength > 20)
         return "Lunghezza username non valida!";
-    
+
     var regex = /[a-z_\-0-9]/i;
     if (!regex.test($("#username").val()))
         return "Lo username contiene simboli non consentiti!";
@@ -78,7 +78,7 @@ function password_check() {
     var strLength = $("#password").val().trim().length;
     if (strLength < 5 || strLength > 20)
         return "Lunghezza password non valida!";
-    
+
     var regex = /[a-z_!?\-0-9]/i;
     if (!regex.test($("#password").val()))
         return "La password contiene simboli non consentiti!";
@@ -86,10 +86,9 @@ function password_check() {
 }
 
 function search_input_check() {
-    $("#cercaProdotti").keypress(function(e)
-    {
+    $("#cercaProdotti").keypress(function(e) {
         var value = String.fromCharCode(e.keyCode);
-        if (!value.match(/[a-zA-Z ]/i)) { 
+        if (!value.match(/[a-zA-Z ]/i)) {
             return false;
         }
     });
@@ -97,10 +96,10 @@ function search_input_check() {
 
 function perform_client_login_check(e) {
     var errorMessage = username_check();
-    if ( errorMessage === "") 
+    if (errorMessage === "")
         errorMessage = password_check();
-    
-    if ( errorMessage === "")
+
+    if (errorMessage === "")
         return true;
 
     print_login_error(e, errorMessage);
@@ -111,12 +110,12 @@ function process_server_login(e) {
     $.ajax({
         type: "POST",
         url: "../php/backend/admin_handler.php",
-        data: {Login: "Accedi",username: $("#username").val(),password: $("#password").val()},
+        data: { Login: "Accedi", username: $("#username").val(), password: $("#password").val() },
         async: false,
         success: function(correct) {
-            if(correct != 1){
+            if (correct != 1) {
                 print_login_error(e, correct);
-            } 
+            }
         }
     });
 }
@@ -130,8 +129,7 @@ function handle_login_form() {
 
 function check_edit_title() {
     var strLength = $("#title").val().trim().length;
-    if (strLength < 3 || strLength > 40)
-    {
+    if (strLength < 3 || strLength > 40) {
         $("#edit_title_error").text("Lunghezza del titolo non valida!");
         return false;
     }
@@ -140,8 +138,7 @@ function check_edit_title() {
 
 function check_edit_description() {
     var strLength = $("#description").val().trim().length;
-    if (strLength < 20 || strLength > 500)
-    {
+    if (strLength < 20 || strLength > 500) {
         $("#edit_description_error").text("Lunghezza della descrizione non valida!");
         return false;
     }
@@ -171,8 +168,7 @@ function handle_edit_form() {
 function check_search(e) {
     $("#search_error").text("");
     var strLength = $("#cercaProdotti").val().trim().length;
-    if (strLength > 0 && (strLength < 3 || strLength > 40))
-    {
+    if (strLength > 0 && (strLength < 3 || strLength > 40)) {
         $("#search_error").text("Lunghezza della ricerca non valida!");
         e.preventDefault();
     }
@@ -185,9 +181,9 @@ function handle_search_form() {
     });
 }
 
-$(document).ready(function(){
+$(document).ready(function() {
 
-    if($("#login_error").length != 0){
+    if ($("#login_error").length != 0) {
 
         $("#header").addClass("shift_down");
         $("#breadcrumb").addClass("shift_down");
@@ -201,7 +197,7 @@ $(document).ready(function(){
     search_input_check();
 });
 
-function close_error(){
+function close_error() {
     $('#login_error').addClass('hide');
     $('#login_error').removeAttr('id');
     $("#header").removeClass("shift_down");

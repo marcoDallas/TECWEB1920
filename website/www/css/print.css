@@ -1,59 +1,68 @@
-*{
-	padding: 0;
+* {
+    padding: 0;
     margin: 0;
     line-height: 1.5em;
 }
 
-body{
-	font-family: Georgia, "Times New Roman", sans-serif;
+body {
+    font-family: Georgia, "Times New Roman", sans-serif;
 }
 
-.logo_column, .general_image, .news_container, .hidden, .map, .general_form, .general_button, .print_hide{
+.logo_column,
+.general_image,
+.news_container,
+.hidden,
+.map,
+.general_form,
+.general_button,
+.print_hide {
     display: none;
 }
 
-#menu, #breadcrumb, #footer > p{
+#menu,
+#breadcrumb,
+#footer>p {
     display: none;
 }
 
-h2{
+h2 {
     padding: 1em;
 }
 
-.footer_wrapper{
+.footer_wrapper {
     padding-top: 1em;
 }
 
-    .footer_wrapper > dl{
-        display: block;
-        width: 50%;
-        float:left;
-        text-align: center;
-    }
+.footer_wrapper>dl {
+    display: block;
+    width: 50%;
+    float: left;
+    text-align: center;
+}
 
-.element{
+.element {
     overflow: hidden;
     margin-top: -1em;
 }
 
-    .element > div{
-        float:left;
-    }
+.element>div {
+    float: left;
+}
 
-.img_product{
+.img_product {
     width: 20%;
     height: auto;
 }
 
-.cont_product{
-    width:80%;
+.cont_product {
+    width: 80%;
 }
 
-.product{
+.product {
     border-bottom: 1px solid black;
 }
 
-.product_image{
+.product_image {
     width: 5em;
     height: auto;
 }
