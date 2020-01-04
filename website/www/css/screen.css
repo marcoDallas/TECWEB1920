@@ -169,12 +169,17 @@ body {
 
 /*------------------------------------------------------*/
 
+.center{
+	text-align: center;
+}
+
 .logo_column{
 	width: 75%;
 }
 .full_column{
 	width: 100%;
 }
+
 .menu_column{
 	width: 100%;
 }
@@ -517,10 +522,6 @@ dt {
 	text-align: left;
 }
 
-#edit_form fieldset{
-
-}
-
 #edit_form textarea{
 	resize: horizontal;
 	width: 97%;
@@ -541,10 +542,6 @@ dt {
 
 .general_textarea{
 	padding-left: 1em;
-}
-
-#edit_form_submit{
-	margin-left: 42%;
 }
 
 .input_suggestion{
