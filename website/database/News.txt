@@ -1,1 +1,1 @@
-1	Test news	Questo è il testo della nuova news
+	Sconti speciali!	Tutto è scontato del 30%
