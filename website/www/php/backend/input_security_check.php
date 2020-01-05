@@ -58,7 +58,7 @@ class Input_security_check
 
     public static function search_input_check($field)
     {
-        if (strlen($field) < 3  ||  strlen($field) > 40) {
+        if (strlen($field) > 40) {
             return false;
         }
         $field = Input_security_check::general_controls($field);
