@@ -417,7 +417,7 @@ input {
 }
 
 #search_error {
-    display: inline;
+    display: block;
     padding: 0 0 0 0;
 }
 
