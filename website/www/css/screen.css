@@ -513,6 +513,15 @@ input {
     padding-left: 1em;
 }
 
+#preview {
+    max-width: 15em;
+    max-height: auto;
+}
+
+.edit_image {
+    margin-top: 5em;
+}
+
 .input_suggestion {
     font-size: 0.9em;
 }

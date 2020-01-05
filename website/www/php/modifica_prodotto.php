@@ -91,10 +91,10 @@ $path='';
 if ($edit) {
     $path=$product['Immagine'];
 }
-$content = str_replace('<file_to_insert/>', '<img id="preview" src="'.$path.'" alt=""/><div>
-                                            <label for="image">Cambia immagine: </label>
+$content = str_replace('<file_to_insert/>', '<div class="box"><div class="edit_image"><label for="image">Cambia immagine: </label>
                                             <input name="image" type="file" id="image" onclick="input_image(this)" aria-label="Scegli fail"/>
-                                            </div><input type="hidden" name="oldimage" value="'.$path.'"/>', $content);
+                                            <input type="hidden" name="oldimage" value="'.$path.'"/></div>
+                                            <img id="preview" src="'.$path.'" alt="immagine da impostare o sostituire"/></div>', $content);
 $content = str_replace('<submit_to_insert/>', '<input id="edit_form_submit" class="general_button" type="submit" value="Modifica" name="writeEdits" aria-label="Modifica"/>', $content);
 if ($edit) {
     $content = str_replace('<id_to_insert/>', '<input type="hidden" value="'.$_POST['id'].'" name="id"/>', $content);
