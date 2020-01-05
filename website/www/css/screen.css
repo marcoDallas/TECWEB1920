@@ -253,6 +253,7 @@ h2 {
     text-align: center;
     float: right;
     font-size: 120%;
+    min-height: 36em;
 }
 
 .content p {
