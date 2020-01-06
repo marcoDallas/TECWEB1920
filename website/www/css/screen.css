@@ -60,6 +60,11 @@ dt {
     font-weight: bold;
 }
 
+ol>li {
+    margin: auto;
+    width: 90%;
+}
+
 .hidden {
     font-size: 0;
     text-indent: 100%;

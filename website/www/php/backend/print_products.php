@@ -19,7 +19,7 @@ class Print_products
         $content='<div id="content" class="body_column content">
                     <h2>'.$_GET['type'].'</h2>';
         if (Admin::verify()) {
-            $content.='<form class="inline full_column" method="post" action="modifica_prodotto.php">
+            $content.='<form class="general_form inline full_column" method="post" action="modifica_prodotto.php">
                         <div>
                          <input type="hidden" name="prevpage" value="'.htmlentities($_SERVER['REQUEST_URI']).'"/>
                          <input type="hidden" name="type" value="'.$_GET['type'].'"/>
@@ -27,8 +27,8 @@ class Print_products
                         </div> 
                        </form>';
         }
-        $content.='<form class="inline" id="ricerca_prodotti" method="get" action="prodotti.php">
-                    <div>
+        $content.='<form class="general_form inline full_column" id="ricerca_prodotti" method="get" action="prodotti.php">
+                    <div class="full_column">
                      <label for="cercaProdotti">Cerca '.$_GET['type'].': </label>
                      <input class="general_input" type="text" maxlength="40" id="cercaProdotti" name="search"/>
                      <input type="hidden" name="type" value="'.$_GET['type'].'"/>

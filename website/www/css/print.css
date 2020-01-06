@@ -15,6 +15,8 @@ body {
 .map,
 .general_form,
 .general_button,
+.admin_column,
+.to_top,
 .print_hide {
     display: none;
 }
@@ -49,12 +51,11 @@ h2 {
     float: left;
 }
 
-.img_product {
+.product_Img_Container {
     width: 20%;
-    height: auto;
 }
 
-.cont_product {
+.product_Text_Container {
     width: 80%;
 }
 
@@ -65,4 +66,8 @@ h2 {
 .product_image {
     width: 5em;
     height: auto;
+}
+
+li {
+    margin-left: 1em;
 }
