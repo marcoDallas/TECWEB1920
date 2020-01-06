@@ -78,6 +78,10 @@ ol>li {
     overflow: hidden;
 }
 
+.not_visible {
+    visibility: hidden;
+}
+
 .element {
     background-color: #FFF7E6;
     border: 0.1em solid #FFAC61;
@@ -391,7 +395,8 @@ input {
     padding-bottom: 0.5em;
 }
 
-#nav_page a {
+#nav_page>a,
+#nav_page>span {
     display: inline-block;
 }
 

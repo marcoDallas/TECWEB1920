@@ -18,15 +18,7 @@ class Print_products
     {
         $content='<div id="content" class="body_column content">
                     <h2>'.$_GET['type'].'</h2>';
-        if (Admin::verify()) {
-            $content.='<form class="general_form inline full_column" method="post" action="modifica_prodotto.php">
-                        <div>
-                         <input type="hidden" name="prevpage" value="'.htmlentities($_SERVER['REQUEST_URI']).'"/>
-                         <input type="hidden" name="type" value="'.$_GET['type'].'"/>
-                         <input class="general_button" type="submit" name="add" value="Aggiungi Prodotto" aria-label="Aggiungi prodotto"/>
-                        </div> 
-                       </form>';
-        }
+        
         $content.='<form class="general_form inline full_column" id="ricerca_prodotti" method="get" action="prodotti.php">
                     <div class="full_column">
                      <label for="cercaProdotti">Cerca '.$_GET['type'].': </label>
@@ -95,11 +87,24 @@ class Print_products
                 if ($_GET['page']>1) {
                     $previouspage=$_GET['page']-1;
                     $content.='<a class="general_button anchor_button" href="?type='.$_GET['type'].'&amp;page='.$previouspage.'">Pagina precedente</a>';
+                }else{
+                    $content.='<a class="general_button anchor_button not_visible">Pagina precedente</a>';
                 }
+                $content.='<span id="page_number">Pagina '.$_GET['page'].'</span>';
                 if ((sizeof($arr)-$_GET['page']*7) > 0) {
                     $content.='<a class="general_button anchor_button" href="?type='.$_GET['type'].'&amp;page='.$nextpage.'">Pagina successiva</a>';
+                }else{
+                    $content.='<a class="general_button anchor_button not_visible">Pagina successiva</a>';
                 }
-
+                if (Admin::verify()) {
+                    $content.='<form class="general_form full_column" method="post" action="modifica_prodotto.php">
+                                <div>
+                                 <input type="hidden" name="prevpage" value="'.htmlentities($_SERVER['REQUEST_URI']).'"/>
+                                 <input type="hidden" name="type" value="'.$_GET['type'].'"/>
+                                 <input class="general_button" type="submit" name="add" value="Aggiungi Prodotto" aria-label="Aggiungi prodotto"/>
+                                </div> 
+                               </form>';
+                }
                 $content.='</div>';
             }
         } else {
