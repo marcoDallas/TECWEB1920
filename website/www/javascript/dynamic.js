@@ -29,11 +29,12 @@ function toggleLogin(icon) {
 
 function input_image() {
     document.getElementById("image").onchange = function() {
-        $("p").remove('.input_error_message');
+        $("#file_error").text('');
+        def = document.getElementById("preview").src;
         var reader = new FileReader();
 
         if (this.files[0].type.indexOf("image") == -1) {
-            $("#preview").after("<p class=\"input_error_message full_column\">Tipo invalido!</p>");
+            $("#file_error").text("Tipo invalido!");
             $("#preview").attr("src", "blank");
             $("#preview").hide();
             $('#image').wrap('<form>').closest('form').get(0).reset();
@@ -41,7 +42,7 @@ function input_image() {
             return false;
         }
         if (this.files[0].size > 528385) {
-            $("#preview").after("<p class=\"input_error_message full_column\">L'immagine non può essere più grande di 500kb</p>");
+            $("#file_error").text("L'immagine non può essere più grande di 500kb");
             $("#preview").attr("src", "blank");
             $("#preview").hide();
             $('#image').wrap('<form>').closest('form').get(0).reset();
@@ -149,7 +150,9 @@ function check_edit_description() {
 function perform_client_edit_check(e) {
     $("#edit_title_error").text("");
     $("#edit_description_error").text("");
-    if (check_edit_title() && check_edit_description())
+    var title = check_edit_title();
+    var description = check_edit_description();
+    if (title && description)
         return;
 
     e.preventDefault();
@@ -159,6 +162,9 @@ function handle_edit_form() {
     $('#edit_form').on('reset', function(e) {
         $("#edit_title_error").text("");
         $("#edit_description_error").text("");
+        $("#file_error").text("");
+        document.getElementById("preview").src = def;
+        $("#preview").show();
     });
 
     $('#edit_form').submit(function(e) {
