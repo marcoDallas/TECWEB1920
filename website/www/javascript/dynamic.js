@@ -30,7 +30,8 @@ function toggleLogin(icon) {
 function input_image() {
     document.getElementById("image").onchange = function() {
         $("#file_error").text('');
-        def = document.getElementById("preview").src;
+        if (typeof def == 'undefined')
+            def = document.getElementById("preview").src;
         var reader = new FileReader();
 
         if (this.files[0].type.indexOf("image") == -1) {
