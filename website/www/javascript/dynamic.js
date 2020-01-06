@@ -29,18 +29,19 @@ function toggleLogin(icon) {
 
 function input_image() {
     document.getElementById("image").onchange = function() {
-
+        $("p").remove('.input_error_message');
         var reader = new FileReader();
-        if (this.files[0].size > 528385) {
-            alert("Image Size should not be greater than 500Kb");
+
+        if (this.files[0].type.indexOf("image") == -1) {
+            $("#preview").after("<p class=\"input_error_message full_column\">Tipo invalido!</p>");
             $("#preview").attr("src", "blank");
             $("#preview").hide();
             $('#image').wrap('<form>').closest('form').get(0).reset();
             $('#image').unwrap();
             return false;
         }
-        if (this.files[0].type.indexOf("image") == -1) {
-            alert("Invalid Type");
+        if (this.files[0].size > 528385) {
+            $("#preview").after("<p class=\"input_error_message full_column\">L'immagine non può essere più grande di 500kb</p>");
             $("#preview").attr("src", "blank");
             $("#preview").hide();
             $('#image').wrap('<form>').closest('form').get(0).reset();
