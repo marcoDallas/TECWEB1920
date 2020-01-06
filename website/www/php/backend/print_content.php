@@ -73,6 +73,11 @@ class Print_content
         } else {
             $content = file_get_contents('../html/components/admin_form.html');
             $content = str_replace('<form_to_insert/>', '<form class="mobile_hidden login_logout_form" id="admin_login_form" method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">', $content);
+            if(isset($_POST['in']) && $_POST['in']===FALSE) {
+                $content = str_replace('<error_login_to_insert/>','<p id="login_error_ajax">Credenziali errate!</p>',$content);
+            } else {
+                $content = str_replace('<error_login_to_insert/>','<p id="login_error_ajax"></p>',$content);
+            }
         }
         return $content;
     }

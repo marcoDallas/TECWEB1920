@@ -20,7 +20,7 @@ $DOM = str_replace('<meta_description_to_insert/>', '<meta name="description" co
 $DOM = str_replace('<meta_keyword_to_insert/>', '<meta name="keywords" content="Pasticceria,Veneto,Padova,Padovana,Prodotti,Paste,Torte,Panna,Cioccolato" />', $DOM);
 
 $DOM = str_replace('<no_index_to_insert/>', '', $DOM);
-$DOM = str_replace('<login_error_to_insert/>', Admin::init_admin(), $DOM);
+Admin::init_admin();
 $DOM = str_replace('<logo_to_insert/>', Print_content::logo(Utilities::get_page_name()), $DOM);
 if (!strcmp($_GET['type'], 'Paste')) {
     $DOM = str_replace('<title_h1_to_insert/>', 'Una vasta gamma di paste, ti basta solo scegliere', $DOM);

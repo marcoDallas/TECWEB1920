@@ -28,7 +28,6 @@ $DOM = str_replace('<meta_description_to_insert/>', '<meta name="description" co
 $DOM = str_replace('<meta_keyword_to_insert/>', '<meta name="keywords" content="Pasticceria,Veneto,Padova,Padovana,Prodotti" />', $DOM);
 
 $DOM = str_replace('<no_index_to_insert/>', '<meta name="robots" content="noindex"/>', $DOM);
-$DOM = str_replace('<login_error_to_insert/>', '', $DOM);
 $DOM = str_replace('<logo_to_insert/>', Print_content::logo(Utilities::get_page_name()), $DOM);
 $DOM = str_replace('<title_h1_to_insert/>', 'Modifica Prodotto', $DOM);
 

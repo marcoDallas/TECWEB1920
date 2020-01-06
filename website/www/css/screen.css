@@ -458,37 +458,6 @@ input {
     margin-left: 2em;
 }
 
-#login_error {
-    position: absolute;
-    top: 0;
-    left: 13em;
-    right: 7em;
-    z-index: 1;
-    height: 5.5em;
-    background-color: red;
-    text-align: center;
-}
-
-#text_error {
-    position: absolute;
-    left: 0;
-    top: 0.2em;
-    font-size: 1.4em;
-    color: white;
-}
-
-.close {
-    position: absolute;
-    right: 1em;
-    top: 0.5em;
-    width: 3em;
-    height: 3em;
-    background-image: url('../images/close.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    cursor: pointer;
-}
-
 .general_form {
     margin: 0 0.5em 0.5em 0.5em;
     width: auto;
