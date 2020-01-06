@@ -68,6 +68,6 @@ h2 {
     height: auto;
 }
 
-li {
+ol>li {
     margin-left: 1em;
 }
