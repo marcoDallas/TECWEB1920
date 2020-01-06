@@ -70,7 +70,7 @@ class Edit_products
         $userfile_name = $_FILES['image']['name'];
 
         if (!move_uploaded_file($userfile_tmp, $uploaddir . $userfile_name)) {
-            echo 'Upload NON riuscito!';
+            error_log('Upload NON riuscito!');
         }
     }
 }
