@@ -14,7 +14,11 @@ $DOM = str_replace('<no_index_to_insert/>', '<meta name="robots" content="noinde
 $DOM = str_replace('<login_error_to_insert/>', Admin::init_admin(), $DOM);
 $DOM = str_replace('<logo_to_insert/>', Print_content::logo(Utilities::get_page_name()), $DOM);
 $DOM = str_replace('<title_h1_to_insert/>', 'Ti sei perso?', $DOM);
-$DOM = str_replace('<breadcrumb_path_to_insert/>', '<strong xml:lang="en">Fallback</strong>', $DOM);
+if (Admin::verify()) {
+    $DOM = str_replace('<breadcrumb_path_to_insert/>', '<strong><span xml:lang="en">Fallback</span> (Amministratore)</strong>', $DOM);
+} else {
+    $DOM = str_replace('<breadcrumb_path_to_insert/>', '<strong xml:lang="en">Fallback</strong>', $DOM);
+}
 $DOM = str_replace('<menu_to_insert/>', Print_content::menu('fallback.php'), $DOM);
 
 if (Admin::verify()) {
