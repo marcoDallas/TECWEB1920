@@ -78,25 +78,6 @@ ol>li {
 }
 
 
-/*element*/
-
-.element {
-    width: auto;
-    margin: 1em;
-    background-color: #FFF7E6;
-    border: 1px solid #FFAC61;
-}
-
-.element p {
-    padding: 1em 1em 0.5em 1em;
-}
-
-.element h3,
-h2 {
-    padding-top: 0.5em;
-}
-
-
 /*header*/
 
 #header {
@@ -132,7 +113,7 @@ h2 {
 }
 
 
-/*content+lateralbar*/
+/*general container*/
 
 #general_container {
     background-color: #FFF7E6;
@@ -140,6 +121,46 @@ h2 {
 
 
 /*menu*/
+
+#menu {
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    overflow: hidden;
+}
+
+#menu ul li {
+    border-bottom: 2px solid #bc5800;
+    padding: 0.4em 0em 0.4em 0em;
+    list-style-type: none;
+    text-align: center;
+}
+
+#menu ul li a {
+    display: block;
+    float: left;
+    color: black;
+    text-align: center;
+}
+
+#menu ul li a:visited {
+    color: purple;
+}
+
+#menu ul li a:hover {
+    color: red;
+}
+
+#menu.mobile {
+    position: relative;
+    margin-bottom: 0em;
+}
+
+#menu.mobile li a {
+    float: none;
+}
+
+
+/*hamburher animation*/
 
 .menu_icon {
     border-left: 2px solid #bc5800;
@@ -151,35 +172,6 @@ h2 {
     cursor: pointer;
     padding: 1.4em 2em 1.4em 2em;
     min-width: 48px;
-}
-
-#menu {
-    font-size: 1.5em;
-    overflow: hidden;
-    margin-bottom: 1em;
-}
-
-#menu ul li {
-    list-style-type: none;
-    text-align: center;
-    padding: 0em;
-    border-bottom: 2px solid #bc5800;
-    padding: 0.4em 0em 0.4em 0em;
-}
-
-#menu ul li a {
-    color: black;
-    float: left;
-    display: block;
-    text-align: center;
-}
-
-#menu ul li a:visited {
-    color: purple;
-}
-
-#menu ul li a:hover {
-    color: red;
 }
 
 .bar1,
@@ -212,18 +204,8 @@ h2 {
     transform: translate(0em, -0.75em) rotate(45deg);
 }
 
-#menu.mobile {
-    position: relative;
-    margin-bottom: 0em;
-}
 
-#menu.mobile li a {
-    float: none;
-    display: block;
-}
-
-
-/*news*/
+/*news bar*/
 
 .news_container {
     border: 1px solid;
@@ -238,10 +220,6 @@ h2 {
     font-weight: bold;
 }
 
-.news_content {
-    padding-bottom: 1em;
-}
-
 
 /*content*/
 
@@ -252,9 +230,8 @@ h2 {
     border-top: 1px solid #FFAC61;
     margin-top: -1px;
     text-align: center;
-    float: right;
     font-size: 120%;
-    min-height: 36em;
+    min-height: 39em;
 }
 
 .content p {
@@ -266,7 +243,26 @@ h2 {
 }
 
 .content>h2 {
-    color: red;
+    padding-top: 0.5em;
+}
+
+
+/*element*/
+
+.element {
+    width: auto;
+    margin: 1em;
+    background-color: #FFF7E6;
+    border: 1px solid #FFAC61;
+    border-radius: 1em;
+}
+
+.element p {
+    padding: 1em 1em 0.5em 1em;
+}
+
+.element h3,
+h2 {
     padding-top: 0.5em;
 }
 
