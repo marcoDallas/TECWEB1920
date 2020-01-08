@@ -91,7 +91,8 @@ ol>li {
     border-radius: 4px;
 }
 
-.anchor_button {
+.nav_button {
+    width: 10%;
     margin: 0.5em;
     text-decoration: none;
     font-size: 1em;

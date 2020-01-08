@@ -84,16 +84,18 @@ class Print_products
                 $nextpage=$_GET['page']+1;
                 if ($_GET['page']>1) {
                     $previouspage=$_GET['page']-1;
-                    $content.='<a class="general_button anchor_button" href="?type='.$_GET['type'].'&amp;page='.$previouspage.'">Pagina precedente</a>';
+                    $content.='<a class="general_button nav_button" href="?type='.$_GET['type'].'&amp;page='.$previouspage.'">Indietro</a>';
                 }else{
-                    $content.='<a class="general_button anchor_button not_visible">Pagina precedente</a>';
+                    $content.='<a class="general_button nav_button not_visible">Pagina precedente</a>';
                 }
                 $content.='<span id="page_number">Pagina '.$_GET['page'].'</span>';
                 if ((sizeof($arr)-$_GET['page']*7) > 0) {
-                    $content.='<a class="general_button anchor_button" href="?type='.$_GET['type'].'&amp;page='.$nextpage.'">Pagina successiva</a>';
+                    $content.='<a class="general_button nav_button" href="?type='.$_GET['type'].'&amp;page='.$nextpage.'">Avanti</a>';
                 }else{
-                    $content.='<a class="general_button anchor_button not_visible">Pagina successiva</a>';
+                    $content.='<a class="general_button nav_button not_visible">Pagina successiva</a>';
                 }
+                
+                $content.='</div>';
                 if (Admin::verify()) {
                     $content.='<form class="general_form col-sm-1" method="post" action="modifica_prodotto.php">
                                 <div>
@@ -103,7 +105,6 @@ class Print_products
                                 </div> 
                                </form>';
                 }
-                $content.='</div>';
             }
         } else {
             $content.='<p>Nessun prodotto trovato</p>
