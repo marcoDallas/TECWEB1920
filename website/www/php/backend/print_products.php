@@ -25,7 +25,6 @@ class Print_products
                      <input class="general_input" type="text" maxlength="40" id="cercaProdotti" name="search"/>
                      <input type="hidden" name="type" value="'.$_GET['type'].'"/>
                      <input class="general_button" type="submit" value="cerca" aria-label="Cerca"/>
-                     <p class="input_error_message" id="search_error"></p>
                     </div>    
                 </form>';
         if ($arr) {
