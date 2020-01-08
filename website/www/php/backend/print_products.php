@@ -55,28 +55,27 @@ class Print_products
                                 <div class="product_text_container">
                                     <h3>'.$prodotto['Nome'].'</h3>
                                     <p>'.$prodotto['Descrizione'].'</p>
-                                ';
+                                </div>';
                 if (Admin::verify()) {
-                    $content.='<div class="productButtons"><form method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">
-                                <div>
-                                 <input type="hidden" name="product" value="'.$prodotto['Codice'].'"/>
-                                 <input class="general_button" type="submit" name="remove" value="Rimuovi prodotto" aria-label="Rimuovi prodotto"/>
-                                </div> 
+                    $content.='<div class="col-sm-1 product_buttons">
+                                <form method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">
+                                    <div>
+                                        <input type="hidden" name="product" value="'.$prodotto['Codice'].'"/>
+                                        <input class="general_button" type="submit" name="remove" value="Rimuovi prodotto" aria-label="Rimuovi prodotto"/>
+                                    </div> 
                                </form>
-							   </div>
-							   <div class="productButtons">
+							   
                                <form method="post" action="modifica_prodotto.php">
-							   <div>
-                                 <input type="hidden" name="id" value="'.$prodotto['Codice'].'"/>
-                                 <input type="hidden" name="prevpage" value="'.htmlentities($_SERVER['REQUEST_URI']).'"/>
-                                 <input type="hidden" name="type" value="'.$_GET['type'].'"/>
-                                 <input class="general_button" type="submit" name="edit" value="Modifica prodotto" aria-label="Modifica prodotto"/>
-								</div>
-                            </form>
+                                    <div>
+                                        <input type="hidden" name="id" value="'.$prodotto['Codice'].'"/>
+                                        <input type="hidden" name="prevpage" value="'.htmlentities($_SERVER['REQUEST_URI']).'"/>
+                                        <input type="hidden" name="type" value="'.$_GET['type'].'"/>
+                                        <input class="general_button" type="submit" name="edit" value="Modifica prodotto" aria-label="Modifica prodotto"/>
+                                    </div>
+                                </form>
 							</div>';
                 }
                 $content.='</div>
-						</div>
                         </li>';
             }
             $content.='</ul>';

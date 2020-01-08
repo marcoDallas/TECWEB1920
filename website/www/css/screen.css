@@ -317,7 +317,16 @@ h2 {
 }
 
 .product_image {
-    max-width: 12em;
+    margin-top: 1.5em;
+    max-width: 10em;
+}
+
+.product_buttons {
+    padding-bottom: 1em;
+}
+
+.product_buttons>* {
+    margin-bottom: 0.5em;
 }
 
 
@@ -394,10 +403,6 @@ h2 {
 
 #submit_login_form {
     margin-bottom: 0.5em;
-}
-
-.inline {
-    display: inline-block;
 }
 
 #search_error {
@@ -572,10 +577,9 @@ h2 {
     .product_text_container {
         width: 70%;
     }
-    .productButtons {
-        width: 45%;
+    .product_buttons>* {
+        width: 35%;
         display: inline-block;
-        padding-bottom: 1em;
     }
 }
 
