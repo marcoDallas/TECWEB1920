@@ -77,6 +77,43 @@ ol>li {
     border-radius: 1em;
 }
 
+.general_button {
+    background-color: #a73f2d;
+    border: 1px solid #241d13;
+    cursor: pointer;
+    color: white;
+    font-size: 0.95em;
+    font-weight: bold;
+    min-width: 2em;
+    max-width: 100%;
+    width: fit-content;
+    padding: 0.6em 10%;
+    border-radius: 4px;
+}
+
+.anchor_button {
+    margin: 0.5em;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.general_button:hover {
+    background-color: #d4a8a1;
+}
+
+.general_button:active {
+    position: relative;
+    top: 1px;
+}
+
+.general_input {
+    width: 25%;
+    padding: 0.5em;
+    font-size: 1em;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
 
 /*header*/
 
@@ -332,43 +369,6 @@ h2 {
 
 /*buttons and forms*/
 
-.general_button {
-    background-color: #a73f2d;
-    border: 1px solid #241d13;
-    cursor: pointer;
-    color: white;
-    font-size: 0.95em;
-    font-weight: bold;
-    min-width: 2em;
-    max-width: 100%;
-    width: fit-content;
-    padding: 0.6em 10%;
-    border-radius: 4px;
-}
-
-.anchor_button {
-    margin: 0.5em;
-    text-decoration: none;
-    font-size: 1em;
-}
-
-.general_button:hover {
-    background-color: #d4a8a1;
-}
-
-.general_button:active {
-    position: relative;
-    top: 1px;
-}
-
-.general_input {
-    width: 62%;
-    padding: 0.5em;
-    font-size: 1em;
-    border: 1px solid black;
-    border-radius: 4px;
-}
-
 #login_input {
     width: 68%;
 }
@@ -564,6 +564,9 @@ h2 {
     .col-tb-1 {
         width: 50%;
     }
+    .general_input {
+        width: 45%;
+    }
     .news_container {
         display: inline-block;
         width: 40%;
@@ -686,9 +689,6 @@ h2 {
     .shift_down {
         position: relative;
         top: 4em;
-    }
-    .general_input {
-        width: 45%;
     }
     .login_buttons {
         text-align: center;
