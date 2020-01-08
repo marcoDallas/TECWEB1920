@@ -19,8 +19,8 @@ class Print_products
         $content='<div id="content" class="body_column content">
                     <h2>'.$_GET['type'].'</h2>';
         
-        $content.='<form class="general_form inline full_column" id="ricerca_prodotti" method="get" action="prodotti.php">
-                    <div class="full_column">
+        $content.='<form class="general_form inline col-sm-1" id="ricerca_prodotti" method="get" action="prodotti.php">
+                    <div class="col-sm-1">
                      <label for="cercaProdotti">Cerca '.$_GET['type'].': </label>
                      <input class="general_input" type="text" maxlength="40" id="cercaProdotti" name="search"/>
                      <input type="hidden" name="type" value="'.$_GET['type'].'"/>
@@ -43,7 +43,7 @@ class Print_products
             $content.='<ul>';
             foreach ($arrpage as &$prodotto) {
                 $content.='<li class="product">
-                            <div class="container full_column element">
+                            <div class="container col-sm-1 element">
                                 <div class="product_Img_Container">';
                 if (!strcmp($prodotto['Immagine'], '')) {
                     $content.='<p>Forse l\'admin non ha inserito la foto  title="cosa triste">:\'(</abbr></p>';
@@ -96,7 +96,7 @@ class Print_products
                     $content.='<a class="general_button anchor_button not_visible">Pagina successiva</a>';
                 }
                 if (Admin::verify()) {
-                    $content.='<form class="general_form full_column" method="post" action="modifica_prodotto.php">
+                    $content.='<form class="general_form col-sm-1" method="post" action="modifica_prodotto.php">
                                 <div>
                                  <input type="hidden" name="prevpage" value="'.htmlentities($_SERVER['REQUEST_URI']).'"/>
                                  <input type="hidden" name="type" value="'.$_GET['type'].'"/>

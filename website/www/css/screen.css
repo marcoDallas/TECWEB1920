@@ -33,6 +33,10 @@ body {
     display: inline-block;
 }
 
+.col-sm-1 {
+    width: 100%;
+}
+
 .title_column,
 .full_column,
 .menu_column,

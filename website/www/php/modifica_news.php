@@ -60,7 +60,7 @@ $content = str_replace('<id_to_insert/>', '', $content);
 $content = str_replace('<submit_to_insert/>', '<input id="edit_form_submit" class="general_button" type="submit" value="Modifica" name="submitEditNews" aria-label="Modifica:"/>', $content);
 
 $DOM = str_replace('<page_to_insert/>', $content, $DOM);
-$DOM = str_replace('<footer_to_replace/>', '<div id="footer" class="container full_column">', $DOM);
+$DOM = str_replace('<footer_to_replace/>', '<div id="footer" class="container col-sm-1">', $DOM);
 $DOM = str_replace('<login_admin_to_insert/>', Print_content::admin_form(), $DOM);
 
 echo($DOM);
