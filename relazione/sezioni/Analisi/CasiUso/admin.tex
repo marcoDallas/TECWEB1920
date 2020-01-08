@@ -23,7 +23,9 @@ gli annessi bottoni \emph{Accedi} (analogo al bottone desktop per funzionalità)
 Se le credenziali sono corrette, allora il login è andato a buon fine e si visualizzerà sul footer il form \emph{Benvenuto amministratore!} con il relativo bottone \emph{Esci}, 
 altrimenti si visualizzerà un messaggio di errore specifico all'interno del form:
 \begin{itemize}
-	\item se manca un campo da inserire od entrambi, il messaggio sarà \emph{Hai inserito simboli non consentiti};
+	\item se il campo username ha contenuto troppo breve o troppo lungo il messaggio sarà \emph{Lunghezza username non valida!};
+	\item se il campo password ha contenuto troppo breve o troppo lungo il messaggio sarà \emph{Lunghezza password non valida!};
+	\item se un campo da inserire, o entrambi, contengono caratteri non permessi il messaggio sarà \emph{Hai inserito simboli non consentiti};
 	\item se le credenziali inserite non sono corrette, il messaggio sarà \emph{Credenziali errate!}.
 \end{itemize}
 
@@ -31,7 +33,7 @@ altrimenti si visualizzerà un messaggio di errore specifico all'interno del for
 \label{par:AddP}
 L'amministratore può aggiungere una pasta alla volta, cliccando sul bottone apposito \emph{Aggiungi prodotto} all'inizio del content di "Paste".\\ 
 Una volta cliccato, si aprirà una nuova pagina con annesso form che conterrà i campi: \emph{Nome Prodotto}, \emph{Immagine prodotto} e \emph{Descrizione Prodotto}.\\ 
-Una volta inseriti correttamente tutti i campi, allora si clicca sul bottone \emph{Modifica} e si viene reindirizzati alla pagina \emph{Paste}, con il nuovo prodotto 
+Una volta inseriti correttamente tutti i campi si clicca sul bottone \emph{Modifica} e si viene reindirizzati alla pagina \emph{Paste}, con il nuovo prodotto 
 aggiunto all'elenco di paste in prima posizione.\\
 Se si vogliono resettare tutti i campi input, allora basterà cliccare sul bottone \emph{Ripristina}.
 
@@ -39,20 +41,20 @@ Se si vogliono resettare tutti i campi input, allora basterà cliccare sul botto
 \label{par:ModP}
 L'amministratore può modificare una pasta alla volta, cliccando sul bottone apposito \emph{Modifica prodotto}, che è associato ad ogni singola pasta.\\ 
 Una volta cliccato il bottone, si aprirà una nuova pagina con annesso form dove si potranno modificare i singoli campi della pasta in questione. 
-Gli input sono precompilati, ovvero che riprendono il contenuto originale della pasta.\\
-Una volta cliccato il bottone \emph{Modifica}, allora si viene reindirizzati alla pagina "Paste" con l'elenco aggiornato.\\
+Gli input sono precompilati, ovvero riprendono il contenuto originale della pasta.\\
+Una volta cliccato il bottone \emph{Modifica} si viene reindirizzati alla pagina "Paste" con l'elenco aggiornato.\\
 Se si vogliono ripristinare tutti i campi input e cancellare le modifiche, allora basterà cliccare sul bottone \emph{Ripristina}.
 
 \paragraph{Eliminazione prodotto in "Paste"}\mbox{}\\
 \label{par:DelP}
-L'amministratore può eliminare una pasta alla volta cliccando sul bottone apposito \emph{Elimina prodotto}, che è associato ad ogni singola pasta.\\ 
-Una volta cliccato il bottone, la pasta viene eliminata definitavamente dalla pagina "Paste".\\
+L'amministratore può eliminare una pasta alla volta cliccando sull'apposito bottone \emph{Elimina prodotto}, che è associato ad ogni singola pasta.\\ 
+Una volta cliccato il bottone, la pasta viene eliminata definitivamente dalla pagina "Paste".\\
 
 \paragraph{Aggiunta prodotto in "Torte"}\mbox{}\\
 \label{par:AddT}
 L'amministratore può aggiungere una torta alla volta, cliccando sul bottone apposito \emph{Aggiungi prodotto} nel content di "Torte".\\
 Una volta cliccato, si aprirà una nuova pagina con annesso form che conterrà i campi: \emph{Nome Prodotto}, \emph{Immagine prodotto} e \emph{Descrizione Prodotto}.\\ 
-Una volta inseriti correttamente tutti i campi, allora si clicca sul bottone \emph{Modifica} e si viene reindirizzati alla pagina \emph{Torte} con il nuovo prodotto 
+Una volta inseriti correttamente tutti i campi si clicca sul bottone \emph{Modifica} e si viene reindirizzati alla pagina \emph{Torte} con il nuovo prodotto 
 aggiunto all'elenco di torte in prima posizione.\\
 Se si vogliono resettare tutti i campi input, allora basterà cliccare sul bottone \emph{Ripristina}.
 
@@ -61,13 +63,13 @@ Se si vogliono resettare tutti i campi input, allora basterà cliccare sul botto
 L'amministratore può modificare una torta alla volta cliccando sul bottone apposito \emph{Modifica prodotto}, che è associato ad ogni singola torta.\\ 
 Una volta cliccato il bottone, si aprirà una nuova pagina con annesso form dove si potranno modificare i singoli campi della torta in questione. 
 Gli input sono precompilati, ovvero che riprendono il contenuto originale della torta.\\
-Una volta cliccato il bottone \emph{Modifica}, allora si viene reindirizzati alla pagina "Torte" con l'elenco aggiornato.\\
+Una volta cliccato il bottone \emph{Modifica} si viene reindirizzati alla pagina "Torte" con l'elenco aggiornato.\\
 Se si vogliono ripristinare tutti i campi input e cancellare le modifiche, allora basterà cliccare sul bottone \emph{Ripristina}.
 
 \paragraph{Eliminazione prodotto in "Torte"}\mbox{}\\
 \label{par:DelT}
-L'amministratore può eliminare una torta alla volta, cliccando sul bottone apposito \emph{Elimina prodotto}, che è associato ad ogni singola torta.\\ 
-Una volta cliccato il bottone, la torta viene eliminata definitavamente dalla pagina "Torte".\\
+L'amministratore può eliminare una torta alla volta, cliccando sull'apposito bottone \emph{Elimina prodotto}, che è associato ad ogni singola torta.\\ 
+Una volta cliccato il bottone, la torta viene eliminata definitivamente dalla pagina "Torte".\\
 
 \paragraph{Modifica la sezione "News"}\mbox{}\\
 \label{par:ModN}
