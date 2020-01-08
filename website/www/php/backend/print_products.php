@@ -16,7 +16,7 @@ class Print_products
 
     public function print_pr($arr)
     {
-        $content='<div id="content" class="body_column content">
+        $content='<div id="content" class="col-sm-1 col-ds-1 content">
                     <h2>'.$_GET['type'].'</h2>';
         
         $content.='<form class="general_form inline col-sm-1" id="ricerca_prodotti" method="get" action="prodotti.php">

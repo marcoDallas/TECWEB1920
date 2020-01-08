@@ -40,14 +40,6 @@ body {
     width: 75%;
 }
 
-.title_column,
-.menu_column,
-.body_column,
-.footer_column,
-.footer_wrapper {
-    width: 100%;
-}
-
 .admin_column {
     width: 80%;
     padding-top: 1em;
@@ -582,15 +574,16 @@ input {
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 @media only screen and (min-width: 700px) {
+    /*grid*/
+    .col-tb-1 {
+        width: 50%;
+    }
     .news_container {
         display: inline-block;
         width: 40%;
     }
     #content>h2 {
         padding-top: 0.5em;
-    }
-    .footer_column {
-        width: 50%;
     }
     .element img {
         width: 80%;
@@ -619,33 +612,34 @@ input {
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 @media only screen and (min-width: 830px) {
-    #logo {
-        max-height: 9em;
-        max-width: 14em;
-    }
-    #general_container {
-        min-height: 59.3%;
-    }
-    .logo_column {
-        width: 40%;
-    }
-    .title_column {
-        width: 60%;
-    }
-    .menu_column {
-        width: 25%;
-    }
-    .body_column {
+    /*grid*/
+    .col-ds-1 {
         width: 75%;
     }
-    .footer_wrapper {
+    .col-ds-2 {
         width: 70%;
+    }
+    .col-ds-3 {
+        width: 60%;
+    }
+    .col-ds-4 {
+        width: 40%;
+    }
+    .col-ds-5 {
+        width: 25%;
     }
     .admin_column {
         width: 27%;
         padding-top: 0em;
         padding-left: 0%;
         padding-right: 0%;
+    }
+    #logo {
+        max-height: 9em;
+        max-width: 14em;
+    }
+    #general_container {
+        min-height: 59.3%;
     }
     #header h1 {
         font-size: 1.7em;
