@@ -40,16 +40,8 @@ body {
     width: 75%;
 }
 
-.admin_login {
-    width: 80%;
-    padding-top: 1em;
-    padding-left: 10%;
-    padding-right: 10%;
-}
 
-.center {
-    text-align: center;
-}
+/*general*/
 
 dt {
     font-weight: bold;
@@ -60,41 +52,43 @@ ol>li {
     width: 90%;
 }
 
+.center {
+    text-align: center;
+}
+
 .hidden {
     font-size: 0;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 .mobile_hidden {
     position: absolute;
     left: -999999em;
-    overflow: hidden;
 }
 
 .not_visible {
     visibility: hidden;
 }
 
-.element {
-    background-color: #FFF7E6;
-    border: 0.1em solid #FFAC61;
+.general_image {
+    width: 80%;
+    height: auto;
     margin: 1em;
+    border: 1px solid #FFAC61;
+    border-radius: 1em;
+}
+
+
+/*element*/
+
+.element {
     width: auto;
+    margin: 1em;
+    background-color: #FFF7E6;
+    border: 1px solid #FFAC61;
 }
 
 .element p {
     padding: 1em 1em 0.5em 1em;
-}
-
-.element img {
-    padding: 1em 1em 0.5em 0.5em;
-    width: 100%;
-    height: auto;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
 }
 
 .element h3,
@@ -108,7 +102,6 @@ h2 {
 #header {
     background-color: #EC7205;
     color: #FFFFFF;
-    outline: none;
 }
 
 #header h1 {
@@ -118,11 +111,11 @@ h2 {
 }
 
 #logo {
+    display: block;
     max-height: 4em;
     max-width: 9em;
     font-size: 1.5em;
     text-align: center;
-    display: block;
 }
 
 
@@ -254,6 +247,10 @@ h2 {
 
 .content {
     background-color: white;
+    border-left: 1px solid #FFAC61;
+    margin-left: -1px;
+    border-top: 1px solid #FFAC61;
+    margin-top: -1px;
     text-align: center;
     float: right;
     font-size: 120%;
@@ -306,11 +303,6 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     padding: 0em;
-}
-
-.general_image {
-    width: 80%;
-    height: auto;
 }
 
 
@@ -434,6 +426,13 @@ input {
     text-align: center;
     padding-top: 1.2em;
     padding-bottom: 1.2em;
+}
+
+.admin_login {
+    width: 80%;
+    padding-top: 1em;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 #login_admin>a {
@@ -580,10 +579,6 @@ input {
     }
     #content>h2 {
         padding-top: 0.5em;
-    }
-    .element img {
-        width: 80%;
-        height: auto;
     }
     .product_Img_Container {
         width: 30%;
