@@ -22,7 +22,7 @@ body {
 }
 
 
-/*general*/
+/*grid*/
 
 .container {
     overflow: hidden;
@@ -30,24 +30,22 @@ body {
 
 .container>* {
     float: left;
-    display: inline-block;
 }
 
 .col-sm-1 {
     width: 100%;
 }
 
+.col-sm-2 {
+    width: 75%;
+}
+
 .title_column,
-.full_column,
 .menu_column,
 .body_column,
 .footer_column,
 .footer_wrapper {
     width: 100%;
-}
-
-.logo_column {
-    width: 75%;
 }
 
 .admin_column {
