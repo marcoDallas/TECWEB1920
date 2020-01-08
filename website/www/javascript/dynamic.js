@@ -11,14 +11,14 @@ function toggleMobileVisibility(element) {
     }
 }
 
-function toggleLogin(icon) {
+function toggleLogin() {
     var toShow = document.getElementById("admin_login_form");
     if (toShow.classList.contains("mobile_hidden")) {
         toShow.classList.remove("mobile_hidden");
     } else {
         toShow.classList.add("mobile_hidden");
     }
-    var element = document.getElementById("login_admin");
+    var element = document.getElementById("login_button_mobile");
     if (element.classList.contains("hidden")) {
         element.classList.remove("hidden");
     } else {
@@ -219,7 +219,6 @@ function handle_edit_form() {
 }
 
 function check_search(e) {
-    $("#search_error").text("");
     var strLength = $("#cercaProdotti").val().trim().length;
     var parent = (document.getElementById('cercaProdotti')).parentNode;
     if (strLength > 40) {

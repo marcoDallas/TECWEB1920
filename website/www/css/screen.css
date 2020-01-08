@@ -115,6 +115,11 @@ ol>li {
     border-radius: 4px;
 }
 
+.general_form {
+    margin: 0 0.5em 0.5em 0.5em;
+    width: auto;
+}
+
 
 /*header*/
 
@@ -367,13 +372,6 @@ h2 {
     margin-bottom: 0.5em;
 }
 
-
-/*buttons and forms*/
-
-#login_input {
-    width: 68%;
-}
-
 #nav_page {
     padding-bottom: 0.5em;
 }
@@ -383,12 +381,8 @@ h2 {
     display: inline-block;
 }
 
-.input_line p {
-    width: 25%;
-    min-width: 4.6em;
-    padding-left: 0.5em;
-    display: inline-block;
-}
+
+/*login form*/
 
 .input_line {
     text-align: center;
@@ -402,16 +396,15 @@ h2 {
     padding: 0.2em;
 }
 
+#fieldset_login input[type=submit] {
+    padding: 1em;
+}
+
 #submit_login_form {
     margin-bottom: 0.5em;
 }
 
-#search_error {
-    display: block;
-    padding: 0 0 0 0;
-}
-
-#login_admin {
+.admin_login {
     width: 80%;
     padding-left: 10%;
     padding-right: 10%;
@@ -420,39 +413,16 @@ h2 {
     padding-bottom: 1.2em;
 }
 
-.admin_login {
-    width: 80%;
-    padding-top: 1em;
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
-#login_admin>a {
+.admin_login>a {
     padding: 1.2em 2% 1.2em 2%;
 }
 
-#admin_login_form {
-    width: 100%;
-}
-
-#admin_login_form input[type=submit] {
-    padding: 1em;
-}
-
-#exit_login_form {
+#exit_login_button_mobile {
     padding: 1.2em;
-    margin-left: 2em;
 }
 
-.general_form {
-    margin: 0 0.5em 0.5em 0.5em;
-    width: auto;
-}
 
-.login_logout_form {
-    margin: 0 0.5em 0.5em 0.5em;
-    width: 100%;
-}
+/*edit pages*/
 
 #edit_form {
     text-align: left;
@@ -613,6 +583,9 @@ h2 {
     .col-ds-5 {
         width: 25%;
     }
+    .desktop_hidden {
+        display: none;
+    }
     .admin_login {
         width: 27%;
         padding-top: 0em;
@@ -642,9 +615,6 @@ h2 {
         text-align: left;
         float: none;
     }
-    .desktop_hidden {
-        display: none;
-    }
     .news_container {
         width: auto;
         display: block;
@@ -661,9 +631,6 @@ h2 {
         vertical-align: middle;
         display: inline;
         margin: 0em;
-    }
-    #submit_login_form {
-        margin-bottom: 0.5em;
     }
     #login_input {
         width: 56%;
