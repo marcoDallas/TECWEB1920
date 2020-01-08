@@ -40,7 +40,7 @@ body {
     width: 75%;
 }
 
-.admin_column {
+.admin_login {
     width: 80%;
     padding-top: 1em;
     padding-left: 10%;
@@ -628,11 +628,12 @@ input {
     .col-ds-5 {
         width: 25%;
     }
-    .admin_column {
+    .admin_login {
         width: 27%;
         padding-top: 0em;
         padding-left: 0%;
         padding-right: 0%;
+        padding-top: .7em;
     }
     #logo {
         max-height: 9em;
@@ -715,8 +716,5 @@ input {
     .to_top_button {
         bottom: 1.5em;
         right: 2.5em;
-    }
-    .admin_login {
-        padding-top: .7em;
     }
 }
