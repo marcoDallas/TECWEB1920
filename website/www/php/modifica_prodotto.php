@@ -90,7 +90,7 @@ $path='';
 if ($edit) {
     $path=$product['Immagine'];
 }
-$content = str_replace('<file_to_insert/>', '<div class="box"><div class="edit_image"><label for="image">Cambia immagine: </label>
+$content = str_replace('<file_to_insert/>', '<div class="container"><div class="edit_image"><label for="image">Cambia immagine: </label>
                                             <input name="image" type="file" id="image" onclick="input_image(this)" aria-label="Scegli fail"/>
                                             <input type="hidden" name="oldimage" value="'.$path.'"/></div>
                                             <img id="preview" src="'.$path.'" alt="immagine da impostare o sostituire"/></div>', $content);
@@ -101,7 +101,7 @@ if ($edit) {
     $content = str_replace('<id_to_insert/>', '', $content);
 }
 $DOM = str_replace('<page_to_insert/>', $content, $DOM);
-$DOM = str_replace('<footer_to_replace/>', '<div id="footer" class="box full_column">', $DOM);
+$DOM = str_replace('<footer_to_replace/>', '<div id="footer" class="container full_column">', $DOM);
 $DOM = str_replace('<login_admin_to_insert/>', Print_content::admin_form(), $DOM);
 
 echo($DOM);

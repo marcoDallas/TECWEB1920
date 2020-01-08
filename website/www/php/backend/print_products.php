@@ -43,7 +43,7 @@ class Print_products
             $content.='<ul>';
             foreach ($arrpage as &$prodotto) {
                 $content.='<li class="product">
-                            <div class="box full_column element">
+                            <div class="container full_column element">
                                 <div class="product_Img_Container">';
                 if (!strcmp($prodotto['Immagine'], '')) {
                     $content.='<p>Forse l\'admin non ha inserito la foto  title="cosa triste">:\'(</abbr></p>';
