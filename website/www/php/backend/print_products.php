@@ -19,7 +19,7 @@ class Print_products
         $content='<div id="content" class="col-sm-1 col-ds-1 content">
                     <h2>'.$_GET['type'].'</h2>';
         
-        $content.='<form class="general_form inline col-sm-1" id="ricerca_prodotti" method="get" action="prodotti.php">
+        $content.='<form class="general_form col-sm-1" method="get" action="prodotti.php">
                     <div class="col-sm-1">
                      <label for="cercaProdotti">Cerca '.$_GET['type'].': </label>
                      <input class="general_input" type="text" maxlength="40" id="cercaProdotti" name="search"/>
@@ -44,7 +44,7 @@ class Print_products
             foreach ($arrpage as &$prodotto) {
                 $content.='<li class="product">
                             <div class="container col-sm-1 element">
-                                <div class="product_Img_Container">';
+                                <div class="product_image_container">';
                 if (!strcmp($prodotto['Immagine'], '')) {
                     $content.='<p>Forse l\'admin non ha inserito la foto  title="cosa triste">:\'(</abbr></p>';
                 } else {
@@ -52,7 +52,7 @@ class Print_products
                 }
                                     
                 $content.='</div>
-                                <div class="product_Text_Container">
+                                <div class="product_text_container">
                                     <h3>'.$prodotto['Nome'].'</h3>
                                     <p>'.$prodotto['Descrizione'].'</p>
                                 ';
