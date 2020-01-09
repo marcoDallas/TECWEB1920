@@ -6,6 +6,7 @@
 
 class Edit_news
 {
+    /* controlla se è stato richiesto di modificare una news, e se passa i controlli, la modifica */ 
     public static function edit()
     {
         if (isset($_POST['submitEditNews']) && isset($_POST['title']) && isset($_POST['description'])) {
