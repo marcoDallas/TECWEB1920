@@ -421,6 +421,12 @@ h2 {
     padding: 1.2em;
 }
 
+.login_buttons {
+    display: inline-block;
+    text-align: center;
+    width: 45%;
+}
+
 
 /*edit pages*/
 
@@ -452,12 +458,6 @@ h2 {
 
 .input_suggestion {
     font-size: 0.9em;
-}
-
-.login_buttons {
-    display: inline-block;
-    text-align: center;
-    width: 45%;
 }
 
 .input_error_message {
@@ -495,7 +495,7 @@ h2 {
 }
 
 
-/*TO TOP PROPERTIES*/
+/*to top*/
 
 .to_top_button {
     position: fixed;
@@ -537,6 +537,7 @@ h2 {
     #content>h2 {
         padding-top: 0.5em;
     }
+    /*product*/
     .product_image_container {
         width: 30%;
     }
@@ -626,29 +627,6 @@ h2 {
     }
     #login_input {
         width: 56%;
-    }
-    #login_error {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: 100%;
-        height: 4em;
-        background-color: red;
-        text-align: center;
-    }
-    #text_error {
-        position: absolute;
-        width: 80%;
-        left: 0;
-        top: 0.2em;
-        font-size: 2em;
-        color: white;
-        padding-left: 3em;
-    }
-    .shift_down {
-        position: relative;
-        top: 4em;
     }
     .login_buttons {
         text-align: center;
