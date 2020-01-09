@@ -579,25 +579,18 @@ h2 {
     .desktop_hidden {
         display: none;
     }
-    .admin_login {
-        width: 27%;
-        padding-top: 0em;
-        padding-left: 0%;
-        padding-right: 0%;
-        padding-top: .7em;
-    }
     #logo {
         max-height: 9em;
         max-width: 14em;
-    }
-    #general_container {
-        min-height: 59.3%;
     }
     #header h1 {
         font-size: 1.7em;
         text-align: right;
         padding-top: 1.8em;
         padding-right: 5%;
+    }
+    #general_container {
+        min-height: 59.3%;
     }
     #menu ul li {
         text-align: left;
@@ -625,13 +618,18 @@ h2 {
         display: inline;
         margin: 0em;
     }
-    #login_input {
-        width: 56%;
+    .admin_login {
+        width: 27%;
+        padding-top: 0em;
+        padding-left: 0%;
+        padding-right: 0%;
+        padding-top: .7em;
     }
     .login_buttons {
         text-align: center;
         width: 100%;
     }
+    /*to top*/
     .to_top_button {
         bottom: 1.5em;
         right: 2.5em;
