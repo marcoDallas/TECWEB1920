@@ -497,7 +497,7 @@ h2 {
 
 /*to top*/
 
-.to_top_button {
+#to_top_button {
     position: fixed;
     bottom: 1em;
     right: 1.5em;
@@ -632,7 +632,7 @@ h2 {
         margin: 0;
     }
     /*to top*/
-    .to_top_button {
+    #to_top_button {
         bottom: 1.5em;
         right: 2.5em;
     }
