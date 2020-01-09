@@ -445,10 +445,6 @@ h2 {
     display: block;
 }
 
-.general_textarea {
-    padding-left: 1em;
-}
-
 #preview {
     max-width: 15em;
     max-height: auto;
