@@ -8,21 +8,21 @@ require_once('admin.php');
 class Print_products
 {
     private $arr_prodotti;
-
+    /* Il costruttore crea un oggetto di get_products */
     public function __construct()
     {
         $this->arr_prodotti = new Get_products();
     }
-
+    /* Il metodo stampa il content della pagina prodotti */
     public function print_pr($arr)
     {
         $content='<div id="content" class="col-sm-1 col-ds-1 content">
                     <h2>'.$_GET['type'].'</h2>';
         
-        $content.='<form class="general_form col-sm-1" method="get" action="prodotti.php">
+        $content.='<form class="col-sm-1 general_form" method="get" action="prodotti.php">
                     <div class="col-sm-1">
                      <label for="cercaProdotti">Cerca '.$_GET['type'].': </label>
-                     <input class="general_input" type="text" maxlength="40" id="cercaProdotti" name="search"/>
+                     <input id="cercaProdotti" class="general_input" type="text" maxlength="40" name="search"/>
                      <input type="hidden" name="type" value="'.$_GET['type'].'"/>
                      <input class="general_button" type="submit" value="cerca" aria-label="Cerca"/>
                     </div>    
@@ -113,22 +113,22 @@ class Print_products
         $content.='</div>';
         return $content;
     }
-    
+    /* Il metodo ritorna la lista delle paste */
     public function print_paste()
     {
         return $this->print_pr($this->arr_prodotti->get_paste());
     }
-
+    /* Il metodo ritorna la lista delle torte */
     public function print_torte()
     {
         return $this->print_pr($this->arr_prodotti->get_torte());
     }
-
+    /* Il metodo ritorna la lista delle paste cercate */
     public function print_searcheable_paste($to_search)
     {
         return $this->print_pr($this->arr_prodotti->search_paste($to_search));
     }
-
+    /* Il metodo ritorna la lista delle torte cercate */
     public function print_searcheable_torte($to_search)
     {
         return $this->print_pr($this->arr_prodotti->search_torte($to_search));
