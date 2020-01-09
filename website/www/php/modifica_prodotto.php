@@ -91,7 +91,7 @@ if ($edit) {
     $path=$product['Immagine'];
 }
 $content = str_replace('<file_to_insert/>', '<div class="container"><div><label for="image">Cambia immagine: </label>
-                                            <input name="image" type="file" id="image" onclick="input_image(this)" aria-label="Scegli fail"/>
+                                            <input id="image" name="image" type="file" xml:lang="en" aria-label="Scegli file"  onclick="input_image(this)"/>
                                             <input type="hidden" name="oldimage" value="'.$path.'"/></div>
                                             <img id="preview" src="'.$path.'" alt="immagine da impostare o sostituire"/></div>', $content);
 $content = str_replace('<submit_to_insert/>', '<input id="edit_form_submit" class="general_button" type="submit" value="Modifica" name="writeEdits" aria-label="Modifica"/>', $content);
