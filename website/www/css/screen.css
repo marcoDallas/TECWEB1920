@@ -417,14 +417,14 @@ h2 {
     padding: 1.2em 2% 1.2em 2%;
 }
 
-#exit_login_button_mobile {
-    padding: 1.2em;
-}
-
 .login_buttons {
     display: inline-block;
     text-align: center;
     width: 45%;
+}
+
+.login_buttons>a {
+    padding: 1.2em;
 }
 
 
