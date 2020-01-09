@@ -1,14 +1,15 @@
 <?php
 /*
- *  Classe per la verifica/logout dell'amministratore
+ *  Classe per il login/logout e verifica dell'amministratore
  */
 include_once('sessions.php');
 
 class Admin
 {
+    /* Ad ogni caricamento di una pagina il metodo verifica se è stato richiesto di accedere come admin */
     public static function init_admin()
     {
-        Sessions::set_expire(1800); //30 minuti di vita alle sessioni
+        Sessions::set_expire(1800);
         Sessions::init_session();
         
         if (!Admin::verify() && isset($_POST['Login'])) {
@@ -18,12 +19,12 @@ class Admin
             Admin::logout();
         }
     }
-
+    /* Il metodo controlla ad ogni caricamento di una pagina se la sessione amministratore è presente */
     public static function verify()
     {
         return Sessions::session_exists('admin') && Sessions::get_value('admin')==true;
     }
-
+    /* Il metodo effettua il logout, quando richiesto */
     public static function logout()
     {
         if (Sessions::session_exists('admin')) {
@@ -32,7 +33,7 @@ class Admin
         }
         return false;
     }
-
+    /* Il metodo effettua il login */
     public static function login()
     {
         if (isset($_POST['username']) && isset($_POST['password'])) {
@@ -52,7 +53,7 @@ class Admin
             }
         }
     }
-
+    /* Il metodo tenta di controllare se le credenziali sono corrette e ritorna un messaggio */
     public static function login_ajax()
     {
         if (isset($_POST['username']) && isset($_POST['password'])) {

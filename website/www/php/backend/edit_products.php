@@ -6,6 +6,7 @@
 
 class Edit_products
 {
+    /* Il metodo controlla se è stata fatta una richiesta di cancellazione o modifica prodotto */
     public static function check_edit()
     {
         if (isset($_POST['remove'])) {
@@ -15,7 +16,7 @@ class Edit_products
         }
         return false;
     }
-    
+    /* Il metodo si occupa di rimuovere un prodotto, dato il suo id */
     public static function remove()
     {
         require_once 'backend/get_products.php';
@@ -25,7 +26,7 @@ class Edit_products
         }
         return (new Get_products())->delete_product($_POST['product']);
     }
-
+    /* Il metodo modifica un prodotto, se supera i controlli (per sicurezza viene controllato anche type) */
     public static function edit()
     {
         require_once 'backend/get_products.php';
@@ -59,7 +60,7 @@ class Edit_products
         }
         return false;
     }
-
+    /* Il metodo si occupa di fare l'upload di un immagine */
     public static function upload_image()
     {
         if (!isset($_FILES['image']) || !is_uploaded_file($_FILES['image']['tmp_name'])) {

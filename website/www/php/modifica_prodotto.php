@@ -67,7 +67,7 @@ if ($edit) {
 
 $content = file_get_contents('../html/components/edit.html');
 $content = str_replace('<title_h2_to_insert/>', 'Da questa pagina puoi aggiungere/modificare un prodotto', $content);
-$content = str_replace('<prev_page_to_insert/>', '<div class="general_form"><form enctype="multipart/form-data" id="edit_form" method="post" action="'.htmlentities($_POST['prevpage']).'">', $content);
+$content = str_replace('<prev_page_to_insert/>', '<form enctype="multipart/form-data" class="general_form" id="edit_form" method="post" action="'.htmlentities($_POST['prevpage']).'">', $content);
 if ($edit) {
     $input="Modifica ".$product['Nome'];
 } else {
@@ -90,8 +90,8 @@ $path='';
 if ($edit) {
     $path=$product['Immagine'];
 }
-$content = str_replace('<file_to_insert/>', '<div class="box"><div class="edit_image"><label for="image">Cambia immagine: </label>
-                                            <input name="image" type="file" id="image" onclick="input_image(this)" aria-label="Scegli fail"/>
+$content = str_replace('<file_to_insert/>', '<div class="container"><div><label for="image">Cambia immagine: </label>
+                                            <input id="image" name="image" type="file" xml:lang="en" aria-label="Scegli file"  onclick="input_image(this)"/>
                                             <input type="hidden" name="oldimage" value="'.$path.'"/></div>
                                             <img id="preview" src="'.$path.'" alt="immagine da impostare o sostituire"/></div>', $content);
 $content = str_replace('<submit_to_insert/>', '<input id="edit_form_submit" class="general_button" type="submit" value="Modifica" name="writeEdits" aria-label="Modifica"/>', $content);
@@ -101,7 +101,7 @@ if ($edit) {
     $content = str_replace('<id_to_insert/>', '', $content);
 }
 $DOM = str_replace('<page_to_insert/>', $content, $DOM);
-$DOM = str_replace('<footer_to_replace/>', '<div id="footer" class="box full_column">', $DOM);
+$DOM = str_replace('<footer_to_replace/>', '<div id="footer" class="container col-sm-1">', $DOM);
 $DOM = str_replace('<login_admin_to_insert/>', Print_content::admin_form(), $DOM);
 
 echo($DOM);
