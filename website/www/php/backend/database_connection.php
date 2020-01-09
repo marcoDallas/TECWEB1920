@@ -11,6 +11,7 @@
      private const DATABASE_NAME = 'pasticceria';
      private $current_connection;
 
+     /* Il costruttore della classe tenta di effettuare una connessione al database. In caso di mancata riuscita ritorna a video un errore (non di php) */
      public function __construct()
      {
          if (!($this->current_connection = @mysqli_connect(static::HOST, static::USERNAME, static::PASSWORD, static::DATABASE_NAME))) {
@@ -18,19 +19,19 @@
              echo "Momentaneamente i dati non sono disponibili. Riprovare più tardi.";
          }
      }
-
+     /* Il metodo ritorna la corrente connessione */
      public function getCurrent()
      {
          return $this->current_connection;
      }
-
+     /* Il metodo esegue e ritorna il risultato di una query */
      public function execute($query)
      {
          $result = @mysqli_query($this->current_connection, $query);
          @mysqli_close($this->current_connection);
          return $result;
      }
-    
+     /* Il metodo esegue la disconnessione dal database */
      public function disconnect()
      {
          @mysqli_close($this->current_connection);
