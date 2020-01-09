@@ -388,15 +388,15 @@ h2 {
     text-align: center;
 }
 
-#fieldset_login {
+.fieldset_login {
     border: 2px solid white;
 }
 
-#fieldset_login>* {
+.fieldset_login>* {
     padding: 0.2em;
 }
 
-#fieldset_login input[type=submit] {
+.fieldset_login input[type=submit] {
     padding: 1em;
 }
 
