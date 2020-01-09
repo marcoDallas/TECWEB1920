@@ -1,12 +1,13 @@
 <?php
 /*
- * Definisce metodi che elaborano parti di pagine
+ * Definisce metodi che elaborano parti di pagine dinamiche
  */
 require_once('backend/utilities.php');
 require_once('sessions.php');
 
 class Print_content
 {
+    /* Il metodo stampa il logo in base alla pagina in cui ci troviamo */
     public static function logo($page)
     {
         if (!strcmp($page, "Home")) {
@@ -18,7 +19,7 @@ class Print_content
         }
         return $content;
     }
-
+    /* Il metodo stampa il menu in base alla pagina in cui ci troviamo */
     public static function menu($page)
     {
         if (!strcmp($page, "home.php")) {
@@ -60,7 +61,7 @@ class Print_content
         }
         return $content;
     }
-    
+    /* Il metodo stampa il form di login o logout */
     public static function admin_form()
     {
         if (Sessions::session_exists('admin')) {
