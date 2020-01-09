@@ -90,7 +90,7 @@ $path='';
 if ($edit) {
     $path=$product['Immagine'];
 }
-$content = str_replace('<file_to_insert/>', '<div class="container"><div class="edit_image"><label for="image">Cambia immagine: </label>
+$content = str_replace('<file_to_insert/>', '<div class="container"><div><label for="image">Cambia immagine: </label>
                                             <input name="image" type="file" id="image" onclick="input_image(this)" aria-label="Scegli fail"/>
                                             <input type="hidden" name="oldimage" value="'.$path.'"/></div>
                                             <img id="preview" src="'.$path.'" alt="immagine da impostare o sostituire"/></div>', $content);
