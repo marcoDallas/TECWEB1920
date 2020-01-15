@@ -16,13 +16,13 @@ body {
 .general_form,
 .general_button,
 .admin_login,
-.to_top,
 .print_hide {
     display: none;
 }
 
 #menu,
 #breadcrumb,
+#to_top_button,
 #footer>p {
     display: none;
 }

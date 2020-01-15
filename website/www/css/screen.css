@@ -522,7 +522,6 @@ h2 {
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 @media only screen and (min-width: 700px) {
-    /*grid*/
     .col-tb-1 {
         width: 50%;
     }
@@ -536,7 +535,6 @@ h2 {
     #content>h2 {
         padding-top: 0.5em;
     }
-    /*product*/
     .product_image_container {
         width: 30%;
     }
@@ -559,7 +557,6 @@ h2 {
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 @media only screen and (min-width: 830px) {
-    /*grid*/
     .col-ds-1 {
         width: 75%;
     }
@@ -612,7 +609,6 @@ h2 {
         width: auto;
         display: block;
     }
-    /*login*/
     .admin_login {
         width: 27%;
         padding-top: 0em;
@@ -624,13 +620,11 @@ h2 {
         text-align: center;
         width: 100%;
     }
-    /*footer*/
     #footer img {
         vertical-align: middle;
         display: inline;
         margin: 0;
     }
-    /*to top*/
     #to_top_button {
         bottom: 1.5em;
         right: 2.5em;
