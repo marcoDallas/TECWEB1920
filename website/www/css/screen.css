@@ -276,7 +276,7 @@ ol>li {
 
 /*content*/
 
-.content {
+#content {
     background-color: white;
     border-left: 1px solid #FFAC61;
     margin-left: -1px;
@@ -287,15 +287,15 @@ ol>li {
     min-height: 39em;
 }
 
-.content p {
+#content p {
     padding: 0.5em;
 }
 
-.content>dl {
+#content>dl {
     padding: 1em;
 }
 
-.content>h2 {
+#content>h2 {
     padding-top: 0.5em;
 }
 
