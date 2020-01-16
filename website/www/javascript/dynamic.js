@@ -67,7 +67,7 @@ function password_check() {
 }
 
 function search_input_check() {
-    $("#cercaProdotti").keypress(function(e) {
+    $("#cerca_prodotti").keypress(function(e) {
         var value = String.fromCharCode(e.keyCode);
         if (!value.match(/[a-zA-Z ]/i)) {
             return false;
@@ -219,8 +219,8 @@ function handle_edit_form() {
 }
 
 function check_search(e) {
-    var strLength = $("#cercaProdotti").val().trim().length;
-    var parent = (document.getElementById('cercaProdotti')).parentNode;
+    var strLength = $("#cerca_prodotti").val().trim().length;
+    var parent = (document.getElementById('cerca_prodotti')).parentNode;
     if (strLength > 40) {
         if (parent.children.length > 4)
             parent.removeChild(parent.children[4]);

@@ -16,13 +16,13 @@ class Print_products
     /* Il metodo stampa il content della pagina prodotti */
     public function print_pr($arr)
     {
-        $content='<div id="content" class="col-sm-1 col-ds-1 content">
+        $content='<div id="content" class="col-sm-1 col-ds-1">
                     <h2>'.$_GET['type'].'</h2>';
         
         $content.='<form class="col-sm-1 general_form" method="get" action="prodotti.php">
                     <div class="col-sm-1">
-                     <label for="cercaProdotti">Cerca '.$_GET['type'].': </label>
-                     <input id="cercaProdotti" class="general_input" type="text" maxlength="40" name="search"/>
+                     <label for="cerca_prodotti">Cerca '.$_GET['type'].': </label>
+                     <input id="cerca_prodotti" class="general_input" type="text" maxlength="40" name="search"/>
                      <input type="hidden" name="type" value="'.$_GET['type'].'"/>
                      <input class="general_button" type="submit" value="cerca" aria-label="Cerca"/>
                     </div>    

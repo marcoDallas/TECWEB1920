@@ -26,9 +26,9 @@ $DOM = str_replace('<title_h1_to_insert/>', 'Modifica <span xml:lang="en">News</
 
 if (isset($_POST['type'])) {
     $prevpage = ucfirst($_POST['type']);
-    $DOM = str_replace('<breadcrumb_path_to_insert/>', '<strong>'.$prevpage.' / Modifica <span xml:lang="en">News</span></strong>', $DOM);
+    $DOM = str_replace('<breadcrumb_path_to_insert/>', '<strong>'.$prevpage.' / Modifica <span xml:lang="en">News</span> (Amministratore)</strong>', $DOM);
 } else {
-    $DOM = str_replace('<breadcrumb_path_to_insert/>', '<strong>Modifica <span xml:lang="en">News</span></strong>', $DOM);
+    $DOM = str_replace('<breadcrumb_path_to_insert/>', '<strong>Modifica <span xml:lang="en">News</span> (Amministratore)</strong>', $DOM);
 }
 
 $DOM = str_replace('<menu_to_insert/>', Print_content::menu('modifica_news.php'), $DOM);
