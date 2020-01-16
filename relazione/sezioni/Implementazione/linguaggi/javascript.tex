@@ -17,8 +17,7 @@ La motivazione di tale scelta è per il messaggio d'errore in caso di input scor
 verrebbe inserito un messaggio d'errore dopo il ricaricamento della pagina, il che è scomodo perchè non si avrebbe accesso diretto ai campi del form
 se non scrollando la pagina.\\
 Grazie ad AJAX, l'errore viene visualizzato all'interno del form e la pagina non viene ricaricata.\\
-Nel caso i vecchi browser non riescano a supportare questa funzionalità, visualizzeranno comunque un messaggio di errore ad inizio pagina, 
-dopo il caricamento.\\
+Nel caso i vecchi browser non riescano a supportare questa funzionalità, visualizzeranno comunque lo stesso messaggio di errore, ma si dovrà scorrere la pagina.\\
 AJAX entra in funzione nel momento in cui avviene un click nel submit. L'evento, reso asincrono, si occuperà in primo luogo di controllare 
 se le credenziali sono corrette: se non lo sono, viene disabilitato il comportamento standard del submit, per visualizzare 
 un messaggio d'errore.\\
