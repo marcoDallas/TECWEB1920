@@ -48,7 +48,7 @@ class Print_products
                 if (!strcmp($prodotto['Immagine'], '')) {
                     $content.='<p>Forse l\'admin non ha inserito la foto  title="cosa triste">:\'(</abbr></p>';
                 } else {
-                    $content.='<img class="product_image" src="'.$prodotto['Immagine'].'" alt="Immagine della sezione '.$_GET['type'].' : '.$prodotto['Nome'].'"/>';
+                    $content.='<img class="product_image" src="'.$prodotto['Immagine'].'" alt="Immagine della sezione '.$_GET['type'].' : '.strip_tags($prodotto['Nome']).'"/>';
                 }
                                     
                 $content.='</div>

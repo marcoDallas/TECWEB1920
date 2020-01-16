@@ -16,7 +16,7 @@ CREATE TABLE Utente (
 
 CREATE TABLE Prodotto (
 	Codice INT(11) NOT NULL AUTO_INCREMENT,
-	Nome VARCHAR(50) NOT NULL,
+	Nome VARCHAR(80) NOT NULL,
 	TipoProdotto ENUM('Torta','Pasta') NOT NULL,
 	Immagine VARCHAR(100),
 	Descrizione VARCHAR(500),
