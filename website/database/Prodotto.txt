@@ -1,48 +1,45 @@
-1	Bignè con crema al cioccolato	Pasta	../images/mignon/bigne-alla-crema-al-cioccolato-grand-cru.png	Preparati con una pastella che verrà suddivisa negli stampini e cotta in forno. A parte si preparerà la crema al cioccolato, che andrà poi a farcire i bignè una volta che si saranno raffreddati.	NULL
-2	Bignè alla crema al pistacchio	Pasta	../images/mignon/bigne-alla-crema-al-pistacchio-di-bronte.png	Preparati con una pastella che verrà suddivisa negli stampini e cotta in forno. A parte si preparerà la crema al pistacchio, che andrà poi a farcire i bignè una volta che si saranno raffreddati.	NULL
-3	Bignè alla crema chantilly	Pasta	../images/mignon/bigne-alla-crema-chantilly.png	Preparati con una pastella che verrà suddivisa negli stampini e cotta in forno. A parte si preparerà la crema chantilly, che andrà poi a farcire i bignè una volta che si saranno raffreddati. La crema chantilly è composta da panna montata, zucchero a velo, e un aroma alla vaniglia.	NULL
-4	Bignè allo zabaione	Pasta	../images/mignon/bigne-allo-zabaione.png	Preparati con una pastella che verrà suddivisa negli stampini e cotta in forno. A parte si preparerà la crema al cioccolato, che andrà poi a farcire i bignè una volta che si saranno raffreddati. La nostra crema allo zabaione ha una base di uova, zucchero e vermut.	NULL
+1	<span xml:lang="fr">Bignè</span> con crema al cioccolato	Pasta	../images/mignon/bigne-alla-crema-al-cioccolato-grand-cru.png	Preparati con una pastella che verrà suddivisa negli stampini e cotta in forno. A parte si preparerà la crema al cioccolato, che andrà poi a farcire i <span xml:lang="fr">bignè</span> una volta che si saranno raffreddati.	NULL
+2	<span xml:lang="fr">Bignè</span> alla crema al pistacchio	Pasta	../images/mignon/bigne-alla-crema-al-pistacchio-di-bronte.png	Preparati con una pastella che verrà suddivisa negli stampini e cotta in forno. A parte si preparerà la crema al pistacchio, che andrà poi a farcire i <span xml:lang="fr">bignè</span> una volta che si saranno raffreddati.	NULL
+3	<span xml:lang="fr">Bignè</span> alla crema <span xml:lang="fr">chantilly</span>	Pasta	../images/mignon/bigne-alla-crema-chantilly.png	Preparati con una pastella che verrà suddivisa negli stampini e cotta in forno. A parte si preparerà la crema <span xml:lang="fr">chantilly</span>, che andrà poi a farcire i <span xml:lang="fr">bignè</span> una volta che si saranno raffreddati. La crema chantilly è composta da panna montata, zucchero a velo, e un aroma alla vaniglia.	NULL
+4	<span xml:lang="fr">Bignè</span> allo zabaione	Pasta	../images/mignon/bigne-allo-zabaione.png	Preparati con una pastella che verrà suddivisa negli stampini e cotta in forno. A parte si preparerà la crema al cioccolato, che andrà poi a farcire i <span xml:lang="fr">bignè</span> una volta che si saranno raffreddati. La nostra crema allo zabaione ha una base di uova, zucchero e vermut.	NULL
 5	Bresciana	Pasta	../images/mignon/bresciana.png	Preparato con crema al cioccolato, e scaglie di cioccolato che si adagiano sulla sua superficie.	NULL
-6	Cannoncino con crema pasticcera	Pasta	../images/mignon/cannoncino-con-crema-pasticcera.png	Un classico, fatto con la pasta sfoglia, crema pasticcera e un pizzico di granella di nocciole.	NULL
-7	Crostatina al caramello e cioccolato al latte	Pasta	../images/mignon/crostatina-al-caramello-e-cioccolato-al-latte.png	Crostatina con amaretto, strato di caramello e crema di cioccolato al latte. 	NULL
-8	Crostatina al cioccolato e arancio	Pasta	../images/mignon/crostatina-al-cioccolato-e-arancio.png	Crostatina con crema di cioccolato e arancio.	NULL
-9	Crostatina al cioccolato fondente e banane	Pasta	../images/mignon/crostatina-al-cioccolato-fondente-e-banane.png	Crostatina con crema di cioccolato fondente e banane.	NULL
-10	Crostatina alla crema chantilly e frutta secca	Pasta	../images/mignon/crostatina-alla-crema-chantilly-e-frutta-secca.png	Crostatina con crema chantilly e lamponi.	NULL
-11	Crostatina alle mandorle e ananas	Pasta	../images/mignon/crostatina-alle-mandorle-e-ananas.png	Crostatina con crema alle mandorle e ananas.	NULL
-12	Cubo alle mandorle	Pasta	../images/mignon/cubo-alle-mandorle.png	Cubo con strati di mandorle, amaretti e nocciole.	NULL
-13	Cubo cioco-mango	Pasta	../images/mignon/cubo-cioco-mango.png	Cubo con strati di cioccolato e mango.	NULL
-14	Cubo vaniglia e fragola	Pasta	../images/mignon/cubo-vaniglia-e-fragola.png	Cubo con strati di ricotta, vaniglia e glassa alla fragola.	NULL
-15	Opera	Pasta	../images/mignon/opera.png	Cubo di zuppa inglese.	NULL
-16	Tarletta al cioccolato e pera	Pasta	../images/mignon/tarletta-al-cioccolato-e-pera.png	Impasto con farina di lenticchie e pasta di mandorle, riempito con cioccolato e pera.	NULL
-17	Tarletta alle mele e frutta secca	Pasta	../images/mignon/tarletta-alle-mele-e-frutta-secca.png	Impasto con farina di lenticchie e pasta di mandorle, riempito con listarelle di mela e frutta secca.	NULL
-18	Tortino carabaico	Pasta	../images/mignon/tortino-caraibico.png	Tortino con impasto e crema al cioccolato.	NULL
-19	Tortino cremoso di nocciole	Pasta	../images/mignon/tortino-cremoso-di-nocciole.png	Tortino con crema alle nocciole.	NULL
-20	Tortino lamponi e cioccolato	Pasta	../images/mignon/tortino-lamponi-e-cioccolato.png	Tortino con fondo di cioccolato e glassa di lamponi.	NULL
-21	Abbraccio di cioccolato	Pasta	../images/monoporzioni/abbraccio-di-cioccolato.png	Biscotto morbido al cioccolato e mandorle. Cremoso di cioccolato al latte e mousse al cioccolato fondente.	NULL
-22	Amalfi	Pasta	../images/monoporzioni/amalfi.png	Biscotto alle mandorle profumato al limone. Polpa di lamponi freschi. Soffice crema al limone.	NULL
-23	Angelina	Pasta	../images/monoporzioni/angelina.png	Frolla croccante alle nocciole. Biscotto al cioccolato profumato al maraschino. Soffice crema alle mandorle tostate.	NULL
-24	Caramel all’arancia	Pasta	../images/monoporzioni/caramell-arancia.png	Biscotto al cioccolato fondente all'olio di olive extravergine, crema vellutata al caramello, cremoso al cioccolato bianco e arancio.	NULL
-25	Cheope	Pasta	../images/monoporzioni/cheope.png	Sottili gusci di bignè farciti con crema chantilly, zabaione e cioccolato 60% e morbida glassa al cioccolato.	NULL
-26	Cuore di velluto	Pasta	../images/monoporzioni/cuore-di-velluto.png	Meringa morbida alle nocciole. Cremoso di cioccolato al latte e nocciole pralinate. Crema chantilly di cioccolato al latte.	NULL
-27	Exotica	Pasta	../images/monoporzioni/exotica.png	Morbida meringa al cocco, cremoso al frutto della passione, sfoglie di cioccolato bianco e mousse al cocco.	NULL
-28	Perle e rubini	Pasta	../images/monoporzioni/perle-e-rubini.png	Biscotto morbido alle mandorle. Polpa di lamponi freschi. Mousse al cioccolato bianco.	NULL
-29	Rugiada	Pasta	../images/monoporzioni/rugiada.png	Biscotto morbido al cioccolato. Mousse ai frutti di bosco cremosa.	NULL
-30	Settepetali	Pasta	../images/monoporzioni/settepetali.png	Mousse al cioccolato fondente 70%. Bavarese alle nocciole pralinate. Sfoglie di cioccolato fondente.	NULL
-31	Abbraccio di cioccolato	Torta	../images/torte/abbraccio-di-cioccolato.png	Biscotto morbido al cioccolato, crema di cioccolato al latte e mousse al cioccolato fondente.	NULL
-32	Angelina	Torta	../images/torte/angelina.png	Fondo croccante di frolla alle nocciole, biscotto profumato al maraschino avvolto da una soffice crema alle mandorle tostate, decorata con foglie di cioccolato bianco.	NULL
-33	Caramel all’arancia	Torta	../images/torte/caramell-arancia.png	Biscotto al cioccolato, crema vellutata al caramello, albicocche candite e crema al cioccolato bianco e arancio.	NULL
-34	Crostata ai frutti di bosco	Torta	../images/torte/crostata-ai-frutti-di-bosco.png	Fondo di pasta frolla alle mandorle, marmellata ai mirtilli ricoperta di frutti di bosco freschi.	NULL
-35	Cuore di velluto	Torta	../images/torte/cuore-di-velluto.png	Fondo di meringa alle nocciole, crema di cioccolato al latte e nocciole, cuore avvolto da una leggera crema chantilly di cioccolato al latte.	NULL
-36	Cupola al torroncino	Torta	../images/torte/cupola-al-torroncino.png	Pan di spagna al cioccolato, crema leggera al torrone, cubetti di meringa, soffice crema al cioccolato fondente avvolta da granella di amaretto.	NULL
-37	Exotica	Torta	../images/torte/Exotica.png	Fondo morbido di meringa al cocco, cremosa al frutto della passione, sfoglie di cioccolato bianco, leggera mousse al latte di cocco.	NULL
-38	Meringata alla frutta	Torta	../images/torte/meringata-alla-frutta.png	Fondo croccante di meringa, panna montata e frutta fresca.	NULL
-39	Mimosa	Torta	../images/torte/mimosa.png	Morbido pan di spagna al limone, crema leggera al limone, cubetti di meringa e ananas freschi.	NULL
-40	Settepetali	Torta	../images/torte/settepetali.png	Biscotto morbido al cioccolato e nocciole con cereali, mousse al cioccolato fondente, sfoglie di cioccolato fondente.	NULL
-41	Torta alle mandorle	Torta	../images/torte/torta-alle-mandorle.png	Fondo di friabile pasta frolla, pan di spagna profumato al maraschino e amaretto morbido alle mandorle, ricoperta di mandorle tostate.	NULL
-42	Torta Amalfi	Torta	../images/torte/torta-amalfi.png	Soffice pan di spagna alle mandorle profumato al limone, polpa di lamponi freschi avvolti da una leggerissima mousse al limone.	NULL
-43	Torta bresciana	Torta	../images/torte/torta-bresciana-zizzola.png	Croccante frolla al cioccolato e mandorle, biscotto al cioccolato bagnato al caffè e crema leggera al mascarpone ricoperta da sottili sfoglie di cioccolato fondente.	NULL
-44	Torta Langhe	Torta	../images/torte/torta-langhe.png	Fondo di friabile pasta frolla con morbido cake alle nocciole ricoperto di crema al cioccolato e nocciole.	NULL
-45	Torta noci e caramello	Torta	../images/torte/torta-noci-caramello.png	Fondo di friabile pasta alle mandorle ricoperta di noci caramellate.	NULL
-46	Torta perle e rubini	Torta	../images/torte/torta-perle-e-rubini.png	Biscotto morbido alle mandorle, polpa di lamponi freschi avvolta da una leggera mousse al cioccolato bianco.	NULL
-47	Torta rugiada	Torta	../images/torte/torta-rugiada.png	Biscotto morbido al cioccolato, sottile strato di cioccolato fondente avvolto da una delicata mousse ai frutti di bosco.	NULL
-48	Torta sacher	Torta	../images/torte/torta-sacher-zizzola.png	Morbido pan di spagna al cioccolato e mandorle farcito con marmellata di albicocche al 70%, ricoperto da una morbida glassa al cioccolato fondente.	NULL
+6	Crostatina al caramello e cioccolato al latte	Pasta	../images/mignon/crostatina-al-caramello-e-cioccolato-al-latte.png	Crostatina con amaretto, strato di caramello e crema di cioccolato al latte. 	NULL
+7	Crostatina al cioccolato e arancio	Pasta	../images/mignon/crostatina-al-cioccolato-e-arancio.png	Crostatina con crema di cioccolato e arancio.	NULL
+8	Crostatina al cioccolato fondente e banane	Pasta	../images/mignon/crostatina-al-cioccolato-fondente-e-banane.png	Crostatina con crema di cioccolato fondente e banane.	NULL
+9	Crostatina alla crema <span xml:lang="fr">chantilly</span> e frutta secca	Pasta	../images/mignon/crostatina-alla-crema-chantilly-e-frutta-secca.png	Crostatina con crema <span xml:lang="fr">chantilly</span> e lamponi.	NULL
+10	Crostatina alle mandorle e ananas	Pasta	../images/mignon/crostatina-alle-mandorle-e-ananas.png	Crostatina con crema alle mandorle e ananas.	NULL
+11	Cubo alle mandorle	Pasta	../images/mignon/cubo-alle-mandorle.png	Cubo con strati di mandorle, amaretti e nocciole.	NULL
+12	Cubo cioco-mango	Pasta	../images/mignon/cubo-cioco-mango.png	Cubo con strati di cioccolato e mango.	NULL
+13	Cubo vaniglia e fragola	Pasta	../images/mignon/cubo-vaniglia-e-fragola.png	Cubo con strati di ricotta, vaniglia e glassa alla fragola.	NULL
+14	Opera	Pasta	../images/mignon/opera.png	Cubo di zuppa inglese.	NULL
+15	Tarletta al cioccolato e pera	Pasta	../images/mignon/tarletta-al-cioccolato-e-pera.png	Impasto con farina di lenticchie e pasta di mandorle, riempito con cioccolato e pera.	NULL
+16	Tarletta alle mele e frutta secca	Pasta	../images/mignon/tarletta-alle-mele-e-frutta-secca.png	Impasto con farina di lenticchie e pasta di mandorle, riempito con listarelle di mela e frutta secca.	NULL
+17	Tortino carabaico	Pasta	../images/mignon/tortino-caraibico.png	Tortino con impasto e crema al cioccolato.	NULL
+18	Tortino cremoso di nocciole	Pasta	../images/mignon/tortino-cremoso-di-nocciole.png	Tortino con crema alle nocciole.	NULL
+19	Tortino lamponi e cioccolato	Pasta	../images/mignon/tortino-lamponi-e-cioccolato.png	Tortino con fondo di cioccolato e glassa di lamponi.	NULL
+20	Abbraccio di cioccolato	Pasta	../images/monoporzioni/abbraccio-di-cioccolato.png	Biscotto morbido al cioccolato e mandorle. Cremoso di cioccolato al latte e <span xml:lang="fr">mousse</span> al cioccolato fondente.	NULL
+21	Amalfi	Pasta	../images/monoporzioni/amalfi.png	Biscotto alle mandorle profumato al limone. Polpa di lamponi freschi. Soffice crema al limone.	NULL
+22	Angelina	Pasta	../images/monoporzioni/angelina.png	Frolla croccante alle nocciole. Biscotto al cioccolato profumato al maraschino. Soffice crema alle mandorle tostate.	NULL
+23	Cuore di velluto	Pasta	../images/monoporzioni/cuore-di-velluto.png	Meringa morbida alle nocciole. Cremoso di cioccolato al latte e nocciole pralinate. Crema <span xml:lang="fr">chantilly</span> di cioccolato al latte.	NULL
+24	Exotica	Pasta	../images/monoporzioni/exotica.png	Morbida meringa al cocco, cremoso al frutto della passione, sfoglie di cioccolato bianco e <span xml:lang="fr">mousse</span> al cocco.	NULL
+25	Perle e rubini	Pasta	../images/monoporzioni/perle-e-rubini.png	Biscotto morbido alle mandorle. Polpa di lamponi freschi. <span xml:lang="fr">Mousse</span> al cioccolato bianco.	NULL
+26	Rugiada	Pasta	../images/monoporzioni/rugiada.png	Biscotto morbido al cioccolato. <span xml:lang="fr">Mousse</span> ai frutti di bosco cremosa.	NULL
+27	Settepetali	Pasta	../images/monoporzioni/settepetali.png	<span xml:lang="fr">Mousse</span> al cioccolato fondente 70%. Bavarese alle nocciole pralinate. Sfoglie di cioccolato fondente.	NULL
+28	Abbraccio di cioccolato	Torta	../images/torte/abbraccio-di-cioccolato.png	Biscotto morbido al cioccolato, crema di cioccolato al latte e <span xml:lang="fr">mousse</span> al cioccolato fondente.	NULL
+29	Angelina	Torta	../images/torte/angelina.png	Fondo croccante di frolla alle nocciole, biscotto profumato al maraschino avvolto da una soffice crema alle mandorle tostate, decorata con foglie di cioccolato bianco.	NULL
+30	Caramel all’arancia	Torta	../images/torte/caramell-arancia.png	Biscotto al cioccolato, crema vellutata al caramello, albicocche candite e crema al cioccolato bianco e arancio.	NULL
+31	Crostata ai frutti di bosco	Torta	../images/torte/crostata-ai-frutti-di-bosco.png	Fondo di pasta frolla alle mandorle, marmellata ai mirtilli ricoperta di frutti di bosco freschi.	NULL
+32	Cuore di velluto	Torta	../images/torte/cuore-di-velluto.png	Fondo di meringa alle nocciole, crema di cioccolato al latte e nocciole, cuore avvolto da una leggera crema <span xml:lang="fr">chantilly</span> di cioccolato al latte.	NULL
+33	Cupola al torroncino	Torta	../images/torte/cupola-al-torroncino.png	Pan di spagna al cioccolato, crema leggera al torrone, cubetti di meringa, soffice crema al cioccolato fondente avvolta da granella di amaretto.	NULL
+34	Exotica	Torta	../images/torte/Exotica.png	Fondo morbido di meringa al cocco, cremosa al frutto della passione, sfoglie di cioccolato bianco, leggera <span xml:lang="fr">mousse</span> al latte di cocco.	NULL
+35	Meringata alla frutta	Torta	../images/torte/meringata-alla-frutta.png	Fondo croccante di meringa, panna montata e frutta fresca.	NULL
+36	Mimosa	Torta	../images/torte/mimosa.png	Morbido pan di spagna al limone, crema leggera al limone, cubetti di meringa e ananas freschi.	NULL
+37	Settepetali	Torta	../images/torte/settepetali.png	Biscotto morbido al cioccolato e nocciole con cereali, <span xml:lang="fr">mousse</span> al cioccolato fondente, sfoglie di cioccolato fondente.	NULL
+38	Torta alle mandorle	Torta	../images/torte/torta-alle-mandorle.png	Fondo di friabile pasta frolla, pan di spagna profumato al maraschino e amaretto morbido alle mandorle, ricoperta di mandorle tostate.	NULL
+39	Torta Amalfi	Torta	../images/torte/torta-amalfi.png	Soffice pan di spagna alle mandorle profumato al limone, polpa di lamponi freschi avvolti da una leggerissima <span xml:lang="fr">mousse</span> al limone.	NULL
+40	Torta bresciana	Torta	../images/torte/torta-bresciana-zizzola.png	Croccante frolla al cioccolato e mandorle, biscotto al cioccolato bagnato al caffè e crema leggera al mascarpone ricoperta da sottili sfoglie di cioccolato fondente.	NULL
+41	Torta Langhe	Torta	../images/torte/torta-langhe.png	Fondo di friabile pasta frolla con morbido <span xml:lang="en">cake</span> alle nocciole ricoperto di crema al cioccolato e nocciole.	NULL
+42	Torta noci e caramello	Torta	../images/torte/torta-noci-caramello.png	Fondo di friabile pasta alle mandorle ricoperta di noci caramellate.	NULL
+43	Torta perle e rubini	Torta	../images/torte/torta-perle-e-rubini.png	Biscotto morbido alle mandorle, polpa di lamponi freschi avvolta da una leggera <span xml:lang="fr">mousse</span> al cioccolato bianco.	NULL
+44	Torta rugiada	Torta	../images/torte/torta-rugiada.png	Biscotto morbido al cioccolato, sottile strato di cioccolato fondente avvolto da una delicata <span xml:lang="fr">mousse</span> ai frutti di bosco.	NULL
+45	Torta sacher	Torta	../images/torte/torta-sacher-zizzola.png	Morbido pan di spagna al cioccolato e mandorle farcito con marmellata di albicocche al 70%, ricoperto da una morbida glassa al cioccolato fondente.	NULL

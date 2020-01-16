@@ -1,3 +1,7 @@
 ﻿Per il salvataggio dei dati il gruppo, ha deciso di utilizzare SQL tramite \emph{MariaDB}.\\
 Per eseguire le interrogazioni o aggiornare il database, è stata usata la libreria \emph{mysqli} di \emph{PHP}.\\
 Il database collegato al sito è molto semplice, ed è descritto nel capitolo 3: \emph{Progettazione -> Database}.
+\\
+Da notare le lunghezze dei campi SQL più grandi rispetto a quelle richieste in input (questo nel caso delle news e dei prodotti).\\
+La scelta è stata fatta poichè l'uso di un marcatore (ex.[en=testo]) per evidenziare una lingua diversa, o per evidenziare una parola o testo importante,
+nel database viene tradotto in tag html e quest'ultimo ha una lunghezza maggiore.
