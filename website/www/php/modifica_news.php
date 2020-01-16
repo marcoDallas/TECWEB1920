@@ -22,13 +22,13 @@ $DOM = str_replace('<meta_keyword_to_insert/>', '<meta name="keywords" content="
 
 $DOM = str_replace('<no_index_to_insert/>', '<meta name="robots" content="noindex"/>', $DOM);
 $DOM = str_replace('<logo_to_insert/>', Print_content::logo(Utilities::get_page_name()), $DOM);
-$DOM = str_replace('<title_h1_to_insert/>', 'Modifica News', $DOM);
+$DOM = str_replace('<title_h1_to_insert/>', 'Modifica <span xml:lang="en">News</span>', $DOM);
 
 if (isset($_POST['type'])) {
     $prevpage = ucfirst($_POST['type']);
-    $DOM = str_replace('<breadcrumb_path_to_insert/>', '<strong>'.$prevpage.' / Modifica News (Amministratore)</strong>', $DOM);
+    $DOM = str_replace('<breadcrumb_path_to_insert/>', '<strong>'.$prevpage.' / Modifica <span xml:lang="en">News</span> (Amministratore)</strong>', $DOM);
 } else {
-    $DOM = str_replace('<breadcrumb_path_to_insert/>', '<strong>Modifica News (Amministratore)</strong>', $DOM);
+    $DOM = str_replace('<breadcrumb_path_to_insert/>', '<strong>Modifica <span xml:lang="en">News</span> (Amministratore)</strong>', $DOM);
 }
 
 $DOM = str_replace('<menu_to_insert/>', Print_content::menu('modifica_news.php'), $DOM);
@@ -49,9 +49,9 @@ $DOM = str_replace('<timetable_to_insert/>', file_get_contents('../html/componen
 $news = (new Get_news())->get_news();
 
 $content = file_get_contents('../html/components/edit.html');
-$content = str_replace('<title_h2_to_insert/>', 'Da questa pagina puoi modificare la news laterale', $content);
+$content = str_replace('<title_h2_to_insert/>', 'Da questa pagina puoi modificare la <span xml:lang="en">news</span> laterale', $content);
 $content = str_replace('<prev_page_to_insert/>', '<form enctype="multipart/form-data" id="edit_form" class="general_form" method="post" action="'.$_POST['prevpage'].'">', $content);
-$content = str_replace('<legend_to_insert/>', 'Modifica News', $content);
+$content = str_replace('<legend_to_insert/>', 'Modifica <span xml:lang="en">News</span>', $content);
 $content = str_replace('<title_to_insert/>', '<input id="title" class="general_input" type="text" maxlength="40" name="title" value="'.Input_security_check::tag_check($news['Titolo']).'"/>', $content);
 $content = str_replace('<content_to_insert/>', Input_security_check::tag_check($news['Contenuto']), $content);
 $content = str_replace('<file_to_insert/>', '', $content);
