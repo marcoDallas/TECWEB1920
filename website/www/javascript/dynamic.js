@@ -159,8 +159,6 @@ function perform_client_edit_check(e) {
 
 function input_image() {
     document.getElementById("image").onchange = function() {
-        if (typeof def == 'undefined')
-            def = document.getElementById("preview").src;
         var reader = new FileReader();
         var parent = (document.getElementById("preview")).parentNode;
         if (this.files[0].type.indexOf("image") == -1) {
@@ -205,12 +203,12 @@ function input_image() {
 
 
 function handle_edit_form() {
+    if (typeof def == 'undefined')
+        def = document.getElementById("preview").src;
     $('#edit_form').on('reset', function(e) {
-        $("#edit_title_error").text("");
-        $("#edit_description_error").text("");
-        $("#file_error").text("");
         document.getElementById("preview").src = def;
         $("#preview").show();
+        $(".input_error_message").remove();
     });
 
     $('#edit_form').submit(function(e) {
