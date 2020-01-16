@@ -19,7 +19,7 @@ CREATE TABLE Prodotto (
 	Nome VARCHAR(80) NOT NULL,
 	TipoProdotto ENUM('Torta','Pasta') NOT NULL,
 	Immagine VARCHAR(100),
-	Descrizione VARCHAR(500),
+	Descrizione VARCHAR(600),
 	Ingredienti VARCHAR(500),
 	PRIMARY KEY (Codice)
 	
@@ -37,8 +37,8 @@ CREATE TABLE Recensione (
 
 CREATE TABLE News (
 	Codice INT(11) NOT NULL AUTO_INCREMENT,
-	Titolo VARCHAR(50) NOT NULL,
-	Contenuto VARCHAR(500) NOT NULL,
+	Titolo VARCHAR(80) NOT NULL,
+	Contenuto VARCHAR(600) NOT NULL,
 	PRIMARY KEY (Codice)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- Popola le tabelle 
