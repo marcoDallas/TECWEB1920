@@ -117,16 +117,14 @@ function check_edit_title() {
     var strLength = $("#title").val().trim().length;
     var parent = (document.getElementById("title")).parentNode;
     if (strLength < 3 || strLength > 40) {
-        if (parent.children.length > 4)
-            parent.removeChild(parent.children[4]);
+        $('#title').parent().find('.input_error_message').remove();
         var strong = document.createElement("strong");
         strong.classList.add("input_error_message");
         strong.appendChild(document.createTextNode("Lunghezza del titolo non valida!"));
         parent.appendChild(strong);
         return false;
     } else {
-        if (parent.children.length > 4)
-            parent.removeChild(parent.children[4]);
+        $('#title').parent().find('.input_error_message').remove();
     }
     return true;
 }
@@ -135,16 +133,14 @@ function check_edit_description() {
     var strLength = $("#description").val().trim().length;
     var parent = (document.getElementById("description")).parentNode;
     if (strLength < 20 || strLength > 500) {
-        if (parent.children.length > 5)
-            parent.removeChild(parent.children[5]);
+        $('#description').parent().find('.input_error_message').remove();
         var strong = document.createElement("strong");
         strong.classList.add("input_error_message");
         strong.appendChild(document.createTextNode("Lunghezza della descrizione non valida!"));
         parent.appendChild(strong);
         return false;
     } else {
-        if (parent.children.length > 5)
-            parent.removeChild(parent.children[5]);
+        $('#description').parent().find('.input_error_message').remove();
     }
     return true;
 }
@@ -162,8 +158,7 @@ function input_image() {
         var reader = new FileReader();
         var parent = (document.getElementById("preview")).parentNode;
         if (this.files[0].type.indexOf("image") == -1) {
-            if (parent.children.length > 2)
-                parent.removeChild(parent.children[2]);
+            $('#preview').parent().find('.input_error_message').remove();
             var strong = document.createElement("strong");
             strong.classList.add("input_error_message");
             strong.appendChild(document.createTextNode("Estensione invalida!"));
@@ -174,12 +169,10 @@ function input_image() {
             $('#image').unwrap();
             return false;
         } else {
-            if (parent.children.length > 2)
-                parent.removeChild(parent.children[2]);
+            $('#preview').parent().find('.input_error_message').remove();
         }
         if (this.files[0].size > 528385) {
-            if (parent.children.length > 2)
-                parent.removeChild(parent.children[2]);
+            $('#preview').parent().find('.input_error_message').remove();
             var strong = document.createElement("strong");
             strong.classList.add("input_error_message");
             strong.appendChild(document.createTextNode("L'immagine non può essere più grande di 500kb"));
@@ -190,8 +183,7 @@ function input_image() {
             $('#image').unwrap();
             return false;
         } else {
-            if (parent.children.length > 2)
-                parent.removeChild(parent.children[2]);
+            $('#preview').parent().find('.input_error_message').remove();
         }
         reader.onload = function(e) {
             document.getElementById("preview").src = e.target.result;
@@ -203,14 +195,16 @@ function input_image() {
 
 
 function handle_edit_form() {
-    if (typeof def == 'undefined')
+
+    if (page_name() == "modifica_prodotto.php" && typeof def == 'undefined')
         def = document.getElementById("preview").src;
     $('#edit_form').on('reset', function(e) {
-        document.getElementById("preview").src = def;
-        $("#preview").show();
+        if (page_name() == "modifica_prodotto.php") {
+            document.getElementById("preview").src = def;
+            $("#preview").show();
+        }
         $(".input_error_message").remove();
     });
-
     $('#edit_form').submit(function(e) {
         perform_client_edit_check(e);
     });
@@ -240,6 +234,14 @@ function handle_search_form() {
         check_search(e);
     });
 }
+
+function page_name() {
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+
+    return page;
+}
+
 
 $(document).ready(function() {
     handle_login_form();
