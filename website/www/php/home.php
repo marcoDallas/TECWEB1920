@@ -1,5 +1,6 @@
 <?php
 require_once('backend/admin.php');
+Admin::init_admin();
 require_once('backend/print_content.php');
 require_once('backend/utilities.php');
 require_once('backend/print_news.php');
@@ -13,7 +14,6 @@ $DOM = str_replace('<meta_description_to_insert/>', '<meta name="description" co
 $DOM = str_replace('<meta_keyword_to_insert/>', '<meta name="keywords" content="Pasticceria,Veneto,Padova,Padovana,Paste,Torte" />', $DOM);
 
 $DOM = str_replace('<no_index_to_insert/>', '', $DOM);
-Admin::init_admin();
 $DOM = str_replace('<logo_to_insert/>', Print_content::logo(Utilities::get_page_name()), $DOM);
 $DOM = str_replace('<title_h1_to_insert/>', 'Il meglio delle paste a Padova', $DOM);
 if (Admin::verify()) {
