@@ -15,5 +15,5 @@ Header set Cache-Control "max-age=604800, public"
 
 # Index e fallback
 DirectoryIndex index.php
-ErrorDocument 404 /TECWEB1920/website/www/php/fallback.php
+ErrorDocument 404 /php/fallback.php
 php_flag display_errors on
