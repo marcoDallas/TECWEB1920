@@ -1,30 +1,16 @@
 function toggleMenu(icon) {
-    toggleMobileVisibility(document.getElementById("menu"));
-    icon.classList.toggle("change");
+    toggleMobileVisibility();
+    $(".menu_icon").toggleClass("change");
 }
 
-function toggleMobileVisibility(element) {
-    if (element.className === "mobile_hidden") {
-        element.classList = "mobile";
-    } else {
-        element.className = "mobile_hidden";
-    }
+function toggleMobileVisibility() {
+    $("#menu").toggleClass("mobile_hidden");
+    $("#menu").toggleClass("mobile");    
 }
 
 function toggleLogin() {
-    var toShow = document.getElementById("admin_login_form");
-    if (toShow.classList.contains("mobile_hidden")) {
-        toShow.classList.remove("mobile_hidden");
-    } else {
-        toShow.classList.add("mobile_hidden");
-    }
-    var element = document.getElementById("login_button_mobile");
-    if (element.classList.contains("hidden")) {
-        element.classList.remove("hidden");
-    } else {
-        element.classList.add("hidden");
-    }
-
+    $("#admin_login_form").toggleClass("mobile_hidden");
+    $("#login_button_mobile").toggleClass("hidden");
 }
 
 function delete_error_login(input) {

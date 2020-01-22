@@ -1,19 +1,3 @@
-# Compressione lato server dei documenti
-<ifModule mod_deflate.c>
-AddOutputFilterByType DEFLATE text/text text/plain text/html text/xml text/css text/javascript
-AddOutputFilterByType DEFLATE application/xml
-AddOutputFilterByType DEFLATE application/xhtml+xml
-AddOutputFilterByType DEFLATE application/rss+xml
-AddOutputFilterByType DEFLATE application/javascript
-AddOutputFilterByType DEFLATE application/x-javascript
-</IfModule>
-
-# Cache di 1 settimana
-<FilesMatch "\.(ico|png|jpg|js|css)$">
-Header set Cache-Control "max-age=604800, public"
-</FilesMatch>
-
 # Index e fallback
 DirectoryIndex index.php
-ErrorDocument 404 /TECWEB1920/website/www/php/fallback.php
-php_flag display_errors on
+ErrorDocument 404 /php/fallback.php
