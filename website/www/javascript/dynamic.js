@@ -1,11 +1,11 @@
-function toggleMenu(icon) {
+function toggleMenu() {
     toggleMobileVisibility();
-    $(".menu_icon").toggleClass("change");
+    $("#menu_icon").toggleClass("change");
 }
 
 function toggleMobileVisibility() {
     $("#menu").toggleClass("mobile_hidden");
-    $("#menu").toggleClass("mobile");    
+    $("#menu").toggleClass("mobile");
 }
 
 function toggleLogin() {
