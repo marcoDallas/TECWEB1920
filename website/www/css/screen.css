@@ -204,7 +204,7 @@ ol>li {
 
 /*hamburher animation*/
 
-.menu_icon {
+#menu_icon {
     border-left: 2px solid #bc5800;
     border-bottom: 2px solid #bc5800;
     display: block;
@@ -572,6 +572,9 @@ h2 {
         width: 25%;
     }
     .desktop_hidden {
+        display: none;
+    }
+    #menu_icon {
         display: none;
     }
     .mobile_hidden {
