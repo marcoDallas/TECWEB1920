@@ -10,7 +10,9 @@ Quindi, è stato scelto di implementare:
     \item un menù ad hamburger che mostra/nasconde le singole voci, rimpiazzando così il menu laterale lato desktop;
     \item un bottone \emph{Accesso amministratore} nel footer che, una volta premuto, fa comparire il form di login per l'amministratore, e per farlo
     scomparire può premere sul bottone \emph{Esci.} 
-\end{itemize}    
+\end{itemize}
+E' stato anche utilizzato \emph{JQuery} per ovviare il problema di compatibilità con Internet Explorer derivanti da problemi con JavaScript Vanilla
+(e.g. classList.toggle(nomeClass) sostituito con toogleClass(nomeClasse)).    
 
 La validazione dell'utente nel form di login avviene attraverso \emph{AJAX}, acronimo di \emph{Asynchronous JavaScript and XML}.\\ 
 La motivazione di tale scelta è per il messaggio d'errore in caso di input scorretto: il form di login si trova nel footer, e nel caso di errore 
