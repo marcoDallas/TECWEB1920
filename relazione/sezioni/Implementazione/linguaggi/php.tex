@@ -19,7 +19,7 @@ Per soddisfare un'altra importante richiesta del progetto, ovvero \emph{"deve es
 sia lato client che lato server"}, sono stati implementati controlli PHP (server-side) sugli input dei form presenti nel sito, che corrispondono ai 
 controlli client-side attuati con JavaScript/JQuery.\\
 Questo potrebbe risultare inutile, ma in realtà è un ulteriore controllo di sicurezza fondamentale. Basti pensare banalmente che un utente
-avanzato potrebbe alterare il comportamento client-side per oltrepassare i controlli. Putroppo per lui, e per fortuna del gestore e degli
+avanzato potrebbe alterare il comportamento client-side per oltrepassare i controlli. Purtroppo per lui, e per fortuna del gestore e degli
 utilizzatori del sito, l'utente che ha cercato di infiltrarsi non potrà mai modificare il comportamento \emph{PHP}, in quanto è codice server-side.\\
 Per questo è fornita una classe \emph{Input\_security\_check} contenente tutti i metodi necessari ai vari controlli, che operano controllando 
 i singoli caratteri in input.
