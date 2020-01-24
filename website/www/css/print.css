@@ -44,7 +44,6 @@ h2 {
 
 .element {
     overflow: hidden;
-    margin-top: -1em;
 }
 
 .element>div {
@@ -52,7 +51,7 @@ h2 {
 }
 
 .product_image_container {
-    width: 20%;
+    width: 15%;
 }
 
 .product_text_container {
