@@ -42,8 +42,8 @@ class Print_products
 
             $content.='<ul>';
             foreach ($arrpage as &$prodotto) {
-                $content.='<li class="product">
-                            <div class="container col-sm-1 element">
+                $content.='<li class="container col-sm-1 element product">
+                            
                                 <div class="product_image_container">';
                 if (!strcmp($prodotto['Immagine'], '')) {
                     $content.='<p>Forse l\'admin non ha inserito la foto  title="cosa triste">:\'(</abbr></p>';
@@ -75,8 +75,7 @@ class Print_products
                                 </form>
 							</div>';
                 }
-                $content.='</div>
-                        </li>';
+                $content.='</li>';
             }
             $content.='</ul>';
             if (sizeof($arr)>7) {
