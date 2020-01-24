@@ -19,8 +19,8 @@ class Print_products
         $content='<div id="content" class="col-sm-1 col-ds-1">
                     <h2>'.$_GET['type'].'</h2>';
         
-        $content.='<form class="col-sm-1 general_form" method="get" action="prodotti.php">
-                    <div class="col-sm-1">
+        $content.='<form class="general_form" method="get" action="prodotti.php">
+                    <div>
                      <label for="cerca_prodotti">Cerca '.$_GET['type'].': </label>
                      <input id="cerca_prodotti" class="general_input" type="text" maxlength="40" name="search"/>
                      <input type="hidden" name="type" value="'.$_GET['type'].'"/>
@@ -57,7 +57,7 @@ class Print_products
                                     <p>'.$prodotto['Descrizione'].'</p>
                                 </div>';
                 if (Admin::verify()) {
-                    $content.='<div class="col-sm-1 product_buttons">
+                    $content.='<div class="product_buttons">
                                 <form method="post" action="'.htmlentities($_SERVER['REQUEST_URI']).'">
                                     <div>
                                         <input type="hidden" name="product" value="'.$prodotto['Codice'].'"/>
@@ -96,7 +96,7 @@ class Print_products
                 
                 $content.='</div>';
                 if (Admin::verify()) {
-                    $content.='<form class="general_form col-sm-1" method="post" action="modifica_prodotto.php">
+                    $content.='<form class="general_form" method="post" action="modifica_prodotto.php">
                                 <div>
                                  <input type="hidden" name="prevpage" value="'.htmlentities($_SERVER['REQUEST_URI']).'"/>
                                  <input type="hidden" name="type" value="'.$_GET['type'].'"/>
