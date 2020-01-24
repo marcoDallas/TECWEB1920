@@ -19,30 +19,30 @@
         <p>I campi contrassegnati con (*) sono obbligatori.</p>
     </div>
     <prev_page_to_insert/>
-    <fieldset>
+    <fieldset class="element">
         <legend>
             <legend_to_insert/>
         </legend>
-        <div class="element">
-            <div>
-                <label for="title">Titolo*: </label>
-                <span class="hidden">:Minimo 3 caratteri</span>
-                <title_to_insert/><span class="input_suggestion" aria-hidden="true">(minimo 3 caratteri)</span>
-            </div>
-            <file_to_insert/>
 
-            <div id="input_textarea">
-                <label for="description">Descrizione*: <span class="input_suggestion" aria-hidden="true">(minimo 20 caratteri)</span></label>
-                <span class="hidden">:Minimo 20 caratteri</span>
-                <textarea id="description" class="general_input" name="description" rows="12" cols="70"><content_to_insert/></textarea>
-                <type_to_insert/>
-                <id_to_insert/>
-            </div>
-            <div class="center">
-                <submit_to_insert/>
-                <input class="general_button" type="reset" value="Ripristina" name="reset" aria-label="Ripristina" />
-            </div>
+        <div>
+            <label for="title">Titolo*: </label>
+            <span class="hidden">:Minimo 3 caratteri</span>
+            <title_to_insert/><span class="input_suggestion" aria-hidden="true">(minimo 3 caratteri)</span>
         </div>
+        <file_to_insert/>
+
+        <div id="input_textarea">
+            <label for="description">Descrizione*: <span class="input_suggestion" aria-hidden="true">(minimo 20 caratteri)</span></label>
+            <span class="hidden">:Minimo 20 caratteri</span>
+            <textarea id="description" class="general_input" name="description" rows="12" cols="70"><content_to_insert/></textarea>
+            <type_to_insert/>
+            <id_to_insert/>
+        </div>
+        <div class="center">
+            <submit_to_insert/>
+            <input class="general_button" type="reset" value="Ripristina" name="reset" aria-label="Ripristina" />
+        </div>
+
     </fieldset>
     </form>
 </div>
