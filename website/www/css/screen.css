@@ -364,6 +364,7 @@ h2 {
 }
 
 .product_buttons {
+    width: 100%;
     padding-bottom: 1em;
 }
 
@@ -446,11 +447,12 @@ h2 {
     margin-left: 1em;
 }
 
-.input_textarea>* {
+#input_textarea>* {
     display: block;
 }
 
 #preview {
+    display: block;
     max-width: 15em;
 }
 
